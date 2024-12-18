@@ -24,15 +24,11 @@
 %
 %
 
-\cbstart
 %ISBN-13: 9798373548373\todo{Update to new ISBN}
-\cbend
 
 %ISBN-10: 1981662464
 
-\cbstart
 \acrshort{scsc} Publication Number: SCSC-127I%\todo{Guessed 3.6 should be SCSC-127I. Check before release.}
-\cbend
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by/4.0/}{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA\@. You are free to share the material in any form and adapt the material for any purpose providing you attribute the material to the \gls{scsc} Data Safety Initiative Working Group, reference the source material, include the licence details above, and indicate if any changes were made.  See the license for full details.
 
@@ -51,11 +47,9 @@ Cover design by Paul Hampton.
 The \gls{scsc} is the professional network for sharing knowledge regarding safety-critical systems. It brings together: engineers and specialists from a range of disciplines working on safety-critical systems in a wide variety of industries; academics researching the arena of safety-critical systems; providers of the tools and services that are needed to develop the systems; and the regulators who oversee safety. Through publications, seminars, workshops, tutorials, a web site and, most importantly, at the annual \gls{sss}, it provides opportunities for these people to network and benefit from each other’s experience in working hard at the accidents that don’t happen. It focuses on current and emerging practices in safety engineering, software engineering, and product and process safety standards.
 
 This document was written by the \gls{dsiwg}, which is convened under the auspices of the \gls{scsc}. The document supports the \gls{dsiwg}'s vision, which is to have clear guidance that reflects emerging best practice on how data (as distinct from software and hardware) should be managed in a safety-related context. This update takes account of the consensus that a process-based guidance document will complement existing safety management processes, making it more usable. It was formally released at
-\cbstart
 \gls{sss}'24, 13--15 February 2024,
 details of which may be found at
 \href{https://scsc.uk/e1007}{https://scsc.uk/e1007}%\todo{Update e797 reference}.
-\cbend
 
 Comments on this document are actively encouraged. These can be emailed to: 
 \begin{center}
@@ -118,12 +112,11 @@ While the authors and the publishers have used reasonable endeavours to ensure t
   \\\hline
   {3.5} & {The \acrshort{dsiwg} Team} & {For publication at \acrshort{sss}'23} & {07-FEB-2023}
   \\\hline
-  {3.6} & {The \acrshort{dsiwg} Team} & {For publication at \acrshort{sss}'24} & {\cbstart 13-FEB-2024\cbend}
+  {3.6} & {The \acrshort{dsiwg} Team} & {For publication at \acrshort{sss}'24} & { 13-FEB-2024}
   \\\hline
 \end{longtable}
 %
 \subsection*{Changes Since the Last Edition}%\todo{Update this whole section}
-\cbstart
 In this update to the Guidance, one update has been made that introduces a slight incompatibility
 to previous updates of the 3.x series.
 Within \autoref{bkm:guidance}, item DD.10 has been deleted from \autoref{tab:MethodsDataDesign}
@@ -171,13 +164,11 @@ Similarly, the \hyperref[bkm:guidance:dataproperties]{Data Properties}
 Completeness\index{Completeness!Property}, Analysability\index{Analysability Property},
 and Explainability\index{Explainability Property} have been reviewed to ensure their continued
 applicability.
-\cbend
 
-To assist users of earlier 3.x versions of the guidance in ensuring that their existing data safety arguments have not been impacted by this update, a version of this document is available which has been annotated with change bars. The annotated version is available at \cbstart\href{http://scsc.uk/scsc-127I}{http://scsc.uk/scsc-127I}\cbend.
+To assist users of earlier 3.x versions of the guidance in ensuring that their existing data safety arguments have not been impacted by this update, a version of this document is available which has been annotated with change bars. The annotated version is available at \href{http://scsc.uk/scsc-127I}{http://scsc.uk/scsc-127I}
 
 
 \subsection*{Future work}
-\cbstart
 %An \gls{scsc} Ontology Working Group is currently developing a formal ontology for risk management.\todo{Update this later}
 %Once this model is sufficiently mature, the intention is to apply it to data safety risk management and thus formalise the terminology and conceptual relationships used in this guidance.
 %An introduction to the ontological modelling was provided in the proceedings to \acrshort{sss}’20 \cite{citation:Banham2020} and a progress update on the work was presented at \acrshort{sss}’22.
@@ -203,7 +194,6 @@ and include:
 \item guidance on the application of the Data Safety Culture Questionnaire,
 \end{itemize}
 Several of these changes are likely to
-\cbend
 cause parts of the document to be re-ordered --- they have therefore been deferred to the next major update, in version 4.0 of the guidance.
 
 If you or your organization are interested in learning more about the work of the \gls{dsiwg} or joining either of the sub-groups,
@@ -212,7 +202,6 @@ please visit the \gls{scsc} website, where more information including contact de
 %
 %
 \subsection*{Related working groups}
-\cbstart
 The \gls{scsc} sponsors initiatives to develop methods and techniques through a number of working groups. These groups each address safety aspects peculiar to their domain, including data aspects when appropriate. The current list of working groups includes:
 %
 \begin{itemize}
@@ -228,7 +217,6 @@ The newest addition is the \acrfull{saiwg}, which aims to capture cross-domain b
 The working group was launched at SSS’24. It will conduct regular meetings, workshops, and publications to share knowledge and experience on various topics related to AI and safety systems, such as co-ordination of safety with other disciplines, evaluation of risk, and mapping of terminology and language.
 
 A current list of working groups, with links to further details on the work of each group, with contact details of each lead engineer may be found here: \href{https://scsc.uk/g}{https://scsc.uk/g}.
-\cbend
 %
 \clearpage
 %
@@ -246,15 +234,11 @@ A current list of working groups, with links to further details on the work of e
 
 \dsiwgTextBF{Data is here}:
 Data is becoming ever more important in our lives: influencing, managing and even controlling many critical aspects.
-\cbstart
 The use of AI systems is a new, exciting but potentially hazardous use of data. \acrfull{llm} based systems are trained on vast amount of data, and it this data which enables them to be useful.
-\cbend
 Some of this data is related to our personal safety and well-being.
 Consider, for example, the importance of data defining the layout of railway signals,
 data that indicates the position of underwater obstructions in nautical channels or data that
-\cbstart
 is used to train a vision recognition system to detect tumours in medical images.
-\cbend
 Organizations now make significant decisions (including safety-related decisions) based solely on data held in systems.
 Hence, organizations need to safely manage, control and process their data.
 In particular, key \index{Property!Data}Data Properties that preserve safety must be actively managed.
@@ -308,10 +292,10 @@ The following bullets provide a single-page introduction to Data Safety Guidance
       \item A discussion of topics loosely related to system lifecycles (\dsiwgRef{Appendix}{bkm:lifecycle});
       \item Considerations regarding Machine Learning (\dsiwgRef{Appendix}{bkm:MachineLearning});
 %      \item A discussion of the risks of AI and autonomy (\dsiwgRef{Appendix}{bkm:autonomy});
-      \item \cbstart An introduction to the concepts of both Dark and Dazzle Data (\dsiwgRef{Appendix}{bkm:darkdazzledata});\cbend
+      \item An introduction to the concepts of both Dark and Dazzle Data (\dsiwgRef{Appendix}{bkm:darkdazzledata});
       \item The concepts of Black Swan, Dragon King, Perfect Storm and Pudding Lane data (\dsiwgRef{Appendix}{bkm:cygnology}).
       \item Considerations for the assurance and qualification of data-handling tools (\dsiwgRef{Appendix}{bkm:tools}).
-%      \item \cbstart An introduction to the Radish tool, that has been developed to assist in the application of the guidance within this document (\dsiwgRef{Appendix}{bkm:radish}).\cbend
+%      \item An introduction to the Radish tool, that has been developed to assist in the application of the guidance within this document (\dsiwgRef{Appendix}{bkm:radish}).
       \item Issues that may arise when migrating, porting, importing or exporting data (\dsiwgRef{Appendix}{bkm:migration}).            
       \item Some of the data issues that made management of the Covid-19 virus difficult (\dsiwgRef{Appendix}{bkm:Covid19});
       \item Examples of ways that \glspl{dsal} may be customised, with particular focus on likelihood (\dsiwgRef{Appendix}{bkm:DsalCustomisation});

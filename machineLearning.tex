@@ -24,10 +24,8 @@ A complete discussion about the assurance of machine learning /artificial intell
 However, as such algorithms are inherently data-driven, the Data Safety Guidance provides the following notes on good practice for data sets used for machine learning / Artificial Intelligence applications.
 
 The data for real-world machine learning
-\cbstart
 (ML)
 scenarios may be effectively infinite (for example, with self-driving cars, where the environment is largely unbounded) and can only be approximated by a finite number of scenarios.
-\cbend
 Therefore it is crucial to have an extension process in place to extend the system when previously unknown situations are experienced. 
 ISO~21448 \cite{citation:ISO21448} captures this process by introducing the term \gls{sotif} and requires the systematic handling of unknowns. Although specifically aimed at road vehicles, \gls{sotif} may be of interest to other domains.
 
@@ -35,21 +33,15 @@ For more general guidance on managing the safety of Autonomous Systems, please r
 
 \subsection{Data Categories}
 Three data categories are discussed: training data\index{Machine Learning Data} (the data used to train the machine learning model),
-\cbstart
 ML test data\index{Category!Data!Verification} (used to provide a measure the trained model’s \index{Accuracy Property}accuracy), and ML
-\cbend
 validation data (used to independently verify the trained model).  
 
 \subsection{Real-world Data}
 It is important to obtain sufficient quantities of data for the training data. It is generally assumed that this is sufficiently representative of situations that could be encountered to allow the algorithm to generalise the appropriate behaviour for all encountered situations.  However, there are problems with real-life training data. Firstly, it is possible that rare, hazardous cases are never encountered during the capture of a data set (as those events have been engineered to be statistically unlikely) and are too dangerous, or expensive, to generate deliberately. Poor representation of rare cases in training data will result in a model that is insufficiently prepared to handle those important scenarios. Poor representation (or weighting) of rare cases in
-\cbstart
 ML test data or ML
-\cbend
 validation data can result in error heuristics that do not provide adequate insight into the system’s performance\index{Performance, System} in rare situations. A second issue with real-world data is that amassing, understanding, verifying and validating it at scale is resource intensive.
 Hence it is not just a case of more testing, a more cost-effective approach is needed. Some possible techniques are: artificial
-\cbstart
 ML
-\cbend
 test data set generation, data fault injection and simulation. It may well be more practicable to use simulated training data during the training phase to give more control and avoid the cost and effort of real-world testing. The issue then is how realistic the simulated data (and the associated simulation) can be. Note that artificial data sets can also be used to increase the frequency of rare events, thus biasing the algorithm to managing those rare events effectively, but doing so, could impair the ``sunny day'' performance\index{Performance, System} of the system.
 
 \subsection{Sensor Data}
@@ -70,9 +62,7 @@ to feed into a system safety case.
 
 \subsection{Data Diversity}
 The degree of data diversity is important. Common data items across data sets need to be avoided, especially across training and
-\cbstart
 ML
-\cbend
 validation data. Common data may include data derived from the same sources, environments, simulators, tools, techniques or mathematical models.
 
 \subsection{\index{Property!Data}Data Properties}
@@ -82,7 +72,6 @@ It is suggested that all the \index{Property!Data}data properties mentioned in t
 \subsection{Hallucinations}
 \label{bkm:MachineLearning:Hallucinations}\index{Hallucinations|textbf}
 %
-\cbstart
 The human brain can see and interpret patterns in unexpected ways, for example seeing a shadow that
 suggests a monster is waiting to pounce, or seeing an animal in a cloud formation%
 \footnote{These are not strictly hallucinations in the medical sense, but serve to illustrate
@@ -158,16 +147,13 @@ Promoting media literacy and critical thinking: Educating users to critically ev
 Establishing ethical guidelines and regulations: Clear ethical frameworks and regulations for AI development and deployment are necessary to ensure responsible use and mitigate potential risks.
 By acknowledging the dangers of hallucinations and taking proactive steps to address them, we can minimize their impact on data safety and build trust in AI-powered technologies.
 \end{aibox}
-\cbend
 
 \subsection{Data Set Management}
 Data sets will be large and complex and ensuring quality and \index{Consistency!Property}consistency will be difficult. Measures will have to be taken to control, manage and archive large amounts of data. Data sets should be subject to formal change control and monitoring. Tools will be needed to manage the data.
 
 \subsection{Optimization}
 What is an optimal size of a training or
-\cbstart
 ML
-\cbend
 validation data set? A data set may contain many repeated or redundant values. If these do not add to the training outcome it is possible that some values may be removed. Also if there are ways in which the data set could be compressed or optimized then these should be considered to assist management and curation.
 
 \subsection{Compliance}

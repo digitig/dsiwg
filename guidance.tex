@@ -25,9 +25,7 @@ The interfaces between \index{Data!Owner}Data Owners, and indeed data ownership 
 
 The \index{Data!Owner}Data Owners throughout the lifecycle\index{Lifecycle!Data} of data within the system should be identified, or the lack of an owner highlighted where applicable, including where data is merged or modified through the system operation. This will facilitate a greater understanding of the ``controllability'' of data safety issues within the assessment at a particular organizational level.
 
-\cbstart
 \subsubsection{Organizational Data Risk Assessment Form}
-\cbend
 The \gls{odr} Assessment Form was generated to capture a high-level perspective on the risk posed to an organization by data safety issues within a specific project. How it integrates with an organization's existing risk (or safety) management processes is the responsibility of the implementing organization.
 However, it is anticipated that the form could be used to facilitate tailoring of the data safety guidance process.
 To facilitate this integration, the following paragraphs describe the connections between the \gls{odr} and the
@@ -103,7 +101,7 @@ where further detail on each entry is provided.
   {11} & {Behavioural}\index{Behavioural Data} & {Data used to change the functionality of the system}\\\hline
   {12} & {Adaptation}\index{Adaptation Data} & {Data used to configure to a particular site}\\\hline
   \multicolumn{3}{|c|}{\dsiwgTextBF{Capability}}\\\hline
-  {13} & {\cbstart Staffing\cbend}\index{Staffing Data} & {Data related to staff training, competency, certification and permits}\\\hline
+  {13} & {Staffing}\index{Staffing Data} & {Data related to staff training, competency, certification and permits}\\\hline
   \multicolumn{3}{|c|}{\dsiwgTextBF{The Built System}}\\\hline
   {14} & {Asset}\index{Asset Data} & {Data about the installed or deployed system and its parts, including maintenance data}\\\hline
   {15} & {Performance}\index{Performance Data} & {Data collected or produced about the system during trials, pre-operational phases and live operations}\\\hline
@@ -183,14 +181,12 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
   \item \dsiwgTextBF{Distribution}
     Data can be decentralised, decomposed or distributed across many sources (e.g. channels, databases, websites) and needs to be consistently integrated to make a coherent picture. In the health sector often many IT systems have to work together feeding in different parts of a patient medical record to make a complete health picture. If parts of this distributed data are missing (for instance diagnostic test results) then it is difficult if not impossible to obtain the complete picture, and mistakes may be made.
-    \cbstart
     There are several parts to this problem:
     \begin{enumerate}[label=\alph*]
     	\item \dsiwgTextBF{Integration} - multiple elements of data have to be brought together in a coherent way, addressing aspects such as which data should supercede or replace other data;
     	\item \dsiwgTextBF{Communication} - having correct and current information about what data is available and its location so it can be requested; and
     	\item \dsiwgTextBF{Contingency} - what to to if part of the distributed data is unavailable or late.
     \end{enumerate}
-    \cbend
 \end{itemize}
 
 
@@ -438,7 +434,7 @@ For example, errors that are easy to guard against are associated with low likel
   \label{tab:Likelihood}
   \\\hline
   \TableHeadColour{} & \multicolumn{3}{c|}{\TableHeadColourCX{Likelihood}}\\\cline{2-4}
-  \multirow{-2}*{\TableHeadColourCX{}} & \TableDimColourCX{\cbstart High\cbend} & \TableDimColourCX{Medium} & \TableDimColourCX{Low}\\\hline
+  \multirow{-2}*{\TableHeadColourCX{}} & \TableDimColourCX{ High} & \TableDimColourCX{Medium} & \TableDimColourCX{Low}\\\hline
   \endfirsthead
   \caption[]{Calculation of likelihood (continued)}
   \\\hline\TableHeadColour{} & \multicolumn{3}{c|}{\TableHeadColourCX{Likelihood}}\\\cline{2-4}
@@ -894,25 +890,23 @@ This table addresses design aspects, including the construction of data storage 
   \hline
   DD.04 & Data Model & \dsiwgTextTT{VIDPJ} & HR & HR & HR & HR & To articulate how data is organized. & \dsiwgTextTT{..N.O................ZX}\\
   \hline
-  DD.05 & Client Sign-off & \dsiwgTextTT{VI.PJ} & R & R & HR & HR & \cbstart Agreement from the client that the system architecture and design are appropriate for the data considered.\cbend & \dsiwgTextTT{......R..V.............}\\
+  DD.05 & Client Sign-off & \dsiwgTextTT{VI.PJ} & R & R & HR & HR & Agreement from the client that the system architecture and design are appropriate for the data considered. & \dsiwgTextTT{......R..V.............}\\
   \hline
-  DD.06 & Data Quality Correction Mechanisms & \dsiwgTextTT{...P.} & - & R & HR & HR & \cbstart Design incorporates a data quality management system.\cbend & \dsiwgTextTT{IC.Y...................}\\
+  DD.06 & Data Quality Correction Mechanisms & \dsiwgTextTT{...P.} & - & R & HR & HR &  Design incorporates a data quality management system. & \dsiwgTextTT{IC.Y...................}\\
   \hline
   DD.07 & Configuration Management & \dsiwgTextTT{VIDPJ} & HR & HR & HR & HR & A formal process that controls changes to the data and data model. & \dsiwgTextTT{.......T.........H.....}\\
   \hline
   DD.08 & Data Dictionary & \dsiwgTextTT{VIDPJ} & HR & HR & HR & HR & A collection of descriptions of the data objects or items in a data model for the benefit of data users. & \dsiwgTextTT{..N.O.R....F.........ZX}\\
   \hline
   DD.09 & Formal Methods & \dsiwgTextTT{..D..} & - & R & R & HR &
-  \cbstart To specify data (or data formats) in a precise, mathematical manner.\cbend &
+  To specify data (or data formats) in a precise, mathematical manner. &
   \dsiwgTextTT{.CN.O..T....PQ......GZX}\\
   \hline
 \end{longtable}
 
 \clearpage% Avoids having the following title as a widow on the first page
-\cbstart
 \paragraph{Data Verification}
 \label{bkm:dataVerification}
-\cbend
 A number of issues need to be considered during the implementation phase of a programme, to ensure that at any point in the programme we know how much we can rely upon the data. \autoref{tab:MethodsDataProcedures} addresses those mitigations\index{Mitigation} relevant to this whole programme phase, not just from data capture or generation. It therefore includes aspects of data management, checking and expiry.
 \begin{longtable}
   {%
@@ -967,15 +961,13 @@ A number of issues need to be considered during the implementation phase of a pr
   \hline
   DI.12 & Independent Check & \dsiwgTextTT{VIDPJ} & - & - & R & HR & A separate person or system is used to check the data independently. & \dsiwgTextTT{I........V.............}\\
   \hline
-  DI.13 & Update Comparison & \dsiwgTextTT{VIDPJ} & - & R & R & HR & \cbstart Updated data is compared to its previous version (e.g., so the list of changed elements can be compared with a supplier-generated list).\cbend & \dsiwgTextTT{.......T.........H..G..}\\
+  DI.13 & Update Comparison & \dsiwgTextTT{VIDPJ} & - & R & R & HR & Updated data is compared to its previous version (e.g., so the list of changed elements can be compared with a supplier-generated list). & \dsiwgTextTT{.......T.........H..G..}\\
   \hline
 \end{longtable}
 
 \clearpage% Avoids having the final row of the table on a page by itself 
 \paragraph{Data Migration}
-\cbstart
 This table addresses migration of data from one system to another system.
-\cbend
 
 New entries DM.10 to DM.15 have been added to address issues identified during the development of \dsiwgRef{Appendix}{bkm:migration}.
 \begin{longtable}

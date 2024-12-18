@@ -23,7 +23,6 @@ The following `War Stories' describe incidents and accidents in which data is co
 
 \dsiwgTextBF{Note:} The analysis presented here has no legal standing whatsoever. The purpose of this section is not to discredit, contradict or undermine any existing accident analysis; the aim is simply to view these incidents from a data perspective. Where possible accident reports have been referenced with the role of data highlighted. All references have been taken at face value and not independently verified.
 
-\cbstart
 Two tables are presented to assist the reader in finding incidents and accidents of interest:
 \begin{itemize}
 \item \autoref{tab:IncidentsByDomain} lists the issues and accidents according to the domain where
@@ -165,7 +164,6 @@ Two tables are presented to assist the reader in finding incidents and accidents
     %
 \end{longtable}
 %% End new ToC table
-\cbend
 %
 %
 %
@@ -185,9 +183,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
   \hline
   %
   \ref{bkm:incacc:horizon} & Post Office Horizon System\index[locationidx]{United Kingdom} &
-  \cbstart
-  Non-atomic transactions and other errors in accounting software lead to false prosecutions, lost livelihoods, and suicides.
-  \cbend &
+  Non-atomic transactions and other errors in accounting software lead to false prosecutions, lost livelihoods, and suicides. &
   Accountancy & 1999 & Integrity\index{Integrity Property}, Completeness\index{Completeness Property}, Traceability\index{Traceability Property}, Verifiability\index{Verifiability Property}, History\index{History Property}\\ 
   %TGR I have not included Availability, because SPMs were not authorised to see the transaction information, although arguably they should have been.
   %TGR I cannot find an appropriate property for "The data can only be changed by those with authority to change it. One of the Horizon issues was that PO staff had higher level access than they were supposed to have had.
@@ -197,11 +193,9 @@ Two tables are presented to assist the reader in finding incidents and accidents
   \ref{bkm:incacc:agincourt} & Battle of Agincourt &
   French misconceptions about English longbow led to devastating losses &
   Defence & 1415 &
-  \cbstart
   Integrity\index{Integrity Property}, Completeness\index{Completeness Property},
   Accuracy\index{Accuracy Property}, Fidelity / Representation\index{Fidelity/Representation Property},
-  Timeliness\index{Timeliness Property}
-  \cbend\\
+  Timeliness\index{Timeliness Property}\\
   %
   \hline
   \ref{bkm:incacc:geminiV} & Gemini V\index{Gemini V} &
@@ -253,9 +247,9 @@ Two tables are presented to assist the reader in finding incidents and accidents
 	\hline
 	\ref{bkm:incacc:comintercept} & Interception of Communications & Incorrect data was disclosed during an investigation\index{Investigation!Criminal} into indecent images. A welfare check was delayed on a child believed to be in crisis. & Policing & 2015 & \index{Integrity Property}Integrity \\ 
 	\hline
-	\ref{bkm:incacc:a400m} & A400M Torque Calibration Parameters & A software update apparently wiped the engine torque control parameters. Aircraft crash; four fatalities. & Air \cbstart(Defence) \cbend& 2015 & \index{Completeness!Property}Completeness \\
+	\ref{bkm:incacc:a400m} & A400M Torque Calibration Parameters & A software update apparently wiped the engine torque control parameters. Aircraft crash; four fatalities. & Air (Defence) & 2015 & \index{Completeness!Property}Completeness \\
 	\hline
-	\ref{bkm:incacc:subtrawler} & \cbstart Royal \cbend\ Navy Submarine, Trawler \dsiwgTextIT{Karen}\index{Trawler Karen} & A royal Navy submarine snagged the fishing gear of the trawler \dsiwgTextIT{Karen}. The trawler was dragged backwards at about seven knots and suffered structural damage. & Maritime & 2015 & resolution, \index{Integrity Property}Integrity \\
+	\ref{bkm:incacc:subtrawler} & Royal Navy Submarine, Trawler \dsiwgTextIT{Karen}\index{Trawler Karen} & A royal Navy submarine snagged the fishing gear of the trawler \dsiwgTextIT{Karen}. The trawler was dragged backwards at about seven knots and suffered structural damage. & Maritime & 2015 & resolution, \index{Integrity Property}Integrity \\
 	\hline
 	\ref{bkm:accinc:turkisha330} & Turkish Airlines A330 & Inaccurate navigation data, relating to runway location, led to touchdown with left main gear off the paved surface. Aircraft written off. & Air & 2015 & \index{Accuracy Property}Accuracy, Timeliness\index{Timeliness Property}, Verifiability\index{Verifiability Property} \\
 	\hline
@@ -290,7 +284,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
         \ref{bkm:incacc:annabella} & Annabella container ship --- Baltic Sea & Software developed loading plan using incorrect container specifications &
         Maritime & 2007 & \index{Integrity Property}Integrity, Verifiability\index{Verifiability Property}, \index{Fidelity/Representation Property}Fidelity / representation \\
         \hline
-        \ref{bkm:incacc:comair5191} & \cbstart Comair\cbend\ Flight 5191 & Inaccurate (out-of-date) aerodrome charts led to take-off being attempted from the wrong runway. Aircraft overran the runway; 49 fatalities. & Air & 2006 & Timeliness\index{Timeliness Property}, \index{Completeness!Property}Completeness \\
+        \ref{bkm:incacc:comair5191} & Comair Flight 5191 & Inaccurate (out-of-date) aerodrome charts led to take-off being attempted from the wrong runway. Aircraft overran the runway; 49 fatalities. & Air & 2006 & Timeliness\index{Timeliness Property}, \index{Completeness!Property}Completeness \\
 	\hline
 	\ref{bkm:incacc:uberlingen} & \"Uberlingen Mid-Air Collision & Contradictory advice from \gls{tcas} and an air traffic controller led to a mid-air collision between two \gls{tcas}-equipped aircraft. 71 fatalities. & Air & 2002 & \index{Consistency!Property}Consistency, \index{Availability Property}Availability, Timeliness\index{Timeliness Property} \\
 	\hline
@@ -313,7 +307,6 @@ Two tables are presented to assist the reader in finding incidents and accidents
 \end{longtable}
 
 %\clearpage% Inserted to better format 737 MAX 8 after inserting Soyuz - a new war story may make this unnecessary
-\cbstart
 \subsection{Post Office Horizon System}\index[locationidx]{United Kingdom}\label{bkm:incacc:horizon}
 Post Office Limited is a company wholly owned by the UK government, and provides a variety of counter services to the general public. These include postal services, banking services including currency exchange, issue of international driving permits, driving licence renewals, passport application checks, benefits payments, and various other services. A small number of branches are operated by Post Office Limited itself (``Crown Post Offices''), but the vast majority are operated under contract (``Branch Post Offices'') by independent persons known as subpostmasters (SPMs).
 
@@ -388,7 +381,6 @@ The data issues included:
 
 \end{itemize}
 
-\cbend
   %
   % Agincourt - end
   %
@@ -563,7 +555,7 @@ MCAS\index{MCAS} did not compare data from the two sensors in order to detect a 
 Several other data-safety-related failures can also be found in the report on flight 610:
 
 \begin{itemize}
-    \item The MCAS\index{MCAS} system was not described in the pilot's manual and training materials (Data Category: \cbstart Staffing\cbend\index{Staffing Data}, \index{Property!Data}Properties lost: \dsiwgTextIT{\index{Availability Property}Availability})
+    \item The MCAS\index{MCAS} system was not described in the pilot's manual and training materials (Data Category: Staffing\index{Staffing Data}, \index{Property!Data}Properties lost: \dsiwgTextIT{\index{Availability Property}Availability})
     \item There was no indication to the pilots that MCAS\index{MCAS} was active (Data Category: Dynamic\index{Dynamic Data}; \index{Property!Data}Properties lost: \dsiwgTextIT{\index{Availability Property}Availability}).
     \item The \gls{aoa} sensor fitted to flight 610 was incorrectly calibrated during a previous repair,
       reporting an angle 21° higher than the correct value.
@@ -1107,9 +1099,7 @@ the terrain database used by the \gls{msaw} system.
 \end{itemize}
 \end{samepage}
 
-\cbstart
 \subsection{San Bernardino derailment and pipeline rupture} \index[locationidx]{USA!California!San Bernardino}\label{bkm:incacc:sanbernardino}
-\cbend
 In May 1989 a Southern Pacific Transportation Company\index{Southern Pacific Transportation Company} freight train derailed in San Bernardino\index[locationidx]{USA!California!San Bernardino}, California. The train derailment accounted for seven fatalities and two serious injuries; however, that accident also damaged a fuel pipe and less than a fortnight later it ruptured causing a further two deaths and three serious injuries.
 
 One of the causal factors of the train’s derailment, as reported by the National Transportation Safety Board, was a ``failure to determine the weight of the train'' and in summary, the operator thought it weighed less than it actually did, resulting in the dynamic braking being insufficient to deal with the downhill gradient it was travelling on. The Company\index{Southern Pacific Transportation Company} had used a computer to determine the train’s weight and because the actual weights had not been entered the system made its calculations based upon estimated weights, which were lower. Clearly this was not a systematic failure of the computation algorithm but again potentially a failure to appreciate the criticality of the weight information and its potential as a causal factor within an accident sequence.
