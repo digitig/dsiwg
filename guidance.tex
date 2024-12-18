@@ -1,0 +1,1330 @@
+%================================================================================
+%       Safety Critical Systems Club - Data Safety Initiative Working Group
+%================================================================================
+%                       DDDD    SSSS  IIIII  W   W   GGGG
+%                       D   D  S        I    W   W  G   
+%                       D   D   SSS     I    W W W  G  GG
+%                       D   D      S    I    WW WW  G   G
+%                       DDDD   SSSS   IIIII  W   W   GGG
+%================================================================================
+%               Data Safety Guidance Document - LaTeX Source File
+%================================================================================
+%
+% Description:
+%   Guidance section.
+%
+%================================================================================
+\section{Guidance (Informative)} \label{bkm:guidance}
+
+\dsiwgSectionQuote{I wanted to separate data from programs, because data and instructions are very different.}{Ken Thompson}
+
+
+\subsection{Establish Context}
+\subsubsection{Interface control}\index{Interface!Organizational}
+The interfaces between \index{Data!Owner}Data Owners, and indeed data ownership itself, can be much more complicated than for hardware or software, where the owner can be clearly identified. Indeed, when combining items from various sources it is possible to create data for which there is not an ``owner'' in any traditional sense. In such circumstances it may be appropriate for the overall system owner to take responsibility for the collected data and, where appropriate, pass specific, formally-recorded requirements onto original data suppliers. 
+
+The \index{Data!Owner}Data Owners throughout the lifecycle\index{Lifecycle!Data} of data within the system should be identified, or the lack of an owner highlighted where applicable, including where data is merged or modified through the system operation. This will facilitate a greater understanding of the ``controllability'' of data safety issues within the assessment at a particular organizational level.
+
+\cbstart
+\subsubsection{Organizational Data Risk Assessment Form}
+\cbend
+The \gls{odr} Assessment Form was generated to capture a high-level perspective on the risk posed to an organization by data safety issues within a specific project. How it integrates with an organization's existing risk (or safety) management processes is the responsibility of the implementing organization.
+However, it is anticipated that the form could be used to facilitate tailoring of the data safety guidance process.
+To facilitate this integration, the following paragraphs describe the connections between the \gls{odr} and the
+\acrshort{iso} 31000 \cite{citation:iso310002018risk}
+standard for risk management.
+The \gls{odr} itself is presented in \autoref{bkm:assessment}.
+
+Establishing the context of a risk assessment ensures that the system being considered and the scope of any assessment is well defined. This helps prevent an overrun of the assessment's boundaries and allows those items that are out of scope to be explicitly communicated to all \index{Stakeholder}Stakeholders. In addition, it is the role of this activity to produce the criteria that a system will be judged on. The \gls{odr} assessment links directly to the sub-tasks identified by \acrshort{iso} 31000 for establishing the risk assessment context and introduces aspects to guide the assessor into focusing on data-specific risks.
+
+Questions 2, 3 and 4 of the \gls{odr} align directly with establishing the external context of the risk assessment
+(Activity 6.3.3 from \acrshort{iso} 31000).
+They guide the assessor into judging the risk appetite of external \index{Stakeholder}Stakeholders, the level of risk that is allocated to the organization and the regulatory environment within the project will operate.
+
+Question 5 is concerned with establishing the internal context of the risk assessment
+(Activity 6.3.3),
+inviting the assessor to comment on the maturity of the organization in terms of their attitude not just to risk, but specifically to data-driven risks.
+
+Question 6 explores \index{Data!Owner}data ownership through the use cases of the system. This is related to the legal frameworks explored in Question 4, but also acts to lay the foundations of Activity
+6.3.4,
+``Defining Risk Criteria'', which requires an assessor to identify ``the nature and types of causes and consequences that can occur and how they will be measured''. This is expanded upon by Questions 1, 7 and 8 which go into data-driven specifics about failure consequences and the issues raised by data complexity, boundary complexity and system complexity for the project.
+
+Finally, the scoring system of the \gls{odr} provides a heuristic for defining the risk criteria
+(Activity 6.3.4)
+which handles how to combine these different aspects of risk into a single, high-level estimate of the data-related risks associated with a given project. This means that the \gls{odr} can, for example, provide some guidance on Data Safety Assurance Principle ``4 + 1''; that is, it provides some guidance on the amount of effort that should be directed towards the management of data safety issues.
+ 
+It is of note that while the completion of an \gls{odr} fits within the context establishment activity it also augments the ongoing ``communication and consultation'' activity both by providing a standardised format for capturing the relevant information and securing endorsement.
+
+\subsubsection{Data Safety Culture Questionnaire}
+Part of the \gls{odr} assessment relates to assessing the organization's maturity in managing data safety risks; \index{Response}responses are aimed at establishing the depth of awareness of data safety and the associated management processes within the organization. However, measuring the level of awareness of processes and concepts in an organization is not always easy. There may be sufficient high-level knowledge of this for the purposes of the \gls{odr} but it still may be an area that warrants further investigation.
+
+To support this, a separate questionnaire has been developed to explore the specific area of measuring the data safety culture for a particular activity; whether this be for the organization as a whole or for a particular project, service or activity. However, here the focus is on a personal view rather than a project or company view so the questionnaire would be completed by all, or a significant subset of, staff. \index{Response}Responses can be aggregated to give an overall data safety culture value. A key aspect of this approach is that it can be periodically repeated to determine trends: for example, if overall scores are declining, this may suggest that further training and briefings will be required.
+
+More details on the Data Safety Culture Questionnaire are provided in \autoref{bkm:culture}.
+
+\subsubsection{System Definition}
+The system under consideration should be understood and documented, including interfaces\index{Interface!System} and safety-related data aspects. The process of documenting the system of interest furthers the understanding of \index{Stakeholder}Stakeholders and approvers so they can make sensible judgements about the system. It also formally declares assumptions that are being made while assessing the system and clearly defines the limits of the assessment. In addition, different levels of risk may be associated with composites of safety-related data, which may be easier to manage than individual \index{Artefact, Data}artefacts, or where independence cannot be demonstrated or maintained. Hence, the partitioning of data sets should also be considered during this phase.
+
+\subsubsection{Supplier Data Maturity}
+As noted above, a number of usage scenarios involve data being supplied by subcontracted organizations. It is expected that some formal process will be used to select these suppliers. A questionnaire has been developed to help ensure that the supplier has suitable processes in place to manage data safety-related issues. This is available in \autoref{bkm:maturity}.
+
+\subsubsection{Data Categories\index{Category!Data|textbf}}
+\label{bkm:datacategories}
+The full set of Data Categories which can have safety implications is large: to date more than twenty categories (and one meta-category) have been identified. 
+
+The table below gives the current view of the categories of safety-related data that contribute to, are used by, produced by or affected by safety-related systems. They are roughly organized into a number of categories\index{Category!Data}, which aim to cover all aspects of the system lifecycle\index{Lifecycle!System}. Note that the list in \autoref{tab:CategoriesShort} is non-exhaustive. Also note that a more detailed version of this table is available at \autoref{bkm:categories},
+where further detail on each entry is provided.
+
+\begin{longtable}{|C{\dsiwgColumnWidth{0.1}}|L{\dsiwgColumnWidth{0.2}}|L{\dsiwgColumnWidth{0.7}}|}
+  \caption{Categories\index{Category!Data} of safety-related data: concise definitions}
+  \label{tab:CategoriesShort}
+  \\\hline\TableHeadColourCX{No.} & \TableHeadColour{Category} & \TableHeadColour{Description}\\\hline
+  \endfirsthead
+  \caption[]{Category of safety-related data: concise definitions (continued)}
+  \\\hline\TableHeadColourCX{No.} & \TableHeadColour{Category} & \TableHeadColour{Description}\\\hline
+  \endhead
+  \multicolumn{3}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  \multicolumn{3}{|c|}{\dsiwgTextBF{Context}}\\\hline
+  {1} & {Predictive}\index{Predictive Data} & {Data used to model or predict behaviours and performance}\\\hline
+  {2} & {Scope, Assumption and Context}\index{Scope, Assumption and Context Data} & {Data used to frame the development, operations or provide context}\\\hline
+  {3} & {Requirements}\index{Requirement Data} & {Data used to specify what the system has to do}\\\hline
+  {4} & {Interface}\index{Interface Data} & {Data used to enable interfaces between this system and other systems:  for operations, initialisation or export from the system}\\\hline
+  {5} & {Reference or Lookup}\index{Reference or Lookup Data} & {Data used across multiple systems with generic usage}\\\hline
+  \multicolumn{3}{|c|}{\dsiwgTextBF{Implementation}}\\\hline
+  {6} & {Design and Development}\index{Design and Development Data} & {Data produced during development  and implementation}\\\hline
+  {7} & {Software}\index{Software Data} & {Data that is compiled (or interpreted) and executed to achieve the desired system behaviour}\\\hline
+  {8} & {Verification}\index{Verification Data} & {Data used to test and analyse the system,
+    specifically to determine whether it has been built as intended}\\\hline
+  \multicolumn{3}{|c|}{\dsiwgTextBF{Configuration}}\\\hline
+	{9} & {Machine Learning}\index{Machine Learning Data} & {Data used to train the system}\\\hline
+  {10} & {Infrastructure}\index{Infrastructure Data} & {Data used to configure, tailor or instantiate the system itself}\\\hline
+  {11} & {Behavioural}\index{Behavioural Data} & {Data used to change the functionality of the system}\\\hline
+  {12} & {Adaptation}\index{Adaptation Data} & {Data used to configure to a particular site}\\\hline
+  \multicolumn{3}{|c|}{\dsiwgTextBF{Capability}}\\\hline
+  {13} & {\cbstart Staffing\cbend}\index{Staffing Data} & {Data related to staff training, competency, certification and permits}\\\hline
+  \multicolumn{3}{|c|}{\dsiwgTextBF{The Built System}}\\\hline
+  {14} & {Asset}\index{Asset Data} & {Data about the installed or deployed system and its parts, including maintenance data}\\\hline
+  {15} & {Performance}\index{Performance Data} & {Data collected or produced about the system during trials, pre-operational phases and live operations}\\\hline
+  {16} & {Release}\index{Release Data} & {Data used to ensure safe operations per release instance}\\\hline
+  {17} & {Instructional}\index{Instructional Data} & {Data used to warn, train or instruct users about the system}\\\hline
+  {18} & {Evolution}\index{Evolution!Data} & {Data about changes after deployment}\\\hline
+  {19} & {End of Life}\index{End of Life Data} & {Data about how to stop, remove, replace or dispose of the system}\\\hline
+  {20} & {Stored}\index{Stored Data} & {Data stored by the system during operations}\\\hline
+  {21} & {Dynamic}\index{Dynamic Data} & {Data manipulated and processed by the system during operations}\\\hline
+  {22} & {Twinning}\index{Twinning Data} & {Data used to create and maintain a digital counterpart of a physical object or process}\\\hline
+%
+  \multicolumn{3}{|c|}{\dsiwgTextBF{Compliance and Liability}}\\\hline
+  {23} & {Standards and Regulatory}\index{Standards and Regulatory Data} & {Data that governs the approaches,  processes and procedures used to develop safety systems}\\\hline
+  {24} & {Justification} & {Data used to justify the safety position of the system}\\\hline
+  {25} & {Investigation}\index{Investigation Data} & {Data used to support accident or incident investigations (i.e., potential evidence)}\\\hline
+  \multicolumn{3}{|c|}{\dsiwgTextBF{Meta-Property}}\\\hline
+  {+1} & {Trustworthiness}\index{Trustworthiness Data} & {(Meta) data which tells us how much the system can be trusted}\\\hline
+\end{longtable}
+
+\subsection{Identify Risks}
+\subsubsection{Historical Accidents and Incidents}
+Ideally, data safety risks would be identified and mitigated before they led to an accident or incident. However, this is not always the case. Historical occurrences can provide an indication of the data safety risks present in planned or existing systems. In particular, accidents and incidents can be analysed to identify potential contributory causes relating to data.
+
+To support this type of analysis a number of previous accidents and incidents have been collected in \autoref{bkm:accidents}.
+These include cases which relate to a number of Data Properties (see
+\hyperref[bkm:guidance:dataproperties]{section}~\ref{bkm:guidance:dataproperties}), %Clunky, but \autoref inserted "subsubsection"
+for example the properties of \index{Completeness!Property}completeness, \index{Integrity Property}integrity and timeliness\index{Timeliness Property}.
+They also highlight the importance of the adaptation Data\index{Adaptation Data} Category\index{Category!Data} and dangers associated with the inappropriate use of default data values.
+
+Most of the current collection of accidents and incidents fall into three categories: aviation; maritime; and medical. However, the lessons that can be learned span a much wider range of application areas.
+
+\subsubsection{Ways that Data Can Cause Problems}
+\label{tab:issues}
+There are some risk-inducing issues that are different or more prevalent for data than for other system elements. An incomplete collection of examples is provided below. This list may provide a quick way of identifying risks, which could be especially useful at an early stage of a project:
+
+\begin{itemize}
+  \item \dsiwgTextBF{Fluidity} Hardware and software can undergo significant amounts of product assurance and once assured may change relatively infrequently. Where change is required to hardware or software, it can be carefully managed and the impact on the safety case appraised. This is not always the case for data, which is often much more fluid; indeed the ease with which data can be changed is one motivation for the move towards data-driven systems. This fluidity means that it is not always possible to revisit safety cases when data changes --- for example, the safety case for an autonomous vehicle cannot be updated every time that the vehicle acquires new knowledge during operation. Instead, the fact that data can change, along with any associated safety impacts, may need to be captured in the system safety case. Fluidity can also provide a temptation for unscrupulous operators to falsify data, for example, after an incident has occurred. Rigorous configuration control procedures can help protect against this type of behaviour.
+
+  \item \dsiwgTextBF{Reuse} For the purposes of this discussion, ``reuse'' is interpreted as use of the same data in a different system or system context (e.g., lifecycle\index{Lifecycle!System} phase). Just because data was valid for use in a particular system, it does not immediately follow that it can be reused again in a similar system. Many considerations associated with data reuse are similar to those of software reuse, for example: similarity of requirements; similarity of role in system; and similarity in required \index{Integrity Property}integrity / \index{Assurance Level}assurance level. One consideration that is different is that of timeliness\index{Timeliness Property}: data that was valid for use in a particular system at a particular time is not necessarily valid for reuse in the same system at a different time.
+
+  \item \dsiwgTextBF{Ageing} As highlighted above, all safety-related data has a lifetime and this needs to be explicitly managed. This can involve, for example, purging, deletion and alerting. It is also important to note that ageing can occur as a result of changes external to the system (for example, records of the positions of other aircraft, newly discovered drug interactions, or new software patches) or it can result from internal changes (e.g., valves gradually becoming less responsive, configuration data becoming out of date, or data schemas evolving over time).
+
+  \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new data sets as a result. Data Properties are not necessarily preserved by these processes --- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source information; data can also appear to become something else. Without careful management the \index{Integrity Property}integrity may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., validation checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}integrity / assurance is maintained.
+
+  \item \dsiwgTextBF{\index{Data!Owner}Ownership} The transformation of data can result in a lack of clarity regarding who has ownership of, and responsibility for, the data (if anyone). It is important that responsibility for errors can be tracked, for example, to determine whether they were present in the initial data or whether they arose as part of the transformation process. Establishing clear roles within the data supply chain can help mitigate these issues.
+
+  \item \dsiwgTextBF{Archiving and Retrieval} Safety-related data needs to be available when required. There is thus a need to think about data accessibility over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
+
+  \item \dsiwgTextBF{Biasing} This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation and interpretation of data. It is usually an unintentional distortion in the data set --- one example of this is the confirmation bias that may be applied to safety claims,
+    while another example is that synthetic autonomous vehicle training databases can have issues with artificial data if not realistic.
+    Although there is no perfect way of checking for this within the system, \index{Completeness!Checks}completeness, statistical and validity checks on data sets may help.
+
+  \item \dsiwgTextBF{Falsification / Misinformation} This issue arises where data is created, modified or deleted either accidentally or deliberately so as to mislead or misinform potential consumers of that data. Examples from policing and criminal justice might be: notes taken with fabricated times or dates; or accidentally adding or removing a crime from the wrong individual in a database. Another example might be a supplier falsifying quality records for materials or goods. There have been many cases of misinformation related to the Covid-19\index{Covid-19} pandemic (for example on social media) where people have been deliberately misled and sometimes this has led to harm (drinking bleach as a cure for instance). Some mitigations\index{Mitigation} involve digitally signing transmitted data, strong access controls, independent fact-checking and audit records.
+
+  \item \dsiwgTextBF{Defaulting} Many systems use default or initial values for data items; sometimes in data sets and sometimes embedded in software. Often these default values are designed to be neutral (e.g., ``0'') or unrealistic (e.g., ``VOID''). There are essentially two cases: (i) initialisation data which may persist and be mistakenly taken as a real value when in fact it should have been changed; (ii) data that is used when no meaningful value has been assigned (e.g., during data migration or data exchange between systems). These issues can often be managed through good design of data structures, for example by the inclusion of a validity flag.
+
+  \item \dsiwgTextBF{Sentinels} A sentinel value is a data value that is used to indicate a special action needs to be taken, typically indicating the end of a record or a data set. The sentinel value should be one that is not allowable in the data set itself, but often is not properly considered and may use common sequences (e.g., five zeroes). Sentinels can cause problems in two ways: (i) where they are not recognized and so, for example, processing continues past the sentinel; (ii) where the data itself somehow contains the sentinel value and so processing is erroneously interrupted. Sentinels can be a particular risk in long-lived systems and data sets. As with the issue above, the management or elimination of this issue may often be achieved through improved data structures.
+
+  \item \dsiwgTextBF{Aliasing} This is an effect that causes different data to become indistinguishable when accessed; that is, there is only one record when there should be several --- for example, two patients with similar names inadvertently sharing a single set of medical records. This could be due to the way the data is filtered, sampled, indexed, stored or retrieved. The data issues are typically related to loss of resolution\index{Resolution Property} leading to similar data points appearing to be identical. Hence, methods to maintain resolution\index{Resolution Property}, including use of unique indexes, may be beneficial.
+
+    One specific case of aliasing has come to light recently regarding ``Homophones'' --- words which sound the same but are different such as ``Flower'' / ``Flour'' and ``Bare'' / ``Bear'' \cite{citation:homonym}.
+    If these words are read out over a phone there may be confusion as to which is intended.
+    Location services based on a number of words such as W3W don't avoid all homophones,
+    and so there may be issues when the words are given verbally in an emergency. The issue is discussed further in \autoref{bkm:incacc:w3w}.
+
+  \item \dsiwgTextBF{Disassociation} This effect is, in some senses, the opposite of aliasing; there are several records when there should only be one. This could occur, for example, if two records are created for the same individual using slightly different names. It could also arise if different systems use different indexing methods and the association between the indexes becomes corrupted. Again, methods to maintain data resolution\index{Resolution Property} can be beneficial.
+
+  \item \dsiwgTextBF{Masking} This issue can arise if a notable proportion of a data set is of a poor quality, for example, if sensors producing the data are faulty or measurements are taken from the wrong source. This poor quality data can mask errors in the way that the system handles the good quality data. One way of protecting against this issue is the generation and use of test sets of appropriate size and quality, although for some applications this may be a non-trivial task.
+
+  \item \dsiwgTextBF{\index{Completeness!Property}Incompleteness} Not all the data that is needed is always available; there may be known, and sometimes, unknown gaps or missing data points. The missing data points ("Dark Data"\index{Dark Data} --- see \autoref{bkm:darkdata}) can be critical and in some cases, more important than the data that is available. Incomplete data can arise, for example, from limitations on how much data can be physically captured (eg.~sampling frequencies, storage/time constraints) or from the unintentional or deliberate darkening of data (eg.~for privacy, security, political or commercial reasons).
+
+  \item \dsiwgTextBF{Volume} Data can be so large and unstructured that it is not manageable in practicable timeframes.
+    For example, video records of rail track could take days to inspect manually.
+
+  \item \dsiwgTextBF{Interpretation} Data can be misinterpreted --- too much or too little deduced from available data, or data extrapolated incorrectly to derive unsound results.
+    An example is Machine Learning data\index{Machine Learning Data}, especially real or recorded data that may not contain critical edge/corner cases.
+
+  \item \dsiwgTextBF{Distribution}
+    Data can be decentralised, decomposed or distributed across many sources (e.g. channels, databases, websites) and needs to be consistently integrated to make a coherent picture. In the health sector often many IT systems have to work together feeding in different parts of a patient medical record to make a complete health picture. If parts of this distributed data are missing (for instance diagnostic test results) then it is difficult if not impossible to obtain the complete picture, and mistakes may be made.
+    \cbstart
+    There are several parts to this problem:
+    \begin{enumerate}[label=\alph*]
+    	\item \dsiwgTextBF{Integration} - multiple elements of data have to be brought together in a coherent way, addressing aspects such as which data should supercede or replace other data;
+    	\item \dsiwgTextBF{Communication} - having correct and current information about what data is available and its location so it can be requested; and
+    	\item \dsiwgTextBF{Contingency} - what to to if part of the distributed data is unavailable or late.
+    \end{enumerate}
+    \cbend
+\end{itemize}
+
+
+Further examples of how data may cause issues in many scenarios is given in a recently published book~\cite{citation:datacentric}.
+
+\subsubsection{Data Properties}\label{bkm:guidance:dataproperties}
+Data Properties are used to establish what aspects of the data (e.g., timeliness\index{Timeliness Property}, accuracy\index{Accuracy Property}) need to be guaranteed in order that the system operates in a safe manner.
+
+James Inge's work \cite{citation:inge2008improving} produced a useful taxonomy of data categories, and went on to look at faults in data. He concluded that a rigid taxonomy of data categories was unhelpful due to various properties, or characteristics, of the data which vary independently. In short, it is the combination of Data Category\index{Category!Data} with the required \index{Property!Data}Data Properties that facilitates safety analysis.
+
+Data Categories were discussed in the preceding phase. A collection of \index{Property!Data}Data Properties has been produced; this is documented in \autoref{tab:PropertiesOfData}. Typically speaking, it is the loss of one of these properties that presents a hazard. Note that, this notion of ``loss'' is dependent on the intended use: for example, what is ``timely'' for one use may not be for another. Also note that this list is non-exhaustive.
+
+\paragraph{The Goldilocks\index{Goldilocks Property|textbf} Property}\label{bkm:guidance:goldilocks}
+The ``Goldilocks'' property has been added to address appropriate sizing and quantity of data. A number of issues have been found to arise when there is too much or too little data. While it is particularly relevant to communications links, it may have relevance to other areas, such as databases and also when people are involved in reviewing or checking data. The property is named ``Goldilocks'' as it refers to the need to have not too much, not too little, but just the right amount of data%
+%
+\footnote{A system where the property was lost involved a high speed bus that connected several safety-critical systems. A transceiver of that bus failed and transmitted random noise. The receivers employed parity checks and cyclic redundancy check, but the system had been designed to eliminate occasional errors. When random noise filled the bus, several apparently valid messages were created every second, resulting in potentially lethal behaviour.
+
+In a \gls{hazop}\index{HAZOP} carried out during 2020, based upon the \gls{hazop}\index{HAZOP} guidewords within previous versions of this document, the facilitator realised that certain failure modes had not been identified by the \gls{hazop} team. In addition to the issue of system overload already discussed, those omissions also concerned system behaviour following data rejection. In these cases, bad data was detected and rejected, but the consequences of data rejection over an extended period had not been considered.}.
+
+The Goldilocks\index{Goldilocks Property} property is related to the ``Volume'' problem of data discussed in \hyperref[tab:issues]{section}~\ref{tab:issues}, however given the importance of data sizing, and the experience of real-world incidents this is now a separate property.
+%
+\paragraph{The Analysability\index{Analysability Property|textbf} Property}\label{bkm:guidance:analysability}
+The ``Analysability'' property has been added to recognize that data is now complex and extensive: often large scale, distributed and of a highly complex nature, and yet for safety purposes we need to make sure it is of suitable quality, and able to support system goals.
+We therefore need to ensure that it is possible to analyse it for key characteristics and establish, using tools or other means, meaningful results. This property is related to explainabilty and may be performed by the same set of tools or techniques.
+
+\paragraph{The Explainability\index{Explainability Property|textbf} Property}\label{bkm:guidance:explainability}
+``Explainability'' has been added because it is necessary to establish, especially for learning or AI-based systems,
+what the purpose and effect data (and especially changes to data) has on a system
+and explain this to relevant stakeholders in terms that they can understand.
+This could be, for example, machine learning training data or system configuration data.
+This property is related to analysability and may be performed by the same set of tools or techniques.
+%
+\clearpage
+\begin{longtable}{|L{\dsiwgColumnWidth{0.24}}|C{\dsiwgColumnWidth{0.15}}|L{\dsiwgColumnWidth{0.61}}|}
+  \caption{\index{Property!Data}Properties of data}
+  \label{tab:PropertiesOfData}
+  \\\hline\TableHeadColour{Property} & \TableHeadColour{Abbreviation} & \TableHeadColour{Description}\\\hline
+  \endfirsthead
+    \caption[]{Properties of data (continued)}
+  \\\hline\TableHeadColour{Property} & \TableHeadColour{Abbreviation} & \TableHeadColour{Description}\\\hline
+  \endhead
+  \multicolumn{3}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  {Integrity}\index{Integrity Property} & I & {The data is correct, true and unaltered}\\\hline
+  {Completeness}\index{Completeness!Property} & C & {The data has nothing missing or lost}\\\hline
+  {Consistency}\index{Consistency!Property} & N & {The data adheres to a common world view (e.g., units)}\\\hline
+  {Continuity}\index{Continuity Property} & Y & {The data is continuous and regular without gaps or breaks}\\\hline
+  {Format}\index{Format Property} & O & {The data is represented in a way which is readable by those that need to use it}\\\hline
+  {Accuracy}\index{Accuracy Property} & A & {The data has sufficient detail for its intended use}\\\hline
+  {Resolution}\index{Resolution Property} & R & {The smallest difference between two adjacent values that can be represented in a data storage, display or transfer system}\\\hline
+  {Traceability} & T & {The data can be linked back to its source or derivation}\\\hline
+  {Timeliness}\index{Timeliness Property} & M & {The data is as up to date as required}\\\hline
+  {Verifiability}\index{Verifiability Property} & V & {The data can be checked and its properties demonstrated to be correct}\\\hline
+  {Availability}\index{Availability Property} & L & {The data is accessible and usable when an authorized entity demands access}\\\hline
+  {Fidelity/Representation}\index{Fidelity/Representation Property} & F & {How well the data maps to the real-world entity it is trying to model}\\\hline
+  {Priority}\index{Priority Property} & P & {The data is presented / transmitted / made available in the order required}\\\hline
+  {Sequencing\index{Sequencing, Data}} & Q & {The data is preserved in the order required}\\\hline
+  {Intended Destination / Usage}\index{Intended Destination/Usage Property} & U & {The data is only sent to those that should have
+  access to
+  it}\\\hline
+  {Accessibility}\index{Accessibility Property} & B & {The data is visible only to those that should see it}\\\hline
+  {Suppression}\index{Suppression Property} & S & {The data is intended never to be used again}\\\hline
+  {History}\index{History Property} & H & {The data has an audit trail of changes}\\\hline
+  {Lifetime}\index{Lifetime Property} & E & {When does the safety-related data expire}\\\hline
+  {Disposability / Deletability}\index{Disposability/Deletability Property} & D & {The data can be permanently removed when required}\\\hline
+  {Goldilocks\index{Goldilocks Property}} & G & {The data is just the right size --- not too much and not too little}\\\hline
+  {Analysability\index{Analysability Property}} & Z & {The data is of a suitable size, type and representation (including any metadata) to enable it be usefully analysed}\\\hline
+  {Explainability\index{Explainability Property}} & X & {The data can be meaningfully explained to those who need to understand it by a suitable mechanism}\\\hline
+\end{longtable}
+
+\clearpage
+\autoref{tab:issuesCrossReference} illustrates where the data issues discussed in
+\hyperref[tab:issues]{section}~\ref{tab:issues} %Clunky, but \autoref inserted "subsubsection"
+can result in
+loss of one or more \index{Property!Data}Data Properties (x = potential loss of property).
+
+\begin{longtable}{|L{\dsiwgColumnWidth{0.16}}|%
+    C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|%
+    C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|%
+    C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|%
+    C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|%
+    C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|%
+    C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|}
+  \caption{Properties that can be lost through issues}
+  \label{tab:issuesCrossReference}
+  \\\hline
+  & \rotatebox{90}{\index{Integrity Property}Integrity}
+  & \rotatebox{90}{\index{Completeness!Property}Completeness}
+  & \rotatebox{90}{\index{Consistency!Property}Consistency}
+  & \rotatebox{90}{\index{Continuity Property}Continuity}
+  & \rotatebox{90}{Format}
+  & \rotatebox{90}{\index{Accuracy Property}Accuracy}
+  & \rotatebox{90}{Resolution\index{Resolution Property}}
+  & \rotatebox{90}{Traceability}
+  & \rotatebox{90}{Timeliness\index{Timeliness Property}}
+  & \rotatebox{90}{Verifiability}\index{Verifiability Property}
+  & \rotatebox{90}{\index{Availability Property}Availability}
+  & \rotatebox{90}{Fidelity/Representation\index{Fidelity/Representation Property}}
+  & \rotatebox{90}{Priority} & \rotatebox{90}{Sequencing\index{Sequencing, Data}}
+  & \rotatebox{90}{Intended Destination/Usage\index{Intended Destination/Usage Property}\ }
+  & \rotatebox{90}{Accessibility}
+  & \rotatebox{90}{Suppression}
+  & \rotatebox{90}{History}
+  & \rotatebox{90}{Lifetime}
+  & \rotatebox{90}{Disposability/Deletability}
+  & \rotatebox{90}{Goldilocks\index{Goldilocks Property}}
+  & \rotatebox{90}{Analysability\index{Analysability Property}}
+  & \rotatebox{90}{Explainability\index{Explainability Property}}
+  %
+  \\\hline\TableHeadColour{Issue} &%
+  \TableHeadColour{I} & \TableHeadColour{C} & \TableHeadColour{N} & \TableHeadColour{Y} &%
+  \TableHeadColour{O} & \TableHeadColour{A} & \TableHeadColour{R} & \TableHeadColour{T} &%
+  \TableHeadColour{M} & \TableHeadColour{V} & \TableHeadColour{L} & \TableHeadColour{F} &%
+  \TableHeadColour{P} & \TableHeadColour{Q} & \TableHeadColour{U} & \TableHeadColour{B} &%
+  \TableHeadColour{S} & \TableHeadColour{H} & \TableHeadColour{E} & \TableHeadColour{D} &%
+  \TableHeadColour{G} & \TableHeadColour{Z} & \TableHeadColour{X}\\\hline
+  \endfirsthead
+    \caption[]{Properties that can be lost through issues (continued)}
+    \\\hline
+    & \rotatebox{90}{\index{Integrity Property}Integrity}
+    & \rotatebox{90}{\index{Completeness!Property}Completeness}
+    & \rotatebox{90}{\index{Consistency!Property}Consistency}
+    & \rotatebox{90}{\index{Continuity Property}Continuity}
+    & \rotatebox{90}{Format}
+    & \rotatebox{90}{\index{Accuracy Property}Accuracy}
+    & \rotatebox{90}{Resolution\index{Resolution Property}}
+    & \rotatebox{90}{Traceability}
+    & \rotatebox{90}{Timeliness\index{Timeliness Property}}
+    & \rotatebox{90}{Verifiability}\index{Verifiability Property}
+    & \rotatebox{90}{\index{Availability Property}Availability}
+    & \rotatebox{90}{Fidelity/Representation\index{Fidelity/Representation Property}}
+    & \rotatebox{90}{Priority} & \rotatebox{90}{Sequencing\index{Sequencing, Data}}
+    & \rotatebox{90}{Intended Destination/Usage\index{Intended Destination/Usage Property}\ }
+    & \rotatebox{90}{Accessibility}
+    & \rotatebox{90}{Suppression}
+    & \rotatebox{90}{History}
+    & \rotatebox{90}{Lifetime}
+    & \rotatebox{90}{Disposability/Deletability}
+    & \rotatebox{90}{Goldilocks\index{Goldilocks Property}}
+    & \rotatebox{90}{Analysability\index{Analysability Property}}
+    & \rotatebox{90}{Explainability\index{Explainability Property}}
+    %
+    \\\hline\TableHeadColour{Issue} &%
+    \TableHeadColour{I} & \TableHeadColour{C} & \TableHeadColour{N} & \TableHeadColour{Y} &%
+    \TableHeadColour{O} & \TableHeadColour{A} & \TableHeadColour{R} & \TableHeadColour{T} &%
+    \TableHeadColour{M} & \TableHeadColour{V} & \TableHeadColour{L} & \TableHeadColour{F} &%
+    \TableHeadColour{P} & \TableHeadColour{Q} & \TableHeadColour{U} & \TableHeadColour{B} &%
+    \TableHeadColour{S} & \TableHeadColour{H} & \TableHeadColour{E} & \TableHeadColour{D} &%
+    \TableHeadColour{G} & \TableHeadColour{Z} & \TableHeadColour{X}\\\hline
+  \endhead
+  \multicolumn{22}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  Fluidity       &   &   &   &   &   &   &   & x &   & x &   & x &   &   &   &   &   & x &   &   & x & x & x \\\hline
+  Reuse          &   & x &   &   &   & x &   & x & x & x &   & x &   &   & x &   & x & x & x & x & x &   & x \\\hline
+  Ageing         &   & x &   &   &   & x &   &   & x &   &   & x &   &   & x & x & x & x & x & x & &   & x \\\hline
+  Transformation & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x \\\hline
+  \index{Data!Owner}Ownership      &   &   &   &   &   &   &   & x &   & x & x &   &   &   & x & x &   & x &   &   &   &   & x \\\hline
+  Archiving / Retrieval &   &   &   &   &   &   &   &   &   &   &   &   &   &   & x & x & x & x & x & x &   & x & \\\hline
+  Biasing        & x & x & x & x &   & x &   &   & x & x &   & x & x & x &   &   &   &   &   &   &   & x & x \\\hline
+  Falsification / Misinformation & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x \\\hline
+  Defaulting     & x & x & x & x &   & x &   &   &   &   &   & x &   &   &   &   &   &   &   &   &   & x & \\\hline
+  Sentinels      & x & x &   & x &   & x &   &   &   &   &   &   &   & x &   &   &   &   &   &   &   & x & \\\hline
+  Aliasing       & x & x &   & x &   & x & x & x &   & x & x & x &   &   &   &   &   &   &   &   &   & x & x \\\hline
+  Disassociation & x &   &   & x &   & x &   & x & x & x & x & x & x & x & x & x & x & x & x & x &   & x & x \\\hline
+  Masking        & x & x & x & x &   & x &   &   &   & x &   & x &   &   &   &   &   &   &   &   &   & x & x \\\hline
+  \index{Completeness!Property}Incompleteness & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x \\\hline
+  Volume         &   &   &   &   &   &   &   &   &   & x &   &   &   &   &   &   &   &   &   &   & x & x & x \\\hline
+  Interpretation & x & x & x &   & x & x & x &   & x & x &   & x &   &   &   &   &   &   &   &   &   & x & x \\\hline
+  Distribution   & x & x & x & x &   &   &   & x &   &   & x &   & x & x & x & x &   & x &   & x &   & x & x \\\hline
+\end{longtable}
+\clearpage
+\subsubsection{\gls{hazop} Guidewords}\index{HAZOP}
+\label{bkm:HazopGuidewords}
+A \acrfull{hazop} \cite{citation:iec61882:2016}
+provides a structured approach for identifying hazards. It involves a multidisciplinary team collaborating to identify potential hazards and operability problems. Structure and \index{Completeness!Hazard Identification}completeness are supported through the use of guideword prompts, for example, considering the implications if software components perform functions early, late or not at all. These prompts are intended to stimulate imaginative thinking, to focus the study and to elicit ideas and discussion.
+
+\autoref{tab:HazopShort}\index{HAZOP} lists a set of guidewords for a data-focused \gls{hazop}, based upon the \index{Property!Data}properties defined in \autoref{tab:PropertiesOfData}. The intent here is to assess the impact of each guideword on the property under consideration. For example, the first row considers \dsiwgTextIT{loss} of \index{Integrity Property}integrity, \dsiwgTextIT{partial loss} of \index{Integrity Property}integrity, and so on.
+The list is non-exhaustive. Other guidewords may be useful for particular systems, or may be used to ensure the Data Safety Assessment is fully integrated within the system safety assessment\index{Safety Assessment!System}\index{System Safety Assessment|see{Safety Assessment, System}}. Note that a more detailed version of this table, including specific \gls{hazop}\index{HAZOP} Data Considerations, is available at \autoref{bkm:guidewords}.
+
+\begin{longtable}{|L{\dsiwgColumnWidth{0.25}}|L{\dsiwgColumnWidth{0.75}}|}
+  \caption{\gls{hazop} guidewords: concise guide}\index{HAZOP}
+  \label{tab:HazopShort}
+  \\\hline\TableHeadColour{Property} & \TableHeadColour{\acrshort{hazop} Data Guidewords}\\\hline
+  \endfirsthead
+  \caption[]{\gls{hazop} guidewords: concise guide (continued)}
+  \\\hline\TableHeadColour{Property} & \TableHeadColour{\acrshort{hazop} Data Guidewords}\\\hline
+  \endhead
+  \multicolumn{2}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  {Integrity}\index{Integrity Property} & {Loss, partial loss, incorrect, multiple}\\\hline
+  {Completeness}\index{Completeness!Property} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
+  {Consistency}\index{Consistency!Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
+  {Continuity}\index{Continuity Property} & {Loss, partial loss, incorrect, late, loss of sequence}\\\hline
+  {Format}\index{Format Property} & {Loss, partial loss, incorrect, multiple}\\\hline
+  {Accuracy}\index{Accuracy Property} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
+  {Resolution\index{Resolution Property}} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
+  {Traceability}\index{Traceability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
+  {Timeliness\index{Timeliness Property}} & {Loss, partial loss}\\\hline
+  {Verifiability}\index{Verifiability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
+  {Availability}\index{Availability Property} & {Loss, partial loss, multiple, too early, too late}\\\hline
+  {Fidelity/Representation}\index{Fidelity/Representation Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
+  {Priority}\index{Priority Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
+  {Sequencing\index{Sequencing, Data}} & {Loss, partial loss, incorrect, multiple}\\\hline
+  {Intended Destination / Usage\index{Intended Destination/Usage Property}} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
+  {Accessibility}\index{Accessibility Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
+  {Suppression}\index{Suppression Property} & {Loss, partial loss, incorrect, too early, too late, too much, too little}\\\hline
+  {History}\index{History Property} & {Loss, partial loss, incorrect, multiple}\\\hline
+  {Lifetime}\index{Lifetime Property} & {Loss, too early, too late, incorrect, multiple, loss of sequence}\\\hline
+  {Disposability / Deletability}\index{Disposability/Deletability Property} & {Loss, partial loss, incorrect, too early, too late}\\\hline
+  {Goldilocks\index{Goldilocks Property}} & {Loss, partial loss, incorrect, too early, too late, too much,
+    too little (insufficient), spurious}\\\hline
+  {Analysability\index{Analysability Property}} & {Loss, partial loss, incorrect, too much, too little, loss of sequence, loss of tooling}\\\hline
+  {Explainability\index{Explainability Property}} & {Loss, partial loss, incorrect, too early, too late, too much, too little, loss of sequence, loss of skills, loss of tooling}\\\hline
+\end{longtable}
+
+\clearpage
+\subsection{Analyse Risks}
+\subsubsection{Establishing \glspl{dsal}}\index{Assurance Level!Data}
+\label{bkm:Establishing-DSALS}
+\hyperref[bkm:DSAL-table-section]{Section}~\ref{bkm:DSAL-table-section} %Clunky, but \autoref inserted "paragraph"
+presented a method for the assignment of \gls{dsal}s, by combining Severity and Likelihood through a risk matrix, such as \autoref{tab:DSAL-risk-matrix}. This section describes approaches that may be used to determine the Severity and Likelihood appropriate to the loss of any given \index{Property!Data}property. In principle, \autoref {tab:Likelihood} and \autoref{tab:Severity} are used together with \autoref{tab:DSAL-risk-matrix} to determine a \gls{dsal}. However it must be emphasised that the methods presented within this document to determine Severity and Likelihood, and to combine them to determine a \gls{dsal} should not be slavishly followed, but should be defined based upon the overall \index{Safety Requirement!System}safety requirements of the system being assessed. Examples of situations that may require such alternate approaches are described in
+\hyperref[bkm:activities:analyse:partofsystemsafetyactivities]{section}~\ref{bkm:activities:analyse:partofsystemsafetyactivities}, %Clunky, again avoidging "paragraph"
+while potential approaches to customisation are described in \autoref{bkm:DsalCustomisation}.
+Such customisation is encouraged, but it is essential that any customised approach is recorded in the \gls{dsmp}.
+
+The likelihood of a data safety related risk is qualitatively determined by
+consideration of the significance of a data error, along with the defences currently in place against such errors. These factors may be addressed by
+considering the following characteristics:
+
+\begin{enumerate}
+  \item \dsiwgTextBF{Proximity}: how directly a data failure will lead to an accident;
+  \item \dsiwgTextBF{Dependency}: how dependent the application is on the data set;
+  \item \dsiwgTextBF{Prevention}: the ability of the systems architect / developers to guard against errors;
+  \item \dsiwgTextBF{Detection}: the likelihood of being able to detect a data failure prior to an accident; and
+  \item \dsiwgTextBF{Correction}: the ability of the system to work around or correct errors.
+\end{enumerate}
+
+For example, errors that are easy to guard against are associated with low likelihoods. Conversely, errors that are difficult to detect are associated with high likelihoods. \autoref {tab:Likelihood} illustrates how aspects of these characteristics map to three, qualitative likelihoods.
+
+\begin{longtable}{|C{\dsiwgColumnWidth{0.19}}|C{\dsiwgColumnWidth{0.27}}|C{\dsiwgColumnWidth{0.27}}|C{\dsiwgColumnWidth{0.27}}|}
+  \caption{Calculation of likelihood}
+  \label{tab:Likelihood}
+  \\\hline
+  \TableHeadColour{} & \multicolumn{3}{c|}{\TableHeadColourCX{Likelihood}}\\\cline{2-4}
+  \multirow{-2}*{\TableHeadColourCX{}} & \TableDimColourCX{\cbstart High\cbend} & \TableDimColourCX{Medium} & \TableDimColourCX{Low}\\\hline
+  \endfirsthead
+  \caption[]{Calculation of likelihood (continued)}
+  \\\hline\TableHeadColour{} & \multicolumn{3}{c|}{\TableHeadColourCX{Likelihood}}\\\cline{2-4}
+  \multirow{-2}*{\TableHeadColourCX{}} & \TableDimColourCX{High} & \TableDimColourCX{Medium} & \TableDimColourCX{Low}\\\hline
+  \endhead
+  \multicolumn{4}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  Proximity & %
+    A known use of the data is highly likely to lead to an accident. & %
+    A possible use of the data could lead to an accident. & %
+    All currently foreseen uses of the data could lead to harm only via lengthy and indirect routes.\\
+    \hline
+  Dependency & %
+    Data is completely relied upon. & %
+    Data is indirectly relied upon. & %
+    Little reliance on data.\\
+    \hline
+  Prevention & %
+    Difficult or impossible to guard / barrier against errors. & %
+    Possible to guard / barrier against errors. & %
+    Easy to guard / barrier against error.\\
+    \hline
+  Detection & %
+    Low or no chance of anything else detecting an error. & %
+    Some other people / systems are involved in checking the data. & %
+    Many other people / systems are involved in checking the data.\\
+    \hline
+  Correction & %
+    Difficult or impossible to correct or workaround errors. & %
+    Possible to correct or workaround errors. & %
+    Easy to correct or workaround errors.\\
+    \hline
+\end{longtable}
+
+When applying this table to a specific data-related risk it is likely that consideration of different characteristics will result in different likelihoods. In order to provide an overall likelihood, it is assumed that the actions implied in the above table are taken. For example, a low likelihood for the ``prevention'' characteristic is only valid if the easy guard / barrier is actually implemented. Similarly, it is assumed that if an error is found, under the ``detection'' characteristic, an appropriate \index{Response}response is implemented. With those assumptions in place, the overall \gls{dsal}\index{Assurance Level!Data} is
+associated with
+the lowest likelihood of any characteristic.
+
+Note that the approach described above in the determination of likelihood may seem non-intuitive, as we look for the {\bf lowest} likelihood, not the highest. However in doing so, it is important to only apply those rows of the table which are valid for the issue under consideration. Thus, for example, if it would be easy to implement a guard against a given error, but that guard is not actually in place, it would not be valid to claim that the likelihood is Low, on the basis of the Prevention row. In general, it should always be possible to determine likelihood based upon Proximity and Dependency, however the benefits of Prevention, Detection and Correction will not always be present.
+
+Risk severity is estimated against a five-point scale, as indicated in \autoref{tab:Severity}.
+
+%\clearpage
+\begin{longtable}{|C{\dsiwgColumnWidth{0.2}}|L{\dsiwgColumnWidth{0.6}}|}
+  \caption{Definition of severity}
+  \label{tab:Severity}
+  \\\hline
+  \TableHeadColourCX{Severity} & \TableHeadColour{Description}\\\hline
+  \endfirsthead
+    \caption[]{Definition of severity (continued)}
+  \\\hline
+  \TableHeadColourCX{Severity} & \TableHeadColour{Description}\\\hline
+  \endhead
+    \multicolumn{2}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  Minor & %
+    Minor injury or temporary discomfort for one or two people. Minor environmental impact.\\
+    \hline
+  Moderate & %
+    An accident resulting in minor injuries affecting several people or one serious injury. Some environmental impact.\\
+    \hline
+  Significant & %
+    An accident resulting in minor injuries affecting many people or a few serious injuries. Significant environmental impact.\\
+    \hline
+  Major & %
+    A serious accident resulting in serious injuries affecting a number of people, or a single death. Major environmental impact.\\
+    \hline
+  Catastrophic & %
+    An accident resulting in several deaths. The accident could affect the general public or have wide and catastrophic environmental impact.\\
+    \hline
+\end{longtable}
+
+As noted earlier, \glspl{dsal}\index{Assurance Level!Data} have some commonality with things like (Item / Function) \index{Assurance Level!Development}Development Assurance Levels (IDALs / \glspl{fdal}). However, this commonality does not extend across all aspects. For example, there is an accepted calculus of \glspl{fdal} in which two independent \index{Integrity Property}lower-integrity functions can be used to replace a single \index{Integrity Property}higher-integrity function. There are two reasons why this type of calculus is not appropriate for \glspl{dsal}:
+
+\begin{enumerate}
+  \item The definition of a \gls{dsal}\index{Assurance Level!Data} already caters for interactions. For example, using two independent \index{Artefact, Data}Data Artefacts to provide similar information to a system function reduces the ``dependency'' of each artefact.
+  \item These types of consideration are most closely related to system architecture, from which \index{Artefact, Data}Data Artefacts, associated \index{Property!Data}Data Properties and risks are derived. Hence, rather than applying any calculus at the \gls{dsal}\index{Assurance Level!Data} tier it is more appropriate to apply this to, for example, FDALs, with \glspl{dsal} changing as a consequence of the revised system definition.
+\end{enumerate}
+
+\subsubsection{Analysing \glspl{dsal}}\index{Assurance Level!Data}
+When considering the possibility of data affecting software or software affecting data, the degree of contribution and existing mitigation\index{Mitigation} position are important. The mitigations should be proportionate and full credit for existing mitigations may reduce or obviate the need for additional work. A particular case is the use of strong checksums to ``wrap'' the data. If these are preserved through processing and can be checked later on, then undetected  corruption situations can be largely discounted.
+
+With regards to the first case (i.e., \dsiwgTextBF{data affecting software}) the issue is that the data used by the system may affect the software execution in a way that could credibly lead to hazards, but only where this data-induced effect is not easily detected or mitigated by other means. If this is the situation then appropriate measures need to be put in place \dsiwgTextIT{within the data} to mitigate this risk. Alternatively (or additionally), if the software within the system can be modified, mitigations\index{Mitigation} could be placed \dsiwgTextIT{within the software} to achieve or enhance the mitigation needed:
+
+\begin{enumerate}
+  \item \dsiwgTextBF{Mitigation within the data}\index{Mitigation} In many cases the best or only option is to improve the quality of the data to avoid the issue. This can be done by introducing a \gls{dsal}\index{Assurance Level!Data} for the data, related to the severity of the hazard which may be induced, and thereby addressing the issue at cause. In this case, the \gls{dsal} is bearing a large amount of responsibility. This may mean that a greater number of the ``Recommended'' risk \index{Treatment!Risk}treatment methods and approaches (identified in the following phase) need to be implemented.
+  \item \dsiwgTextBF{Mitigation within the software} If the data cannot be assured to a \gls{dsal}\index{Assurance Level!Data} (e.g., if it is supplied by a third party or legacy system), sometimes changes can be made to the software in the system to improve the situation. These mitigations could be functional (e.g., introduction of better range checking, rejection of illegal combinations of data values). This requires not only specific software changes but also associated verification of these new features and any software changes will have to be implemented to an appropriate \index{Assurance Level!Software}Software Assurance Level. However there may be no particular functional mitigation\index{Mitigation} or set of mitigations that can be targeted at the particular issue (e.g., testing for illegal combinations of values is too complex). In this latter case, potentially the complete set of software within the system responsible for manipulating the data should be developed (or re-developed) to a suitable \index{Assurance Level!Software}Software Assurance Level. This level should be related to the severity of hazards it is mitigating.
+\end{enumerate}
+
+With regards to the second case (i.e., \dsiwgTextBF{software affecting data}) the issue is that the software may affect (e.g., corrupt, delete) the data in a way that key \index{Property!Safety}safety properties may be lost and, furthermore, that loss may not be easily detected. In general the key \index{Property!Data}Data Properties should be considered to see if any important ones for this data may be jeopardised. If so, a \index{Assurance Level!Software}Software Assurance Level from an appropriate standard or guideline should be introduced that mitigates this risk of undetected property loss. This \index{Assurance Level!Software}Software Assurance Level should be determined by the hazards that could be caused, and may be localised to the software that can cause the problem.
+
+However there are specific functional and architectural approaches that may reduce or avoid the need for a \index{Assurance Level!Software}Software Assurance Level, including use of strong checksums and digital signatures, as well as techniques such as storing multiple copies, independent channels and so on. However it is important that the software performing the check of the \index{Property!Data}Data Property will itself need to be developed to the introduced \index{Assurance Level!Software}Software Assurance Level. The key is to establish what the software in the system is doing to the data: if the operations are simple and non-changing, then the risk is lower; if the operations are complex involving transforming the data, using the data to calculate and insert new values, or reformatting the data then the risk is higher.
+
+It is necessary to decide how effective the functional mitigations\index{Mitigation} are in reducing impact to the particular \index{Property!Data}Data Properties, e.g., a strong checksum may be very effective at detecting unwanted change and therefore lower the \index{Assurance Level!Software}Software Assurance Level (from the perspective of data-related requirements). However a checksum may not help at all if the issue is one of timely message delivery. More information on the use of checksums in the aviation domain is available in \cite{citation:koopman2015selection}; this information is likely to be applicable to other domains as well.
+
+\clearpage %Manual page break
+\subsection{Evaluate and Treat Risks}
+\label{bkm:EvaluateAndTreat}
+\subsubsection{Risk \index{Treatment!Risk}Treatment}
+There are a range of approaches that could be used to treat data-related risks. One option might be to redesign part of a system, either to remove the risk or to incorporate safety devices. Alternatively, ways of mitigating (or, more generally, treating) the risk could be devised. Another option could be to conduct further analysis, for example to better understand the likelihood of a risk occurring. In extreme cases, risk evaluation may lead to a recommendation to cancel a project.
+
+It is apparent that some of these approaches involve repeating activities (or part of activities) discussed in earlier sections of this document. This type of repetition is to be expected given the iterative nature of risk management.
+
+Discussion is an important part of risk evaluation, allowing a variety of different perspectives to be brought to bear. Documentation is also important, partly to allow these discussions to occur on an even footing and partly to ensure that decisions and supporting rationale are recorded.
+
+\subsubsection{Mitigating Data Safety Risks}\index{Mitigation|textbf}
+A range of methods and approaches can be used to mitigate the identified data safety risks. Since mitigation\index{Mitigation} can be a complex process, requiring collaboration with all system engineering elements, a collection of high-level mitigation measures is provided; these may particularly assist those attempting to explain the process to non-practitioners, or those conducting assessments in less regulated environments. For practitioners assessing systems which do not have a high safety criticality, these high-level mitigation measures may prove sufficient.
+
+For practitioners conducting assessments in highly regulated environments, or for highly safety-critical systems, sets of appropriate mitigation\index{Mitigation} measures should be derived from the high-level table. To assist these practitioners, suggested methods and approaches are provided in a series of more detailed tables. These methods and approaches have been developed through cross-industry collaboration, but they may not be complete, especially for different types of system. 
+
+The practitioner should always consider whether the mitigation\index{Mitigation} measures used to mitigate the data safety risks are sufficient for their purposes. In highly safety-critical systems, each data safety risk can be linked to a system-level hazard (or a new system-level hazard identified). Each hazard is tracked in accordance with the existing system safety method and mitigations are reviewed in terms of their feasibility, potential to introduce new or amended hazards, and effectiveness.
+
+\paragraph{High-level Mitigation Measures}
+\autoref{tab:HighLevelMitigations} presents a number of generally applicable mitigation measures.
+Each of these mitigation measures should be reviewed to establish whether it is relevant to the system under assessment.
+
+For each \index{Assurance Level!Data}Data Safety Assurance Level, the tables indicate whether the method / approach is:
+\begin{itemize}
+  \item Highly Recommended (HR);
+  \item Recommended (R); or
+  \item No recommendation for or against being used (-).
+\end{itemize}
+
+\begin{longtable}%
+  {%
+    |C{\dsiwgColumnWidth{0.08}}|L{\dsiwgColumnWidth{0.22}}|C{\dsiwgColumnWidth{0.05}}|C{\dsiwgColumnWidth{0.05}}%
+    |C{\dsiwgColumnWidth{0.05}}|C{\dsiwgColumnWidth{0.05}}|L{\dsiwgColumnWidth{0.5}}|%
+  }%
+  \caption{High-level mitigation measures}\index{Mitigation}
+  \label{tab:HighLevelMitigations}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}\index{Assurance Level!Data}}}\index{Assurance Level!Data} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColourCX{Ref}} & \multirow{-2}*{\TableHeadColour{Mitigation Measure}} & %
+  \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & \multirow{-2}*{\TableHeadColour{Comment}}\\\hline
+  \hline
+  \endfirsthead
+    \caption[]{High level mitigation measures (continued)}\index{Mitigation}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}\index{Assurance Level!Data}}}\index{Assurance Level!Data} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColourCX{Ref}} & \multirow{-2}*{\TableHeadColour{Mitigation Measure}} & %
+  \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & \multirow{-2}*{\TableHeadColour{Comment}}\\\hline
+  \hline
+  \endhead
+    \multicolumn{7}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  M.01 & %
+    Documentation of data context and suitability for use & %
+    HR & HR & HR & HR & %
+    e.g., data flow diagram to document and agree how data is handled in the system, recording the impact of design decisions on the data aspects of the safety case\\%
+    \hline
+  M.02 & %
+    Definition of \index{Data!Owner}data ownership through the data lifecycle\index{Lifecycle!Data} in the system & %
+    R & R & HR & HR & %
+    e.g., governance model, interface control document\index{Interface!Control Document}\\%
+    \hline
+  M.03 & %
+    Definition and traceability of data requirements & %
+    HR & HR & HR & HR & %
+    e.g., requirements management, use of test data / test cases\\
+    \hline
+  M.04 & %
+    Recorded trustability of the data source(s) & %
+    R & R & HR & HR & %
+    e.g., source of the data is trusted (with ‘trusted’ to be defined in detail for the system), or there are multiple sources of data which are correlated\\%
+    \hline
+  M.05 & %
+    Editing limitations & %
+    R & R & HR & HR & %
+    e.g., encapsulation%
+    \footnote{Sometimes referred to as ``data hiding'', encapsulation hides the physical representation of data.}
+    of data, access limitations\\%
+    \hline
+  M.06 & %
+    Diverse and / or redundant manipulation of data & %
+    R & R & HR & HR & %
+    e.g.\ data partitioning separation of data that is managed differently (architectural decisions)\\%
+    \hline
+  M.07 & %
+    Automatic system checking functionality &
+    -  & R & HR & HR & %
+    e.g., Built-In Test (BIT), heartbeat functionality\\%
+    \hline
+  M.08 & %
+    Monitored, controlled, or redundant manipulation of data & %
+    - & - & R & HR & %
+    e.g., redundant channels processing the data as hot standby\\
+    \hline
+  M.09 & %
+    Diverse and / or redundant storage of data & %
+    R & R & HR & HR & %
+    e.g., redundant storage of data, multiple different media types used to back up the data\\
+    \hline
+  M.10 & %
+    Data recovery mechanisms &
+    R & R & HR & HR & %
+    e.g., backward recovery, error correcting codes\\
+    \hline
+  M.11 & %
+    Tracking of data & %
+    R & R & HR & HR & %
+    e.g., digital signatures, sequence numbers, logging of data processing events, using metadata, configuration management\\
+    \hline
+  M.12 & %
+    Recorded derivation of test data & %
+    R & R & HR & HR & %
+    e.g., test data derived from an established system and supported by field evidence, or from another `trusted' source\\
+    \hline
+  M.13 & %
+    Documented compliance against the data requirements & %
+    HR & HR & HR & HR &
+    e.g., use of test data / test cases\\
+    \hline
+\end{longtable}
+
+\paragraph{Detailed Methods and Approaches}
+\label{bkm:DetailedMethods}
+The following collection of tables details methods and approaches which may be used by practitioners conducting \index{Safety Assessment}safety assessments. The tables map the methods and approaches to Data Categories. To aid both legibility and usability, these data categories are abbreviated using the scheme shown in
+\autoref{tab:DataCategoryAbbreviations}.
+
+It should be noted that the five Data Categories\index{Category!Data} presented in \autoref{tab:DataCategoryAbbreviations} are a subset of those presented in \autoref{tab:CategoriesShort}, which presents a comprehensive list of Data Categories\index{Category!Data}. The five presented in \autoref{tab:DataCategoryAbbreviations} have been used to populate the tables within this document which are used for the selection of methods and approaches. The addition of further Data Categories\index{Category!Data} to \autoref{tab:DataCategoryAbbreviations} is likely to be associated with expansion or customisation of the methods and approaches tables. Future versions of this guidance may incorporate these enhancements --- however users of the guidance are also encouraged to do this as part of the customisation process associated with their own organizations or projects.
+
+\begin{longtable}{|L{\dsiwgColumnWidth{0.2}}|C{\dsiwgColumnWidth{0.2}}|}
+  \caption{Data category\index{Category!Data} abbreviations}
+  \label{tab:DataCategoryAbbreviations}
+  \\\hline
+  \TableHeadColour{Data Category} & \TableHeadColourCX{Abbreviation}\\
+  \hline
+  \endfirsthead
+    \caption[]{Data category abbreviations (continued)}
+  \\\hline
+  \TableHeadColour{Data Category} & \TableHeadColourCX{Abbreviation}\\
+  \hline
+  \endhead
+    \multicolumn{2}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  Verification\index{Verification Data} & V\\\hline
+  Infrastructure\index{Infrastructure Data} & I\\\hline
+  Dynamic\index{Dynamic Data} & D\\\hline
+  Performance\index{Performance Data} & P\\\hline
+  Justification\index{Justification Data} & J\\\hline
+\end{longtable}
+
+The tables also map the methods and approaches to the \index{Property!Data}Data Properties. To aid legibility, the properties
+which were defined in \autoref{tab:PropertiesOfData} have been assigned abbreviations
+using the scheme shown in \autoref{tab:DataPropertyAbbreviations}.
+
+\begin{longtable}{|L{\dsiwgColumnWidth{0.3}}|C{\dsiwgColumnWidth{0.2}}|}
+  \caption{\index{Property!Data}Data property abbreviations}
+  \label{tab:DataPropertyAbbreviations}
+  \\\hline
+  \TableHeadColour{Data Property} & \TableHeadColourCX{Abbreviation}\\
+  \hline
+  \endfirsthead
+    \caption[]{Data property abbreviations (continued)}
+  \\\hline
+  \TableHeadColour{Data Property} & \TableHeadColourCX{Abbreviation}\\
+  \hline
+  \endhead
+      \multicolumn{2}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  Integrity\index{Integrity Property} & I\\\hline
+  Completeness\index{Completeness!Property} & C\\\hline
+  Consistency\index{Consistency!Property} & N\\\hline
+  Continuity\index{Continuity Property} & Y\\\hline
+  Format\index{Format Property} & O\\\hline
+  Accuracy\index{Accuracy Property} & A\\\hline
+  Resolution\index{Resolution Property} & R\\\hline
+  Traceability\index{Traceability Property} & T\\\hline
+  Timeliness\index{Timeliness Property} & M\\\hline
+  Verifiability\index{Verifiability Property} & V\\\hline
+  Availability\index{Availability Property} & L\\\hline
+  Fidelity/Representation\index{Fidelity/Representation Property} & F\\\hline
+  Priority\index{Priority Property} & P\\\hline
+  Sequencing\index{Sequencing, Data} & Q\\\hline
+  Intended Destination / Usage\index{Intended Destination/Usage Property} & U\\\hline
+  Accessibility\index{Accessibility Property} & B\\\hline
+  Suppression\index{Suppression Property} & S\\\hline
+  History\index{History Property} & H\\\hline
+  Lifetime\index{Lifetime Property} & E\\\hline
+  Disposability / Deletability\index{Disposability/Deletability Property} & D\\\hline
+  Goldilocks\index{Goldilocks Property} & G\\\hline
+   Analysability\index{Analysability Property} & Z\\\hline
+   Explainability\index{Explainability Property} & X\\\hline
+\end{longtable}
+
+In an attempt to aid usability, these detailed methods and approaches tables have been organized into eight, loosely-defined categories:
+\begin{itemize}
+  \item System Design\index{Category!Approach!System Design};
+  \item Data Design\index{Category!Approach!Data Design};
+  \item Data Implementation\index{Category!Approach!Data Implementation};
+  \item Data Migration\index{Category!Approach!Data Migration};
+  \item Data Testing\index{Category!Approach!Data Testing};
+  \item Test Data\index{Category!Approach!Test};
+  \item Media - Paper\index{Category!Approach!Media -- Paper}; and 
+  \item Media - Electronic\index{Category!Approach!Media -- Electronic}.
+\end{itemize}
+
+The method for using these tables when considering any given \index{Artefact, Data}data artefact, is as follows:
+\begin{itemize}
+    \item Determine the \gls{dsal}\index{Assurance Level!Data} applicable to the \index{Artefact, Data}artefact, using \autoref{tab:DSAL-risk-matrix} in association with \autoref{tab:Likelihood} and \autoref{tab:Severity}.
+    \item Determine the Data Category\index{Category!Data}, using the abbreviations in \autoref{tab:DataCategoryAbbreviations}.
+    \item Determine the list of applicable \index{Property!Data}Data Properties, using the abbreviations in \autoref{tab:DataPropertyAbbreviations}. This will generally provide a list of several applicable abbreviations.
+\end{itemize}
+
+Then consider each row in each table (or each table that you wish to use for this assessment). For each row, if:
+\begin{itemize}
+    \item The Data Category\index{Category!Data} matches the Data Category\index{Category!Data} for this \index{Artefact, Data}artefact and
+    \item At least one of the \index{Property!Data}Data Properties listed in that row matches a \index{Property!Data}Data Property for the artefact 
+\end{itemize}
+then the row is likely to be applicable to the \index{Artefact, Data}artefact. The result for that row is therefore found from the \gls{dsal}\index{Assurance Level!Data} column, since if:
+\begin{itemize}
+    \item The relevant \gls{dsal} entry is ``HR'', then use of the Technique on this row is Highly Recommended.
+    \item The relevant \gls{dsal} entry is ``R'', then use of the Technique is Recommended.
+    \item The relevant \gls{dsal} entry is ``-'', then the technique should be considered, as it may be relevant in certain application domains, but this guidance document is unable to take a view on its application in a generic context.
+\end{itemize}
+
+To give a specific example, consider the row corresponding to the first Technique in \autoref{tab:MethodsSystemDesign}. This Technique will apply to \index{Artefact, Data}data artefacts where:
+\begin{itemize}
+    \item The Data Category\index{Dynamic Data} is Dynamic (``D'' from \autoref{tab:DataCategoryAbbreviations}) and
+    \item The \index{Artefact, Data}data artefact holds one or more of the \index{Integrity Property}properties \index{Integrity Property}Integrity, \index{Completeness!Property}Completeness or Verifiability\index{Verifiability Property} (``I'', ``C'' or ``V'' from \autoref{tab:DataPropertyAbbreviations}).
+\end{itemize}
+In such a case, the Technique would be Highly Recommended if the \index{Artefact, Data}data artefact were of \gls{dsal}\index{Assurance Level!Data} 3 or 4, Recommended if the \gls{dsal} were 2, or should merely be considered if the \gls{dsal} were 1.
+
+Many dots have been placed in the table to indicate Data Categories\index{Category!Data} and \index{Property!Data}Data Properties which are not applicable to the Technique under consideration. The dots enable the tables to be assessed very quickly, as they enable the letters representing specific Data Categories\index{Category!Data} and \index{Property!Data}Data Properties to always be presented in the same position within the table. For example, the \index{Property!Data}Data Property Verifiability\index{Verifiability Property} (``V'' from \autoref{tab:DataPropertyAbbreviations} can easily be seen to appear against the first two Techniques of \autoref{tab:MethodsSystemDesign}, whereas it does not appear in the next seven Techniques --- this can be seen without actually reading the text, but merely looking at the pattern presented by the letters and dots. 
+
+Within each table, the ``Serial'' column lists a unique serial number for each technique. The serial numbers simply provide a unique reference which aligns with those implemented within the toolset.
+
+\paragraph{System Design}
+
+% This next table breaks the rules slightly, with a width of 1.005, as opensans was updated in TeXlive 2019
+% Breaking the rules was the only way to keep the page layout in 3.3 aligned with that in 3.2. 
+\begin{longtable}
+  {%
+    |C{\dsiwgColumnWidth{0.07}}%Index
+    |L{\dsiwgColumnWidth{0.16}}|C{\dsiwgColumnWidth{0.105}}%Technique, category
+    |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
+    |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
+  }%
+  \caption{Mitigation methods: system design}\index{Mitigation}
+  \label{tab:MethodsSystemDesign}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+    \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+    \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+    \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endfirsthead
+  \caption[]{Mitigation methods: system design (continued)}\index{Mitigation}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+    \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category} & %
+    \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+    \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endhead
+    \multicolumn{9}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  SD.01 & Built-in-Test / Built-in-Test Equipment (BIT / BITE) &  \usefont{T1}{cmtt}{m}{n}{..D..} & - & R & HR & HR & Application tests the data (e.g., at start-up or when requested by an operator). &  \usefont{T1}{cmtt}{m}{n}{IC.......V.............}\\
+  \hline
+  SD.02 & Cyclic / Continuous BIT & \dsiwgTextTT{..D..} & - & - & R & HR & Application applies tests to the data it is processing continuously (e.g., for a live data stream) or periodically (e.g., every nth message, every hour). & \dsiwgTextTT{IC.Y.....VL............}\\
+  \hline
+  SD.03 & Backward recovery & \dsiwgTextTT{..D..} & R & R & HR & HR & If a fault in data has been detected, the system resets to an earlier internal data set, which has been proven consistent. & \dsiwgTextTT{IC.....................}\\
+  \hline
+  SD.04 & Parity Checks & \dsiwgTextTT{..D..} & R & R & HR & HR & Within data, e.g., Hamming codes, Reed-Solomon, Hagelbarger. & \dsiwgTextTT{I......................}\\
+  \hline
+  SD.05 & Automatic Error Correction & \dsiwgTextTT{..D..} & R & R & HR & HR & Detected errors are corrected automatically. & \dsiwgTextTT{IC.....................}\\
+  \hline
+  SD.06 & Checksums / Cyclic Redundancy Checks (CRCs) / Hashes & \dsiwgTextTT{..D..} & - & R & HR & HR & Digests of data sets are produced, included with the data set and checked to provide confidence that the data is unaltered. & \dsiwgTextTT{IC..................G..}\\
+  \hline
+  SD.07 & Digital Signatures & \dsiwgTextTT{..D..} & - & R & HR & HR & For non-repudiation and \index{Integrity Property}integrity of data. & \dsiwgTextTT{I......T......U.....G..}\\
+  \hline
+  SD.08 & Sequence Numbers & \dsiwgTextTT{..D..} & R & R & HR & HR & Data bears sequence numbers so the \index{Integrity Property}integrity of a data stream can be checked (e.g., monotonic increase, duplicate detection). & \dsiwgTextTT{ICN.........PQ.........}\\
+  \hline
+  SD.09 & Automatic Repeat Request & \dsiwgTextTT{..D..} & R & R & HR & HR & Automatic Repeat-reQuest (ARQ) to repeat transmission of data which has not been received correctly. & \dsiwgTextTT{IC.Y................G..}\\
+  \hline
+  SD.10 & Auditing Facilities & \dsiwgTextTT{..DP.} & - & R & HR & HR & Changes to \index{Property!Data}Data Properties are audited so the before and after values are recorded and also other related information such as the author and the time of the change. & \dsiwgTextTT{.......T.V.......H...ZX}\\
+  \hline
+  SD.11 & Logging Facilities & \dsiwgTextTT{..DP.} & R & R & HR & HR & Data processing events are logged to allow support staff to monitor the health of the system and provide diagnostic information. & \dsiwgTextTT{.......T.........H...ZX}\\
+  \hline
+  SD.12 & Encapsulation & \dsiwgTextTT{..D..} & R & R & HR & HR & The hiding of data so that it is only accessible through well-defined interfaces. & \dsiwgTextTT{..............UB.......}\\
+  \hline
+  SD.13 & Multiple Stores & \dsiwgTextTT{..D..} & - & - & R & HR & The same instance of a data set or data items is stored in multiple locations. & \dsiwgTextTT{...............B.H.....}\\
+  \hline
+  SD.14 & Homogeneous Redundancy & \dsiwgTextTT{..D..} & - & - & R & HR & Data is processed using homogeneous redundant channels; detected faults in data of one channel cause processing to switch to another channel. & \dsiwgTextTT{IC.Y....M..............}\\
+  \hline
+  SD.15 & Heterogeneous Redundancy & \dsiwgTextTT{..D..} & - & - & R & HR & Data is processed using heterogeneous redundant channels; detected faults in data of one channel cause processing to switch to another channel. & \dsiwgTextTT{IC.Y....M..............}\\
+  \hline
+  SD.16 & Data \index{Integrity Property}Integrity Sampling & \dsiwgTextTT{..D..} & HR & HR & R & R & The \index{Integrity Property}integrity of subsets of data is periodically checked, in accordance with a given selection criteria (e.g., random, critical records). & \dsiwgTextTT{IC..O.....L............}\\
+  \hline
+  SD.17 & Sanity / Reasonability Checks & \dsiwgTextTT{V.D..} & R & R & HR & HR & Dedicated processing implemented to check that data is within reasonable tolerances and / or logically / semantically consistent (e.g., range checks, date checks, record counts, record sizes, special values - NaN). & \dsiwgTextTT{I...O...............G..}\\
+  \hline
+  SD.18 & Data Correlation & \dsiwgTextTT{..D..} & R & R & HR & HR & Data from a number of sources exists to permit a cross-correlation of the data supplied from one source (the master) with other sources. & \dsiwgTextTT{ICNY...................}\\
+  \hline
+  SD.19 & Data Partitioning & \dsiwgTextTT{..D..} & R & R & HR & HR & To separate data that is managed differently, creating independence so that a whole data set does not require validation after a change. & \dsiwgTextTT{...............B.......}\\
+  \hline
+  SD.20 & Syntax Checks & \dsiwgTextTT{VID..} & R & R & HR & HR & Semantic checking of data values and sequences based on defined rule sets. & \dsiwgTextTT{I.N.O...............G..}\\
+  \hline
+  SD.21 & Feedback testing & \dsiwgTextTT{..D..} & HR & HR & R & R & To check output data by comparing it with the input source. & \dsiwgTextTT{IC.Y...T.V..........G..}\\
+  \hline
+  SD.22 & Information Redundancy & \dsiwgTextTT{..D..} & HR & HR & R & R & Additional redundant information is supplied from diverse sources. The validity of the data coming from the diverse sources can be checked against each other. & \dsiwgTextTT{IC..................G..}\\
+  \hline
+  SD.23 & Reverse Translation & \dsiwgTextTT{..D..} & - & R & HR & HR & To verify data output of a process is correct, by attempting to create the source data from the output data and comparing this with the original source. & \dsiwgTextTT{IC.Y...T..............X}\\
+  \hline
+  SD.24 & Metadata & \dsiwgTextTT{..DP.} & - & R & HR & HR & Auditable data are sent with the data that is about the data (e.g., source, issue state, expiry date). & \dsiwgTextTT{..N....T.V..PQ....E..ZX}\\
+  \hline
+\end{longtable}
+
+\clearpage% Avoids having a single row of the table on the first page 
+\paragraph{Data Design}
+This table addresses design aspects, including the construction of data storage structures and methods.
+\begin{longtable}
+  {%
+    |C{\dsiwgColumnWidth{0.07}}%Index
+    |L{\dsiwgColumnWidth{0.16}}|C{\dsiwgColumnWidth{0.105}}%Technique, category
+    |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
+    |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
+  }%
+  \caption{Mitigation methods: data design}\index{Mitigation}
+  \label{tab:MethodsDataDesign}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+    \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+    \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+    \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endfirsthead
+   \caption[]{Mitigation methods: data design (continued)}\index{Mitigation}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+    \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{\index{Category!Data}} & %
+    \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+    \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endhead
+    \multicolumn{9}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  DD.01 & Governance Model & \dsiwgTextTT{VI..J} & R & R & HR & HR & A governance model is established that defines, e.g., \index{Data!Owner}data ownership, processing roles and responsibilities, processing authorizations and permissions. & \dsiwgTextTT{I....A.T......U.S..D..X}\\
+  \hline
+  DD.02 & Data Process Definition & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Documented and agreed process definitions for how data is handled. & \dsiwgTextTT{.......T......U.....G.X}\\
+  \hline
+  DD.03 & Data Flow Diagram & \dsiwgTextTT{VIDPJ} & HR & HR & HR & HR & To describe the data flow in a diagrammatic form. & \dsiwgTextTT{..............U......Z.}\\
+  \hline
+  DD.04 & Data Model & \dsiwgTextTT{VIDPJ} & HR & HR & HR & HR & To articulate how data is organized. & \dsiwgTextTT{..N.O................ZX}\\
+  \hline
+  DD.05 & Client Sign-off & \dsiwgTextTT{VI.PJ} & R & R & HR & HR & \cbstart Agreement from the client that the system architecture and design are appropriate for the data considered.\cbend & \dsiwgTextTT{......R..V.............}\\
+  \hline
+  DD.06 & Data Quality Correction Mechanisms & \dsiwgTextTT{...P.} & - & R & HR & HR & \cbstart Design incorporates a data quality management system.\cbend & \dsiwgTextTT{IC.Y...................}\\
+  \hline
+  DD.07 & Configuration Management & \dsiwgTextTT{VIDPJ} & HR & HR & HR & HR & A formal process that controls changes to the data and data model. & \dsiwgTextTT{.......T.........H.....}\\
+  \hline
+  DD.08 & Data Dictionary & \dsiwgTextTT{VIDPJ} & HR & HR & HR & HR & A collection of descriptions of the data objects or items in a data model for the benefit of data users. & \dsiwgTextTT{..N.O.R....F.........ZX}\\
+  \hline
+  DD.09 & Formal Methods & \dsiwgTextTT{..D..} & - & R & R & HR &
+  \cbstart To specify data (or data formats) in a precise, mathematical manner.\cbend &
+  \dsiwgTextTT{.CN.O..T....PQ......GZX}\\
+  \hline
+\end{longtable}
+
+\clearpage% Avoids having the following title as a widow on the first page
+\cbstart
+\paragraph{Data Verification}
+\label{bkm:dataVerification}
+\cbend
+A number of issues need to be considered during the implementation phase of a programme, to ensure that at any point in the programme we know how much we can rely upon the data. \autoref{tab:MethodsDataProcedures} addresses those mitigations\index{Mitigation} relevant to this whole programme phase, not just from data capture or generation. It therefore includes aspects of data management, checking and expiry.
+\begin{longtable}
+  {%
+    |C{\dsiwgColumnWidth{0.07}}%Index
+    |L{\dsiwgColumnWidth{0.16}}|C{\dsiwgColumnWidth{0.105}}%Technique, category
+    |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
+    |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
+  }%
+  \caption{Mitigation methods: data verification}\index{Mitigation}
+  \label{tab:MethodsDataProcedures}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data}& %
+  \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+  \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endfirsthead
+  \caption[]{Mitigation methods: data verification (continued)}\index{Mitigation}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+  \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+  \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endhead
+    \multicolumn{9}{r}{\sl Continued on next page}
+\endfoot
+\endlastfoot
+  DI.01 & Review / Inspection & \dsiwgTextTT{VIDPJ} & HR & HR & HR & HR & Manual review / inspection of data possibly involving data visualization tools. & \dsiwgTextTT{IC..O.....L...........X}\\
+  \hline
+  DI.02 & Statistics-Based Sampling & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & More appropriate for real-time large and / or volume data. Could be manual selection, a form of random selection or comparison against statistical norms. & \dsiwgTextTT{I.NY.A...............Z.}\\
+  \hline
+  DI.03 & Ground-Truth Check & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Inspection against physical measurements (e.g., lengths, positions, heights) taken in the real world. & \dsiwgTextTT{ICN..AR..V.F..........X}\\
+  \hline
+  DI.04 & Auditing & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & A period of comprehensive internal and external testing of the data quality process. & \dsiwgTextTT{ICNYO....V............X}\\
+  \hline
+  DI.05 & Tracing & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Ability to trace data from source across multiple participants in the data supply chain. & \dsiwgTextTT{.......T.V............X}\\
+  \hline
+  DI.06 & Defined Verification Frequency & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Data should contain an indicator of how often it should be revalidated against other (e.g., real-world) source. & \dsiwgTextTT{.........V........E....}\\
+  \hline
+  DI.07 & Defined Data Lifetime(s) & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Information showing when data validity expires. & \dsiwgTextTT{..................E....}\\
+  \hline
+  DI.08 & Data Quality Trend Analysis & \dsiwgTextTT{VIDPJ} & - & - & R & HR & Checking that a data set is consistent with a model of the expected data behaviour (e.g., vibration data increases over time). & \dsiwgTextTT{IC.Y.....V.F.........Z.}\\
+  \hline
+  DI.09 & Authorization & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & A security model is established to control who is authorized to create, view, edit, delete the data. & \dsiwgTextTT{..............UBS..D...}\\
+  \hline
+  DI.10 & Authentication & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Data is authenticated to validate its provenance. & \dsiwgTextTT{.......T.V............X}\\
+  \hline
+  DI.11 & Defined Confidence / Trust Levels & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Criteria are established to provide an objective measurement of the confidence or trust in a given data set. & \dsiwgTextTT{IC.Y.....V.F..........X}\\
+  \hline
+  DI.12 & Independent Check & \dsiwgTextTT{VIDPJ} & - & - & R & HR & A separate person or system is used to check the data independently. & \dsiwgTextTT{I........V.............}\\
+  \hline
+  DI.13 & Update Comparison & \dsiwgTextTT{VIDPJ} & - & R & R & HR & \cbstart Updated data is compared to its previous version (e.g., so the list of changed elements can be compared with a supplier-generated list).\cbend & \dsiwgTextTT{.......T.........H..G..}\\
+  \hline
+\end{longtable}
+
+\clearpage% Avoids having the final row of the table on a page by itself 
+\paragraph{Data Migration}
+\cbstart
+This table addresses migration of data from one system to another system.
+\cbend
+
+New entries DM.10 to DM.15 have been added to address issues identified during the development of \dsiwgRef{Appendix}{bkm:migration}.
+\begin{longtable}
+  {%
+    |C{\dsiwgColumnWidth{0.07}}%Index
+    |L{\dsiwgColumnWidth{0.16}}|C{\dsiwgColumnWidth{0.105}}%Technique, category
+    |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
+    |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
+  }%
+  \caption{Mitigation methods: data migration}\index{Mitigation}
+  \label{tab:MethodsDataMigration}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+  \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+  \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endfirsthead
+  \caption[]{Mitigation methods: data migration (continued)}\index{Mitigation}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+  \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+  \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endhead
+  \multicolumn{9}{r}{\sl Continued on next page}
+  \endfoot
+  \endlastfoot
+  DM.01 & Manual Load & \dsiwgTextTT{..D..} & R & R & - & - & Data is entered into the system manually relying on human validation and verification. & \dsiwgTextTT{ICNYOA.....F...........}\\
+  \hline
+  DM.02 & Dedicated Translation and Loading Platform & \dsiwgTextTT{..D..} & - & R & HR & HR & For example, using mature enterprise migration \gls{cots} products. & \dsiwgTextTT{ICNYOA.T...F...........}\\
+  \hline
+  DM.03 & Existing / Established System Transfer & \dsiwgTextTT{..D..} & - & R & HR & HR & Use of an existing / established proven transfer mechanism. & \dsiwgTextTT{ICNYOA.T...F...........}\\
+  \hline
+  DM.04 & Client Supervision & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & The client provides independent supervision of activities checking processes, inputs and outputs at agreed points. & \dsiwgTextTT{ICNYOA.....F...........}\\
+  \hline
+  DM.05 & Client Sign-off & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Formal acceptance of the migrated data sets in the target system. & \dsiwgTextTT{ICNYOA.....F...........}\\
+  \hline
+  DM.06 & Incremental switch-over & \dsiwgTextTT{..D..} & - & R & HR & HR & Users are incrementally switched over to the new system rather than as a ``big bang''. & \dsiwgTextTT{ICNYOA.....F...........}\\
+  \hline
+  DM.07 & Parallel Load With Existing System & \dsiwgTextTT{..D..} & - & R & HR & HR & Parallel running of the new system alongside the existing system with data crosschecks between the two systems. & \dsiwgTextTT{ICNYOA.....F...........}\\
+  \hline
+  DM.08 & Shadowing & \dsiwgTextTT{..D..} & - & R & HR & HR & Parallel running of the new system alongside the existing system, only data from the existing system is used operationally, with an experienced user crosschecking between the two systems. & \dsiwgTextTT{ICNYOA.....F...........}\\
+  \hline
+  DM.09 & End to End Import-Export Verification & \dsiwgTextTT{..D..} & - & R & HR & HR & Data is traced and verified at all stages through the entire end to end migration process. & \dsiwgTextTT{ICNYOA.T...F..........X}\\
+  \hline
+DM.10&
+End-to-end Size Compare&
+\dsiwgTextTT{..D..}&
+R&
+R&
+HR&
+HR&
+Data is extracted from new or final system and its size or volume compared with original data as input
+&
+\dsiwgTextTT{IC.Y.....V..........G..}\\\hline
+%
+DM.11&
+End-to-end Content Compare&
+\dsiwgTextTT{..D..}&
+R&
+R&
+HR&
+HR&
+Data is extracted from new or final system and compared with original data as input, possibly on a sample basis
+&
+\dsiwgTextTT{ICN....T.V.F...........}\\\hline
+%
+DM.12&
+Validation Campaign&
+\dsiwgTextTT{..D..}&
+R&
+R&
+HR&
+HR&
+An extensive set of validation checks is performed on the migrated data.
+&
+\dsiwgTextTT{ICNY.....V.............}\\\hline
+%
+DM.13&
+Interpretation Check&
+\dsiwgTextTT{..D..}&
+R&
+R&
+HR&
+HR&
+Migrated data is checked for misinterpretation in the new system (e.g. due to units, national, or cultural aspects).
+&
+\dsiwgTextTT{..N.O....V.F..U......Z.}\\\hline
+%
+DM.14&
+Data Cleanse Trial&
+\dsiwgTextTT{..D..}&
+R&
+R&
+HR&
+HR&
+Data cleansing is tried on subsets of the data and special cases,
+before being applied to the whole set (e.g. removing time-expired, obsolete or repeated data)
+&
+\dsiwgTextTT{IC................EDG..}\\\hline
+%
+DM.15&
+Meta-Data Preservation&
+\dsiwgTextTT{..D..}&
+- &
+- &
+R&
+R&
+Any meta-data as part of the original data set which cannot be incorporated or translated into the new system is preserved
+&
+\dsiwgTextTT{IC.Y...T.........H...ZX}\\\hline
+\end{longtable}
+
+\clearpage% Avoids having The section title as a widow at the bottom of the page 
+\paragraph{Data Checking}
+\begin{longtable}
+  {%
+    |C{\dsiwgColumnWidth{0.07}}%Index
+    |L{\dsiwgColumnWidth{0.16}}|C{\dsiwgColumnWidth{0.105}}%Technique, category
+    |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
+    |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
+  }%
+  \caption{Mitigation methods: data checking}\index{Mitigation}
+  \label{tab:MethodsDataChecking}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+  \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+  \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endfirsthead
+  \caption[]{Mitigation methods: data checking (continued)}\index{Mitigation}
+  \\\hline
+  \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+  \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+  \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{\index{Category!Data}} & %
+  \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+  \hline
+  \endhead
+    \multicolumn{9}{r}{\sl Continued on next page}
+\endfoot
+\endlastfoot
+  DC.01 & Limited / Pre-Operational Deployment & \dsiwgTextTT{.IDP.} & - & R & HR & HR & A period of monitored operation in a specially chosen environment. & \dsiwgTextTT{ICN..A.....F...........}\\
+  \hline
+  DC.02 & Client Sign-off of Data & \dsiwgTextTT{VI.PJ} & - & R & HR & HR & Agreement from the client that the data is appropriate. & \dsiwgTextTT{......R..V.............}\\
+  \hline
+  DC.03 & Non-Critical Trialling & \dsiwgTextTT{..D..} & - & R & HR & HR & Monitored operation in an operational, but non-critical, environment. & \dsiwgTextTT{.....A.....F...........}\\
+  \hline
+  DC.04 & Beta Testing & \dsiwgTextTT{V....} & - & R & HR & HR & Testing with a small group of specially chosen users. & \dsiwgTextTT{ICN..A.....F...........}\\
+  \hline
+  DC.05 & Parallel Running & \dsiwgTextTT{.IDP.} & - & R & HR & HR & Running two systems in parallel and crosschecking between them. & \dsiwgTextTT{ICN..A..M..FP..........}\\
+  \hline
+  DC.06 & Checklists & \dsiwgTextTT{.IDP.} & R & R & HR & HR &
+  Using a checklist to verify that system behaviour is correct, prior to use. This approach can also be effective for detecting otherwise dormant failures and reduces time at risk.
+  & \dsiwgTextTT{ICN.O....VLFP..........}\\
+  \hline
+  DC.07 & Widespread Distribution to User Community & \dsiwgTextTT{.IDP.} & - & R & HR & HR & Large-scale distribution to all users. & \dsiwgTextTT{ICN.OAR.M.LFP..........}\\
+  \hline
+\end{longtable}
+
+\clearpage %Manual page break
+\paragraph{Test Data}
+\begin{longtable}
+  {%
+    |C{\dsiwgColumnWidth{0.07}}%Index
+    |L{\dsiwgColumnWidth{0.16}}|C{\dsiwgColumnWidth{0.105}}%Technique, category
+    |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
+    |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
+  }%
+  \caption{Mitigation methods: test data}\index{Mitigation}
+  \label{tab:MethodsTestData}
+  \\\hline
+\TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+\TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+\multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+\TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+\hline
+\endfirsthead
+  \caption[]{Mitigation methods: test data (continued)}\index{Mitigation}
+\\\hline
+\TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+\TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+\multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+\TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+\hline
+\endhead
+    \multicolumn{9}{r}{\sl Continued on next page}
+\endfoot
+\endlastfoot
+  TD.01 & Using Informal / Ad-hoc Means & \dsiwgTextTT{V....} & R & R & - & - & Data is generated by simple means (e.g, spreadsheets, scripts, basic assumptions). There is no formal checking or review of the method of generation. & \dsiwgTextTT{ICNY.A.....F...........}\\
+  \hline
+  TD.02 & Using Testbed & \dsiwgTextTT{V....} & - & R & HR & HR & A dedicated testbed is a good way to produce test data. It may require configuration and tailoring for the particular application, and this configuration should be managed. & \dsiwgTextTT{ICNY.A.....F........G..}\\
+  \hline
+  TD.03 & Using Simulator & \dsiwgTextTT{V....} & - & R & HR & HR & Simulators (software or hardware) may be able to produce very good test data, obviously depending on how close and detailed a simulation they can achieve. & \dsiwgTextTT{ICNYOAR....F........G..}\\
+  \hline
+  TD.04 & Using Prototype & \dsiwgTextTT{V....} & - & R & HR & HR & Prototypes are often a good way of generating test data for the real system. However they may not produce data with the appropriate range, \index{Accuracy Property}accuracy or precision. & \dsiwgTextTT{ICNY.A.....F........G..}\\
+  \hline
+  TD.05 & Using Manual Means & \dsiwgTextTT{V....} & R & R & - & - & Simple test data can be produced by manual means, although this may be prone to human error. & \dsiwgTextTT{ICNY.A.....F........G..}\\
+  \hline
+  TD.06 & Using Dedicated Platform & \dsiwgTextTT{V....} & - & R & HR & HR & For complex and critical systems a dedicated test platform is required which can produce realistic test data for all interfaces and inputs. & \dsiwgTextTT{ICNY.AR..V.FPQ.........}\\
+  \hline
+  TD.07 & Using Existing / Established System & \dsiwgTextTT{V....} & - & R & HR & HR & Where a new system replaces an old one, then data can often be extracted from the old system to test the new one. Data formats may change so translation may be required. & \dsiwgTextTT{ICNYOAR.MV.FPQU.....G..}\\
+  \hline
+  TD.08 & Using Initial Runs of New System & \dsiwgTextTT{V....} & R & R & R & R & This method is often used where the system is breaking new ground and there is no prototype or legacy system to produce test data. Initial operations may differ from eventual usage, so test data must evolve. & \dsiwgTextTT{ICNYOAR.MV.FPQ.........}\\
+  \hline
+  TD.09 & Derived from Real Data & \dsiwgTextTT{V....} & R & R & HR & HR & Where real data is available this is usually a good basis for generating test data (e.g., by modification to increase the test space coverage). & \dsiwgTextTT{ICNY.A.....F........G.X}\\
+  \hline
+  TD.10 & Statistical Profiling Post-Production & \dsiwgTextTT{V....} & - & - & R & HR & If a statistical analysis of the data can be produced then greater confidence in the quality of the test data can be obtained. & \dsiwgTextTT{ICNY.A...V.F..........X}\\
+  \hline
+  TD.11 & Produced by Client & \dsiwgTextTT{V....} & R & R & R & HR & Ideally the client is involved in producing or at least checking the test data. & \dsiwgTextTT{ICNY.A...V.F........G..}\\
+  \hline
+  TD.12 & Client Sign-off & \dsiwgTextTT{V....} & R & R & HR & HR & Where possible, the client should formally agree and sign off the test data as appropriate. & \dsiwgTextTT{ICNY.A...V.F..........X}\\
+  \hline
+  TD.13 & Error Seeding & \dsiwgTextTT{V....} & R & R & HR & HR & This is where errors are deliberately inserted into the data set to demonstrate the effectiveness of data validation. & \dsiwgTextTT{ICNYOAR.MV.F........G..}\\
+  \hline
+  TD.14 & Data Reuse & \dsiwgTextTT{V....} & R & R & HR & HR & Reusing data for one project that was created and thoroughly assured for another project. This can be effective but the read-across should be established. & \dsiwgTextTT{ICNY.A.....F........G.X}\\
+  \hline
+  TD.15 & Feedback Testing & \dsiwgTextTT{V....} & R & R & R & R & To check output data by comparing it with the input source. & \dsiwgTextTT{ICNY.A.....F...........}\\
+  \hline
+\end{longtable}
+
+\clearpage% Avoids having a single row of the table on the first page 
+\paragraph{Media - Paper}
+\begin{longtable}
+  {%
+    |C{\dsiwgColumnWidth{0.07}}%Index
+    |L{\dsiwgColumnWidth{0.16}}|C{\dsiwgColumnWidth{0.105}}%Technique, category
+    |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
+    |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
+  }%
+  \caption{Mitigation methods: data media handling --- paper / physical storage}\index{Mitigation}
+  \label{tab:MethodsDataMediaPhysical}
+  \\\hline
+\TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+\TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+\multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+\TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+\hline
+\endfirsthead
+  \caption[]{Mitigation methods: data media handling --- paper / physical storage (continued)}\index{Mitigation}
+\\\hline
+\TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+\TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+\multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+\TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+\hline
+\endhead
+    \multicolumn{9}{r}{\sl Continued on next page}
+\endfoot
+\endlastfoot
+  MP.01 & Photographic Copies & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Photocopy and store separately. & \dsiwgTextTT{.C.............B.H.....}\\
+  \hline
+  MP.02 & Scan to Electronic Format & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Retain both paper and electronic copies. & \dsiwgTextTT{.C.............B.H.....}\\
+  \hline
+  MP.03 & Copies Held at Different Locations & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Meaning of ``different'' depends on data criticality and similarity of location-based risks. & \dsiwgTextTT{.........VL....B.......}\\
+  \hline
+  MP.04 & Limited Access & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Control (e.g., by procedure) who can access the data. & \dsiwgTextTT{..............U........}\\
+  \hline
+  MP.05 & Secure Storage & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Physical measures to prevent unauthorized access. & \dsiwgTextTT{..............U........}\\
+  \hline
+  MP.06 & Manual Inspection & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Used to check data when generated and periodically thereafter. & \dsiwgTextTT{IC.....................}\\
+  \hline
+  MP.07 & Suitable Physical Environment & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & For example, prevent water ingress, control temperature. & \dsiwgTextTT{I.........L.......E....}\\
+  \hline
+  MP.08 & Defined Handling Procedures & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & To ensure that changes to the data can be attributed. & \dsiwgTextTT{I.............UB.H.....}\\
+  \hline
+  MP.09 & Repair / Restoration Programme & \dsiwgTextTT{VIDPJ} & - & - & R & HR & To protect against degradation and to ensure \index{Availability Property}availability. & \dsiwgTextTT{I.........L............}\\
+  \hline
+  MP.10 & Indexing / Cataloguing & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & To support efficient accessibility. & \dsiwgTextTT{..........L............}\\
+  \hline
+  MP.11 & Lifetime Planning & \dsiwgTextTT{VIDPJ} & - & - & R & HR & For example, to avoid gradual quality reduction by repeatedly ``copying a copy''. & \dsiwgTextTT{..................ED...}\\
+  \hline
+\end{longtable}
+
+\clearpage
+\paragraph{Media - Electronic}
+\begin{longtable}
+  {%
+    |C{\dsiwgColumnWidth{0.07}}%Index
+    |L{\dsiwgColumnWidth{0.16}}|C{\dsiwgColumnWidth{0.105}}%Technique, category
+    |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
+    |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
+  }%
+  \caption{Mitigation methods: data media handling --- electronic storage}\index{Mitigation}
+  \label{tab:MethodsDataMediaElectronic}
+  \\\hline
+\TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+\TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+\multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+\TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+\hline
+\endfirsthead
+  \caption[]{Mitigation methods: data media handling --- electronic storage (continued)}\index{Mitigation}
+\\\hline
+\TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
+\TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
+\multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
+\TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
+\hline
+\endhead
+    \multicolumn{9}{r}{\sl Continued on next page}
+\endfoot
+\endlastfoot
+  ME.01 & Regular Refresh / Rewrite & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Of magnetic media or flash memory. & \dsiwgTextTT{I.................E....}\\
+  \hline
+  ME.02 & Suitable Physical Environment & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Store media in a clean, low-humidity environment at a steady temperature, cool but not cold. & \dsiwgTextTT{I.........L.......E....}\\
+  \hline
+  ME.03 & Copies at Different Locations & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Physically separate to cover natural disasters, accidental or malicious damage. & \dsiwgTextTT{.........VL....B.......}\\
+  \hline
+  ME.04 & Backups / Duplication & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Backups are essential. Frequency of backup depends on rate of change. The number of generations to keep relates to the impact of data loss. & \dsiwgTextTT{..........L............}\\
+  \hline
+  ME.05 & Sample Restores & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Sample restores should be performed at intervals to ensure that the backups are readable and retrievable. & \dsiwgTextTT{..........L............}\\
+  \hline
+  ME.06 & Multiple Copies & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & At least two backups should be kept, preferably in diverse formats. & \dsiwgTextTT{.........VL............}\\
+  \hline
+  ME.07 & Copy to Latest Media Format & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Anticipate obsolescence and plan a smooth transition to new technologies. & \dsiwgTextTT{..........L............}\\
+  \hline
+  ME.08 & Media Physically Secured & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Access to, and removal of, media should be controlled by suitable procedures. Access permissions should be reviewed at intervals. & \dsiwgTextTT{.......T......U..H.....}\\
+  \hline
+  ME.09 & Resilient / Redundant Format & \dsiwgTextTT{VIDPJ} & - & - & R & HR & This may involve less use of compression, use of error detection and correction protocols, and (at the highest level) two or more redundant data servers. & \dsiwgTextTT{IC........L............}\\
+  \hline
+  ME.10 & Long-Lifetime Format & \dsiwgTextTT{VIDPJ} & - & - & R & HR & The best formats should be adopted where available. & \dsiwgTextTT{..........L.......E....}\\
+  \hline
+  ME.11 & Easily Translatable / Convertible Format & \dsiwgTextTT{VIDPJ} & - & - & R & HR & Adopt widely-used, well-documented, general-purpose formats in preference to specialist proprietary formats. & \dsiwgTextTT{....O.....L............}\\
+  \hline
+  ME.12 & Copy to Cloud Storage & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Must specify whether a private cloud or a public cloud shall be used. Cloud storage may not be suitable for highly confidential data. & \dsiwgTextTT{..........L............}\\
+  \hline
+  ME.13 & Copy to Archiving organization & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Consider the required level of data \index{Integrity Property}integrity and confidentiality; also, the \index{Integrity Property}integrity and long-term viability of the archiving organization, and plans in case it ceases to function. & \dsiwgTextTT{..........L............}\\
+  \hline
+\end{longtable}
+
+\paragraph{Recording the Data Safety Risk Mitigation}\index{Mitigation}
+The Data Safety Management Plan can be used to document:
+\begin{itemize}
+  \item The tables of mitigation measures (or methods and approaches) used for the system, context, and planned implementation under assessment;
+  \item Any specific mitigation measures identified for the system and their source / justification;
+  \item Planned compliance with the tables; and
+  \item Confirmation that the mitigation measures are sufficiently complete and consistent.
+\end{itemize}  
+The overall safety justification for the given project/service/operational context must then provide evidence of compliance against the plan.

@@ -1,0 +1,351 @@
+%================================================================================
+%       Safety Critical Systems Club - Data Safety Initiative Working Group
+%================================================================================
+%                       DDDD    SSSS  IIIII  W   W   GGGG
+%                       D   D  S        I    W   W  G   
+%                       D   D   SSS     I    W W W  G  GG
+%                       D   D      S    I    WW WW  G   G
+%                       DDDD   SSSS   IIIII  W   W   GGG
+%================================================================================
+%               Data Safety Guidance Document - LaTeX Source File
+%================================================================================
+%
+% Description:
+%   Acronyms, Definitions and Glossary section.
+%
+%================================================================================
+\section{Acronyms, Definitions and Glossary (Discursive)} \label{bkm:acronyms}
+
+\dsiwgSectionQuote{The plural of anecdote is not data.}{Mark Berkoff}
+
+%
+%Uncomment the following to have LaTeX automatically list the acronyms and
+%glossary entries used in this document, as indicated by the \gls, \glspl,
+%\acrshort, and \acrfull commands. (All defined in the file 'glossary.tex'
+% Note: some of these now done, where the Perfectit tool identified issues
+% in the existing document. I think it should be \acrlong, not \acrfull.
+% New command \acrentry{} introduced to reduce repetition
+%
+%THIS WILL BE LEFT UNTIL THE NEXT VERSION (2.X OR 3.0)
+%
+%\printglossary[type=acronym]
+%\printglossary
+
+\subsection{Acronyms}
+\begin{longtable}{|L{\dsiwgColumnWidth{0.2}}|L{\dsiwgColumnWidth{0.8}}|}
+  \hline\TableHeadColour{Acronym} & \TableHeadColour{Expansion}\\\hline
+  \endfirsthead
+  \hline\TableHeadColour{Acronym} & \TableHeadColour{Expansion}\\\hline
+  \endhead
+  \endfoot\endlastfoot
+
+  AAL & Above Aerodrome Level\\\hline
+  \acrentry{adiru}
+  \acrentry{aoa}
+  ARP & Aerospace Recommended Practice\\\hline
+  ARQ & Automatic Repeat-reQuest\\\hline
+  ATM & Air Traffic Management\\\hline
+  ATSB & Australian Transport Safety Bureau\\\hline
+  BIT(E) & Built-In Test (Equipment)\\\hline
+	CFIT & Controlled Flight Into Terrain\\\hline
+  CNS & Communications, Navigation, Surveillance\\\hline
+  CoD & Certificate of Design\\\hline
+  \acrentry{cots}
+  \acrentry{cpu}
+  CRC & Cyclic Redundancy Check\\\hline
+  CSV & Comma Separated Variable\\\hline
+  CT & Computed Tomography\\\hline
+  DCB & Data Coordination Board\\\hline
+  DME & Distance Measuring Equipment\\\hline
+	DOC & Department Of Corrections\\\hline
+  DRACAS & Defect Reporting And Corrective Action System\\\hline
+  \acrentry{dsal}
+  DSG & Data Safety Guidance\\\hline
+  \acrentry{dsiwg}
+  \acrentry{dsmp}
+  ECS & Electronic Chart System\\\hline
+  ECU & Electronic Control Unit\\\hline
+	EDM & Entry Demonstrator Module\\\hline
+	EGPWS & Enhanced Ground Proximity Warning System\\\hline
+  EHR & Electronic Health Record\\\hline
+  ENC & Electronic Navigational Chart\\\hline
+  ESA & European Space Agency\\\hline
+	FAA & Federal Aviation Administration\\\hline
+  \acrentry{fcpc}
+  \acrentry{fdal}
+  FMGS & Flight Management Guidance System\\\hline
+  FMS & Flight Management System\\\hline
+	GCS & Ground Control Station\\\hline
+  GP & General Practitioner\\\hline
+	GPS & Global Positioning System\\\hline
+  GTOLS & GPS Take-off and Landing System\\\hline
+  \acrentry{hazop}
+	HSE & Health and Safety Executive\\\hline
+  HUMS & Health and Usage Monitoring System\\\hline
+	ICD & Interface Control Document\\\hline
+  \acrentry{icao}
+  IDAL & Item \index{Assurance Level!Development}Development Assurance Level\\\hline
+  IMC & Instrument Meteorological Conditions\\\hline
+	IMU & Inertial Measurement Unit\\\hline
+  \acrentry{ip}
+	IRS & Inertial Reference System\\\hline
+  ISO & International Organization for Standardization\\\hline %note official name is with z's
+	IV & Intravenous\\\hline
+  LHR & London Heathrow\\\hline
+	MAIB & Maritime Accident Investigation Board (\textit{or} Branch)\\\hline
+        \acrentry{mca}
+        ML & Machine Learning\\\hline
+	MSAW & Minimum Safe Altitude Warning\\\hline
+  NaN & Not a Number\\\hline
+  NOTAM & Notice to Airmen\\\hline
+  \acrentry{odr}
+  OOW & Officer Of the Watch\\\hline
+  OSI & Open Systems Interconnection\\\hline
+  \acrentry{pcr}
+	RDA & Radar Doppler Altimeter\\\hline
+	SAR & Search And Rescue\\\hline
+  \acrentry{saswg}
+  \acrentry{scsc}
+  SIL & Safety Integrity Level\\\hline
+  SMP & Safety Management Plan\\\hline
+  SOP & Standard Operating Procedure\\\hline
+  \acrentry{sotif}
+  \acrentry{sss}
+	TCAS & Traffic Collision Avoidance System\\\hline
+	UAS & Unmanned Air System\\\hline
+	USB & Universal Serial Bus\\\hline
+  \acrentry{vhf}
+  \acrentry{vmc}
+  VMS & Voyage Management System\\\hline
+  VOR & VHF Omnidirectional Range\\\hline
+  XML & eXtensible Markup Language\\\hline
+\end{longtable}
+
+\clearpage %Manual page break
+\subsection{Definitions \& Glossary}
+% Odd values required in multirow, to adjust text to centre of multi-line definitions
+\begin{longtable}{|p{\dsiwgColumnWidth{0.2}}|L{\dsiwgColumnWidth{0.6}}|L{\dsiwgColumnWidth{0.2}}|}
+  \hline\TableHeadColour{} & \TableHeadColour{Definition} & \TableHeadColour{Source}\\\hline
+  \endfirsthead
+  \hline\TableHeadColour{} & \TableHeadColour{Definition} & \TableHeadColour{Source}\\\hline
+  \endhead
+  \endfoot\endlastfoot
+  \multicolumn{3}{|l|}{\TableDimColour{A}}\\%{\cellcolor{dsiwgAccentColour} \color{white} A}\\
+  \hline
+  {} & Closeness of agreement between a test result and the accepted reference value. Note that a test result can be observations or measurements. & ISO 19113:2005 \cite{citation:ISO19113}\\
+  \cline{2-3}
+  \multirow{-3.5}*{\index{Accuracy Property|textbf}Accuracy} & A degree of conformance between the estimated or measured value and the true value. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  \index{Artefact, Data|textbf} (data) Artefact & An item, or collection of items, that provides a useful perspective on data
+  generated, processed or consumed by a system. & \\
+  \hline
+  \index{Accuracy, Temporal\textbf}Accuracy (temporal) & Correctness of the temporal references of an item (reporting of error in time measurement). Correctness of ordered events or sequences, if reported. Validity of data with respect to time. & ISO 19138:2006 \cite{citation:ISO19138}\\
+  \hline
+  {} & The required \index{Assurance Level}assurance level for the aeronautical data process is identified, based on the overall system architecture through allocation of risk determined using a preliminary \index{Safety Assessment!System}system safety assessment. & RTCA/DO-200A \cite{citation:ED76}\\
+  \cline{2-3}
+  \multirow{-4.5}*{\index{Assurance Level!Data|textbf}(data) Assurance Level} & An indication of how much assurance is required (commensurate to risk) before deploying software into an operational system. & J Spriggs, based on (EC) No 482/2008 \cite{citation:EC4822008}\\
+  \hline
+  Adaptation Data\index{Adaptation Data} & Data used to customise elements of the Air Traffic Management System for their designated purpose.
+  Adaptation data\index{Adaptation Data} is used to customise elements of the CNS / ATM system for its designated purpose at a specific location.
+  These systems are often configured to accommodate site-specific characteristics.
+  These site dependencies are developed into sets of adaptation data\index{Adaptation Data}.
+  Adaptation data\index{Adaptation Data} includes data that configures the software for a given geographical site, and data that configures a workstation to the preferences and / or functions of an operator.
+  Examples include, but are not limited to:
+  \begin{enumerate}
+  \item Geographical Data - latitude and longitude of a radar site.
+  \item Environmental Data - operator selectable data to provide their specific preferences.
+  \item Airspace Data - sector-specific data.
+  \item Procedures - operational customisation to provide the desired operational role.
+  \end{enumerate}
+  Adaptation data\index{Adaptation Data} may take the form of changes to either database parameters or take the form of pre-programmed options.
+  In some cases, adaptation data\index{Adaptation Data} involves re-linking the code to include different libraries.
+  Note that this should not be confused with recompilation in which a completely new version of the code is generated. & ED-153 \cite{citation:ED153}\\
+  \hline
+  & A representation of aeronautical facts, concepts or instructions in a formalized manner suitable for communication, interpretation or processing. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \cline{2-3}
+  \multirow{-3.5}*{Aeronautical Data} & Data used for aeronautical applications such as navigation, flight planning, flight simulators, terrain awareness, and other purposes. & RTCA/DO-178C \cite{citation:ED12C}\\
+  \hline
+  Availability\index{Availability Property|textbf} & The property of being accessible and usable upon demand by an authorized entity. & ISO27001:2013 \cite{citation:ISO27001:2013}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{B}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{C}}\\
+  Completeness\index{Completeness!Property|textbf} & Completeness of the data provided. & RTCA/DO-200A \cite{citation:ED76}\\
+  \hline
+  & Data that configures a generic software system to a particular instance of its use. & (EC) No 482/2008 \cite{citation:EC4822008}\\
+  \cline{2-3}
+  \multirow{-2.5}*{Configuration Data} & Data that configures a generic software system to a particular instance of its use (e.g., data for flight data processing system for a particular airspace, by setting the positions of airways, reporting points, navigation aids, airports and other elements important to air navigation). & ED-153 \cite{citation:ED153}\\
+  \hline
+  Confidentiality & The property that information is not made available or disclosed to unauthorized individuals, entities, or processes. & ISO27001:2013 \cite{citation:ISO27001:2013}\\
+  \hline
+  (data) Consistency\index{Consistency!Property|textbf} & The property that the data adheres to a common world view (e.g., units). &  \\
+
+  \hline
+  (data) Continuity\index{Continuity Property|textbf} & The property that the data is continuous and regular without gaps or breaks. &  \\
+
+  \hline
+  (data) Correctness & Completeness, \index{Consistency!Self}self-consistency, protection against alteration or corruption and \index{Consistency!With Requirements}consistency with the functional requirements of the data-driven system. & IEC 61508 Part 3 \cite{citation:iec615083}\\
+  \hline
+  (data) Coupling & The dependence of a software component on data not exclusively under the control of that software component. & RTCA/DO-178C \cite{citation:ED12C}\\ 
+  \hline
+  (data) Criticality & Classification of data by the potential effect of erroneous data on the expected operation that is supported by that data. & RTCA/DO-200A \cite{citation:ED76}\\ 
+  \hline
+  Critical Data & Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\ 
+  \hline
+  Customisation (data) & Data used to configure a system or component. & Def(Aust)5679 \cite{citation:DEFOz}\\ 
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{D}}\\
+  \hline
+  & A thing given or granted; something known or assumed as fact, and made the basis of reasoning or calculation; an assumption or premiss from which inferences are drawn. & Oxford English Dictionary (OED)\\
+  \cline{2-3}
+  \multirow{-3.5}*{Data} & A reinterpretable representation of information in a formalized manner suitable for communication, interpretation or processing. & ISO/IEC 2382 \cite{citation:ISO23821}\\
+  \hline
+  Database & A set of data, part or the whole of another set of data, consisting of at least one file that is sufficient for a given purpose or for a given data processing system. & RTCA/DO-178C \cite{citation:ED12C}\\
+  \hline
+  & An `Aeronautical Data Chain' is a conceptual representation of the path that a set, or element of aeronautical data takes from its creation to its end use. An aeronautical data chain is a series of interrelated links wherein each link provides a function that facilitates the origination, transmission and use of aeronautical data for a specific purpose. & RTCA/DO-200A \cite{citation:ED76}\\
+  \cline{2-3}
+  & A collection of organizational data processing functions, where data is transferred from one chain participant to another between data origination and end use. & P. Ensor \cite{citation:Ensor2009}\\
+  \cline{2-3}
+  \multirow{-8}*{Data Chain} & Any combination of two or more data elements, data items, data codes, and data abbreviations in a prescribed sequence to yield meaningful information; for example, ``date'' consists of data elements year, month, and day. & McGraw-Hill Dictionary \cite{citation:McGrawHill}\\
+  \hline
+  (data) Dictionary & The detailed description of data, parameters, variables, and constants used by the system. & RTCA/DO-178C \cite{citation:ED12C}\\
+  \hline
+  Data-Driven Systems & System which relies upon configuration data or lookup tables to define the functionality of the system. & IEC 61508 Part 4 \cite{citation:iec615084}\\
+  \hline
+  Data-intensive System & Systems which make extensive use of large amounts of data. & N. Storey \cite{citation:StoreyFaulkner20031}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{E}}\\
+  \hline
+  & Discrepancy with the universe of discourse. & ISO 19138:2006 \cite{citation:ISO19138}\\
+  \cline{2-3}
+  \multirow{-2}*{(data) Error} & Discrepancy between a data value and the true, specified or theoretically correct value or condition. & P. Ensor \cite{citation:Ensor2009}\\
+  \hline
+  Essential Data & Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred thousand: there is a low probability when using corrupted essential data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{F}}\\
+  \hline
+  \raggedright{(data) Fidelity/ Representation\index{Fidelity/Representation Property|textbf}} & The property describing how well the data maps to the real world entity it is trying to model. &  \\
+  \hline
+
+  \multicolumn{3}{|l|}{\TableDimColour{G}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{H}}\\
+  \hline
+  (data) Hazard & Use of data in the context of a system that could lead to an accident. & SCSC Data Safety Initiative Working Group\\
+  \hline
+  %  Hazard Log & A hazard log is a record keeping tool applied to tracking all hazard analysis, risk assessment and risk reduction activities for the whole-of-life of a safety-related system.&\\
+  Hazard Log & A Hazard Log records all hazard analysis,
+  safety risk assessment and safety risk reduction activities for the ``whole-of-life'' of a safety-related system. &\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{I}}\\
+  \hline
+  & Knowledge communicated concerning some particular fact, subject, or event; that of which one is apprised or told - intelligence, news - as contrasted with data. & Oxford English Dictionary (OED)\\
+  \cline{2-3}
+  \multirow{-3.5}*{Information} & Knowledge that has a contextual meaning. & ISO/IEC 2382  \cite{citation:ISO23821}\\
+  \hline
+  Information (aeronautical) & Information resulting from the assembly, analysis and formatting of aeronautical data. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  & The assurance that a data element retrieved from a storage system has not been corrupted or altered in any ways since the original data entry\index{Data!Entry} or latest authorised amendment. & RTCA/DO-200A \cite{citation:ED76}\\
+  \cline{2-3}
+  & The degree of assurance that a data item and its value have not been lost or altered since the data origination or authorised amendment. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \cline{2-3}
+  & The degree of undetected (at system level) non-conformity of the input value of the data item with its output value. & (EU) No 1207/2011 \cite{citation:EU12072011}\\
+  \cline{2-3}
+  \multirow{-7}*{\index{Integrity Property|textbf}(data) Integrity} & The property of protecting the \index{Accuracy Property}accuracy and completeness of assets, i.e., that which has value to the organization. & ISO27001:2013 \cite{citation:ISO27001:2013}\\
+  \hline
+  (data) Item & Single attribute of a complete data set, which is allocated a value that defines its current status. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{J}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{K}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{L}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{M}}\\
+  \hline
+  Metadata & Data that represents information about data itself. Note that one should distinguish between ``Structural Metadata'', which is data about the design and specification of data structures (and is more properly called ``data about the containers of data'') and ``Descriptive Metadata'', which is about individual instances of application data, the data content. & J. Inge \cite{citation:inge2008improving}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{N}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{O}}\\
+  \hline
+  (data) Origination & Creation of a new data item with its associated value, the modification of the value of an existing data item or the deletion of an existing data item. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  (data) Owner\index{Data!Owner}\index{Owner, Data|see{Data, Owner}} & The individual or organization responsible for a particular Data Artefact, or collection of Data Artefacts. & \\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{P}}\\
+  \hline
+  (data) Product & Dataset or dataset series that conforms to a data product specification. & BS EN ISO 19131:2008 \cite{citation:ISO19131}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{Q}}\\
+  \hline
+  & A degree or level of confidence that the data provided meet the requirements of the user. These requirements include levels of accuracy\index{Accuracy Property}, resolution\index{Resolution Property}, assurance level\index{Assurance Level}, traceability, timeliness\index{Timeliness Property}, completeness, and format. & RTCA/DO-200A \cite{citation:ED76}\\
+  \cline{2-3}
+  & Process by which the Electronic Chart Systems (ECS) Database is produced, the source materials, the resolution\index{Resolution Property} and reproduction \index{Accuracy Property}accuracy of chart features, and the correctness and completeness of data. & ISO 19379:2003 \cite{citation:ISO19379}\\
+  \cline{2-3}
+  \multirow{-8}*{(data) Quality} & A degree or level of confidence that the data provided meets the requirements of the data user in terms of \index{Accuracy Property}accuracy, resolution\index{Resolution Property} and \index{Integrity Property}integrity. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  (data) Property\index{Property!Data} & A characteristic that can be exhibited by a Data Artefact. & \\
+  \hline
+  \raggedright{(data) Quality Attributes} & Accuracy\index{Accuracy Property}, resolution\index{Resolution Property}, \index{Assurance Level}assurance level, traceability, timeliness\index{Timeliness Property}, completeness and format. & RTCA/DO-200A \cite{citation:ED76}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{R}}\\
+  \hline
+  & The smallest difference between two adjacent values that can be represented in a data storage, display or transfer system. & RTCA/DO-200A \cite{citation:ED76}\\
+  \cline{2-3}
+  \multirow{-2.5}*{Resolution}\index{Resolution Property} & A number of units or digits to which a measured or calculated value is expressed and used. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  Response\index{Response} & The way in which an identified risk is addressed; possible responses include avoid/eliminate, treat, or accept as sufficiently low. & \\
+  \hline
+  Routine Data & Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one thousand: there is a very low probability when using corrupted routine data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{S}}\\
+  \hline
+  \raggedright{(data) Safety Assessment}\index{Safety Assessment!Data} & The process of explicitly considering data as part of a system safety assessment, via the means of Data Artefacts, Data Properties and Data Safety Assurance Levels. & \\
+  \hline
+  \raggedright{(data) Safety Assurance Level}\index{Assurance Level!Data} & An indication of the level of rigour with which relevant Data Properties should be demonstrated for appropriate Data Artefacts. & \\
+  \hline
+  \raggedright{(data) Safety Requirement}\index{Safety Requirement!Data} & A requirement to implement an approach specifically designed to achieve, maintain or demonstrate a Data Property (or Properties) for a given Data Artefact (or Artefacts). & \\
+  \hline
+  Sequencing\index{Sequencing, Data|textbf} & The property that the data is preserved in the order required. &\\
+  \hline
+  (data) Set & Identifiable collection of data. Note that a dataset may be a smaller grouping of data which, though limited by some constraint such as spatial extent or feature type, is located physically within a larger dataset. Theoretically, a dataset may be as small as a single feature or feature attribute contained within a larger dataset. A hardcopy map or chart may be considered a dataset. & BS EN ISO 19131:2008 \cite{citation:ISO19131}\\
+  \hline
+  \raggedright{Software Lifecycle Data} & Data that is produced during the software lifecycle\index{Lifecycle!Software} to plan, direct, explain, define, record, or provide evidence of activities (including the software product itself). This data enables the software lifecycle\index{Lifecycle!Software} processes, system or equipment approval and post-approval modification of the software product. & ED-153 \cite{citation:ED153}\\
+  \hline
+  Stakeholder\index{Stakeholder|textbf} & An individual or organization that has some relationship to the system, possibly including a power of veto. & \\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{T}}\\
+  \hline
+  & A measure of the time delay between a change in the real world and the associated database update being available to the user. & P. Ensor \cite{citation:Ensor2009}\\ 
+  \cline{2-3}
+  \multirow{-2.5}*{Timeliness}\index{Timeliness Property} & The difference between the time of output of a data item and the time of applicability of that data item. & (EU) No 1207/2011 \cite{citation:EU12072011}\\ 
+  \hline
+  Traceability & Ability to determine the origin of the data. & RTCA/DO-200A \cite{citation:ED76}\\ 
+  \hline
+  Trace (data) & Data providing evidence of traceability of development and verification processes software lifecycle\index{Lifecycle!Software} data without implying the production of any particular artefact. Trace data may show linkages, for example, through the use of naming conventions or through the use of references or pointers either embedded in or external to the software lifecycle\index{Lifecycle!Software} data. & RTCA/DO-178C \cite{citation:ED12C}\\ 
+  \hline
+  Treatment\index{Treatment!Risk|textbf} & An action taken to reduce or control risk. & \\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{U}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{V}}\\
+  & The activity whereby a data element is checked as having a value that is fully applicable to the identity given to the data element, or a set of data elements that is checked as being acceptable for their purpose. & RTCA/DO-200A \cite{citation:ED76}\\
+  \cline{2-3}
+  \multirow{-3.5}*{(data) Validation} & Process of ensuring that data meets the requirements for the specified application or intended use. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  Validity (period of) & Period between the date and time on which aeronautical information is published and the date and time on which the information ceases to be effective. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  (data) Verification & Evaluation of the output of an aeronautical data process to ensure correctness and \index{Consistency!With Inputs}consistency with respect to the inputs and applicable data standards, rules and conventions used in that process. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \hline
+  Verifiability\index{Verifiability Property|textbf} & The property of the data that it can be checked and its properties demonstrated to be correct &\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{W}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{X}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{Y}}\\
+  \hline
+  \multicolumn{3}{|l|}{\TableDimColour{Z}}\\
+  \hline
+\end{longtable}

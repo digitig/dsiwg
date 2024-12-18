@@ -1,0 +1,65 @@
+%================================================================================
+%       Safety Critical Systems Club - Data Safety Initiative Working Group
+%================================================================================
+%                       DDDD    SSSS  IIIII  W   W   GGGG
+%                       D   D  S        I    W   W  G   
+%                       D   D   SSS     I    W W W  G  GG
+%                       D   D      S    I    WW WW  G   G
+%                       DDDD   SSSS   IIIII  W   W   GGG
+%================================================================================
+%               Data Safety Guidance Document - LaTeX Source File
+%================================================================================
+%
+% Description:
+%   Data Safety Management Plan section.
+%
+%================================================================================
+\section{Data Safety Management Plan (Informative)} \label{bkm:plan}
+
+\dsiwgSectionQuote{Things get done only if the data we gather can inform and inspire those in a position to make a difference.}{Mike Schmoker}
+
+This section gives a suggested \gls{dsmp} table of contents. It is expected that this will be needed only for aspects not already covered in a \gls{smp}, or similar. It can be merged with an \gls{smp}, if appropriate. However it may be useful to consider the distinct data perspective by using a \gls{dsmp} as well as an \gls{smp}. Regardless, a close connection should be maintained between the \gls{smp} and the \gls{dsmp}.
+
+Data Safety Management Plan suggested contents:
+\begin{enumerate}
+  \item Introduction:
+  \begin{itemize}
+    \item Scope and Context (Sets the scene, describes the project, scenario, concept of operations, etc.);
+    \item Boundaries and Interfaces (Describes the main interfaces and exchanges, with a scope boundary diagram.);
+    \item
+      Derived requirements (System-level requirements which impact the data safety process);
+    \item \index{Data!Owner}Owners (Who owns the data under consideration as it progresses through the system?);
+    \item Producers / Consumers (Who are the producers and consumers of the data the system inputs and outputs?);
+    \item Assumptions;
+    \item References; and
+    \item Abbreviations and Acronyms.
+  \end{itemize}
+  \item Analysis of Assigned \gls{dsal}\index{Assurance Level!Data} and \gls{odr} Level (Implications of the data analyses.):
+  \begin{itemize}
+    \item System Integrity Level (SIL), etc., Implications (What impact does the \gls{dsal}\index{Assurance Level!Data} have on the required SIL, or similar measure, and vice versa?);
+    \item Development Implications (Are there any special development considerations? Derived from the SIL if there is one, otherwise what is deemed necessary for this system.);
+    \item Verification Implications (Derived from the SIL if there is one, otherwise what is deemed necessary for this system.);
+    \item Assurance Implications (Derived from the SIL if there is one, otherwise what is deemed necessary for this system.); and
+    \item Process / Procedure Implications (Derived from the SIL if there is one, otherwise what is deemed necessary for this system.).
+  \end{itemize}
+\item
+  Categories
+  of Safety Data in Scope (A list of all the categories\index{Category!Data} to be considered in the system context.).
+  \item Data Requirements Analysis:
+  \begin{itemize}
+    \item Lifecycles\index{Lifecycle!Data} (What data lifecycles are to be used?);
+    \item Specific Targets (Are there any qualitative or quantitative targets for the data?); and
+    \item Security Considerations (How will security be managed in this context? Are there any security / safety conflicts? Are there any security-related causes of data hazards?).
+  \end{itemize}
+  \item Management Approach (How will the organization manage the data safety risks?):
+  \begin{itemize}
+    \item Organization;
+    \item Responsibilities;
+    \item Authorisations; and
+    \item Approvals and Signoffs.
+  \end{itemize}
+  \item Justification Approach (How will the safe usage of the data be justified, e.g., as part of the Safety Case Report?). 
+  \item Analyses / Verifications to be Performed (What analyses or checks are to be performed on the data?).
+  \item Documents to be Produced (The list of documents to be produced related to data aspects.).
+  \item Appendix: \gls{dsal}\index{Assurance Level!Data} Guidelines Response (Tailored version of the tables from this document. What is considered applicable / useful and what is not?).
+\end{enumerate}

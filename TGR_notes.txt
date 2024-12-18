@@ -1,0 +1,4 @@
+1. Makefile created.
+2. Longtable styles removed
+3. mainByTim.bib removed
+4. Front and back covers renamed to remove document version number (evident from the directory it's in anyway) so make can automatically update document when it changes.
