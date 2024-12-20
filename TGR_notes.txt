@@ -2,3 +2,4 @@
 2. Longtable styles removed
 3. mainByTim.bib removed
 4. Front and back covers renamed to remove document version number (evident from the directory it's in anyway) so make can automatically update document when it changes.
+5. Claimed a credit for myself in the frontmatter for helping with the editing.
