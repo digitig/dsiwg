@@ -172,10 +172,10 @@ Two tables are presented to assist the reader in finding incidents and accidents
 \begin{longtable}{|C{\dsiwgColumnWidth{0.07}}|L{\dsiwgColumnWidth{0.16}}|L{\dsiwgColumnWidth{0.37}}|L{\dsiwgColumnWidth{0.14}}|L{\dsiwgColumnWidth{0.1}}|L{\dsiwgColumnWidth{0.15}}|}
   \caption{Incidents and accidents}
   \label{tab:Incidents}
-  \\\hline\TableHeadColourC{Ref.} & \TableHeadColour{Title} & \TableHeadColour{Summary} & \TableHeadColour{Domain} & \TableHeadColour{Year} & \TableHeadColour{\index{Property!Data}Data Property}\\\hline
+  \\\hline\TableHeadColourC{Ref.} & \TableHeadColour{Title} & \TableHeadColour{Summary} & \TableHeadColour{Domain} & \TableHeadColour{Year} & \TableHeadColour{\index{Property!Data}\glsxtrlong{Data Property}}\\\hline
   \endfirsthead
   \caption[]{Incidents and accidents (continued)}
-  \\\hline\TableHeadColourC{Ref.} & \TableHeadColour{Title} & \TableHeadColour{Summary} & \TableHeadColour{Domain} & \TableHeadColour{Year} & \TableHeadColour{\index{Property!Data}Data Property}\\\hline
+  \\\hline\TableHeadColourC{Ref.} & \TableHeadColour{Title} & \TableHeadColour{Summary} & \TableHeadColour{Domain} & \TableHeadColour{Year} & \TableHeadColour{\index{Property!Data}\glsxtrlong{Data Property}}\\\hline
   \endhead
   \multicolumn{6}{r}{\sl Continued on next page}
   \endfoot\endlastfoot
@@ -491,7 +491,7 @@ and that the logged data that the user entered could be used to attack the serve
 For example if a user were to enter into the name field of a html-page\index{HTML} instead of his name a ``delete *.*'' command, along with certain escape sequences\index{Escape sequences},
 it might cause huge damage on the server --- if this data were logged from the software and interpreted from the configuration file.
 
-Data Property involved: \dsiwgTextIT{\index{Integrity Property}Integrity.}
+\Gls{Data Property} involved: \dsiwgTextIT{\index{Integrity Property}Integrity.}
 
 \dsiwgTextBF{Links}
 \begin{itemize}
@@ -612,7 +612,7 @@ Subsequent investigation\index{Investigation!Incident/Accident} revealed that sp
 
 The most significant risk identified thus far by the rail Accident Investigation Board is that a number of the speed restrictions which were in place on the Cambrian lines\index{Cambrian Line} had been invoked to allow pedestrians at level crossings sufficient time to take action, when observing an approaching train. Luckily the failure did not result in an accident --- but this was due to luck, not fail-safe systems on the railway.
 
-This incident highlights the importance of the \dsiwgTextIT{\index{Availability Property}availability} \index{Property!Data}Data Property, as the data had been silently unavailable to trains. In addition, much of the digital audit trail relating to the failure was lost during repeated attempts to correct the problem and get the rail network running again, a loss of the \dsiwgTextIT{history} \index{Property!Data}Data Property.
+This incident highlights the importance of the \dsiwgTextIT{\index{Availability Property}availability} \index{Property!Data}\gls{Data Property}, as the data had been silently unavailable to trains. In addition, much of the digital audit trail relating to the failure was lost during repeated attempts to correct the problem and get the rail network running again, a loss of the \dsiwgTextIT{history} \index{Property!Data}\gls{Data Property}.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -632,7 +632,7 @@ The helicopter was equipped with an \gls{egpws}. This is designed to decrease in
 
 The preliminary investigation\index{Investigation!Incident/Accident} also notes that the flight crew were following an operator-specific route guide: a review of such guides has been recommended.
 
-This incident potentially illustrates the importance of the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} and \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}Data Properties, with respect to the \gls{egpws} databases, and the \dsiwgTextIT{\index{Accuracy Property}accuracy} \index{Property!Data}Data Property, with respect to the route guides.
+This incident potentially illustrates the importance of the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} and \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}Data Properties, with respect to the \gls{egpws} databases, and the \dsiwgTextIT{\index{Accuracy Property}accuracy} \index{Property!Data}\gls{Data Property}, with respect to the route guides.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -651,7 +651,7 @@ During entry, a parachute was deployed as planned. This triggered oscillations t
 
 The investigation\index{Investigation!Incident/Accident} determined the rates that saturated the \gls{imu} could have been predicted. Limitations in the modelling of parachute dynamics meant they were not. The investigation also noted issues with the persistence of the flag used to denote \gls{imu} saturation, as well as inadequate handling of this saturation by the guidance software.
 
-This incident illustrates the importance of the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} Data Property, with respect to the modelling, and the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}Data Property, with respect to the persistence time of the saturation flag.
+This incident illustrates the importance of the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} \gls{Data Property}, with respect to the modelling, and the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}\gls{Data Property}, with respect to the persistence time of the saturation flag.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -666,7 +666,7 @@ In July 2015, it was reported that a public authority was undertaking an investi
 
 Under the regulation of Investigatory Powers Act 2000, Internet Service Providers and indeed other communication service providers (e.g.\ mobile phone network providers) are required to provide data to investigatory bodies such as the Police. This data can be used to support criminal investigation\index{Investigation!Criminal} and prosecutions and in the protection of vulnerable children and adults. The data clearly has the potential to be safety related, but there is no obligation for data providers to treat it as such. In this case the data errors led to a child being exposed to additional risk of harm.
 
-This incident highlights the importance of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}Data Property. It also shows the applicability of Data Safety Guidance to areas that are not traditionally encompassed by safety engineering.
+This incident highlights the importance of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}\gls{Data Property}. It also shows the applicability of Data Safety Guidance to areas that are not traditionally encompassed by safety engineering.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -681,7 +681,7 @@ On 9 May 2015, just minutes into a routine, pre-delivery test flight an Airbus\i
 
 Although not confirmed, reports suggest the torque calibration\index{Torque Calibration} parameters for the engines were wiped during a software installation. The torque calibration\index{Torque Calibration} data is needed to measure and interpret information coming back from the A400M's engines, and is crucial for the \glspl{ecu} that control the aircraft's power systems. 
 
-This accident highlights the importance of the \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}Data Property, specifically with respect to the torque calibration\index{Torque Calibration} parameters.
+This accident highlights the importance of the \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}\gls{Data Property}, specifically with respect to the torque calibration\index{Torque Calibration} parameters.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -701,7 +701,7 @@ review concluded that the submarine\index{Submarine} was operating near to the l
 
 In conclusion, the \gls{maib} report stated, ``The collision happened because the submarine's\index{Submarine} command team believed \dsiwgTextIT{Karen}\index{Trawler Karen} to be a merchant ship, so they did not perceive any risk of collision or need for avoiding action.''
 
-This incident highlights the importance of the \dsiwgTextIT{resolution} \index{Property!Data}Data Property, specifically with regards to resolving a trawler and a merchant vessel. It also highlights the importance of the \dsiwgTextIT{\index{Integrity Property}integrity}, specifically with regards to the information provided from the sonar\index{Sonar} team to the command team. 
+This incident highlights the importance of the \dsiwgTextIT{resolution} \index{Property!Data}\gls{Data Property}, specifically with regards to resolving a trawler and a merchant vessel. It also highlights the importance of the \dsiwgTextIT{\index{Integrity Property}integrity}, specifically with regards to the information provided from the sonar\index{Sonar} team to the command team. 
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -781,7 +781,7 @@ As per company procedures, two days before the Perth-Canberra\index[locationidx]
 
 Two days before the return flight the group was again ``advance accepted'' as all adults. This meant they had all been assigned an `adult weight' of 87 kg. They were checked in at Canberra\index[locationidx]{Australia!ACT!Canberra} Airport and assigned seats at the rear of the aircraft. During take-off the aircraft appeared nose heavy. Significant back pressure was required to rotate the aircraft and lift off from the runway. The aircraft exceeded the calculated take-off safety speed by about 25 kt. The aircraft rose at a higher initial climb speed than usual, but the crew did not receive any warnings. No further issues were experienced during the flight.
 
-This incident demonstrates the importance of the \dsiwgTextIT{\index{Completeness!Property}completeness} Data \index{Property!Data}y (i.e., ensuring that the mandatory ``Gender Description'' field was completed) and the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} \index{Property!Data}Data Property (i.e., ensuring the calculated aircraft loads and balances reflect the real situation). It also illustrates some potential difficulties associated with the use of default data.
+This incident demonstrates the importance of the \dsiwgTextIT{\index{Completeness!Property}completeness} Data \index{Property!Data}y (i.e., ensuring that the mandatory ``Gender Description'' field was completed) and the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} \index{Property!Data}\gls{Data Property} (i.e., ensuring the calculated aircraft loads and balances reflect the real situation). It also illustrates some potential difficulties associated with the use of default data.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -798,7 +798,7 @@ The schedule for the \dsiwgTextIT{Navigator Scorpio}\index{Navigator Scorpio} wa
 
 When the master checked the passage plan, which had been drawn up by the second officer (2/O), he suggested a change to a portion of the route. After discussion with the 2/O the route was left unchanged, but with a requirement that position fixes be obtained every five minutes rather than every fifteen. While acting as the sole bridge watch-keeper the 2/O was distracted by further passage planning activities and lost positional awareness. This led to the grounding of the vessel. After the grounding false information was added to the navigation chart to give the appearance that five minute positional fixes had been taken.
 
-This incident highlights the importance of the \dsiwgTextIT{timeliness\index{Timeliness Property}} \index{Property!Data}Data Property, with respect to both the additional North Sea charts and the master's check of the passage plan.
+This incident highlights the importance of the \dsiwgTextIT{timeliness\index{Timeliness Property}} \index{Property!Data}\gls{Data Property}, with respect to both the additional North Sea charts and the master's check of the passage plan.
 
 In addition, the fluidity of the chart data allowed the 2/O to make false post-grounding additions to create an incorrect impression. According to the \gls{maib}'s report, such actions are not uncommon. These actions affect the \dsiwgTextIT{verifiability}\index{Verifiability Property} of the chart data, which makes post-accident investigations\index{Investigation!Incident/Accident} more complicated.
 
@@ -815,7 +815,7 @@ On 5 December 2012, an MQ-9 reaperMQ-9 reaper remotely piloted aircraft crashed 
 
 The investigation\index{Investigation!Incident/Accident} board concluded that the throttle settings of the \gls{gcs} were incorrectly configured. This misconfiguration arose as the \gls{gcs} was converted from supporting MQ-1 operations to supporting MQ-9 operations. It persisted despite the presence of a checklist, the completion of which should have identified the error. The misconfiguration meant that reverse thrust was commanded whenever the pilot's throttle was in any position except full forward.
 
-This incident highlights the importance of the \dsiwgTextIT{\index{Consistency!Property}consistency} \index{Property!Data}Data Property, with respect to the differences between the \gls{gcs} settings and the aircraft it was meant to be controlling. It also highlights the importance of the \dsiwgTextIT{verifiability}\index{Verifiability Property} Data Property, with respect to the \gls{gcs} settings (and, in particular, the limitations of using checklists to verify data).
+This incident highlights the importance of the \dsiwgTextIT{\index{Consistency!Property}consistency} \index{Property!Data}\gls{Data Property}, with respect to the differences between the \gls{gcs} settings and the aircraft it was meant to be controlling. It also highlights the importance of the \dsiwgTextIT{verifiability}\index{Verifiability Property} \gls{Data Property}, with respect to the \gls{gcs} settings (and, in particular, the limitations of using checklists to verify data).
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -854,7 +854,7 @@ Moments after the self-abort, due to the urgency of the situation and the additi
 
 The Service Inquiry determined that the cause of the accident was engine failure, as a result of overheating caused by oil starvation. Like many incidents, there were a considerable number of interacting factors. In total, thirteen contributory factors were identified, including the error in the \gls{gtols} data.
 
-This incident highlights the importance of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}Data Property, with respect to the \gls{gtols} data loaded by the crew.
+This incident highlights the importance of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}\gls{Data Property}, with respect to the \gls{gtols} data loaded by the crew.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -890,7 +890,7 @@ On 10 February 2010 at 0436 (local), the chemical tanker \dsiwgTextIT{Sichem Osp
 
 Anti-collision radar alarm thresholds were apparently not set according to the Captain's instructions. There were also sizeable discrepancies between the fixes plotted on the chart and those displayed on the radar.
 
-This incident highlights the role of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}Data Property, with respect to the chart plots, and the \dsiwgTextIT{\index{Accuracy Property}accuracy} \index{Property!Data}Data Property, with respect to the alarm thresholds which did not reflect the Captain's wishes.
+This incident highlights the role of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}\gls{Data Property}, with respect to the chart plots, and the \dsiwgTextIT{\index{Accuracy Property}accuracy} \index{Property!Data}\gls{Data Property}, with respect to the alarm thresholds which did not reflect the Captain's wishes.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -906,7 +906,7 @@ On 12 November 2009, a passenger train was being routed into Number 1 Platform r
 
 The investigation\index{Investigation!Incident/Accident} determined that a signalling system\index{Signalling, Railway}\index{Railway Signalling|see{Signalling, Railway}} design error had allowed the incorrect signal\index{Signalling, Railway} to occur. The error happened despite the staff involved being suitably qualified and experienced. Working against a tight timescale, they were simultaneously developing a control table and associated software, rather than adopting the normal sequential approach. The control table contains information on points, signal\index{Signalling, Railway} and level crossing interlocking logic. The tight timescale also compromised the normal testing process. In addition, the quality control process was somewhat lacking: for example, not all identified queries and issues were appropriately closed out.
 
-This incident illustrates the importance of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}Data Property, with respect to the control table data, and the \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}Data Property, with respect to data produced by the testing and the quality control processes.
+This incident illustrates the importance of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}\gls{Data Property}, with respect to the control table data, and the \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}\gls{Data Property}, with respect to data produced by the testing and the quality control processes.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -922,7 +922,7 @@ A software misconfiguration\index{Data!Configuration} in a \gls{ct} scanner used
 
 The problem reportedly arose from an error made by the hospital in resetting the \gls{ct} machine after it began using a new protocol for the procedure in February 2008. The error was not detected until one of the patients reported patchy hair loss in August 2009. ``There was a misunderstanding about an embedded default setting applied by the machine,'' according to a statement from Cedars-Sinai. ``As a result, the use of this protocol resulted in a higher than expected amount of radiation.'' 
 
-This incident highlights the importance of the \dsiwgTextIT{verifiability} \index{Verifiability Property}Data Property, especially with regards to default (and adaptation\index{Adaptation Data}) data.
+This incident highlights the importance of the \dsiwgTextIT{verifiability} \index{Verifiability Property}\gls{Data Property}, especially with regards to default (and adaptation\index{Adaptation Data}) data.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -941,7 +941,7 @@ Although the \gls{vms} was loaded with \glspl{enc} for the vessel's area of oper
 
 Despite the \gls{vms} being unapproved for use as the primary means of navigation, the officers on \dsiwgTextIT{Pride of Canterbury}\index{Pride of Canterbury} were apparently using it as if it was. Furthermore, many of the officers, including the Chief Officer, who was in charge at the time of the accident, were not fully trained in the use of the system.
 
-This incident highlights the importance of the \dsiwgTextIT{\index{Accuracy Property}accuracy} \index{Property!Data}Data Property, with regards to the information displayed on the electronic chart. It also highlights the importance of the \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}Data Property, with regards to training (and training records) and the \dsiwgTextIT{intended destination / usage} \index{Property!Data}Data Property, with regards to the inappropriate use of the \gls{vms} data.
+This incident highlights the importance of the \dsiwgTextIT{\index{Accuracy Property}accuracy} \index{Property!Data}\gls{Data Property}, with regards to the information displayed on the electronic chart. It also highlights the importance of the \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}\gls{Data Property}, with regards to training (and training records) and the \dsiwgTextIT{intended destination / usage} \index{Property!Data}\gls{Data Property}, with regards to the inappropriate use of the \gls{vms} data.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -993,7 +993,7 @@ The Airport Charts used by the crew were inaccurate. The airport was under const
 
 Due to a previously unrecognized software problem, any information the chart provider received after normal work hours on Fridays was not included in their regular updates. Furthermore, the chart provider modified the Blue Grass Airport chart after the accident to include a note that runway 8/26 is ``daytime \acrshort{vmc}\footnote{\acrlong{vmc}} use only'', even though this information had been published since 2001. Additionally there was a local \gls{notam} issued advising of taxiway closures due to construction work. However the crew was not provided with this information in their dispatch paperwork.
 
-This incident highlights the importance of the \dsiwgTextIT{timeliness\index{Timeliness Property}} \index{Property!Data}Data Property, specifically with regards to the charts. The \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}Data Property is also relevant, given that neither the ``after hours'' changes on Fridays nor the local \gls{notam} were communicated appropriately.
+This incident highlights the importance of the \dsiwgTextIT{timeliness\index{Timeliness Property}} \index{Property!Data}\gls{Data Property}, specifically with regards to the charts. The \dsiwgTextIT{\index{Completeness!Property}completeness} \index{Property!Data}\gls{Data Property} is also relevant, given that neither the ``after hours'' changes on Fridays nor the local \gls{notam} were communicated appropriately.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -1047,7 +1047,7 @@ In 2002 the Supreme Court ruled that the \gls{doc} was erroneously denying offen
 
 The error was detected when the family of an assault victim hand-calculated the assailant's release date. The family notified the \gls{doc} that it appeared as if the assailant would be released earlier than warranted by statute. It took a further three years before the programming error was finally corrected.
 
-This incident illustrates the importance of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}Data Property, with respect to calculated release dates. The \dsiwgTextIT{verifiability} \index{Verifiability Property}Data Property is also relevant, noting that the calculation of the release date was readily verifiable (as shown by the actions of the family of the assault victim).
+This incident illustrates the importance of the \dsiwgTextIT{\index{Integrity Property}integrity} \index{Property!Data}\gls{Data Property}, with respect to calculated release dates. The \dsiwgTextIT{verifiability} \index{Verifiability Property}\gls{Data Property} is also relevant, noting that the calculation of the release date was readily verifiable (as shown by the actions of the family of the assault victim).
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -1069,7 +1069,7 @@ It transpires that the orbiter's \gls{fms} software was designed to work with me
 
 The cost of the mission was stated by NASA\index{NASA} to have been \$327.6 million in total (\$193.1 million to develop the spacecraft, \$91.7 million for launch and \$42.8 million for mission operations). 
 
-This incident highlights the importance of the \dsiwgTextIT{\index{Consistency!Property}consistency} \index{Property!Data}Data Property.
+This incident highlights the importance of the \dsiwgTextIT{\index{Consistency!Property}consistency} \index{Property!Data}\gls{Data Property}.
 
 \dsiwgTextBF{Links}
 \begin{itemize}
@@ -1088,7 +1088,7 @@ The \gls{msaw} system uses a terrain database. It is designed to alert a control
 
 In 1990, the Guam\index[locationidx]{Guam} terminal \gls{msaw} was installed to provide protection within a 55~nm radius. In 1993, a new software package was produced in which warnings were inhibited within a 54~nm radius; this left a 1~nm annular region within which warnings could be generated. The motivation behind the new configuration was to reduce false alarms. The software became operational in February 1995. A further software update became operational in April 1996. This also had the 54~nm inhibition.
 
-This incident illustrates the importance of the \dsiwgTextIT{\index{Continuity Property}} \index{Property!Data}Data Property, with respect to the \gls{msaw} coverage, and the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} \index{Property!Data}Data Property,
+This incident illustrates the importance of the \dsiwgTextIT{\index{Continuity Property}} \index{Property!Data}\gls{Data Property}, with respect to the \gls{msaw} coverage, and the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} \index{Property!Data}\gls{Data Property},
 regarding
 the terrain database used by the \gls{msaw} system.
 
@@ -1117,7 +1117,7 @@ The whirlpool created as the lake drained into the mine sucked in the drilling p
 
 Federal experts from the Mine Safety and Health Administration were not able to determine the cause of the accident due to confusion over whether the rig was drilling in the wrong place or whether the mine's maps were inaccurate.
 
-This incident highlights the importance of the \dsiwgTextIT{verifiability} \index{Verifiability Property}Data Property, specifically with regards to the location of the rig. Note that this property was relevant both when the rig started to drill and also during the post-incident investigation\index{Investigation!Incident/Accident}.
+This incident highlights the importance of the \dsiwgTextIT{verifiability} \index{Verifiability Property}\gls{Data Property}, specifically with regards to the location of the rig. Note that this property was relevant both when the rig started to drill and also during the post-incident investigation\index{Investigation!Incident/Accident}.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
