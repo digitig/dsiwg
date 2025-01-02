@@ -88,13 +88,13 @@ Planning of the \index{Safety Assessment!Data}Data Safety Assessment requires so
 Planning of the assessment may be done through a procurement process. Procurers may wish to understand their potential supplier's understanding of data safety and plans to implement a \index{Safety Assessment!Data}Data Safety Assessment. A Data Safety Supplier Questionnaire (\autoref{bkm:maturity}) has been developed to support this analysis; this questionnaire may also be used for auditing purposes.
 
 \paragraph{Identify \index{Artefact, Data}Data Artefacts}
-\index{Artefact, Data}Data Artefacts are the key pieces of data that are generated, processed or consumed by the system, or used for training in its use or maintenance. They provide the foundation for the remaining phases of data-related risk management.
+\index{Artefact, Data}\Glspl{Data Artefact} are the key pieces of data that are generated, processed or consumed by the system, or used for training in its use or maintenance. They provide the foundation for the remaining phases of data-related risk management.
 
-To support the identification of \index{Artefact, Data}Data Artefacts, a wide variety of Data Categories have been enumerated. Cross-referencing these categories against the system description should highlight the relevant artefacts. 
+To support the identification of \index{Artefact, Data}\glspl{Data Artefact}, a wide variety of Data Categories have been enumerated. Cross-referencing these categories against the system description should highlight the relevant artefacts. 
 
-Another way of identifying \index{Artefact, Data}Data Artefacts involves considering the functions that the system performs and establishing the data that is required to support these.
+Another way of identifying \index{Artefact, Data}\glspl{Data Artefact} involves considering the functions that the system performs and establishing the data that is required to support these.
 
-A further option for confirming that all relevant \index{Artefact, Data}Data Artefacts have been identified is to consider the different phases of the system lifecycle\index{Lifecycle!System}. This approach should help prevent an inappropriate focus on operational use of the system at the expense of, for example, artefacts associated with system test and evaluation.
+A further option for confirming that all relevant \index{Artefact, Data}\glspl{Data Artefact} have been identified is to consider the different phases of the system lifecycle\index{Lifecycle!System}. This approach should help prevent an inappropriate focus on operational use of the system at the expense of, for example, artefacts associated with system test and evaluation.
 
 \subsubsection{Tailoring}
 The level of
@@ -116,11 +116,11 @@ The approach of including data-related aspects within a Safety Management Plan i
 
 The questionnaire that helps establish the level of ``data maturity'' in potential suppliers is expected to be of most use when new organizational relationships are being formed. Conversely, it may offer little value in situations where both organizations are familiar with each other, they have worked on data-related projects together before and there are suitable audit / review arrangements in place.
 
-\index{Artefact, Data}Data Artefacts may be defined at a number of levels. An artefact associated with a medical system could be described as ``patient data''. Alternatively, this could be split into smaller parts (e.g., ``blood group''). Generally speaking, the highest possible level consistent with the system description should be used; this prevents an excessively long list of artefacts being developed. If necessary, those artefacts where further detail is needed can be refined as part of an iterative process that is focused on key issues.
+\index{Artefact, Data}\Glspl{Data Artefact} may be defined at a number of levels. An artefact associated with a medical system could be described as ``patient data''. Alternatively, this could be split into smaller parts (e.g., ``blood group''). Generally speaking, the highest possible level consistent with the system description should be used; this prevents an excessively long list of artefacts being developed. If necessary, those artefacts where further detail is needed can be refined as part of an iterative process that is focused on key issues.
 
 Not every Data Category\index{Data!Category|} will be relevant to every system. Furthermore, for low-risk (ODR1) systems it may be sufficient to simply consider the groupings of categories (e.g., ``context'', ``implementation'', etc.). Conversely, high-risk (ODR4) systems might need to consider every category\index{Category!Data}, even if this results in a conclusion that a specific category\index{Category!Data} is not relevant for the system in question.
 
-A function-based approach to identifying \index{Artefact, Data}Data Artefacts is likely to be enabled by design processes that also adopt a function-based perspective. If information from a function-based perspective is readily available then it should be used to support the identification of \index{Artefact, Data}Data Artefacts. If this information is not readily available, it is recommended that it be generated for medium and high-risk systems (i.e., ODR2 to ODR4, inclusive).
+A function-based approach to identifying \index{Artefact, Data}\glspl{Data Artefact} is likely to be enabled by design processes that also adopt a function-based perspective. If information from a function-based perspective is readily available then it should be used to support the identification of \index{Artefact, Data}\glspl{Data Artefact}. If this information is not readily available, it is recommended that it be generated for medium and high-risk systems (i.e., ODR2 to ODR4, inclusive).
 
 Considering data across the system lifecycle\index{Lifecycle!System} is a relatively simple activity, which is applicable to all systems (i.e., ODR1 to ODR4, inclusive).
 
@@ -136,12 +136,12 @@ Some insight into potential risks may be gained by reviewing historical accident
 \autoref{bkm:accidents} of this guidance document. It is expected that each domain would have its own catalogue of historical incidents, which can be consulted during a data-focused review.
 
 \paragraph{Conduct a top-down approach}
-If the system under consideration has clearly identified functions then data-related risks can be assessed by considering each function in turn and analysing what \index{Artefact, Data}Data Artefacts and, more particularly, what Data Properties the function depends on.
+If the system under consideration has clearly identified functions then data-related risks can be assessed by considering each function in turn and analysing what \index{Artefact, Data}\glspl{Data Artefact} and, more particularly, what Data Properties the function depends on.
 
 If there are a limited number of safety-related functions, this is usually the simplest approach. This approach also has the advantage that it integrates well with other function-based, top-down approaches to assessing system safety. 
 
 \paragraph{Conduct a bottom-up approach}
-This approach starts from the Data Artefacts and explores the effects of data errors. In this context an error is a situation where a required \index{Property!Data}Data Property is not exhibited. This may be achieved by a variety of methods, including a \gls{hazop}\index{HAZOP}.
+This approach starts from the \glspl{Data Artefact} and explores the effects of data errors. In this context an error is a situation where a required \index{Property!Data}Data Property is not exhibited. This may be achieved by a variety of methods, including a \gls{hazop}\index{HAZOP}.
 
 \paragraph{Update planning documents}
 Once the data safety risks have been identified, the Data Safety Management Plan (or Safety Management Plan)
@@ -205,9 +205,9 @@ and \autoref{tab:Likelihood}, while default definitions for Severity are present
 
 Although this allocation of \glspl{dsal}\index{Assurance Level!Data} is typically used, it is acknowledged that there are some situations where a different allocation matrix may be more appropriate. Hence, it may be appropriate for a tailored allocation matrix to be used. Regardless of whether tailoring is used, the matrix should be reviewed and confirmed as being suitable for the intended application.
 
-As their name suggests, \glspl{dsal} are focused on safety concerns. However, the framework of \index{Artefact, Data}Data Artefacts, \index{Property!Data}Data Properties, and so on, developed in this document could also be applied to other concerns. It could, for example, be used for to control data-related financial risks, or data-related reputational risks. In these types of approach, the severity terms would obviously relate to financial and reputational consequences, rather than safety ones.
+As their name suggests, \glspl{dsal} are focused on safety concerns. However, the framework of \index{Artefact, Data}\glspl{Data Artefact}, \index{Property!Data}Data Properties, and so on, developed in this document could also be applied to other concerns. It could, for example, be used for to control data-related financial risks, or data-related reputational risks. In these types of approach, the severity terms would obviously relate to financial and reputational consequences, rather than safety ones.
 
-It is possible that the additional understanding developed during this part of the process may mean some previously identified Data Artefacts are no longer of consequence; similarly, it is possible that this process may identify additional artefacts or a need to refine the description of existing artefacts.
+It is possible that the additional understanding developed during this part of the process may mean some previously identified \glspl{Data Artefact} are no longer of consequence; similarly, it is possible that this process may identify additional artefacts or a need to refine the description of existing artefacts.
 
 \paragraph{Analyse \glspl{dsal} as part of system safety activities}\index{Assurance Level!Data}
 \label{bkm:activities:analyse:partofsystemsafetyactivities}
@@ -226,12 +226,12 @@ This activity involves comparing \glspl{dsal}\index{Assurance Level!Data} with t
 \subsubsection{Tailoring}\label{bkm:activities:analyse:tailoring}
 \glspl{dsal}\index{Assurance Level!Data} can be applied at different levels and to different constructs. For example, in the case of simple, low-risk systems it may be appropriate to apply a single \gls{dsal} to an entire system. Alternatively, it may be appropriate to apply \glspl{dsal} to sub-systems, for example, to match the level at which other integrity, or assurance, levels have been determined. 
 
-Another option is to apply \glspl{dsal}\index{Assurance Level!Data} to Data Artefacts rather than directly to risks. This approach has the advantage that \index{Treatment!Risk}treatments are often related to artefacts; it can work well where there is a simple relationship between artefacts and risks.
+Another option is to apply \glspl{dsal}\index{Assurance Level!Data} to \glspl{Data Artefact} rather than directly to risks. This approach has the advantage that \index{Treatment!Risk}treatments are often related to artefacts; it can work well where there is a simple relationship between artefacts and risks.
 
 %\clearpage %Manual page break
 \subsection{Evaluate and Treat Risks}
 \subsubsection{Overview}
-This phase involves deciding, at a generic level, what action (if any) should be taken for each of the risks identified in preceding phases. This decision will be influenced by the organization's risk appetite and other factors determined as part of the Establish Context phase. From some perspectives it may seem strange that requirements are identified at such a late phase. This is a consequence of explicitly linking \index{Safety Requirement!Data}Data Safety Requirements to risks associated with \index{Property!Data}Data Properties of \index{Artefact, Data}Data Artefacts, and the use of \index{Assurance Level!Data}Data Safety Assurance Levels to describe levels of rigour. 
+This phase involves deciding, at a generic level, what action (if any) should be taken for each of the risks identified in preceding phases. This decision will be influenced by the organization's risk appetite and other factors determined as part of the Establish Context phase. From some perspectives it may seem strange that requirements are identified at such a late phase. This is a consequence of explicitly linking \index{Safety Requirement!Data}Data Safety Requirements to risks associated with \index{Property!Data}Data Properties of \index{Artefact, Data}\glspl{Data Artefact}, and the use of \index{Assurance Level!Data}Data Safety Assurance Levels to describe levels of rigour. 
 
 This phase also involves identifying, implementing and verifying \index{Treatment!Risk}treatments for the risks emerging from the previous phase. Part of verifying the \index{Treatment!Risk}treatment involves checking technical details of the chosen approach; another part involves re-assessing the post-treatment risk to determine whether it is now acceptable.
 

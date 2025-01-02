@@ -4,4 +4,13 @@ obj/*
 *.old
 *.ilg
 *.ind
-
+*.aux
+*.bbl
+*.blg
+*.cb*
+*.lof
+*.lot
+*.out
+*.pdf
+*.gz
+*.toc
