@@ -14,13 +14,13 @@
 %   Machine Learning section.
 %
 %================================================================================
-\section{AI and Machine Learning (Informative)} \label{bkm:MachineLearning}
+\section{\Glsfmtshort{ai} and Machine Learning (Informative)} \label{bkm:MachineLearning}
 
 \dsiwgSectionQuote{Learning never exhausts the mind.}{Leonardo da Vinci}
 
 
 \subsection{Machine Learning Training Data}\index{Machine Learning Data|textbf}
-A complete discussion about the assurance of machine learning /artificial intelligence algorithms is beyond the scope of this document.
+A complete discussion about the assurance of machine learning /\gls{ai} algorithms is beyond the scope of this document.
 However, as such algorithms are inherently data-driven, the Data Safety Guidance provides the following notes on good practice for data sets used for machine learning / Artificial Intelligence applications.
 
 The data for real-world machine learning
@@ -75,17 +75,17 @@ It is suggested that all the \index{Property!Data}data properties mentioned in t
 The human brain can see and interpret patterns in unexpected ways, for example seeing a shadow that
 suggests a monster is waiting to pounce, or seeing an animal in a cloud formation%
 \footnote{These are not strictly hallucinations in the medical sense, but serve to illustrate
-the issue with AI interpretation of data.}.
-AI tools can similarly interpret data in novel and unplanned ways, perhaps seeing patterns that a
-human would not perceive, or seeing shapes in noise. However with AI tools, hallucinations can appear
+the issue with \gls{ai} interpretation of data.}.
+\Gls{ai} tools can similarly interpret data in novel and unplanned ways, perhaps seeing patterns that a
+human would not perceive, or seeing shapes in noise. However with \gls{ai} tools, hallucinations can appear
 in two different ways --- in the interpretation of the question or instruction to perform, as well as
 in the interpretation of the source data.
-The problem is exacerbated in the case of AI ``chatbots'', where the output presentation in natural
+The problem is exacerbated in the case of \gls{ai} ``chatbots'', where the output presentation in natural
 language can make the response seem authoritative and result in it being trusted, as though the
-AI chatbot is an expert in the field under consideration \cite{citation:chatbotsterrible:website}. 
+\gls{ai} chatbot is an expert in the field under consideration \cite{citation:chatbotsterrible:website}. 
 
 The complete eradication of hallucinations may not be possible, so it can be dangerous to rely fully
-on the output of an AI without verification. Biases in the training data are regarded as a
+on the output of an \gls{ai} without verification. Biases in the training data are regarded as a
 significant cause of hallucinations, so selection of training data should include consideration
 of its quality --- whether it is diverse, balanced and well structured
 \cite{citation:halucinations:website}. In addition, evaluation of the resultant behaviour should be
@@ -97,27 +97,27 @@ thus fine-tuning it for its specific application.
 Note that fine-tuning will generally only be possible for a specific application and/or a specific
 environment. As with all safety analyses, it is critical that these be clearly defined.
 
-We asked two different AIs to comment on the risks that hallucinations present to data safety. Their responses were as presented in the
+We asked two different \glspl{ai} to comment on the risks that hallucinations present to data safety. Their responses were as presented in the
 following two boxes:
 
 \begin{aibox}%ChatGPT
-  AI hallucinations can have significant implications for data safety and overall trust in AI systems. Here are some key concerns:
+  \Gls{ai} hallucinations can have significant implications for data safety and overall trust in \gls{ai} systems. Here are some key concerns:
 
-Misinformation and Disinformation: If an AI model generates incorrect or misleading information (hallucinates), and this information is used without verification, it can lead to the spread of misinformation. In sensitive areas like healthcare, finance, or law, this could have serious consequences.
+Misinformation and Disinformation: If an \gls{ai} model generates incorrect or misleading information (hallucinates), and this information is used without verification, it can lead to the spread of misinformation. In sensitive areas like healthcare, finance, or law, this could have serious consequences.
 
-Decision-Making Risks: In scenarios where AI is used to aid decision-making, hallucinations can lead to incorrect or risky decisions. For instance, if a financial AI advises on investments based on hallucinated data, it could lead to substantial financial losses.
+Decision-Making Risks: In scenarios where \gls{ai} is used to aid decision-making, hallucinations can lead to incorrect or risky decisions. For instance, if a financial \gls{ai} advises on investments based on hallucinated data, it could lead to substantial financial losses.
 
-Trust and Reliability Issues: Frequent hallucinations can undermine the trust in AI systems. Users and organizations may become reluctant to rely on AI for critical tasks if there's a significant risk of the AI generating false information.
+Trust and Reliability Issues: Frequent hallucinations can undermine the trust in \gls{ai} systems. Users and organizations may become reluctant to rely on \gls{ai} for critical tasks if there's a significant risk of the \gls{ai} generating false information.
 
-Security Vulnerabilities: AI hallucinations can be exploited in cybersecurity. For example, if an AI system responsible for network security misinterprets data or hallucinates a threat, it could either overlook actual threats or allocate resources to non-existent threats.
+Security Vulnerabilities: \gls{ai} hallucinations can be exploited in cybersecurity. For example, if an \gls{ai} system responsible for network security misinterprets data or hallucinates a threat, it could either overlook actual threats or allocate resources to non-existent threats.
 
-Privacy Concerns: There’s a risk that an AI model might inadvertently reveal or imply private information in its outputs, especially if it has been trained on sensitive datasets. While not a hallucination in the traditional sense, this is related to the broader issue of how AI handles and interprets data.
+Privacy Concerns: There’s a risk that an \gls{ai} model might inadvertently reveal or imply private information in its outputs, especially if it has been trained on sensitive datasets. While not a hallucination in the traditional sense, this is related to the broader issue of how \gls{ai} handles and interprets data.
 
-Ethical and Legal Implications: AI hallucinations can lead to ethical and legal challenges, especially if they result in harm or damage. Determining liability in cases where AI-generated misinformation leads to real-world consequences is complex.
+Ethical and Legal Implications: \gls{ai} hallucinations can lead to ethical and legal challenges, especially if they result in harm or damage. Determining liability in cases where AI-generated misinformation leads to real-world consequences is complex.
 
-Bias and Fairness: Hallucinations can also be a reflection of biases in the training data. An AI might generate outputs that are unfairly biased against certain groups or individuals, leading to ethical concerns and potential legal issues.
+Bias and Fairness: Hallucinations can also be a reflection of biases in the training data. An \gls{ai} might generate outputs that are unfairly biased against certain groups or individuals, leading to ethical concerns and potential legal issues.
 
-To mitigate these risks, it's crucial to have robust validation and verification processes, use AI in conjunction with human oversight, continually update and improve AI models with diverse and accurate data, and maintain transparency about the limitations and capabilities of AI systems.
+To mitigate these risks, it's crucial to have robust validation and verification processes, use \gls{ai} in conjunction with human oversight, continually update and improve \gls{ai} models with diverse and accurate data, and maintain transparency about the limitations and capabilities of \gls{ai} systems.
 \end{aibox}
 
 \begin{aibox}%Google Bard
@@ -125,7 +125,7 @@ To mitigate these risks, it's crucial to have robust validation and verification
 
 Privacy:
 
-False generation of personal data: AI hallucinations can fabricate personal information (names, addresses, financial details) that doesn't actually exist, potentially violating privacy rights and harming individuals.
+False generation of personal data: \gls{ai} hallucinations can fabricate personal information (names, addresses, financial details) that doesn't actually exist, potentially violating privacy rights and harming individuals.
 Exposure of sensitive data: If trained on sensitive data, hallucinations might leak this information unintentionally, even if not explicitly instructed to do so. This could include medical records, financial data, or other confidential information.
 Security:
 
@@ -133,19 +133,19 @@ Creating vulnerabilities: Hallucinations might invent security flaws or exploits
 Misleading security assessments: If used for security testing, hallucinations could create false positives or negatives, providing inaccurate assessments of a system's security posture.
 Misinformation:
 
-Spreading false information: AI-generated hallucinations can easily spread misinformation, as they appear convincing and authoritative even if factually incorrect. This can have significant implications for public discourse, trust in institutions, and even manipulation.
+Spreading false information: \gls{ai}-generated hallucinations can easily spread misinformation, as they appear convincing and authoritative even if factually incorrect. This can have significant implications for public discourse, trust in institutions, and even manipulation.
 Evolving deepfakes: Hallucinations could be used to create even more sophisticated deepfakes, making it harder to distinguish between real and fake content, further eroding trust and potentially influencing elections or other high-stakes situations.
 Additional considerations:
 
-Impact on trust: As reliance on AI grows, hallucinations can erode trust in its outputs, making it harder to distinguish reliable information from fabricated content.
-Regulation and accountability: Establishing clear guidelines and accountability mechanisms for AI systems prone to hallucinations is crucial to mitigate their risks.
+Impact on trust: As reliance on \gls{ai} grows, hallucinations can erode trust in its outputs, making it harder to distinguish reliable information from fabricated content.
+Regulation and accountability: Establishing clear guidelines and accountability mechanisms for \gls{ai} systems prone to hallucinations is crucial to mitigate their risks.
 Overall, addressing the implications of hallucinations for data safety requires a multi-pronged approach:
 
-Developing robust and transparent AI systems: Techniques like adversarial training and explainable AI can help reduce hallucinations and improve transparency.
+Developing robust and transparent \gls{ai} systems: Techniques like adversarial training and explainable \gls{ai} can help reduce hallucinations and improve transparency.
 Implementing data governance and privacy measures: Strong data protection frameworks and responsible data handling practices are essential to minimize the risk of sensitive data exposure.
-Promoting media literacy and critical thinking: Educating users to critically evaluate information, regardless of its source, is crucial in the age of AI-generated content.
-Establishing ethical guidelines and regulations: Clear ethical frameworks and regulations for AI development and deployment are necessary to ensure responsible use and mitigate potential risks.
-By acknowledging the dangers of hallucinations and taking proactive steps to address them, we can minimize their impact on data safety and build trust in AI-powered technologies.
+Promoting media literacy and critical thinking: Educating users to critically evaluate information, regardless of its source, is crucial in the age of \gls{ai}-generated content.
+Establishing ethical guidelines and regulations: Clear ethical frameworks and regulations for \gls{ai} development and deployment are necessary to ensure responsible use and mitigate potential risks.
+By acknowledging the dangers of hallucinations and taking proactive steps to address them, we can minimize their impact on data safety and build trust in \gls{ai}-powered technologies.
 \end{aibox}
 
 \subsection{Data Set Management}
