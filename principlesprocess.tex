@@ -56,6 +56,21 @@ Although the Data Safety Management Process is based on the structure of ISO 310
 
 ISO 31000 also recommends two activities that run in parallel with risk assessment. These activities are: (1) monitor and review the risk assessment process; and (2) communicate and consult with the Stakeholders about the risk assessment process. Aspects like ``monitor'', ``review'', ``communicate'' and ``consult'' are taken to be part of normal project activities; items like the \gls{odr} assessment and the \gls{dsmp} are intended to assist from the perspective of data safety.
 
+\cbstart
+\subsection{Data Safety Management Process Overview}
+\begin{figure}[hb]
+\centering
+\includegraphics[angle=90]{images/Lifecycle}
+\caption{Simplified Process Overview}
+\label{fig:process}
+\end{figure}
+Figure \ref{fig:process} provides an overview of the data safety management process and how it integrates with a typical system lifecycle. Data pervades all aspects of a systems lifecycle, so the data safety assessment process can occur throughout the system lifecycle depending on the type of data that is being assessed. Some data items such as context, implementation and built system data are relevant for specific process phases of the lifecycle, while others such as configuration, capability, compliance and liability data apply throughout the entire lifecycle. The meta-property data of trustworthiness covers data that is used to inform on the overall trustworthiness of the system. The specific data categories are covered in more detail in section \ref{bkm:datacategories}.
+
+The data safety management process occurs over four key steps as shown in the top part of the diagram and the specific objectives and outputs of each step is described in more detail in section \ref{bkm:objectivesoutputs}. The last outcome of the process is a post mitigation risk assessment. If the risk reduction is not considered adequate then the process will iterate again from the `identify risk' step. The whole process is intended to be repeated through the lifecycle of the system and so will be repeated many times and further iterations will be required when there are changes to the system or its data.
+
+The bottom section of the figure shows a typical basic lifecycle for a system from its inception through to decommissioning. The types of data that are of concern for each process step including those that apply to all steps are shown and these feed into the data safety assessment process. Further examples of lifecycles are given in Appendix \ref{bkm:lifecycle}.
+\cbend
+
 %\newpage
 %\subsection{Summary Figure}
 %\begin{figure}[!h]
