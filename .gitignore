@@ -11,6 +11,7 @@ obj/*
 *.lof
 *.lot
 *.out
-*.pdf
+main.pdf
 *.gz
+*.zip
 *.toc

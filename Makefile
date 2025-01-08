@@ -72,22 +72,6 @@ clean :
 	del /F /Q $(OBJDIR)\*
 	del /F /Q *.ind
 	del /F /Q *.ilg
-	del /F /Q *.aux
-	del /F /Q *.bbl
-	del /F /Q *.idx
-	del /F /Q *.log
-	del /F /Q *.lot
-	del /F /Q *.lof
-	del /F /Q *.out
-	del /F /Q *.gz
-	del /F /Q *.cb*
-	del /F /Q *.blg
-	del /F /Q *.toc
-	del /F /Q *.pdf
-	
-
-	
-
 
 	
 	

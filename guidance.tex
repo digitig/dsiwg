@@ -21,9 +21,9 @@
 
 \subsection{Establish Context}
 \subsubsection{Interface control}\index{Interface!Organizational}
-The interfaces between \index{Data!Owner}\glspl{Data Owner}, and indeed data ownership itself, can be much more complicated than for hardware or software, where the owner can be clearly identified. Indeed, when combining items from various sources it is possible to create data for which there is not an ``owner'' in any traditional sense. In such circumstances it may be appropriate for the overall system owner to take responsibility for the collected data and, where appropriate, pass specific, formally-recorded requirements onto original data suppliers. 
+The interfaces between \index{Data!Owner}Data Owners, and indeed data ownership itself, can be much more complicated than for hardware or software, where the owner can be clearly identified. Indeed, when combining items from various sources it is possible to create data for which there is not an ``owner'' in any traditional sense. In such circumstances it may be appropriate for the overall system owner to take responsibility for the collected data and, where appropriate, pass specific, formally-recorded requirements onto original data suppliers. 
 
-The \index{Data!Owner}\glspl{Data Owner} throughout the lifecycle\index{Lifecycle!Data} of data within the system should be identified, or the lack of an owner highlighted where applicable, including where data is merged or modified through the system operation. This will facilitate a greater understanding of the ``controllability'' of data safety issues within the assessment at a particular organizational level.
+The \index{Data!Owner}Data Owners throughout the lifecycle\index{Lifecycle!Data} of data within the system should be identified, or the lack of an owner highlighted where applicable, including where data is merged or modified through the system operation. This will facilitate a greater understanding of the ``controllability'' of data safety issues within the assessment at a particular organizational level.
 
 \subsubsection{Organizational Data Risk Assessment Form}
 The \gls{odr} Assessment Form was generated to capture a high-level perspective on the risk posed to an organization by data safety issues within a specific project. How it integrates with an organization's existing risk (or safety) management processes is the responsibility of the implementing organization.
@@ -512,8 +512,8 @@ Risk severity is estimated against a five-point scale, as indicated in \autoref{
 As noted earlier, \glspl{dsal}\index{Assurance Level!Data} have some commonality with things like (Item / Function) \index{Assurance Level!Development}Development Assurance Levels (IDALs / \glspl{fdal}). However, this commonality does not extend across all aspects. For example, there is an accepted calculus of \glspl{fdal} in which two independent \index{Integrity Property}lower-integrity functions can be used to replace a single \index{Integrity Property}higher-integrity function. There are two reasons why this type of calculus is not appropriate for \glspl{dsal}:
 
 \begin{enumerate}
-  \item The definition of a \gls{dsal}\index{Assurance Level!Data} already caters for interactions. For example, using two independent \index{Artefact, Data}\glspl{Data Artefact} to provide similar information to a system function reduces the ``dependency'' of each artefact.
-  \item These types of consideration are most closely related to system architecture, from which \index{Artefact, Data}\glspl{Data Artefact}, associated \index{Property!Data}Data Properties and risks are derived. Hence, rather than applying any calculus at the \gls{dsal}\index{Assurance Level!Data} tier it is more appropriate to apply this to, for example, FDALs, with \glspl{dsal} changing as a consequence of the revised system definition.
+  \item The definition of a \gls{dsal}\index{Assurance Level!Data} already caters for interactions. For example, using two independent \index{Artefact, Data}Data Artefacts to provide similar information to a system function reduces the ``dependency'' of each artefact.
+  \item These types of consideration are most closely related to system architecture, from which \index{Artefact, Data}Data Artefacts, associated \index{Property!Data}Data Properties and risks are derived. Hence, rather than applying any calculus at the \gls{dsal}\index{Assurance Level!Data} tier it is more appropriate to apply this to, for example, FDALs, with \glspl{dsal} changing as a consequence of the revised system definition.
 \end{enumerate}
 
 \subsubsection{Analysing \glspl{dsal}}\index{Assurance Level!Data}
@@ -696,7 +696,7 @@ In an attempt to aid usability, these detailed methods and approaches tables hav
   \item Media - Electronic\index{Category!Approach!Media -- Electronic}.
 \end{itemize}
 
-The method for using these tables when considering any given \index{Artefact, Data}\gls{Data Artefact}, is as follows:
+The method for using these tables when considering any given \index{Artefact, Data}data artefact, is as follows:
 \begin{itemize}
     \item Determine the \gls{dsal}\index{Assurance Level!Data} applicable to the \index{Artefact, Data}artefact, using \autoref{tab:DSAL-risk-matrix} in association with \autoref{tab:Likelihood} and \autoref{tab:Severity}.
     \item Determine the Data Category\index{Category!Data}, using the abbreviations in \autoref{tab:DataCategoryAbbreviations}.
@@ -715,12 +715,12 @@ then the row is likely to be applicable to the \index{Artefact, Data}artefact. T
     \item The relevant \gls{dsal} entry is ``-'', then the technique should be considered, as it may be relevant in certain application domains, but this guidance document is unable to take a view on its application in a generic context.
 \end{itemize}
 
-To give a specific example, consider the row corresponding to the first Technique in \autoref{tab:MethodsSystemDesign}. This Technique will apply to \index{Artefact, Data}\glspl{Data Artefact} where:
+To give a specific example, consider the row corresponding to the first Technique in \autoref{tab:MethodsSystemDesign}. This Technique will apply to \index{Artefact, Data}data artefacts where:
 \begin{itemize}
     \item The Data Category\index{Dynamic Data} is Dynamic (``D'' from \autoref{tab:DataCategoryAbbreviations}) and
-    \item The \index{Artefact, Data}\gls{Data Artefact} holds one or more of the \index{Integrity Property}properties \index{Integrity Property}Integrity, \index{Completeness!Property}Completeness or Verifiability\index{Verifiability Property} (``I'', ``C'' or ``V'' from \autoref{tab:PropertiesOfData}).
+    \item The \index{Artefact, Data}data artefact holds one or more of the \index{Integrity Property}properties \index{Integrity Property}Integrity, \index{Completeness!Property}Completeness or Verifiability\index{Verifiability Property} (``I'', ``C'' or ``V'' from \autoref{tab:PropertiesOfData}).
 \end{itemize}
-AIn such a case, the Technique would be Highly Recommended if the \index{Artefact, Data}\gls{Data Artefact} were of \gls{dsal}\index{Assurance Level!Data} 3 or 4, Recommended if the \gls{dsal} were 2, or should merely be considered if the \gls{dsal} were 1.
+In such a case, the Technique would be Highly Recommended if the \index{Artefact, Data}data artefact were of \gls{dsal}\index{Assurance Level!Data} 3 or 4, Recommended if the \gls{dsal} were 2, or should merely be considered if the \gls{dsal} were 1.
 
 Many dots have been placed in the table to indicate Data Categories\index{Category!Data} and \index{Property!Data}Data Properties which are not applicable to the Technique under consideration. The dots enable the tables to be assessed very quickly, as they enable the letters representing specific Data Categories\index{Category!Data} and \index{Property!Data}Data Properties to always be presented in the same position within the table. For example, the \index{Property!Data}Data Property Verifiability\index{Verifiability Property} (``V'' from \autoref{tab:PropertiesOfData} can easily be seen to appear against the first two Techniques of \autoref{tab:MethodsSystemDesign}, whereas it does not appear in the next seven Techniques --- this can be seen without actually reading the text, but merely looking at the pattern presented by the letters and dots. 
 
@@ -881,7 +881,7 @@ A number of issues need to be considered during the implementation phase of a pr
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
   \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
   \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endfirsthead
   \caption[]{Mitigation methods: data verification (continued)}\index{Mitigation}
@@ -890,7 +890,7 @@ A number of issues need to be considered during the implementation phase of a pr
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
   \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
   \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endhead
     \multicolumn{9}{r}{\sl Continued on next page}
@@ -943,7 +943,7 @@ New entries DM.10 to DM.15 have been added to address issues identified during t
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
   \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
   \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endfirsthead
   \caption[]{Mitigation methods: data migration (continued)}\index{Mitigation}
@@ -952,7 +952,7 @@ New entries DM.10 to DM.15 have been added to address issues identified during t
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
   \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
   \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endhead
   \multicolumn{9}{r}{\sl Continued on next page}
@@ -1060,7 +1060,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
   \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
   \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endfirsthead
   \caption[]{Mitigation methods: data checking (continued)}\index{Mitigation}
@@ -1069,7 +1069,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
   \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{\index{Category!Data}} & %
   \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+  \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endhead
     \multicolumn{9}{r}{\sl Continued on next page}
@@ -1109,7 +1109,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
 \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
 \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endfirsthead
   \caption[]{Mitigation methods: test data (continued)}\index{Mitigation}
@@ -1118,7 +1118,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
 \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
 \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endhead
     \multicolumn{9}{r}{\sl Continued on next page}
@@ -1172,7 +1172,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
 \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
 \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endfirsthead
   \caption[]{Mitigation methods: data media handling --- paper / physical storage (continued)}\index{Mitigation}
@@ -1181,7 +1181,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
 \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
 \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endhead
     \multicolumn{9}{r}{\sl Continued on next page}
@@ -1227,7 +1227,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
 \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
 \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endfirsthead
   \caption[]{Mitigation methods: data media handling --- electronic storage (continued)}\index{Mitigation}
@@ -1236,7 +1236,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
 \multirow{-2}*{\TableHeadColour{Serial}} & \multirow{-2}*{\TableHeadColourCX{Technique}} & \TableHeadColour{Category\index{Category!Data}} & %
 \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & %
-\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}\Gls*{Data Property}}}\\\hline
+\multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endhead
     \multicolumn{9}{r}{\sl Continued on next page}
