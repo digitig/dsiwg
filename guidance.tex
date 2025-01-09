@@ -360,9 +360,9 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   Distribution   & x & x & x & x &   &   &   & x &   &   & x &   & x & x & x & x &   & x &   & x &   & x & x \\\hline
 \end{longtable}
 \clearpage
-\subsubsection{\gls{hazop} Guidewords}\index{HAZOP}
+\subsubsection{\glsfmtshort{hazop} Guidewords}\index{HAZOP}
 \label{bkm:HazopGuidewords}
-A \acrfull{hazop} \cite{citation:iec61882:2016}
+A \gls{hazop} \cite{citation:iec61882:2016}
 provides a structured approach for identifying hazards. It involves a multidisciplinary team collaborating to identify potential hazards and operability problems. Structure and \index{Completeness!Hazard Identification}completeness are supported through the use of guideword prompts, for example, considering the implications if software components perform functions early, late or not at all. These prompts are intended to stimulate imaginative thinking, to focus the study and to elicit ideas and discussion.
 
 \autoref{tab:HazopShort}\index{HAZOP} lists a set of guidewords for a data-focused \gls{hazop}, based upon the \index{Property!Data}properties defined in \autoref{tab:PropertiesOfData}. The intent here is to assess the impact of each guideword on the property under consideration. For example, the first row considers \dsiwgTextIT{loss} of \index{Integrity Property}integrity, \dsiwgTextIT{partial loss} of \index{Integrity Property}integrity, and so on.
@@ -371,10 +371,10 @@ The list is non-exhaustive. Other guidewords may be useful for particular system
 \begin{longtable}{|L{\dsiwgColumnWidth{0.25}}|L{\dsiwgColumnWidth{0.75}}|}
   \caption{\gls{hazop} guidewords: concise guide}\index{HAZOP}
   \label{tab:HazopShort}
-  \\\hline\TableHeadColour{Property} & \TableHeadColour{\acrshort{hazop} Data Guidewords}\\\hline
+  \\\hline\TableHeadColour{Property} & \TableHeadColour{\glsfmtshort{hazop} Data Guidewords}\\\hline
   \endfirsthead
   \caption[]{\gls{hazop} guidewords: concise guide (continued)}
-  \\\hline\TableHeadColour{Property} & \TableHeadColour{\acrshort{hazop} Data Guidewords}\\\hline
+  \\\hline\TableHeadColour{Property} & \TableHeadColour{\glsfmtshort{hazop} Data Guidewords}\\\hline
   \endhead
   \multicolumn{2}{r}{\sl Continued on next page}
   \endfoot
@@ -513,7 +513,7 @@ As noted earlier, \glspl{dsal}\index{Assurance Level!Data} have some commonality
 
 \begin{enumerate}
   \item The definition of a \gls{dsal}\index{Assurance Level!Data} already caters for interactions. For example, using two independent \index{Artefact, Data}Data Artefacts to provide similar information to a system function reduces the ``dependency'' of each artefact.
-  \item These types of consideration are most closely related to system architecture, from which \index{Artefact, Data}Data Artefacts, associated \index{Property!Data}Data Properties and risks are derived. Hence, rather than applying any calculus at the \gls{dsal}\index{Assurance Level!Data} tier it is more appropriate to apply this to, for example, FDALs, with \glspl{dsal} changing as a consequence of the revised system definition.
+  \item These types of consideration are most closely related to system architecture, from which \index{Artefact, Data}Data Artefacts, associated \index{Property!Data}Data Properties and risks are derived. Hence, rather than applying any calculus at the \gls{dsal}\index{Assurance Level!Data} tier it is more appropriate to apply this to, for example, \glspl{fdal}, with \glspl{dsal} changing as a consequence of the revised system definition.
 \end{enumerate}
 
 \subsubsection{Analysing \glspl{dsal}}\index{Assurance Level!Data}
