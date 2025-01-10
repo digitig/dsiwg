@@ -96,7 +96,7 @@ where further detail on each entry is provided.
   {8} & {Verification}\index{Verification Data} & {Data used to test and analyse the system,
     specifically to determine whether it has been built as intended}\\\hline
   \multicolumn{3}{|c|}{\dsiwgTextBF{Configuration}}\\\hline
-	{9} & {Machine Learning}\index{Machine Learning Data} & {Data used to train the system}\\\hline
+	{9} & {\Gls{ml}}\index{Machine Learning Data} & {Data used to train the system}\\\hline
   {10} & {Infrastructure}\index{Infrastructure Data} & {Data used to configure, tailor or instantiate the system itself}\\\hline
   {11} & {Behavioural}\index{Behavioural Data} & {Data used to change the functionality of the system}\\\hline
   {12} & {Adaptation}\index{Adaptation Data} & {Data used to configure to a particular site}\\\hline
@@ -177,7 +177,7 @@ There are some risk-inducing issues that are different or more prevalent for dat
     For example, video records of rail track could take days to inspect manually.
 
   \item \dsiwgTextBF{Interpretation} Data can be misinterpreted --- too much or too little deduced from available data, or data extrapolated incorrectly to derive unsound results.
-    An example is Machine Learning data\index{Machine Learning Data}, especially real or recorded data that may not contain critical edge/corner cases.
+    An example is \gls{ml} data\index{Machine Learning Data}, especially real or recorded data that may not contain critical edge/corner cases.
 
   \item \dsiwgTextBF{Distribution}
     Data can be decentralised, decomposed or distributed across many sources (e.g. channels, databases, websites) and needs to be consistently integrated to make a coherent picture. In the health sector often many IT systems have to work together feeding in different parts of a patient medical record to make a complete health picture. If parts of this distributed data are missing (for instance diagnostic test results) then it is difficult if not impossible to obtain the complete picture, and mistakes may be made.
@@ -216,7 +216,7 @@ We therefore need to ensure that it is possible to analyse it for key characteri
 ``Explainability'' has been added because it is necessary to establish, especially for learning or AI-based systems,
 what the purpose and effect data (and especially changes to data) has on a system
 and explain this to relevant stakeholders in terms that they can understand.
-This could be, for example, machine learning training data or system configuration data.
+This could be, for example, \gls{ml} training data or system configuration data.
 This property is related to analysability and may be performed by the same set of tools or techniques.
 %
 \clearpage
@@ -509,7 +509,7 @@ Risk severity is estimated against a five-point scale, as indicated in \autoref{
     \hline
 \end{longtable}
 
-As noted earlier, \glspl{dsal}\index{Assurance Level!Data} have some commonality with things like (Item / Function) \index{Assurance Level!Development}Development Assurance Levels (IDALs / \glspl{fdal}). However, this commonality does not extend across all aspects. For example, there is an accepted calculus of \glspl{fdal} in which two independent \index{Integrity Property}lower-integrity functions can be used to replace a single \index{Integrity Property}higher-integrity function. There are two reasons why this type of calculus is not appropriate for \glspl{dsal}:
+As noted earlier, \glspl{dsal}\index{Assurance Level!Data} have some commonality with things like (Item / Function) \index{Assurance Level!Development}Development Assurance Levels (\glspl{idal} / \glspl{fdal}). However, this commonality does not extend across all aspects. For example, there is an accepted calculus of \glspl{fdal} in which two independent \index{Integrity Property}lower-integrity functions can be used to replace a single \index{Integrity Property}higher-integrity function. There are two reasons why this type of calculus is not appropriate for \glspl{dsal}:
 
 \begin{enumerate}
   \item The definition of a \gls{dsal}\index{Assurance Level!Data} already caters for interactions. For example, using two independent \index{Artefact, Data}Data Artefacts to provide similar information to a system function reduces the ``dependency'' of each artefact.
@@ -591,7 +591,7 @@ For each \index{Assurance Level!Data}\gls{dsal}, the tables indicate whether the
   M.02 & %
     Definition of \index{Data!Owner}data ownership through the data lifecycle\index{Lifecycle!Data} in the system & %
     R & R & HR & HR & %
-    e.g., governance model, interface control document\index{Interface!Control Document}\\%
+    e.g., governance model, \gls{icd}\index{Interface!Control Document}\\%
     \hline
   M.03 & %
     Definition and traceability of data requirements & %

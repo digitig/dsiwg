@@ -5,3 +5,7 @@
 5. Claimed a credit for myself in the frontmatter for helping with the editing.
 6. Haven't worked out a way to include entries in both the normative and discursive glossaries. That could lead to confusion anyway - "Data Artefact" is normative but "(data) Artefact" is discursive. A reader who found the latter might not notice it's normative. I suggest adding a note at  the start of the discursive glossary similar to the one at the start of the normative glossary, and only including discursive definitions. In the e-version the hyperlinks will take readers to the right place.
 7. Accuracy (temporal) only appears in the glossary (out of alphabetic order) so I've removed it.
+8. In the frontmatter, should we still refer to the SAIWG as "the latest addition"?
+
+TODO
+need consistent citing of ISO standard numbers

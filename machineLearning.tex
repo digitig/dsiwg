@@ -14,34 +14,32 @@
 %   Machine Learning section.
 %
 %================================================================================
-\section{\Glsfmtshort{ai} and Machine Learning (Informative)} \label{bkm:MachineLearning}
+\section{\Glsfmtshort{ai} and \ecapitalisewords{\glsentrylong{ml}} (Informative)} \label{bkm:MachineLearning}
 
 \dsiwgSectionQuote{Learning never exhausts the mind.}{Leonardo da Vinci}
 
 
-\subsection{Machine Learning Training Data}\index{Machine Learning Data|textbf}
-A complete discussion about the assurance of machine learning /\gls{ai} algorithms is beyond the scope of this document.
-However, as such algorithms are inherently data-driven, the Data Safety Guidance provides the following notes on good practice for data sets used for machine learning / Artificial Intelligence applications.
+\subsection{\ecapitalisewords{\glsentrylong{ml}} Training Data}\index{Machine Learning Data|textbf}
+A complete discussion about the assurance of \gls{ml} /\gls{ai} algorithms is beyond the scope of this document.
+However, as such algorithms are inherently data-driven, the Data Safety Guidance provides the following notes on good practice for data sets used for \gls{ml} / \gls{ai} applications.
 
-The data for real-world machine learning
-(ML)
-scenarios may be effectively infinite (for example, with self-driving cars, where the environment is largely unbounded) and can only be approximated by a finite number of scenarios.
+The data for real-world \gls{ml} scenarios may be effectively infinite (for example, with self-driving cars, where the environment is largely unbounded) and can only be approximated by a finite number of scenarios.
 Therefore it is crucial to have an extension process in place to extend the system when previously unknown situations are experienced. 
 ISO~21448 \cite{citation:ISO21448} captures this process by introducing the term \gls{sotif} and requires the systematic handling of unknowns. Although specifically aimed at road vehicles, \gls{sotif} may be of interest to other domains.
 
 For more general guidance on managing the safety of Autonomous Systems, please refer to the safety assurance objectives guidance produced by the SCSC \gls{saswg} \cite{citation:SASWG:Objectives}.
 
 \subsection{Data Categories}
-Three data categories are discussed: training data\index{Machine Learning Data} (the data used to train the machine learning model),
-ML test data\index{Category!Data!Verification} (used to provide a measure the trained model’s \index{Accuracy Property}accuracy), and ML
+Three data categories are discussed: \cbstart\gls{ml} training data\index{Machine Learning Data} (the data used to train the model)\cbend,
+\gls{ml} test data\index{Category!Data!Verification} (used to provide a measure the trained model’s \index{Accuracy Property}accuracy), and \gls{ml}
 validation data (used to independently verify the trained model).  
 
 \subsection{Real-world Data}
 It is important to obtain sufficient quantities of data for the training data. It is generally assumed that this is sufficiently representative of situations that could be encountered to allow the algorithm to generalise the appropriate behaviour for all encountered situations.  However, there are problems with real-life training data. Firstly, it is possible that rare, hazardous cases are never encountered during the capture of a data set (as those events have been engineered to be statistically unlikely) and are too dangerous, or expensive, to generate deliberately. Poor representation of rare cases in training data will result in a model that is insufficiently prepared to handle those important scenarios. Poor representation (or weighting) of rare cases in
-ML test data or ML
+\gls{ml} test data or \gls{ml}
 validation data can result in error heuristics that do not provide adequate insight into the system’s performance\index{Performance, System} in rare situations. A second issue with real-world data is that amassing, understanding, verifying and validating it at scale is resource intensive.
 Hence it is not just a case of more testing, a more cost-effective approach is needed. Some possible techniques are: artificial
-ML
+\gls{ml}
 test data set generation, data fault injection and simulation. It may well be more practicable to use simulated training data during the training phase to give more control and avoid the cost and effort of real-world testing. The issue then is how realistic the simulated data (and the associated simulation) can be. Note that artificial data sets can also be used to increase the frequency of rare events, thus biasing the algorithm to managing those rare events effectively, but doing so, could impair the ``sunny day'' performance\index{Performance, System} of the system.
 
 \subsection{Sensor Data}
@@ -62,7 +60,7 @@ to feed into a system safety case.
 
 \subsection{Data Diversity}
 The degree of data diversity is important. Common data items across data sets need to be avoided, especially across training and
-ML
+\gls{ml}
 validation data. Common data may include data derived from the same sources, environments, simulators, tools, techniques or mathematical models.
 
 \subsection{\index{Property!Data}Data Properties}
@@ -153,7 +151,7 @@ Data sets will be large and complex and ensuring quality and \index{Consistency!
 
 \subsection{Optimization}
 What is an optimal size of a training or
-ML
+\gls{ml}
 validation data set? A data set may contain many repeated or redundant values. If these do not add to the training outcome it is possible that some values may be removed. Also if there are ways in which the data set could be compressed or optimized then these should be considered to assist management and curation.
 
 \subsection{Compliance}
