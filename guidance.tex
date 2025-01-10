@@ -193,7 +193,7 @@ There are some risk-inducing issues that are different or more prevalent for dat
 Further examples of how data may cause issues in many scenarios is given in a recently published book~\cite{citation:datacentric}.
 
 \subsubsection{Data Properties}\label{bkm:guidance:dataproperties}
-Data Properties are used to establish what aspects of the data (e.g., timeliness\index{Timeliness Property}, accuracy\index{Accuracy Property}) need to be guaranteed in order that the system operates in a safe manner.
+Data Properties are used to establish what aspects of the data (e.g., timeliness\index{Timeliness Property}, \gls{accuracy}\index{Accuracy Property}) need to be guaranteed in order that the system operates in a safe manner.
 
 James Inge's work \cite{citation:inge2008improving} produced a useful taxonomy of data categories, and went on to look at faults in data. He concluded that a rigid taxonomy of data categories was unhelpful due to various properties, or characteristics, of the data which vary independently. In short, it is the combination of Data Category\index{Category!Data} with the required \index{Property!Data}Data Properties that facilitates safety analysis.
 
@@ -236,7 +236,7 @@ This property is related to analysability and may be performed by the same set o
   {Consistency}\index{Consistency!Property} & N & {The data adheres to a common world view (e.g., units)}\\\hline
   {Continuity}\index{Continuity Property} & Y & {The data is continuous and regular without gaps or breaks}\\\hline
   {Format}\index{Format Property} & O & {The data is represented in a way which is readable by those that need to use it}\\\hline
-  {Accuracy}\index{Accuracy Property} & A & {The data has sufficient detail for its intended use}\\\hline
+  {\Gls{accuracy}}\index{Accuracy Property} & A & {The data has sufficient detail for its intended use}\\\hline
   {Resolution}\index{Resolution Property} & R & {The smallest difference between two adjacent values that can be represented in a data storage, display or transfer system}\\\hline
   {Traceability} & T & {The data can be linked back to its source or derivation}\\\hline
   {Timeliness}\index{Timeliness Property} & M & {The data is as up to date as required}\\\hline
@@ -279,10 +279,10 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   & \rotatebox{90}{\index{Consistency!Property}Consistency}
   & \rotatebox{90}{\index{Continuity Property}Continuity}
   & \rotatebox{90}{Format}
-  & \rotatebox{90}{\index{Accuracy Property}Accuracy}
+  & \rotatebox{90}{\index{Accuracy Property}\Gls{accuracy}}
   & \rotatebox{90}{Resolution\index{Resolution Property}}
   & \rotatebox{90}{Traceability}
-  & \rotatebox{90}{Timeliness\index{Timeliness Property}}
+s  & \rotatebox{90}{Timeliness\index{Timeliness Property}}
   & \rotatebox{90}{Verifiability}\index{Verifiability Property}
   & \rotatebox{90}{\index{Availability Property}Availability}
   & \rotatebox{90}{Fidelity/Representation\index{Fidelity/Representation Property}}
@@ -384,7 +384,7 @@ The list is non-exhaustive. Other guidewords may be useful for particular system
   {Consistency}\index{Consistency!Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {Continuity}\index{Continuity Property} & {Loss, partial loss, incorrect, late, loss of sequence}\\\hline
   {Format}\index{Format Property} & {Loss, partial loss, incorrect, multiple}\\\hline
-  {Accuracy}\index{Accuracy Property} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
+  {\Gls{accuracy}}\index{Accuracy Property} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
   {Resolution\index{Resolution Property}} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
   {Traceability}\index{Traceability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {Timeliness\index{Timeliness Property}} & {Loss, partial loss}\\\hline
@@ -1130,7 +1130,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
   \hline
   TD.03 & Using Simulator & \dsiwgTextTT{V....} & - & R & HR & HR & Simulators (software or hardware) may be able to produce very good test data, obviously depending on how close and detailed a simulation they can achieve. & \dsiwgTextTT{ICNYOAR....F........G..}\\
   \hline
-  TD.04 & Using Prototype & \dsiwgTextTT{V....} & - & R & HR & HR & Prototypes are often a good way of generating test data for the real system. However they may not produce data with the appropriate range, \index{Accuracy Property}accuracy or precision. & \dsiwgTextTT{ICNY.A.....F........G..}\\
+  TD.04 & Using Prototype & \dsiwgTextTT{V....} & - & R & HR & HR & Prototypes are often a good way of generating test data for the real system. However they may not produce data with the appropriate range, \index{Accuracy Property}\gls{accuracy} or precision. & \dsiwgTextTT{ICNY.A.....F........G..}\\
   \hline
   TD.05 & Using Manual Means & \dsiwgTextTT{V....} & R & R & - & - & Simple test data can be produced by manual means, although this may be prone to human error. & \dsiwgTextTT{ICNY.A.....F........G..}\\
   \hline

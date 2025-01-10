@@ -154,7 +154,7 @@ Some suggestions for test data for safety-related systems are:
 \end{itemize}
 Typically very complex test data is derived from recorded live feeds of real data flows. While this data can be extremely useful for regression purposes, it should be recognised that it is unlikely to contain many outlying or boundary data items. Therefore it may need to be modified to test any hazardous situations; this modification can be difficult and may require sophisticated tools to both ensure correct \index{Property!Data}properties and injection of the intended faults (for instance to introduce a statistical bias to the data).
 
-Simulator / emulator derived values can be useful, but again the issue is how realistic the values are: often the \index{Accuracy Property}accuracy, resolution or timing of simulated values may be different to real data.
+Simulator / emulator derived values can be useful, but again the issue is how realistic the values are: often the \index{Accuracy Property}\gls{accuracy}, resolution or timing of simulated values may be different to real data.
 
 Coverage with test data is something to consider. Sometimes the same data set is used for multiple test scenarios, when in fact it is not stressing all of them to the same degree. Test data coverage can be collected over requirements, code or design, but it is important not to forget hazards: coverage of the hazards and mitigations\index{Mitigation} identified in the hazard log is a key aim. 
 
