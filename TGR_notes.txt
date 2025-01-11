@@ -11,3 +11,6 @@
 
 TODO
 1. Update contributors to current version
+2. Consider adding "mitigation" to definitions.
+3. Check definitions for (data) assurance level. The first definition isn't a definition, and the phrase never appears in the document, only "data safety assurance level". The second is software.
+4. Consider whether "development assurance level", "item development assurance level", and "function development assurance level", or should we have a general definition of "assurance level", not specific to what is being assured?
