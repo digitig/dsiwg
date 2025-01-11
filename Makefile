@@ -33,8 +33,8 @@ TEXFILES = \
 		feedback.tex
 		
 IMAGEFILES = \
-		images/front\ cover.png \
-		images/back\ cover.png \
+		images/front\ cover.pdf \
+		images/back\ cover.pdf \
 		images/medicalscenario.png \
 		images/manufacturer.png \
 		images/healthorganisation.png \

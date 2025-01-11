@@ -148,4 +148,31 @@
 %		generated, processed or consumed by a system.}}
 % I've split data assurance level and software assurance level
 \newglossaryentry{data assurance level}{name={data assurance level},description={The required \index{Assurance Level}assurance level for the aeronautical data process is identified, based on the overall system architecture through allocation of risk determined using a preliminary \index{Safety Assessment!System}system safety assessment. RTCA/DO-200A \cite{citation:ED76}}}
+
+\longnewglossaryentry{adaptation data}{%
+	name={adaptation data},%
+	plural={adaptation data}}%
+	{Data used to customise elements of the \gls{atm} System for their designated purpose.
+		Adaptation data\index{Adaptation Data} is used to customise elements of the \gls{cns} / \gls{atm} system for its designated purpose at a specific location.
+		These systems are often configured to accommodate site-specific characteristics.
+		These site dependencies are developed into sets of adaptation data\index{Adaptation Data}.
+		Adaptation data\index{Adaptation Data} includes data that configures the software for a given geographical site, and data that configures a workstation to the preferences and / or functions of an operator.
+		Examples include, but are not limited to:
+		\begin{enumerate}
+			\item Geographical Data - latitude and longitude of a radar site.
+			\item Environmental Data - operator selectable data to provide their specific preferences.
+			\item Airspace Data - sector-specific data.
+			\item Procedures - operational customisation to provide the desired operational role.
+		\end{enumerate}
+		Adaptation data\index{Adaptation Data} may take the form of changes to either database parameters or take the form of pre-programmed options.
+		In some cases, adaptation data\index{Adaptation Data} involves re-linking the code to include different libraries.
+		Note that this should not be confused with recompilation in which a completely new version of the code is generated. ED-153 \cite{citation:ED153}}
+
+\longnewglossaryentry{aeronautical data}{name={aeronautical data}, plural={aeronautical data}}%
+{A representation of aeronautical facts, concepts or instructions in a formalized manner suitable for communication, interpretation or processing. (EU) No 73/2010 \cite{citation:EU732010}
+
+Data used for aeronautical applications such as navigation, flight planning, flight simulators, terrain awareness, and other purposes. RTCA/DO-178C \cite{citation:ED12C}}
+
+\newglossaryentry{availability}{name={availability},plural={availabilities},description={The property of being accessible and usable upon demand by an authorized entity. ISO\ 27001:2013 \cite{citation:ISO27001:2013}}}
+
 \newglossaryentry{software assurance level}{name={software assurance level},description={An indication of how much assurance is required (commensurate to risk) before deploying software into an operational system. J Spriggs, based on (EC) No 482/2008 \cite{citation:EC4822008}}}
