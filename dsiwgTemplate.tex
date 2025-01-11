@@ -637,9 +637,13 @@ linewidth=2pt]{aibox} % Environment to display AI-generated text
 	section=subsection,%
 	numberedsection=autolabel,%
 	nonumberlist,%
+	hyperfirst=false,%
 	acronym,%
 	toc
 	]{glossaries-extra}
+	% hyperfirst=false suppresses all first-reference hyperlinks, but we want hyperlinks for all main glossary entries.
+	% This sets them as if they've already been referenced.
+%	\glsunsetall[main]
 \setabbreviationstyle[acronym]{long-short}
 \newglossary*{definitions}{Normative Definitions}
 \makenoidxglossaries

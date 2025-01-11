@@ -300,12 +300,6 @@ Geographic {Information}. {Data} {Quality} {Measures}.
 \newblock Standard ISO/TS 19138:2006, International Standards Organisation,
   2006.
 
-\bibitem{citation:ED76}
-Standards for processing aeronautical data.
-\newblock Standard RTCA/DO-200A, EUROCAE/ED-76, Radio Technical Commission for
-  Aeronautics / European Organisation for Civil Aviation Equipment, September
-  1998.
-
 \bibitem{citation:EC4822008}
 Commission {Regulation} ({EC}) {No} 482/2008 of 30 {May} 2008 establishing a
   software safety assurance system, as amended.
@@ -313,6 +307,12 @@ Commission {Regulation} ({EC}) {No} 482/2008 of 30 {May} 2008 establishing a
   \url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008R0482&qid=1611781633022},
   May 2008.
 \newblock Accessed: 27 January 2021, but no longer in force.
+
+\bibitem{citation:ED76}
+Standards for processing aeronautical data.
+\newblock Standard RTCA/DO-200A, EUROCAE/ED-76, Radio Technical Commission for
+  Aeronautics / European Organisation for Civil Aviation Equipment, September
+  1998.
 
 \bibitem{citation:ED153}
 Guidelines for {ANS} software safety assurance.
