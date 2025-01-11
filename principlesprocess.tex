@@ -36,27 +36,59 @@ This is an intentionally broad statement because data is conceptual and not phys
 \subsubsection{Principle 4+1: The confidence established in addressing the Data Safety Assurance Principles shall be commensurate to the contribution of the data to system risk}
 The confidence in the evidence that demonstrates establishment of the first four Data Safety Assurance Principles shall be proportionate to the contribution data (or a particular \index{Artefact, Data}data artefact) makes to the system hazards.
 
-\subsection{Data Safety Management Process}
-To assist organizations with integrating data safety considerations into their existing processes and, in due course, their Safety Management System, an outline Data Safety Management Process has been developed.
-This is structured around
-ISO 31000 \cite{citation:iso310002018risk},
-and takes into account the Data Safety Assurance Principles: links between the process objectives and the assurance principles are described in \autoref{bkm:principlesobjectives}.
-The adoption of ISO 31000 means that a relatively simple process, which focuses on data-related aspects, can be presented here and applied by individual organizations. 
+\cbstart\subsection{Data Safety Management Process}
+To assist organizations with integrating data safety considerations into their existing processes and,
+in due course, their Safety Management System, an outline Data Safety Management Process has
+been developed.
 
-To simplify the presentation, the process is presented as a series of sequential phases. In practice, a degree of iteration is likely to be required (e.g., measures adopted to treat risks may lead to refined system design and revised risk analyses). Likewise, it may be appropriate for some parts of the process to run in parallel (i.e., a subsequent phase may start before a preceding phase has finished).
+This is structured around ISO 31000 \cite{citation:iso310002018risk}, and takes into account the Data Safety Assurance Principles:
+links between the process objectives and the assurance principles are described in \autoref{bkm:principlesobjectives}. The
+adoption of ISO 31000 means that a relatively simple process, which focuses on data-related
+aspects, can be presented here and applied by individual organizations.
 
-A key aim is that the \gls{dsg} can be applied across all industry sectors and to a wide range of system types. This extensive coverage can only be achieved through tailoring: what is required for large-scale, safety-critical systems would be excessive for small-scale systems that pose significantly less risk. Suggestions for tailoring are included in this document. Alternative levels of tailoring may be adopted, if sufficient justification is provided.
+To simplify the presentation, the process is presented as a series of sequential phases. In practice, a
+degree of iteration is likely to be required (e.g., measures adopted to treat risks may lead to refined
+system design and revised risk analyses). Likewise, it may be appropriate for some parts of the
+process to run in parallel (i.e., a subsequent phase may start before a preceding phase has finished).
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{images/process diagram v3 Data Safety Only}
+\caption{Process Phases}
+\label{fig:process_phases}
+\end{figure}
 
-Although the Data Safety Management Process is based on the structure of ISO 31000, there are some differences between the two. These include:
+The Data Safety Management Process occurs over four key steps as shown in \autoref{fig:process_phases}, and the specific
+objectives and outputs of each step are described in more detail in \autoref{bkm:objectivesoutputs}. The last outcome of the
+process is a `Post treatment risk assessment'. If the risk reduction is not considered adequate then
+the process will iterate again. The whole process is intended to be repeated through the lifecycle of
+the system and so will be repeated many times and further iterations will be required when there
+are changes to the system or its data.
+
+Although the Data Safety Management Process is based on the structure of ISO 31000, there are
+some differences between the two. These include:
 \begin{itemize}
-	\item The ISO standard's ``Establish Context'' phase is concerned with an organization adopting a risk management system; within this guidance document that phase is extended to apply to specific projects;
-	\item The ISO standard considers risk as being synonymous with uncertainty in outcome (i.e., some risks may be beneficial and hence it may be desirable to take actions to increase their likelihood); within this guidance document all risks are considered to have adverse effects; and
-	\item The ISO standard separates the ``Evaluate Risks'' and ``Treat Risks'' activities; within this guidance document it has been convenient to combine these into a single phase.
+\item The ISO standard’s ``Establish Context'' phase is concerned with an organization adopting a
+	risk management system; within this guidance document that phase is extended to apply to
+	specific projects;
+\item The ISO standard considers risk as being synonymous with uncertainty in outcome (i.e.,
+	some risks may be beneficial and hence it may be desirable to take actions to increase their
+	likelihood); within this guidance document all risks are considered to have adverse effects;
+	and
+\item The ISO standard separates the ``Evaluate Risks'' and ``Treat Risks'' activities; within this
+	guidance document it has been convenient to combine these into a single phase.
 \end{itemize}
 
-ISO 31000 also recommends two activities that run in parallel with risk assessment. These activities are: (1) monitor and review the risk assessment process; and (2) communicate and consult with the Stakeholders about the risk assessment process. Aspects like ``monitor'', ``review'', ``communicate'' and ``consult'' are taken to be part of normal project activities; items like the \gls{odr} assessment and the \gls{dsmp} are intended to assist from the perspective of data safety.
+ISO 31000 also recommends two activities that run in parallel with risk assessment. These activities
+are:
+\begin{enumerate}
+\item monitor and review the risk assessment process; and 
+\item communicate and consult with the
+Stakeholders about the risk assessment process. 
+\end{enumerate}
+Aspects like ``monitor'', ``review'', ``communicate''
+and ``consult'' are taken to be part of normal project activities; items like the \gls{odr} assessment and
+the \gls{dsmp} are intended to assist from the perspective of data safety.
 
-\cbstart
 \subsection{Data Safety Management Process Overview}
 \begin{figure}[hb]
 \centering
@@ -64,11 +96,23 @@ ISO 31000 also recommends two activities that run in parallel with risk assessme
 \caption{Simplified Process Overview}
 \label{fig:process}
 \end{figure}
-Figure \ref{fig:process} provides an overview of the data safety management process and how it integrates with a typical system lifecycle. Data pervades all aspects of a systems lifecycle, so the data safety assessment process can occur throughout the system lifecycle depending on the type of data that is being assessed. Some data items such as context, implementation and built system data are relevant for specific process phases of the lifecycle, while others such as configuration, capability, compliance and liability data apply throughout the entire lifecycle. The meta-property data of trustworthiness covers data that is used to inform on the overall trustworthiness of the system. The specific data categories are covered in more detail in section \ref{bkm:datacategories}.
 
-The data safety management process occurs over four key steps as shown in the top part of the diagram and the specific objectives and outputs of each step is described in more detail in section \ref{bkm:objectivesoutputs}. The last outcome of the process is a post mitigation risk assessment. If the risk reduction is not considered adequate then the process will iterate again from the `identify risk' step. The whole process is intended to be repeated through the lifecycle of the system and so will be repeated many times and further iterations will be required when there are changes to the system or its data.
+\autoref{fig:process} provides an overview of how the of the \gls{dsmp}
+integrates with a typical system lifecycle. In practice, the main data safety assessments activities will
+occur as part of the normal Safety Assessment process lifecycles, so for example, when risks arising
+from failures of the software and hardware of a system, loss of properties of data should also be
+considered. However, data pervades all aspects of a systems lifecycle so the Data Safety Assessment
+process can occur throughout the system lifecycle depending on the type of data that is being
+assessed. Some data items such as Context, Implementation and Built System Data are relevant for
+specific process phases of the lifecycle, while others such as Configuration, Capability, Compliance and
+Liability Data apply throughout the entire lifecycle. The Meta-Property Data of Trustworthiness
+covers data that is used to inform on the overall trustworthiness of the system. The specific data
+categories are covered in more detail in \autoref{bkm:datacategories}.
 
-The bottom section of the figure shows a typical basic lifecycle for a system from its inception through to decommissioning. The types of data that are of concern for each process step including those that apply to all steps are shown and these feed into the data safety assessment process. Further examples of lifecycles are given in Appendix \ref{bkm:lifecycle}.
+The bottom section of the figure shows a typical basic lifecycle for a system from its inception
+through to end of life. The types of data that are of concern for each process step including those
+that apply to all steps are shown and these feed into the Data Safety Assessment Process. Further
+examples of lifecycles are given in \autoref{bkm:lifecycle}.
 \cbend
 
 %\newpage

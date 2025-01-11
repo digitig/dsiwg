@@ -136,6 +136,7 @@ linewidth=2pt]{aibox} % Environment to display AI-generated text
 }
 %--------------------------------------------------------------------------------
 %The hyperref is best loaded last to avoid conflicts, e.g. with glossaries
+%TGR: the glossaries package documentation says it must be loaded after the hyperref package.
 %--------------------------------------------------------------------------------
 \ifx\withBlueHyperlinks\undefined
 \usepackage[                    %Could use \hypersetup but easier to do it here
@@ -637,13 +638,13 @@ linewidth=2pt]{aibox} % Environment to display AI-generated text
 	section=subsection,%
 	numberedsection=autolabel,%
 	nonumberlist,%
-	hyperfirst=false,%
+	hyperfirst=false,% doesn't work, for some reason.
 	acronym,%
 	toc
 	]{glossaries-extra}
 	% hyperfirst=false suppresses all first-reference hyperlinks, but we want hyperlinks for all main glossary entries.
 	% This sets them as if they've already been referenced.
-%	\glsunsetall[main]
+	\glsunsetall[main]
 \setabbreviationstyle[acronym]{long-short}
 \newglossary*{definitions}{Normative Definitions}
 \makenoidxglossaries
