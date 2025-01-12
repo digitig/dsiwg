@@ -146,7 +146,7 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
   \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new data sets as a result. Data Properties are not necessarily preserved by these processes --- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source information; data can also appear to become something else. Without careful management the \index{Integrity Property}integrity may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., validation checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}integrity / assurance is maintained.
 
-  \item \dsiwgTextBF{\index{Data!Owner}Ownership} The transformation of data can result in a lack of clarity regarding who has ownership of, and responsibility for, the data (if anyone). It is important that responsibility for errors can be tracked, for example, to determine whether they were present in the initial data or whether they arose as part of the transformation process. Establishing clear roles within the data supply chain can help mitigate these issues.
+  \item \dsiwgTextBF{\index{Data!Owner}Ownership} The transformation of data can result in a lack of clarity regarding who has ownership of, and responsibility for, the data (if anyone). It is important that responsibility for \cbstart\glspl{error}\cbend\ can be tracked, for example, to determine whether they were present in the initial data or whether they arose as part of the transformation process. Establishing clear roles within the data supply chain can help mitigate these issues.
 
   \item \dsiwgTextBF{Archiving and Retrieval} Safety-related data needs to be available when required. There is thus a need to think about data accessibility over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
 
@@ -202,7 +202,7 @@ Data Categories were discussed in the preceding phase. A collection of \index{Pr
 \paragraph{The Goldilocks\index{Goldilocks Property|textbf} Property}\label{bkm:guidance:goldilocks}
 The ``Goldilocks'' property has been added to address appropriate sizing and quantity of data. A number of issues have been found to arise when there is too much or too little data. While it is particularly relevant to communications links, it may have relevance to other areas, such as \glspl{database} and also when people are involved in reviewing or checking data. The property is named ``Goldilocks'' as it refers to the need to have not too much, not too little, but just the right amount of data%
 %
-\footnote{A system where the property was lost involved a high speed bus that connected several safety-critical systems. A transceiver of that bus failed and transmitted random noise. The receivers employed parity checks and cyclic redundancy check, but the system had been designed to eliminate occasional errors. When random noise filled the bus, several apparently valid messages were created every second, resulting in potentially lethal behaviour.
+\footnote{A system where the property was lost involved a high speed bus that connected several safety-critical systems. A transceiver of that bus failed and transmitted random noise. The receivers employed parity checks and cyclic redundancy check, but the system had been designed to eliminate occasional \cbstart\glspl{error}\cbend. When random noise filled the bus, several apparently valid messages were created every second, resulting in potentially lethal behaviour.
 
 In a \gls{hazop}\index{HAZOP} carried out during 2020, based upon the \gls{hazop}\index{HAZOP} guidewords within previous versions of this document, the facilitator realised that certain failure modes had not been identified by the \gls{hazop} team. In addition to the issue of system overload already discussed, those omissions also concerned system behaviour following data rejection. In these cases, bad data was detected and rejected, but the consequences of data rejection over an extended period had not been considered.}.
 
@@ -416,15 +416,15 @@ while potential approaches to customisation are described in \autoref{bkm:DsalCu
 Such customisation is encouraged, but it is essential that any customised approach is recorded in the \gls{dsmp}.
 
 The likelihood of a data safety related risk is qualitatively determined by
-consideration of the significance of a data error, along with the defences currently in place against such errors. These factors may be addressed by
+consideration of the significance of a \gls{data error}, along with the defences currently in place against such errors. These factors may be addressed by
 considering the following characteristics:
 
 \begin{enumerate}
   \item \dsiwgTextBF{Proximity}: how directly a data failure will lead to an accident;
   \item \dsiwgTextBF{Dependency}: how dependent the application is on the data set;
-  \item \dsiwgTextBF{Prevention}: the ability of the systems architect / developers to guard against errors;
+  \item \dsiwgTextBF{Prevention}: the ability of the systems architect / developers to guard against \cbstart\glspl{error}\cbend;
   \item \dsiwgTextBF{Detection}: the likelihood of being able to detect a data failure prior to an accident; and
-  \item \dsiwgTextBF{Correction}: the ability of the system to work around or correct errors.
+  \item \dsiwgTextBF{Correction}: the ability of the system to work around or correct \cbstart\glspl{error}\cbend.
 \end{enumerate}
 
 For example, errors that are easy to guard against are associated with low likelihoods. Conversely, errors that are difficult to detect are associated with high likelihoods. \autoref {tab:Likelihood} illustrates how aspects of these characteristics map to three, qualitative likelihoods.
