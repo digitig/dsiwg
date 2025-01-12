@@ -175,4 +175,27 @@ Data used for aeronautical applications such as navigation, flight planning, fli
 
 \newglossaryentry{availability}{name={availability},plural={availabilities},description={The property of being accessible and usable upon demand by an authorized entity. ISO\ 27001:2013 \cite{citation:ISO27001:2013}}}
 
-\newglossaryentry{software assurance level}{name={software assurance level},description={An indication of how much assurance is required (commensurate to risk) before deploying software into an operational system. J Spriggs, based on (EC) No 482/2008 \cite{citation:EC4822008}}}
+\newglossaryentry{completeness}{name={completeness},description={Completeness of the data provided. RTCA/DO-200A}}
+
+\newglossaryentry{software assurance level}{name={assurance level, software},text={software assurance level},description={An indication of how much assurance is required (commensurate to risk) before deploying software into an operational system. J Spriggs, based on (EC) No 482/2008 \cite{citation:EC4822008}}}
+
+\longnewglossaryentry*{configuration data}{name={configuration data}, plural={configuration data}}%
+{Data that configures a generic software system to a particular instance of its use. (EC) No 482/2008 \cite{citation:EC4822008}
+
+Data that configures a generic software system to a particular instance of its use (e.g., data for flight data processing system for a particular airspace, by setting the positions of airways, reporting points, navigation aids, airports and other elements important to air navigation). ED-153 \cite{citation:ED153}Data that configures a generic software system to a particular instance of its use (e.g., data for flight data processing system for a particular airspace, by setting the positions of airways, reporting points, navigation aids, airports and other elements important to air navigation). ED-153 \cite{citation:ED153}}
+
+\newglossaryentry{confidentiality}{name={confidentiality},description={The property that information is not made available or disclosed to unauthorized individuals, entities, or processes. ISO27001:2013 \cite{citation:ISO27001:2013}}}
+
+\newglossaryentry{consistency}{name={consistency (data)},text={consistency},description={The property that the data adheres to a common world view (e.g., units).} }
+
+\newglossaryentry{continuity}{name={continuity (data)},text={continuity},description={The property that the data is continuous and regular without gaps or breaks.}}
+
+\newglossaryentry{correctness}{name={correctness (data)},text={correctness},description={\index{Consistency!Self}self-\gls{consistency}, protection against alteration or corruption and \index{Consistency!With Requirements}\gls{consistency} with the functional requirements of the data-driven system. IEC 61508 Part 3 \cite{citation:iec615083}}}
+
+\newglossaryentry{coupling}{name={coupling (data)}, text={coupling},description={The dependence of a software component on data not exclusively under the control of that software component. RTCA/DO-178C \cite{citation:ED12C}}} %doesn't seem to appear in text.
+
+\newglossaryentry{criticality}{name={criticality (data)},text={criticality},description={Classification of data by the potential effect of erroneous data on the expected operation that is supported by that data. RTCA/DO-200A \cite{citation:ED76}}}
+
+\newglossaryentry{critical data}{name={critical data},description={Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. (EU) No 73/2010 \cite{citation:EU732010}}}
+
+\newglossaryentry{customisation data}{name={customisation data},description={Data used to configure a system or component. Def(Aust)5679 \cite{citation:DEFOz}}}

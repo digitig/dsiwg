@@ -156,12 +156,12 @@ Mitigations\index{Mitigation} include assessing the data collection opportunitie
 \paragraph{Changes with Time}\index{Dark Data!Changes With Time}\label{bkm:dark7}
 This is a common problem in a safety context. Data in safety systems often becomes obsolete or out of date and may still be mistakenly used. Some examples are:
 \begin{itemize}
-\item System configuration data not kept up to date as software\index{Software Changes} or hardware changes
+\item System \gls{configuration data} not kept up to date as software\index{Software Changes} or hardware changes
   \item Medical drug interaction databases
   \item Software patches requiring updates to configuration or system data, which is not always done
 \end{itemize}
 
-Mitigations\index{Mitigation} include keeping critical data up to date and regularly refreshed, and knowing how old the data is in the first place.
+Mitigations\index{Mitigation} include keeping \gls{critical data} up to date and regularly refreshed, and knowing how old the data is in the first place.
 
 \paragraph{Definitions of Data}\index{Dark Data!Definitions of Data}\label{bkm:dark8}
 This was considered a common case for systems with databases or those exchanging data with external systems, e.g.
@@ -490,14 +490,14 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   E.g., Corruptions to a database could change the original values so the original data is lost, or hide or mask values such as by inserting End-of-File markers\\
   \hline
   %
-  Completeness (C) & The data has nothing missing or lost & \tick & - &
+  \Gls{completeness} (C) & The data has nothing missing or lost & \tick & - &
   If data is lost then it is usually unknown and hence dark. However use of parity, CRCs and digital signatures may be able to detect the loss and, in some cases, fill in the missing data.\\
   \hline
   %
-  Consistency (N) & The data adheres to a common world view (e.g., units) & - & - &\\
+  \Gls{consistency} (N) & The data adheres to a common world view (e.g., units) & - & - &\\
   \hline
   %
-  Continuity (Y) & The data is continuous and regular without gaps or breaks & \tick & - &
+  \Gls{continuity} (Y) & The data is continuous and regular without gaps or breaks & \tick & - &
   Gaps or breaks in a data stream would be dark --- the missing values are unknown.
   Methods may be available to mitigate if detected, e.g., interpolation.\\
   \hline

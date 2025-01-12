@@ -117,19 +117,19 @@ The following table summarises some of the safety issues due to migration, maps 
 1.&
 Data format may not map exactly: due to different database formats, word lengths, endian issues, etc.&
 Data can be lost or discarded, or substituted for defaults. Data may be migrated / imported / exported incorrectly.&
-Integrity, Completeness, Format&
+Integrity, \gls{completeness}, Format&
 DM.02, DM.07, DM.08, DM.09, DM.10\\\hline
 %
 2.&
 Data may not translate exactly: no equivalent data type / record / field type in new system, etc&
 Data can be lost or discarded, or substituted for defaults. Data may be migrated / imported / exported incorrectly.&
-Integrity, Completeness&
+Integrity, \gls{completeness}&
 DM.02, DM.04, DM.07, DM.08, DM.09, DM.10\\\hline
 %
 3.&
 Data may not be valid: less numeric range available in new system, etc. Subtype of (2).&
 Data can be lost or discarded, or substituted for defaults. Data may be migrated / imported / exported incorrectly.&
-Integrity, Completeness&
+Integrity, \gls{completeness}&
 DM.02, DM.04, DM.07, DM.08, DM.09, DM.10\\\hline
 %
 4.&
@@ -143,14 +143,14 @@ DM.04, DM.09\\\hline
 Data may have a different meaning or interpretation in the new system context.
 E.g. if a fluid value is ‘gallons’ and this is migrated from a UK to a US-developed system without applying an adjustment factor.&
 Meaning of data can be altered even if migration apparently successful.&
-Consistency, Fidelity/Representation&
+\Gls{consistency}, Fidelity/Representation&
 DM.01, DM.04, DM.11\\\hline
 %
 6.
 &
 Data may be correctly rejected (detection of error on import/export)&
 Data is lost. Not necessarily a problem if notified and fixed.&
-Completeness&
+\Gls{completeness}&
 DM.07, DM.08, DM.09, DM.10\\\hline
 %
 7.
@@ -158,20 +158,20 @@ DM.07, DM.08, DM.09, DM.10\\\hline
 Data may be wrongly filtered or rejected as incompatible&
 Correct data is rejected. If data can’t be imported what should happen? a. Rejected and migration halted,
 b. Rejected and notified, c. Rejected silently, d. Substituted?&
-Integrity, Completeness&
+Integrity, \gls{completeness}&
 DM.02, DM.03, DM.07, DM.08, DM.09, DM.10\\\hline
 %
 8.&
 Two or more data items may map to the same item in the new system – one may overwrite the other with the last one ‘winning’.&
 This is a case of aliasing (See 6.2.2 ref). Data can be lost or discarded. Data may be migrated / imported / exported incorrectly.&
-Integrity, Completeness&
+Integrity, \gls{completeness}&
 DM.02, DM.03, DM.07, DM.08, DM.09, DM.10\\\hline
 %
 9.&
 There may be situations where the data store has to be ‘live’ and the migration / import / export process takes some time.
 In this case some data may be out of date and become inconsistent (stale), and integrity of the whole data set is lost.&
 Data may be migrated / imported / exported incorrectly.&
-Consistency, Integrity, Timeliness&
+\Gls{consistency}, Integrity, Timeliness&
 DM.07, DM.08\\\hline
 %
 10.&
@@ -184,6 +184,6 @@ DM.06, DM.07, DM.08\\\hline
 11.&
 The data ‘cleansing’ activity conducted before or during migration may introduce faults.&
 The cleansing activity may miss some data faults or may be over-zealous, deleting good values.&
-Integrity, Completeness&
+Integrity, \gls{completeness}&
 DM.07, DM.09, DM.13\\\hline
 \end{longtable}
