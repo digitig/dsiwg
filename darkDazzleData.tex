@@ -157,14 +157,14 @@ Mitigations\index{Mitigation} include assessing the data collection opportunitie
 This is a common problem in a safety context. Data in safety systems often becomes obsolete or out of date and may still be mistakenly used. Some examples are:
 \begin{itemize}
 \item System \gls{configuration data} not kept up to date as software\index{Software Changes} or hardware changes
-  \item Medical drug interaction databases
+  \item Medical drug interaction \glspl{database}
   \item Software patches requiring updates to configuration or system data, which is not always done
 \end{itemize}
 
 Mitigations\index{Mitigation} include keeping \gls{critical data} up to date and regularly refreshed, and knowing how old the data is in the first place.
 
 \paragraph{Definitions of Data}\index{Dark Data!Definitions of Data}\label{bkm:dark8}
-This was considered a common case for systems with databases or those exchanging data with external systems, e.g.
+This was considered a common case for systems with \glspl{database} or those exchanging data with external systems, e.g.
 \begin{itemize}
 \item Taxonomies e.g.\ in machine learning categorisation schemes
   \item Data schemas in medical record systems 
@@ -206,7 +206,7 @@ Mitigations\index{Mitigation} include the use of dialectic argument approaches (
 \paragraph{Information Asymmetry}\index{Dark Data!Information Asymmetry}\label{bkm:dark12}
 This is common where there are multiple stores or sources of the same data:
 \begin{itemize}
-\item Multiple / backup databases where they are not kept in sync
+\item Multiple / backup \glspl{database} where they are not kept in sync
   \item Image recognition systems that learn, but fail to share data
   \item Issues of divergence of data across multiple sources.
 \end{itemize}
@@ -226,7 +226,7 @@ This can be mitigated\index{Mitigation} using appropriate technical measures (e.
 Fabrication (i.e.\ making up the data) is surprisingly common, e.g.\ in medical, policing and maritime sectors. Sometimes it is created with the best of intentions as it was not produced or collected at the right time and is now required (e.g.\ for an audit), but sometimes it is created to mask a problem. Synthetic data is often used where there are difficulties in producing enough real data with the right characteristics:
 \begin{itemize}
 \item Data is retrospectively entered / patched to make a “clean” record
-  \item Synthetic autonomous vehicle training databases can have issues with artificial data if not realistic
+  \item Synthetic autonomous vehicle training \glspl{database} can have issues with artificial data if not realistic
 \end{itemize}
 
 Possible mitigations\index{Mitigation} include comparisons with current real-world data and checking with historical data.
@@ -408,7 +408,7 @@ Mitigations\index{Mitigation} include audit and assessing what extra data could 
 \paragraph{Information Asymmetry}\index{Dazzle Data!Information Asymmetry}
 This is common where there are multiple stores or sources of the same data. If one has erroneous duplicate values (i.e. many null values used for padding) then comparisons between them may fail.
 \begin{itemize}
-    \item Multiple / backup databases where they are not kept in sync
+    \item Multiple / backup \glspl{database} where they are not kept in sync
     \item Issues of divergence of data across multiple sources.
 \end{itemize}
 
@@ -487,7 +487,7 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   \endfoot\endlastfoot
   %
   Integrity (I) & The data is correct, true and unaltered & \tick & \tick &
-  E.g., Corruptions to a database could change the original values so the original data is lost, or hide or mask values such as by inserting End-of-File markers\\
+  E.g., Corruptions to a \gls{database} could change the original values so the original data is lost, or hide or mask values such as by inserting End-of-File markers\\
   \hline
   %
   \Gls{completeness} (C) & The data has nothing missing or lost & \tick & - &

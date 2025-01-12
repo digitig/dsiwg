@@ -28,6 +28,16 @@
 %
 %THIS WILL BE LEFT UNTIL THE NEXT VERSION (2.X OR 3.0)
 %
+% Too many hyperlinks if we reference every mention of "data".
+\glsadd{data}
+
+% Aliases
+\glsadd{data consistency}
+\glsadd{data continuity}
+\glsadd{data correctness}
+\glsadd{data criticality}
+
+
 %\printglossary[type=acronym]
 %\printglossary
 \setglossarysection{subsection}
@@ -71,7 +81,7 @@
   \item Airspace Data - sector-specific data.
   \item Procedures - operational customisation to provide the desired operational role.
   \end{enumerate}
-  Adaptation data\index{Adaptation Data} may take the form of changes to either database parameters or take the form of pre-programmed options.
+  Adaptation data\index{Adaptation Data} may take the form of changes to either \gls{database} parameters or take the form of pre-programmed options.
   In some cases, adaptation data\index{Adaptation Data} involves re-linking the code to include different libraries.
   Note that this should not be confused with recompilation in which a completely new version of the code is generated. & ED-153 \cite{citation:ED153}\\
   \hline
@@ -86,9 +96,9 @@
   \multicolumn{3}{|l|}{\TableDimColour{C}}\\
   Completeness\index{Completeness!Property|textbf} & Completeness of the data provided. & RTCA/DO-200A \cite{citation:ED76}\\
   \hline
-  & Data that configures a generic software system to a particular instance of its use. & (EC) No 482/2008 \cite{citation:EC4822008}\\
+  & data that configures a generic software system to a particular instance of its use. & (EC) No 482/2008 \cite{citation:EC4822008}\\
   \cline{2-3}
-  \multirow{-2.5}*{Configuration Data} & Data that configures a generic software system to a particular instance of its use (e.g., data for flight data processing system for a particular airspace, by setting the positions of airways, reporting points, navigation aids, airports and other elements important to air navigation). & ED-153 \cite{citation:ED153}\\
+  \multirow{-2.5}*{Configuration Data} & data that configures a generic software system to a particular instance of its use (e.g., data for flight data processing system for a particular airspace, by setting the positions of airways, reporting points, navigation aids, airports and other elements important to air navigation). & ED-153 \cite{citation:ED153}\\
   \hline
   Confidentiality & The property that information is not made available or disclosed to unauthorized individuals, entities, or processes. & ISO27001:2013 \cite{citation:ISO27001:2013}\\
   \hline
@@ -98,15 +108,15 @@
   (data) Continuity\index{Continuity Property|textbf} & The property that the data is continuous and regular without gaps or breaks. &  \\
 
   \hline
-  (data) Correctness & \Gls{completeness}, \index{Consistency!Self}self-\gls{consistency}, protection against alteration or corruption and \index{Consistency!With Requirements}\gls{consistency} with the functional requirements of the data-driven system. & IEC 61508 Part 3 \cite{citation:iec615083}\\
+  (data) Correctness & \Gls{completeness}, \index{Consistency!Self}self-\gls{consistency}, protection against alteration or corruption and \index{Consistency!With Requirements}\gls{consistency} with the functional requirements of the \gls{data-driven system}. & IEC 61508 Part 3 \cite{citation:iec615083}\\
   \hline
   (data) Coupling & The dependence of a software component on data not exclusively under the control of that software component. & RTCA/DO-178C \cite{citation:ED12C}\\ 
   \hline
   (data) Criticality & Classification of data by the potential effect of erroneous data on the expected operation that is supported by that data. & RTCA/DO-200A \cite{citation:ED76}\\ 
   \hline
-  Critical Data & Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\ 
+  Critical Data & data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\ 
   \hline
-  Customisation (data) & Data used to configure a system or component. & Def(Aust)5679 \cite{citation:DEFOz}\\ 
+  Customisation (data) & data used to configure a system or component. & Def(Aust)5679 \cite{citation:DEFOz}\\ 
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{D}}\\
   \hline
@@ -126,7 +136,7 @@
   \hline
   Data-Driven Systems & System which relies upon \gls{configuration data} or lookup tables to define the functionality of the system. & IEC 61508 Part 4 \cite{citation:iec615084}\\
   \hline
-  Data-intensive System & Systems which make extensive use of large amounts of data. & N. Storey \cite{citation:StoreyFaulkner20031}\\
+  Data-intensive System & Systems which make extensive use of large amounts of data. & N. Storey \cite{citation:StoreyFaulkner20031}\\ %doesn't appear to be used in document.
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{E}}\\
   \hline
@@ -134,7 +144,7 @@
   \cline{2-3}
   \multirow{-2}*{(data) Error} & Discrepancy between a data value and the true, specified or theoretically correct value or condition. & P. Ensor \cite{citation:Ensor2009}\\
   \hline
-  Essential Data & Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred thousand: there is a low probability when using corrupted essential data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  Essential Data & data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred thousand: there is a low probability when using corrupted essential data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{F}}\\
   \hline
@@ -145,7 +155,7 @@
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{H}}\\
   \hline
-  (data) Hazard & Use of data in the context of a system that could lead to an accident. & \gls{scsc} Data Safety Initiative Working Group\\
+  (data) Hazard & Use of data in the context of a system that could lead to an accident. & \gls{scsc} \gls{dsiwg}\\
   \hline
   %  Hazard Log & A hazard log is a record keeping tool applied to tracking all hazard analysis, risk assessment and risk reduction activities for the whole-of-life of a safety-related system.&\\
   Hazard Log & A Hazard Log records all hazard analysis,
@@ -177,7 +187,7 @@
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{M}}\\
   \hline
-  Metadata & Data that represents information about data itself. Note that one should distinguish between ``Structural Metadata'', which is data about the design and specification of data structures (and is more properly called ``data about the containers of data'') and ``Descriptive Metadata'', which is about individual instances of application data, the data content. & J. Inge \cite{citation:inge2008improving}\\
+  Metadata & data that represents information about data itself. Note that one should distinguish between ``Structural Metadata'', which is data about the design and specification of data structures (and is more properly called ``data about the containers of data'') and ``Descriptive Metadata'', which is about individual instances of application data, the data content. & J. Inge \cite{citation:inge2008improving}\\
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{N}}\\
   \hline
@@ -195,7 +205,7 @@
   \hline
   & A degree or level of confidence that the data provided meet the requirements of the user. These requirements include levels of \gls{accuracy}\index{Accuracy Property}, resolution\index{Resolution Property}, \cbstart\gls{dsal}assurance level\cbend\index{Assurance Level}, traceability, timeliness\index{Timeliness Property}, \gls{completeness}, and format. & RTCA/DO-200A \cite{citation:ED76}\\
   \cline{2-3}
-  & Process by which the \gls{ecs} database is produced, the source materials, the resolution\index{Resolution Property} and reproduction \index{Accuracy Property}\gls{accuracy} of chart features, and the \gls{correctness} and \gls{completeness} of data. & ISO\ 19379:2003 \cite{citation:ISO19379}\\
+  & Process by which the \gls{ecs} \gls{database} is produced, the source materials, the resolution\index{Resolution Property} and reproduction \index{Accuracy Property}\gls{accuracy} of chart features, and the \gls{correctness} and \gls{completeness} of data. & ISO\ 19379:2003 \cite{citation:ISO19379}\\
   \cline{2-3}
   \multirow{-8}*{(data) Quality} & A degree or level of confidence that the data provided meets the requirements of the data user in terms of \index{Accuracy Property}\gls{accuracy}, resolution\index{Resolution Property} and \index{Integrity Property}integrity. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
@@ -211,7 +221,7 @@
   \hline
   Response\index{Response} & The way in which an identified risk is addressed; possible responses include avoid/eliminate, treat, or accept as sufficiently low. & \\
   \hline
-  Routine Data & Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one thousand: there is a very low probability when using corrupted routine data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  Routine Data & data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one thousand: there is a very low probability when using corrupted routine data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{S}}\\
   \hline
@@ -225,19 +235,19 @@
   \hline
   (data) Set & Identifiable collection of data. Note that a dataset may be a smaller grouping of data which, though limited by some constraint such as spatial extent or feature type, is located physically within a larger dataset. Theoretically, a dataset may be as small as a single feature or feature attribute contained within a larger dataset. A hardcopy map or chart may be considered a dataset. & BS EN ISO 19131:2008 \cite{citation:ISO19131}\\
   \hline
-  \raggedright{Software Lifecycle Data} & Data that is produced during the software lifecycle\index{Lifecycle!Software} to plan, direct, explain, define, record, or provide evidence of activities (including the software product itself). This data enables the software lifecycle\index{Lifecycle!Software} processes, system or equipment approval and post-approval modification of the software product. & ED-153 \cite{citation:ED153}\\
+  \raggedright{Software Lifecycle Data} & data that is produced during the software lifecycle\index{Lifecycle!Software} to plan, direct, explain, define, record, or provide evidence of activities (including the software product itself). This data enables the software lifecycle\index{Lifecycle!Software} processes, system or equipment approval and post-approval modification of the software product. & ED-153 \cite{citation:ED153}\\
   \hline
   Stakeholder\index{Stakeholder|textbf} & An individual or organization that has some relationship to the system, possibly including a power of veto. & \\
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{T}}\\
   \hline
-  & A measure of the time delay between a change in the real world and the associated database update being available to the user. & P. Ensor \cite{citation:Ensor2009}\\ 
+  & A measure of the time delay between a change in the real world and the associated \gls{database} update being available to the user. & P. Ensor \cite{citation:Ensor2009}\\ 
   \cline{2-3}
   \multirow{-2.5}*{Timeliness}\index{Timeliness Property} & The difference between the time of output of a data item and the time of applicability of that data item. & (EU) No 1207/2011 \cite{citation:EU12072011}\\ 
   \hline
   Traceability & Ability to determine the origin of the data. & RTCA/DO-200A \cite{citation:ED76}\\ 
   \hline
-  Trace (data) & Data providing evidence of traceability of development and verification processes software lifecycle\index{Lifecycle!Software} data without implying the production of any particular artefact. Trace data may show linkages, for example, through the use of naming conventions or through the use of references or pointers either embedded in or external to the software lifecycle\index{Lifecycle!Software} data. & RTCA/DO-178C \cite{citation:ED12C}\\ 
+  Trace (data) & data providing evidence of traceability of development and verification processes software lifecycle\index{Lifecycle!Software} data without implying the production of any particular artefact. Trace data may show linkages, for example, through the use of naming conventions or through the use of references or pointers either embedded in or external to the software lifecycle\index{Lifecycle!Software} data. & RTCA/DO-178C \cite{citation:ED12C}\\ 
   \hline
   Treatment\index{Treatment!Risk|textbf} & An action taken to reduce or control risk. & \\
   \hline

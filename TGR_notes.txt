@@ -8,14 +8,16 @@
 8. In the frontmatter, should we still refer to the SAIWG as "the latest addition"?
 9. MAIB might be "Maritime Accident Investigation Board" or "Maritime Accident Investigation Branch", apparently depending on jurisdiction, so I've had to manage the long form of the abbreviation manually.
 10. Acronym list defines SIL as "Safety Integrity Level", but the only reference in the text defines it as "System Integrity Level". I think the former is the right one.
+11. I've not referenced "data" because it would have made too many hyperlinks.
 
 TODO
 1. Update contributors to current version
 2. Consider adding "mitigation" to definitions.
 3. Check definitions for (data) assurance level. The first definition isn't a definition, and the phrase never appears in the document, only "data safety assurance level". The second is software.
-4. Consider whether "development assurance level", "item development assurance level", and "function development assurance level", or should we have a general definition of "assurance level", not specific to what is being assured?
+4. Consider whether we need definitions for "development assurance level", "item development assurance level", and "function development assurance level", or should we have a general definition of "assurance level", not specific to what is being assured?
 5. Is "the assessed assurance level of a data set" in the lifecycle section "the DSAL"? "the DSAL of a data set"? "the assessed DSAL"? "the assessed DSAL of a data set"? None of those?
 6. Review definition of "completeness". At present it's circular.
 7. Review definition of "adaptation data". At present it only applies to ATM.
-8. Review definition of "critical data". At present it's aviation specific and cites absolute integrity levels that are probably wrong for other industries.
+8. Review definition of "critical data". At present it's aviation specific and cites absolute integrity levels that may be inappropriate for other industries.
 9. Customisation data defined but not used in document. Appears to overlap with configuration data.
+10. First definition of data chain is aviation-specific, not general.

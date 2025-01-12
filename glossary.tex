@@ -190,7 +190,7 @@ Data that configures a generic software system to a particular instance of its u
 
 \newglossaryentry{continuity}{name={continuity (data)},text={continuity},description={The property that the data is continuous and regular without gaps or breaks.}}
 
-\newglossaryentry{correctness}{name={correctness (data)},text={correctness},description={\index{Consistency!Self}self-\gls{consistency}, protection against alteration or corruption and \index{Consistency!With Requirements}\gls{consistency} with the functional requirements of the data-driven system. IEC 61508 Part 3 \cite{citation:iec615083}}}
+\newglossaryentry{correctness}{name={correctness (data)},text={correctness},description={\index{Consistency!Self}self-\gls{consistency}, protection against alteration or corruption and \index{Consistency!With Requirements}\gls{consistency} with the functional requirements of the \gls{data-driven system}. IEC 61508 Part 3 \cite{citation:iec615083}}}
 
 \newglossaryentry{coupling}{name={coupling (data)}, text={coupling},description={The dependence of a software component on data not exclusively under the control of that software component. RTCA/DO-178C \cite{citation:ED12C}}} %doesn't seem to appear in text.
 
@@ -199,3 +199,32 @@ Data that configures a generic software system to a particular instance of its u
 \newglossaryentry{critical data}{name={critical data},description={Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. (EU) No 73/2010 \cite{citation:EU732010}}}
 
 \newglossaryentry{customisation data}{name={customisation data},description={Data used to configure a system or component. Def(Aust)5679 \cite{citation:DEFOz}}}
+
+\longnewglossaryentry*{data}{name={data},plural={data}}{A thing given or granted; something known or assumed as fact, and made the basis of reasoning or calculation; an assumption or premiss from which inferences are drawn. Oxford English Dictionary (OED)
+	
+A reinterpretable representation of information in a formalized manner suitable for communication, interpretation or processing. ISO/IEC\ 2382 \cite{citation:ISO23821}}
+
+\newglossaryentry{data consistency}{name={data consistency},description={See \glsname{consistency}}}
+
+\newglossaryentry{data continuity}{name={data continuity},description={See \glsname{continuity}}}
+
+\newglossaryentry{data correctness}{name={data correctness},description={See \glsname{correctness}}}
+
+\newglossaryentry{data criticality}{name={data critiality},description={See \gls{criticality}}}
+
+\newglossaryentry{data customisation}{name={data customisation},description={See \gls{customisation}}}
+	
+\newglossaryentry{database}{name={database},description={A set of data, part or the whole of another set of data, consisting of at least one file that is sufficient for a given purpose or for a given data processing system. RTCA/DO-178C}}
+
+\longnewglossaryentry{data chain}{name={data chain}}{An `Aeronautical Data Chain' is a conceptual representation of the path that a set, or element of aeronautical data takes from its creation to its end use. An aeronautical data chain is a series of interrelated links wherein each link provides a function that facilitates the origination, transmission and use of aeronautical data for a specific purpose. RTCA/DO-200A \cite{citation:ED76}
+
+A collection of organizational data processing functions, where data is transferred from one chain participant to another between data origination and end use. P. Ensor \cite{citation:Ensor2009}
+
+Any combination of two or more data elements, data items, data codes, and data abbreviations in a prescribed sequence to yield meaningful information; for example, ``date'' consists of data elements year, month, and day. McGraw-Hill Dictionary \cite{citation:McGrawHill}}
+
+\newglossaryentry{data dictionary}{name={data dictionary},plural={data dictionaries},description={The detailed description of data, parameters, variables, and constants used by the system. RTCA/DO-178C}}
+
+\newglossaryentry{data-driven system}{name={data-driven system},description={System which relies upon \gls{configuration data} or lookup tables to define the functionality of the system. IEC 61508 Part 4 \cite{citation:iec615084}}}
+
+\newglossaryentry{data-intensive system}{name={data-intensive system},description={Systems which make extensive use of large amounts of data. & N. Storey \cite{citation:StoreyFaulkner20031}}}
+

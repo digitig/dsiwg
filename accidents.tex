@@ -241,7 +241,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
 	Speed restriction data failed to be passed to trains, placing pedestrians on level crossings at risk.
 	& Rail & 2017 & \index{Availability Property}\gls{availability}, History \\ 
 	\hline
-	\ref{bkm:incacc:irishsar} & Loss of Irish rescue Helicopter & At the time of writing, the investigation\index{Investigation!Incident/Accident} is continuing; possible controlled flight into terrain; possible issues with terrain / obstacle databases. Four fatalities. & Air & 2017 & \index{Fidelity/Representation Property}Fidelity / representation, \index{Completeness!Property}\gls{completeness}, \index{Accuracy Property}\gls{accuracy} \\
+	\ref{bkm:incacc:irishsar} & Loss of Irish rescue Helicopter & At the time of writing, the investigation\index{Investigation!Incident/Accident} is continuing; possible controlled flight into terrain; possible issues with terrain / obstacle \glspl{database}. Four fatalities. & Air & 2017 & \index{Fidelity/Representation Property}Fidelity / representation, \index{Completeness!Property}\gls{completeness}, \index{Accuracy Property}\gls{accuracy} \\
 	\hline
 	\ref{bkm:incacc:schiaparelli} & Loss of Schiaparelli Mars Lander & High rates led to the saturation of the \gls{imu}; the lander prematurely believed it was on the ground and released its parachute; the lander was lost. The high rates should have been expected, but were not due to modelling deficiencies. & Space & 2016 & \index{Fidelity/Representation Property}Fidelity / representation, \index{Integrity Property}Integrity \\
 	\hline
@@ -312,7 +312,7 @@ Post Office Limited is a company wholly owned by the UK government, and provides
 
 In the 1990s, Post Office Counters Limited (POCL, the name at that time for what would become Post Office Limited), the Department of Social Security (the government department at that time responsible for the Post Office) and ICL agreed to replace the paper-based accounting scheme at Post Office branches with an electronic system, in particular to allow the payment of benefits by electronic transfer instead of cash. A pilot system known as Pathway was rolled out to a small number of branches in 1996, but was subsequently abandoned due to ``greater than expected complexity''. However, POCL and ICL decided to continue with a system based on Pathway to automate branch post offices. ICL was acquired by Fujitsu in 1998, and the resulting system, known as Horizon (now known as Legacy Horizon), was rolled out from 1999 and a version that combined management accounting functions and electronic point-of-sale functions, Horizon Online, was rolled out from 2010.
 
-From the outset, Horizon has been a data-driven system ``in which any requirement which
+From the outset, Horizon has been a \gls{data-driven system} ``in which any requirement which
 might change frequently is encoded as data, rather than software code. The code is
 written and tested to work with all allowed values of the data''\cite{citation:bates_v_pol_tech}. 
 
@@ -528,7 +528,7 @@ Data properties involved: \index{Integrity Property}Integrity, \index{Accuracy P
 
 In early October 2020 the British Government announced that 15841 positive Covid-19\index{Covid-19} test results had not been reported in the totals for England between 25 September and 2 October. This also meant that the contacts of those people were not traced, or asked to self-isolate, meaning that the virus might have spread further than it would otherwise have done, and possibly have taken additional lives.
 
-The results were silently discarded as they were imported into the Public Health England database. Results were delivered as a \gls{csv} file, which was imported into an Excel\index{Excel} spreadsheet ``template'', using the ``.xls'' format, which was then in turn imported into the national database. The ``.xls'' format has a limit of 65536 (2$^{16}$) rows, and rows beyond this limit in the \gls{csv} file were silently discarded. (Data Category\index{Dynamic Data}: Dynamic, Properties lost: \dsiwgTextIT{\index{Integrity Property}Integrity, \index{Completeness!Property}\gls{completeness}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}Fidelity/representation})
+The results were silently discarded as they were imported into the Public Health England \gls{database}. Results were delivered as a \gls{csv} file, which was imported into an Excel\index{Excel} spreadsheet ``template'', using the ``.xls'' format, which was then in turn imported into the national \gls{database}. The ``.xls'' format has a limit of 65536 (2$^{16}$) rows, and rows beyond this limit in the \gls{csv} file were silently discarded. (Data Category\index{Dynamic Data}: Dynamic, Properties lost: \dsiwgTextIT{\index{Integrity Property}Integrity, \index{Completeness!Property}\gls{completeness}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}Fidelity/representation})
 
 The newer ``.xlsx'' file format would have increased the row limit to 1048576 (2$^{20}$) rows before suffering the same problem, but the \gls{csv} file format has no limit on the number of rows.
 
@@ -628,11 +628,11 @@ On 14 March 2017, an Irish \gls{sar} helicopter\index{Search and Rescue} apparen
 
 The \gls{sar}\index{Search and Rescue} helicopter was responding to a medical emergency on board a fishing vessel. It left Dublin\index[locationidx]{Ireland, republic of!Dublin} and requested a route to Blacksod\index[locationidx]{Ireland, republic of!Blacksod} to refuel. The flight data recorded on the \gls{hums} showed the helicopter was in stable level flight until the final few seconds, when it pitched up rapidly and impacted with terrain at the western end of Black rock\index[locationidx]{Ireland, republic of!Black rock}.
 
-The helicopter was equipped with an \gls{egpws}. This is designed to decrease instances of \gls{cfit}\index{CFIT}\index{Controlled Flight into Terrain|see{CFIT}} by increasing pilot situational awareness, including the use of alerts and warnings: it is not intended to be used for aircraft navigation. The \gls{egpws} can provide terrain alerting using look ahead algorithms, which take information from the aircraft (e.g.\ position., attitude, heading) and use this in conjunction with internal terrain and obstacle databases. Neither the Black rock\index[locationidx]{Ireland, republic of!Black rock} lighthouse nor the island's terrain were included in the \gls{egpws} databases; these databases had been sourced from external suppliers by the \gls{egpws} manufacturer.
+The helicopter was equipped with an \gls{egpws}. This is designed to decrease instances of \gls{cfit}\index{CFIT}\index{Controlled Flight into Terrain|see{CFIT}} by increasing pilot situational awareness, including the use of alerts and warnings: it is not intended to be used for aircraft navigation. The \gls{egpws} can provide terrain alerting using look ahead algorithms, which take information from the aircraft (e.g.\ position., attitude, heading) and use this in conjunction with internal terrain and obstacle \glspl{database}. Neither the Black rock\index[locationidx]{Ireland, republic of!Black rock} lighthouse nor the island's terrain were included in the \gls{egpws} \glspl{database}; these \glspl{database} had been sourced from external suppliers by the \gls{egpws} manufacturer.
 
 The preliminary investigation\index{Investigation!Incident/Accident} also notes that the flight crew were following an operator-specific route guide: a review of such guides has been recommended.
 
-This incident potentially illustrates the importance of the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} and \dsiwgTextIT{\index{Completeness!Property}\gls{completeness}} \index{Property!Data}Data Properties, with respect to the \gls{egpws} databases, and the \index{Accuracy Property}\gls{accuracy} \index{Property!Data}Data Property, with respect to the route guides.
+This incident potentially illustrates the importance of the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} and \dsiwgTextIT{\index{Completeness!Property}\gls{completeness}} \index{Property!Data}Data Properties, with respect to the \gls{egpws} \gls{database}, and the \index{Accuracy Property}\gls{accuracy} \index{Property!Data}Data Property, with respect to the route guides.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -718,13 +718,13 @@ Flight TK726 was a regular passenger service from Istanbul-Atat{\"u}rk\index[loc
 
 This approach was abandoned at about the Missed Approach Point at 1DME and the aircraft performed a go around. The aircraft circled and positioned for a second approach to runway 02. The aircraft touched down to the left of the runway centre line with the left hand main gear off the paved runway surface. It ran onto soft soil and the nose landing gear collapsed. Following the accident the aircraft was written off.
 
-The aircraft touched down to the left of the centreline because the \gls{fmgs} navigation database contained threshold coordinates for a proposed displacement of the runway 02 threshold. This was later withdrawn through a \gls{notam}, but had not been updated by the airline in the database. Additionally, the coordinates that were initially published were inaccurate, causing the threshold coordinates to be offset to the left of the actual threshold. This had been noticed and reported by a previous Turkish Airlines\index{Turkish Airlines} flight on March 2. The changes had not been performed by the time TK726 landed at Kathmandu\index[locationidx]{Nepal!Kathmandu!Kathmandu-Tribhuvan Airport}. 
+The aircraft touched down to the left of the centreline because the \gls{fmgs} navigation \gls{database} contained threshold coordinates for a proposed displacement of the runway 02 threshold. This was later withdrawn through a \gls{notam}, but had not been updated by the airline in the \gls{database}. Additionally, the coordinates that were initially published were inaccurate, causing the threshold coordinates to be offset to the left of the actual threshold. This had been noticed and reported by a previous Turkish Airlines\index{Turkish Airlines} flight on March 2. The changes had not been performed by the time TK726 landed at Kathmandu\index[locationidx]{Nepal!Kathmandu!Kathmandu-Tribhuvan Airport}. 
 
 Among the safety recommendations stated in the accident report were:
 \begin{itemize}
   \item ``The operator must ensure that the correct navigation data are uploaded on Flight Management Guidance System''; 
   \item ``The operator should establish a system of verifying the quality of charts prepared by the service provider''; 
-  \item ``The operator should establish a system of checking the validity of the \gls{fms} database''; and
+  \item ``The operator should establish a system of checking the validity of the \gls{fms} \gls{database}''; and
   \item ``Civil Aviation Authority of Nepal\index[locationidx]{Nepal} must ensure that raw aeronautical information/data are provided by the aerodrome authorities taking into account of its \index{Accuracy Property}accuracy and \index{Integrity Property}integrity requirements for \gls{aeronautical data} as specified by \gls{icao} Annex 15 and its Aeronautical Information Service Manual.''
 \end{itemize}
 
@@ -1084,13 +1084,13 @@ Probable causes of the accident were the captain's failure to adequately brief a
 
 Another contributing factor was the intentional inhibition by the \gls{faa} of the \gls{msaw} system at Guam\index[locationidx]{Guam}, and the agency's failure to adequately manage the system.
 
-The \gls{msaw} system uses a terrain database. It is designed to alert a controller if an aircraft equipped with a Mode C transponder descends below, or is predicted to descend below, a predetermined safe altitude.
+The \gls{msaw} system uses a terrain \gls{database}. It is designed to alert a controller if an aircraft equipped with a Mode C transponder descends below, or is predicted to descend below, a predetermined safe altitude.
 
 In 1990, the Guam\index[locationidx]{Guam} terminal \gls{msaw} was installed to provide protection within a 55~nm radius. In 1993, a new software package was produced in which warnings were inhibited within a 54~nm radius; this left a 1~nm annular region within which warnings could be generated. The motivation behind the new configuration was to reduce false alarms. The software became operational in February 1995. A further software update became operational in April 1996. This also had the 54~nm inhibition.
 
 This incident illustrates the importance of the \dsiwgTextIT{\index{Continuity Property}\gls{continuity} \index{Property!Data}}Data Property, with respect to the \gls{msaw} coverage, and the \dsiwgTextIT{\index{Fidelity/Representation Property}fidelity / representation} \index{Property!Data}Data Property,
 regarding
-the terrain database used by the \gls{msaw} system.
+the terrain \gls{database} used by the \gls{msaw} system.
 
 \begin{samepage}
 \dsiwgTextBF{Links}

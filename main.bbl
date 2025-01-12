@@ -300,20 +300,6 @@ Geographic {Information}. {Data} {Quality} {Measures}.
 \newblock Standard ISO/TS 19138:2006, International Standards Organisation,
   2006.
 
-\bibitem{citation:EC4822008}
-Commission {Regulation} ({EC}) {No} 482/2008 of 30 {May} 2008 establishing a
-  software safety assurance system, as amended.
-\newblock URL
-  \url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008R0482&qid=1611781633022},
-  May 2008.
-\newblock Accessed: 27 January 2021, but no longer in force.
-
-\bibitem{citation:ED76}
-Standards for processing aeronautical data.
-\newblock Standard RTCA/DO-200A, EUROCAE/ED-76, Radio Technical Commission for
-  Aeronautics / European Organisation for Civil Aviation Equipment, September
-  1998.
-
 \bibitem{citation:ED153}
 Guidelines for {ANS} software safety assurance.
 \newblock Standard EUROCAE/ED-153, European Organisation for Civil Aviation
@@ -327,21 +313,41 @@ Software {Considerations} in {Airborne} {Systems} and {Equipment}
   Aeronautics / European Organisation for Civil Aviation Equipment, January
   2012.
 
+\bibitem{citation:EC4822008}
+Commission {Regulation} ({EC}) {No} 482/2008 of 30 {May} 2008 establishing a
+  software safety assurance system, as amended.
+\newblock URL
+  \url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008R0482&qid=1611781633022},
+  May 2008.
+\newblock Accessed: 27 January 2021, but no longer in force.
+
 \bibitem{citation:ISO27001:2013}
 Information {Technology} --- {Security} {Techniques} --- {Information}
   {Security} {Management} {Systems} --- {Requirements}.
 \newblock Standard BS ISO/IEC 27001:2013, International Standards Organisation,
   2013.
 
-\bibitem{citation:DEFOz}
-{\em DEF(AUST)5679, Issue 2, Safety Engineering for Defence Systems ---
-  Standard}.
-\newblock (Australian) Department of Defence, October 2008.
+\bibitem{citation:ED76}
+Standards for processing aeronautical data.
+\newblock Standard RTCA/DO-200A, EUROCAE/ED-76, Radio Technical Commission for
+  Aeronautics / European Organisation for Civil Aviation Equipment, September
+  1998.
 
 \bibitem{citation:ISO23821}
 Information {Technology}. {Vocabulary}. {Part} 1: {Fundamental} terms.
 \newblock Standard ISO/IEC 2382-1:1993, International Standards Organisation,
   1993.
+
+\bibitem{citation:iec615084}
+Functional safety of electrical/electronic/ programmable electronic safety
+  related systems: {Definitions} and abbreviations.
+\newblock Standard BS EN 61508-4:2010, International Electrotechnical
+  Commission, June 2010.
+
+\bibitem{citation:DEFOz}
+{\em DEF(AUST)5679, Issue 2, Safety Engineering for Defence Systems ---
+  Standard}.
+\newblock (Australian) Department of Defence, October 2008.
 
 \bibitem{citation:Ensor2009}
 P~Ensor.
@@ -352,12 +358,6 @@ P~Ensor.
 {\em McGraw-Hill Dictionary of Scientific and Technical Terms, 6th Edition}.
 \newblock McGraw-Hill, November 2002.
 \newblock \showISBN{007042313X}.
-
-\bibitem{citation:iec615084}
-Functional safety of electrical/electronic/ programmable electronic safety
-  related systems: {Definitions} and abbreviations.
-\newblock Standard BS EN 61508-4:2010, International Electrotechnical
-  Commission, June 2010.
 
 \bibitem{citation:StoreyFaulkner20031}
 N~Storey and A~Faulkner.

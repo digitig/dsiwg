@@ -53,7 +53,7 @@ This is where the old system is switched off and mothballed, and may be subseque
 
 It is noted that migration is generally between systems
 (e.g. a legacy system and a new one) but can be between different instances or environments within the same system,
-involving different software, stores or databases.
+involving different software, stores or \glspl{database}.
 
 Many moves of data are now to Cloud storage, and the implementation may be largely hidden,
 with only software API interfaces available\footnote{It is noted that within a cloud environment mini automated migrations of data are happening all the time as new servers and storage are provisioned by the service provider, software is upgraded, etc. There should be some sort of assurance provided in this case to ensure the data is preserved as required.}.
@@ -115,7 +115,7 @@ The following table summarises some of the safety issues due to migration, maps 
   \endlastfoot
 
 1.&
-Data format may not map exactly: due to different database formats, word lengths, endian issues, etc.&
+Data format may not map exactly: due to different \gls{database} formats, word lengths, endian issues, etc.&
 Data can be lost or discarded, or substituted for defaults. Data may be migrated / imported / exported incorrectly.&
 Integrity, \gls{completeness}, Format&
 DM.02, DM.07, DM.08, DM.09, DM.10\\\hline
@@ -133,7 +133,7 @@ Integrity, \gls{completeness}&
 DM.02, DM.04, DM.07, DM.08, DM.09, DM.10\\\hline
 %
 4.&
-Metadata (data about the data) may be lost, including data dictionary aspects, derivation, history, signoffs, authorisations,
+Metadata (data about the data) may be lost, including \gls{data dictionary} aspects, derivation, history, signoffs, authorisations,
 logs, etc.&
 Data may be migrated / imported / exported losing information.&
 Traceability, History&
