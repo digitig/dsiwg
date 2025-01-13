@@ -9,6 +9,7 @@
 9. MAIB might be "Maritime Accident Investigation Board" or "Maritime Accident Investigation Branch", apparently depending on jurisdiction, so I've had to manage the long form of the abbreviation manually.
 10. Acronym list defines SIL as "Safety Integrity Level", but the only reference in the text defines it as "System Integrity Level". I think the former is the right one.
 11. I've not referenced "data" because it would have made too many hyperlinks.
+12. Can't work out why "data fidelity" sorts to the wrong place.
 
 TODO
 1. Update contributors to current version

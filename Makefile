@@ -63,6 +63,7 @@ main :  is-unsrt.bst \
 	bibtex -include-directory=obj obj/main
 	makeindex obj/main
 	makeindex obj/locationidx
+	makeglossaries "main"
 	pdflatex -output-directory obj main
 	pdflatex -output-directory obj main
 	pdflatex -output-directory obj main
@@ -82,6 +83,13 @@ clean :
 	del /F /Q *.out
 	del /F /Q *.pdf
 	del /F /Q *.toc
+	del /F /Q *.*glg
+	del /F /Q *.*glo
+	del /F /Q *.*gls
+	del /F /Q *.xdy
+	del /F /Q *.acn
+	del /F /Q *.acr
+	del /F /Q *.alg
 	
 	
 

@@ -15,3 +15,10 @@ main.pdf
 *.gz
 *.zip
 *.toc
+*.*glg
+*.*glo
+*.*gls
+*.xdy
+*.acn
+*.acr
+*.alg
