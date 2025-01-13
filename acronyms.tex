@@ -32,6 +32,7 @@
 \glsadd{data}
 
 % Aliases
+\glsadd{aeronautical information}
 \glsadd{data consistency}
 \glsadd{data continuity}
 \glsadd{data correctness}
@@ -117,7 +118,7 @@
   \hline
   (data) Criticality & Classification of data by the potential effect of erroneous data on the expected operation that is supported by that data. & RTCA/DO-200A \cite{citation:ED76}\\ 
   \hline
-  Critical Data & data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\ 
+  Critical Data & data with an \index{Integrity Property}\gls{integrity} level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}\gls{integrity} level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\ 
   \hline
   Customisation (data) & data used to configure a system or component. & Def(Aust)5679 \cite{citation:DEFOz}\\ 
   \hline
@@ -125,7 +126,7 @@
   \hline
   & A thing given or granted; something known or assumed as fact, and made the basis of reasoning or calculation; an assumption or premiss from which inferences are drawn. & Oxford English Dictionary (OED)\\
   \cline{2-3}
-  \multirow{-3.5}*{Data} & A reinterpretable representation of information in a formalized manner suitable for communication, interpretation or processing. & ISO/IEC\ 2382 \cite{citation:ISO23821}\\
+  \multirow{-3.5}*{Data} & A reinterpretable representation of \gls{information} in a formalized manner suitable for communication, interpretation or processing. & ISO/IEC\ 2382 \cite{citation:ISO23821}\\
   \hline
   Database & A set of data, part or the whole of another set of data, consisting of at least one file that is sufficient for a given purpose or for a given data processing system. & RTCA/DO-178C \cite{citation:ED12C}\\
   \hline
@@ -133,7 +134,7 @@
   \cline{2-3}
   & A collection of organizational data processing functions, where data is transferred from one chain participant to another between data origination and end use. & P. Ensor \cite{citation:Ensor2009}\\
   \cline{2-3}
-  \multirow{-8}*{Data Chain} & Any combination of two or more data elements, data items, data codes, and data abbreviations in a prescribed sequence to yield meaningful information; for example, ``date'' consists of data elements year, month, and day. & McGraw-Hill Dictionary \cite{citation:McGrawHill}\\
+  \multirow{-8}*{Data Chain} & Any combination of two or more data elements, \glspl{item data}, data codes, and data abbreviations in a prescribed sequence to yield meaningful information; for example, ``date'' consists of data elements year, month, and day. & McGraw-Hill Dictionary \cite{citation:McGrawHill}\\
   \hline
   (data) Dictionary & The detailed description of data, parameters, variables, and constants used by the system. & RTCA/DO-178C \cite{citation:ED12C}\\
   \hline
@@ -147,7 +148,7 @@
   \cline{2-3}
   \multirow{-2}*{(data) Error} & Discrepancy between a data value and the true, specified or theoretically correct value or condition. & P. Ensor \cite{citation:Ensor2009}\\
   \hline
-  Essential Data & data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred thousand: there is a low probability when using corrupted essential data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  Essential Data & Data with an \index{Integrity Property}\gls{integrity} level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}\gls{integrity} level one in one hundred thousand: there is a low probability when using corrupted essential data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{F}}\\
   \hline
@@ -170,7 +171,7 @@
   \cline{2-3}
   \multirow{-3.5}*{Information} & Knowledge that has a contextual meaning. & ISO/IEC\ 2382  \cite{citation:ISO23821}\\
   \hline
-  Information (aeronautical) & Information resulting from the assembly, analysis and formatting of \gls{aeronautical data}. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  Information (aeronautical) & \Gls{information} resulting from the assembly, analysis and formatting of \gls{aeronautical data}. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
   & The assurance that a data element retrieved from a storage system has not been corrupted or altered in any ways since the original data entry\index{Data!Entry} or latest authorised amendment. & RTCA/DO-200A \cite{citation:ED76}\\
   \cline{2-3}
@@ -190,13 +191,13 @@
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{M}}\\
   \hline
-  Metadata & data that represents information about data itself. Note that one should distinguish between ``Structural Metadata'', which is data about the design and specification of data structures (and is more properly called ``data about the containers of data'') and ``Descriptive Metadata'', which is about individual instances of application data, the data content. & J. Inge \cite{citation:inge2008improving}\\
+  Metadata & data that represents \gls{information} about data itself. Note that one should distinguish between ``Structural Metadata'', which is data about the design and specification of data structures (and is more properly called ``data about the containers of data'') and ``Descriptive Metadata'', which is about individual instances of application data, the data content. & J. Inge \cite{citation:inge2008improving}\\
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{N}}\\
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{O}}\\
   \hline
-  (data) Origination & Creation of a new data item with its associated value, the modification of the value of an existing data item or the deletion of an existing data item. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  (data) Origination & Creation of a new \gls{item data} with its associated value, the modification of the value of an existing \gls{item data} or the deletion of an existing \gls{item data}. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
   (data) Owner\index{Data!Owner}\index{Owner, Data|see{Data, Owner}} & The individual or organization responsible for a particular data artefact, or collection of data artefacts. & \\
   \hline
@@ -210,7 +211,7 @@
   \cline{2-3}
   & Process by which the \gls{ecs} \gls{database} is produced, the source materials, the resolution\index{Resolution Property} and reproduction \index{Accuracy Property}\gls{accuracy} of chart features, and the \gls{correctness} and \gls{completeness} of data. & ISO\ 19379:2003 \cite{citation:ISO19379}\\
   \cline{2-3}
-  \multirow{-8}*{(data) Quality} & A degree or level of confidence that the data provided meets the requirements of the data user in terms of \index{Accuracy Property}\gls{accuracy}, resolution\index{Resolution Property} and \index{Integrity Property}integrity. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  \multirow{-8}*{(data) Quality} & A degree or level of confidence that the data provided meets the requirements of the data user in terms of \index{Accuracy Property}\gls{accuracy}, resolution\index{Resolution Property} and \index{Integrity Property}\gls{integrity}. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
   (data) Property\index{Property!Data} & A characteristic that can be exhibited by a data artefact. & \\
   \hline
@@ -224,7 +225,7 @@
   \hline
   Response\index{Response} & The way in which an identified risk is addressed; possible responses include avoid/eliminate, treat, or accept as sufficiently low. & \\
   \hline
-  Routine Data & data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one thousand: there is a very low probability when using corrupted routine data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  Routine Data & data with an \index{Integrity Property}\gls{integrity} level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}\gls{integrity} level one in one thousand: there is a very low probability when using corrupted routine data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
   \multicolumn{3}{|l|}{\TableDimColour{S}}\\
   \hline
@@ -246,7 +247,7 @@
   \hline
   & A measure of the time delay between a change in the real world and the associated \gls{database} update being available to the user. & P. Ensor \cite{citation:Ensor2009}\\ 
   \cline{2-3}
-  \multirow{-2.5}*{Timeliness}\index{Timeliness Property} & The difference between the time of output of a data item and the time of applicability of that data item. & (EU) No 1207/2011 \cite{citation:EU12072011}\\ 
+  \multirow{-2.5}*{Timeliness}\index{Timeliness Property} & The difference between the time of output of a \gls{item data} and the time of applicability of that \gls{item data}. & (EU) No 1207/2011 \cite{citation:EU12072011}\\ 
   \hline
   Traceability & Ability to determine the origin of the data. & RTCA/DO-200A \cite{citation:ED76}\\ 
   \hline
@@ -261,7 +262,7 @@
   \cline{2-3}
   \multirow{-3.5}*{(data) Validation} & Process of ensuring that data meets the requirements for the specified application or intended use. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
-  Validity (period of) & Period between the date and time on which aeronautical information is published and the date and time on which the information ceases to be effective. & (EU) No 73/2010 \cite{citation:EU732010}\\
+  Validity (period of) & Period between the date and time on which aeronautical information is published and the date and time on which the \gls{information} ceases to be effective. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline
   (data) Verification & Evaluation of the output of an \gls{aeronautical data} process to ensure \gls{correctness} and \index{Consistency!With Inputs}\gls{consistency} with respect to the inputs and applicable data standards, rules and conventions used in that process. & (EU) No 73/2010 \cite{citation:EU732010}\\
   \hline

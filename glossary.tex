@@ -114,10 +114,11 @@
 \newacronym{sar}{SAR}{search and rescue}
 \newacronym{saswg}{SASWG}{Safety of Autonomous Systems Working Group}
 \newacronym{scsc}{SCSC}{Safety-Critical Systems Club}
-\newacronym{sil}{SIL}{safety integrity level}
+\newacronym{sil}{SIL}{safety \gls{integrity} level}
 \newacronym{smp}{SMP}{safety management plan}
 \newacronym{sop}{SOP}{standard operating procedure}
 \newacronym{sotif}{SOTIF}{safety of the intended functionality}
+\newacronym{spm}{SPM}{subpostmaster}
 \newacronym{sss}{SSS}{Safety-critical Systems Symposium}
 %T
 \newacronym{tcas}{TCAS}{traffic collision avoidance system}
@@ -135,6 +136,12 @@
 %Y
 %Z
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Discursive glossary entries
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \longnewglossaryentry{accuracy}{%
 	name={accuracy},%
 	plural={accuracies}}%
@@ -148,6 +155,8 @@
 %		generated, processed or consumed by a system.}}
 % I've split data assurance level and software assurance level
 \newglossaryentry{data assurance level}{name={data assurance level},description={The required \index{Assurance Level}assurance level for the aeronautical data process is identified, based on the overall system architecture through allocation of risk determined using a preliminary \index{Safety Assessment!System}system safety assessment. RTCA/DO-200A \cite{citation:ED76}}}
+
+\newglossaryentry{aeronautical information}{name={aeronautical information},description={See \gls{information aeronautical}}}
 
 \longnewglossaryentry{adaptation data}{%
 	name={adaptation data},%
@@ -184,7 +193,7 @@ Data used for aeronautical applications such as navigation, flight planning, fli
 
 Data that configures a generic software system to a particular instance of its use (e.g., data for flight data processing system for a particular airspace, by setting the positions of airways, reporting points, navigation aids, airports and other elements important to air navigation). ED-153 \cite{citation:ED153}Data that configures a generic software system to a particular instance of its use (e.g., data for flight data processing system for a particular airspace, by setting the positions of airways, reporting points, navigation aids, airports and other elements important to air navigation). ED-153 \cite{citation:ED153}}
 
-\newglossaryentry{confidentiality}{name={confidentiality},description={The property that information is not made available or disclosed to unauthorized individuals, entities, or processes. ISO27001:2013 \cite{citation:ISO27001:2013}}}
+\newglossaryentry{confidentiality}{name={confidentiality},description={The property that \gls{information} is not made available or disclosed to unauthorized individuals, entities, or processes. ISO27001:2013 \cite{citation:ISO27001:2013}}}
 
 \newglossaryentry{consistency}{name={consistency (data)},text={consistency},description={The property that the data adheres to a common world view (e.g., units).} }
 
@@ -196,13 +205,13 @@ Data that configures a generic software system to a particular instance of its u
 
 \newglossaryentry{criticality}{name={criticality (data)},text={criticality},description={Classification of data by the potential effect of erroneous data on the expected operation that is supported by that data. RTCA/DO-200A \cite{citation:ED76}}}
 
-\newglossaryentry{critical data}{name={critical data},description={Data with an \index{Integrity Property}integrity level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}integrity level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. (EU) No 73/2010 \cite{citation:EU732010}}}
+\newglossaryentry{critical data}{name={critical data},description={Data with an \index{Integrity Property}\gls{integrity} level as defined in Chapter 3, Section 3.2 point 3.2.8(a) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}\gls{integrity} level one in one hundred million: there is a high probability when using corrupted critical data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. (EU) No 73/2010 \cite{citation:EU732010}}}
 
 \newglossaryentry{customisation data}{name={customisation data},description={Data used to configure a system or component. Def(Aust)5679 \cite{citation:DEFOz}}}
 
 \longnewglossaryentry*{data}{name={data},plural={data}}{A thing given or granted; something known or assumed as fact, and made the basis of reasoning or calculation; an assumption or premiss from which inferences are drawn. Oxford English Dictionary (OED)
 	
-A reinterpretable representation of information in a formalized manner suitable for communication, interpretation or processing. ISO/IEC\ 2382 \cite{citation:ISO23821}}
+A reinterpretable representation of \gls{information} in a formalized manner suitable for communication, interpretation or processing. ISO/IEC\ 2382 \cite{citation:ISO23821}}
 
 \newglossaryentry{data consistency}{name={data consistency},description={See \glsname{consistency}}}
 
@@ -220,6 +229,9 @@ A reinterpretable representation of information in a formalized manner suitable 
 
 \newglossaryentry{data hazard}{name={data hazard},description={See \glsname{hazard}}}
 
+\newglossaryentry{data item}{name={data item},description={See \glsname{item data}}}
+
+
 	
 \newglossaryentry{database}{name={database},description={A set of data, part or the whole of another set of data, consisting of at least one file that is sufficient for a given purpose or for a given data processing system. RTCA/DO-178C}}
 
@@ -227,7 +239,7 @@ A reinterpretable representation of information in a formalized manner suitable 
 
 A collection of organizational data processing functions, where data is transferred from one chain participant to another between data origination and end use. P. Ensor \cite{citation:Ensor2009}
 
-Any combination of two or more data elements, data items, data codes, and data abbreviations in a prescribed sequence to yield meaningful information; for example, ``date'' consists of data elements year, month, and day. McGraw-Hill Dictionary \cite{citation:McGrawHill}}
+Any combination of two or more data elements, \glspl{item data}, data codes, and data abbreviations in a prescribed sequence to yield meaningful information; for example, ``date'' consists of data elements year, month, and day. McGraw-Hill Dictionary \cite{citation:McGrawHill}}
 
 \newglossaryentry{data dictionary}{name={data dictionary},plural={data dictionaries},description={The detailed description of data, parameters, variables, and constants used by the system. RTCA/DO-178C}}
 
@@ -244,3 +256,19 @@ Discrepancy between a data value and the true, specified or theoretically correc
 
 \newglossaryentry{hazard log}{name={hazard log},description={A record of all hazard analysis,
 safety risk assessment and safety risk reduction activities for the ``whole-of-life'' of a safety-related system.}}
+
+\longnewglossaryentry{information}{name={information},plural={information}}{Knowledge communicated concerning some particular fact, subject, or event; that of which one is apprised or told - intelligence, news - as contrasted with data. Oxford English Dictionary (OED)
+
+Knowledge that has a contextual meaning. ISO/IEC\ 2382  \cite{citation:ISO23821}}
+
+\newglossaryentry{information aeronautical}{name={information (aeronautical)}, text={aeronautical information},plural={aeronautical information},description={\Gls{information} resulting from the assembly, analysis and formatting of \gls{aeronautical data}. (EU) No 73/2010 \cite{citation:EU732010}}}
+
+\longnewglossaryentry{integrity}{name={integrity (data)},text={integrity},plural={integities}}{The assurance that a data element retrieved from a storage system has not been corrupted or altered in any ways since the original data entry\index{Data!Entry} or latest authorised amendment. RTCA/DO-200A \cite{citation:ED76}
+
+The degree of assurance that a \gls{item data} and its value have not been lost or altered since the data origination or authorised amendment. (EU) No 73/2010 \cite{citation:EU732010}
+
+The degree of undetected (at system level) non-conformity of the input value of the \gls{item data} with its output value. (EU) No 1207/2011 \cite{citation:EU12072011}
+
+The property of protecting the \index{Accuracy Property}\gls{accuracy} and \gls{completeness} of assets, i.e., that which has value to the organization. ISO 27001:2013 \cite{citation:ISO27001:2013}}
+
+\newglossaryentry{item data}{name={item (data)},text={data item}, description={Single attribute of a complete data set, which is allocated a value that defines its current status. (EU) No 73/2010 \cite{citation:EU732010}}}

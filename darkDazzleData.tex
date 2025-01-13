@@ -21,7 +21,7 @@
 \dsiwgSectionQuote{\ldots we can be blind to missing data \ldots that can lead us to conclusions and actions that are mistaken, dangerous, or even disastrous.}{David Hand}
 
 \subsection{Introduction}
-Dark and Dazzle data may be viewed as two sides of the same coin. In the former data is hidden, whilst in the latter the important information is hidden by an abundance of other data.
+Dark and Dazzle data may be viewed as two sides of the same coin. In the former data is hidden, whilst in the latter the important \gls{information} is hidden by an abundance of other data.
 
 \subsection{Dark Data}%
 \index{Dark Data|textbf}\index{Data!Dark|see{Dark Data}}%
@@ -74,10 +74,10 @@ In his book, David introduces a taxonomy of 15 varieties of Dark Data. This sect
 
 \paragraph{Data We Know Are Missing: ``Known unknowns''}\index{Dark Data!Data We Know are Missing}\label{bkm:dark1}
 
-This case is very common in safety justifications\index{Justification, Safety} where assurance information may be withheld for commercial reasons or does not exist, but we know, or are informed, that it isn’t available. Common examples include:
+This case is very common in safety justifications\index{Justification, Safety} where assurance \gls{information} may be withheld for commercial reasons or does not exist, but we know, or are informed, that it isn’t available. Common examples include:
 \begin{itemize}
-  \item Assurance information for \gls{cots}\index{COTS} components is unavailable
-  \item Information about legacy systems was never produced or is now lost
+  \item Assurance \gls{information} for \gls{cots}\index{COTS} components is unavailable
+  \item \Gls{information} about legacy systems was never produced or is now lost
   \item \Gls{ml} training data restricted to a particular context of use
 \end{itemize}
     If this is the case, it can be mitigated\index{Mitigation} in several ways, including use of warnings, training, restrictions of use, etc. Evidence can also be substituted with other more indirect assurance e.g.\ established organisational track-record in the sector, or audit reports.
@@ -140,7 +140,7 @@ This was considered similar to case~\ref{bkm:dark2} in impact terms, and might w
 \begin{itemize}
 \item Measuring the wrong things, e.g.\ poor safety metrics / indicators
   \item Too much data to deal with or analyse, so some is ignored
-  \item Too much filtering or processing, so losing information along the way
+  \item Too much filtering or processing, so losing \gls{information} along the way
   \item Being too close to the data, i.e.\ the “wood for the trees”. This is when the detail masks the overall issue with data, e.g.\ a slow trend or bias masked by peaks.
 \end{itemize}
 
@@ -203,7 +203,7 @@ This can often happen in safety justifications\index{Justification!Safety} or te
 
 Mitigations\index{Mitigation} include the use of dialectic argument approaches (where both positive and negative cases can be considered). It is also useful to get a second opinion, independent review or a ‘fresh pair of eyes’ to check the justification.
 
-\paragraph{Information Asymmetry}\index{Dark Data!Information Asymmetry}\label{bkm:dark12}
+\paragraph{\glsfmttext{information} Asymmetry}\index{Dark Data!Information Asymmetry}\label{bkm:dark12}
 This is common where there are multiple stores or sources of the same data:
 \begin{itemize}
 \item Multiple / backup \glspl{database} where they are not kept in sync
@@ -239,7 +239,7 @@ Systems, especially machine learning systems (see Appendix J) have to cope with 
 
 Mitigations\index{Mitigation} include use of machine learning training data\index{Machine Learning Data} containing edge/corner cases, boundary cases, and testing well beyond normal or acceptable ranges to give insight into the system degradation behaviour.
 \subsubsection{Summary of Dark Data}
-Dark Data is a very useful way of thinking about problems and solutions. It is important to always think of the bigger picture, considering what information is not known:
+Dark Data is a very useful way of thinking about problems and solutions. It is important to always think of the bigger picture, considering what \gls{information} is not known:
 
 \begin{itemize}
   \item What might have been left out, intentionally or otherwise?
@@ -250,7 +250,7 @@ Dark Data is a very useful way of thinking about problems and solutions. It is i
 \end{itemize}
 
 \subsubsection{Further Reading}
-A number of resources are available for further information on how Dark Data relates to data safety:
+A number of resources are available for further \gls{information} on how Dark Data relates to data safety:
 \begin{itemize}
 \item The October 2020 edition of the SCSC Newsletter \cite{citation:SCSC160} contains articles both by David Hand and on Dark Data Safety.
   \item A presentation on Dark Data given by David Hand to the \gls{dsiwg} \cite{citation:darkdata:presentation1};
@@ -327,15 +327,15 @@ Some of the varieties are the same as Dark Data\index{Dark Data}, but some are v
 \label{bkm:dazzledata:case1}
 
 This case is very common in systems where an interface\index{Interface!Flooding} may be flooded with unsolicited messages.
-It is also common in  safety justifications\index{Justification, Safety} where assurance information may be padded out with extra, irrelevant information that can mask the underlying safety argument (which may or may not be intentional).
+It is also common in  safety justifications\index{Justification, Safety} where assurance \gls{information} may be padded out with extra, irrelevant \gls{information} that can mask the underlying safety argument (which may or may not be intentional).
 It can be a serious problem in large, complex safety documents or detailed safety analyses.
 Luckily, in this case, the data is recognised as superfluous and can be ignored.
 Common examples include:
 \begin{itemize}
     \item Mailboxes filled with spam mail, preventing important messages being read
     \item Repeated stall warnings when the aircraft is under control
-    \item Assurance information in a safety case is included for components which are not part of the solution in use at that site or situation
-    \item Assurance information about old or legacy components is included but these are now not in service
+    \item Assurance \gls{information} in a safety case is included for components which are not part of the solution in use at that site or situation
+    \item Assurance \gls{information} about old or legacy components is included but these are now not in service
     \item Machine learning training data\index{Machine Learning Data} contains many cases which are duplicates or very closely related, so adding nothing to the learned behaviour but making the set hard to deal with
 \end{itemize}
 This case can be mitigated\index{Mitigation} in several ways, including careful filtering, review, use of concise  notations (such as Goal Structuring Notation) to extract the essence, and periodic audits and cleans. 
@@ -344,7 +344,7 @@ This case can be mitigated\index{Mitigation} in several ways, including careful 
 This is the most serious and far-reaching case, where the additional data is not recognised as unneeded and may be processed, analysed or be left in place when it should be removed. Some examples are:
 \begin{itemize}
 \item Legacy code in software\index{Software!Legacy} where nobody understands its function, or how it relates to the current code and so is reluctant to remove it. The Ariane 4 Inertial Reference function left in place in the Ariane 501 launch disaster might be such a case. Note that code whose function is known would be under the first case, discussed in \ref{bkm:dazzledata:case1}
-    \item Parts of the safety case or safety argument are supplied separately (e.g. by a subcontractor or 3rd party) and they are obscure. In this case it will not be known which parts are relevant to the particular situation. Some information may be irrelevant or worse, misleading.
+    \item Parts of the safety case or safety argument are supplied separately (e.g. by a subcontractor or 3rd party) and they are obscure. In this case it will not be known which parts are relevant to the particular situation. Some \gls{information} may be irrelevant or worse, misleading.
     \item Machine learning training data\index{Machine Learning Data} containing too many outliers, which are not recognised as such
 \end{itemize}
 
@@ -405,7 +405,7 @@ Spurious data can affect summaries in a significant way if composite values are 
 
 Mitigations\index{Mitigation} include audit and assessing what extra data could cause (i.e. performing sensitivity analysis) and establishing what decisions might be made erroneously due to certain data values being present.	
 
-\paragraph{Information Asymmetry}\index{Dazzle Data!Information Asymmetry}
+\paragraph{\Glsfmttext{information} Asymmetry}\index{Dazzle Data!Information Asymmetry}
 This is common where there are multiple stores or sources of the same data. If one has erroneous duplicate values (i.e. many null values used for padding) then comparisons between them may fail.
 \begin{itemize}
     \item Multiple / backup \glspl{database} where they are not kept in sync
@@ -415,7 +415,7 @@ This is common where there are multiple stores or sources of the same data. If o
 Comparisons, reviews and data audits may help in these cases. In general the issue of divergence across multiple data sources needs to be recognised and addressed in an automated way.
 
 \paragraph{Intentionally Dazzled Data}\index{Dazzle Data!Intentionally Dazzled Data}
-This might happen in a secure context where key data is effectively ``camouflaged'' by hiding within large data items (e.g. images) or the use of large amounts of apparently routine data to mask the secure data.
+This might happen in a secure context where key data is effectively ``camouflaged'' by hiding within large \glspl{item data} (e.g. images) or the use of large amounts of apparently routine data to mask the secure data.
 \begin{itemize}
     \item Defence, security and government sectors where data is purposefully hidden 
     \item An organisation may provide copious amounts of safety case collateral to hide a weak safety case
@@ -452,7 +452,7 @@ where:
 \subsubsection{Summary of Dazzle Data}
 Dazzle Data is a very useful way of thinking about data problems and solutions.
 It is important to always think of the bigger picture,
-considering what information is superfluous and may be distorting or masking the real picture:
+considering what \gls{information} is superfluous and may be distorting or masking the real picture:
 \begin{itemize}
     \item What might be hidden intentionally or otherwise due to the extra values?
     \item Could the extra items cause any safety problems, e.g. change a numerical calculation?
@@ -486,7 +486,7 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   \multicolumn{5}{r}{\sl Continued on next page}
   \endfoot\endlastfoot
   %
-  Integrity (I) & The data is correct, true and unaltered & \tick & \tick &
+  \Gls{integrity} (I) & The data is correct, true and unaltered & \tick & \tick &
   E.g., Corruptions to a \gls{database} could change the original values so the original data is lost, or hide or mask values such as by inserting End-of-File markers\\
   \hline
   %

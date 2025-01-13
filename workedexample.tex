@@ -282,7 +282,7 @@ On completion of the Risk Identification phase the Health Organization will \dsi
 
 The Manufacturer will \dsiwgTextBF{\dsiwgTextIT{Establish \glspl{dsal}\index{Assurance Level!Data}}} by considering cases where the use of specific categories of data\index{Category!Data} could give rise to \glspl{hazard}. In the first, the prototyping phase, the Manufacturer sees no use of the data that can give rise to credible clinical risk and assessing the \gls{dsal}\index{Assurance Level!Data} for that data set as \dsiwgTextBF{DSAL0}. 
 
-In the second phase of the development lifecycle\index{Lifecycle!Development}, where \dsiwgTextBF{Verification Data}\index{Verification Data} and \dsiwgTextBF{Infrastructure Data}\index{Infrastructure Data} is being used to demonstrate the correct functioning of the system, the Manufacturer considers that loss of any of the Data Properties of \dsiwgTextBF{\index{Integrity Property}Integrity, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, Resolution{Resolution! Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} of this data could give rise to \glspl{hazard}.
+In the second phase of the development lifecycle\index{Lifecycle!Development}, where \dsiwgTextBF{Verification Data}\index{Verification Data} and \dsiwgTextBF{Infrastructure Data}\index{Infrastructure Data} is being used to demonstrate the correct functioning of the system, the Manufacturer considers that loss of any of the Data Properties of \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, Resolution{Resolution! Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} of this data could give rise to \glspl{hazard}.
 
 For example, if the verification data set selected is not representative of the eventual diversity experienced in practice (loss of \index{Fidelity/Representation Property}\gls{fidelity}), then it is possible that the system may contain latent software errors that could give rise to harm. However, the Manufacturer acknowledges that the system will be subject to further testing and trials in the clinical setting and so there will be other opportunities to detect errors in the system. Overall:
 \begin{itemize}
@@ -350,7 +350,7 @@ Having decided that further risk reduction is necessary, the Manufacturer needs 
   \item Justification in the case where a technique is not to be adopted.
 \end{itemize}
 
-For \dsiwgTextBF{DSAL1}\index{Assurance Level!Data} Verification Data, the tables show that the following are recommended (R) or highly recommended (HR) where loss of Data Properties \dsiwgTextBF{\index{Integrity Property}Integrity, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, Resolution{Resolution! Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} can give rise to
+For \dsiwgTextBF{DSAL1}\index{Assurance Level!Data} Verification Data, the tables show that the following are recommended (R) or highly recommended (HR) where loss of Data Properties \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, Resolution{Resolution! Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} can give rise to
 a number of \glspl{hazard}. The extracts below indicate the mitigation\index{Mitigation} techniques identified from the tables which should form the basis of the \index{Safety Requirement!Data}data safety requirements. 
 
 \begin{longtable}{|C{\dsiwgColumnWidth{0.08}}|L{\dsiwgColumnWidth{0.15}}|C{\dsiwgColumnWidth{0.08}}|L{\dsiwgColumnWidth{0.69}}|}
@@ -364,7 +364,7 @@ a number of \glspl{hazard}. The extracts below indicate the mitigation\index{Mit
   \endhead
   \multicolumn{4}{r}{\sl Continued on next page}
   \endfoot\endlastfoot
-  SD.11 & Logging Facilities & R & Data processing events are logged to allow support staff to monitor the health of the system and provide diagnostic information.
+  SD.11 & Logging Facilities & R & Data processing events are logged to allow support staff to monitor the health of the system and provide diagnostic \gls{information}.
   \\
   \hline
   SD.17 & Sanity / Reasonability Checks & R & Dedicated processing implemented to check that data is within reasonable tolerances and / or logically / semantically consistent (e.g., range checks, date checks, record counts, record sizes, special values - \gls{nan}). \\
@@ -535,7 +535,7 @@ From these tables the Manufacturer decides on a series of activities to implemen
   \hline
   R10 & The level of rigour employed in verifying all the above requirements shall be commensurate with the \gls{dsal}\index{Assurance Level!Data} \gls{criticality} and so an ISO9001 compliant quality management system shall be adopted. & All\\
   \hline
-  R11 & Data processing events shall be logged to allow monitoring of the health of the system, provide diagnostic information, allow audit trails and support the production of explanations. & SD.11
+  R11 & Data processing events shall be logged to allow monitoring of the health of the system, provide diagnostic \gls{information}, allow audit trails and support the production of explanations. & SD.11
   \\
   \hline
 \end{longtable}
