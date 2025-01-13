@@ -25,7 +25,7 @@ Migrating, Porting and Import or Export of data between systems is a large and c
 This appendix highlights some of the issues that arise, links to the data safety properties and suggests some mitigations.
 
 \subsection{Introduction and rationale}\label{bkm:migrationintro}
-All of these activities involve moving data around, with the expectation that the data will be re-used or re-purposed to some extent after the move. Why is this a problem? Because data can be lost, transformed or misinterpreted due to the migration. If some of this data is safety-related then there is the possibility of creating a data hazard. The worst cases are the silent ones: where data is not migrated or modified or changed into something else on migration, and no notification or warning is provided.
+All of these activities involve moving data around, with the expectation that the data will be re-used or re-purposed to some extent after the move. Why is this a problem? Because data can be lost, transformed or misinterpreted due to the migration. If some of this data is safety-related then there is the possibility of creating a data \gls{hazard}. The worst cases are the silent ones: where data is not migrated or modified or changed into something else on migration, and no notification or warning is provided.
 In general porting of data, import and export actions can be considered subsets of full data migration activities. 
 The following are typical stages of a data migration exercise:
 \begin{enumerate}[label=\color{dsiwgAccentColour}\roman*)]
