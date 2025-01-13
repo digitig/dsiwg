@@ -143,7 +143,7 @@ Some suggestions for test data for safety-related systems are:
   \item Use of extreme values, way beyond what could be reasonably expected;
   \item Use of typical ``everyday'' values / sets;
   \item Some realistic but unexpected values;
-  \item Try combinations of data values or items that are problematic together (e.g., inconsistent);
+  \item Try combinations of data values or \cbstart\glspl{item data}\cbend\ that are problematic together (e.g., inconsistent);
   \item If possible, use some values known to have caused problems in the past;
   \item Where appropriate, use values related to timing, rollover or date boundaries;
   \item Where possible, use white box values (i.e., those derived from an understanding of the system);
@@ -152,7 +152,7 @@ Some suggestions for test data for safety-related systems are:
   \item Use data which has incorrect formatting, ordering, or out of sequence, etc.; and
   \item Try data which has repeated sets of values or pseudo-random characteristics.
 \end{itemize}
-Typically very complex test data is derived from recorded live feeds of real data flows. While this data can be extremely useful for regression purposes, it should be recognised that it is unlikely to contain many outlying or boundary \\glspl{item data}. Therefore it may need to be modified to test any hazardous situations; this modification can be difficult and may require sophisticated tools to both ensure correct \index{Property!Data}properties and injection of the intended faults (for instance to introduce a statistical bias to the data).
+Typically very complex test data is derived from recorded live feeds of real data flows. While this data can be extremely useful for regression purposes, it should be recognised that it is unlikely to contain many outlying or boundary \glspl{item data}. Therefore it may need to be modified to test any hazardous situations; this modification can be difficult and may require sophisticated tools to both ensure correct \index{Property!Data}properties and injection of the intended faults (for instance to introduce a statistical bias to the data).
 
 Simulator / emulator derived values can be useful, but again the issue is how realistic the values are: often the \index{Accuracy Property}\gls{accuracy}, resolution or timing of simulated values may be different to real data.
 
