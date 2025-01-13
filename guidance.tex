@@ -254,7 +254,7 @@ This property is related to analysability and may be performed by the same set o
   {Lifetime}\index{Lifetime Property} & E & {When does the safety-related data expire}\\\hline
   {Disposability / Deletability}\index{Disposability/Deletability Property} & D & {The data can be permanently removed when required}\\\hline
   {Goldilocks\index{Goldilocks Property}} & G & {The data is just the right size --- not too much and not too little}\\\hline
-  {Analysability\index{Analysability Property}} & Z & {The data is of a suitable size, type and representation (including any metadata) to enable it be usefully analysed}\\\hline
+  {Analysability\index{Analysability Property}} & Z & {The data is of a suitable size, type and representation (including any \gls{metadata}) to enable it be usefully analysed}\\\hline
   {Explainability\index{Explainability Property}} & X & {The data can be meaningfully explained to those who need to understand it by a suitable mechanism}\\\hline
 \end{longtable}
 
@@ -638,7 +638,7 @@ For each \index{Assurance Level!Data}\gls{dsal}, the tables indicate whether the
   M.11 & %
     Tracking of data & %
     R & R & HR & HR & %
-    e.g., digital signatures, sequence numbers, logging of data processing events, using metadata, configuration management\\
+    e.g., digital signatures, sequence numbers, logging of data processing events, using \gls{metadata}, configuration management\\
     \hline
   M.12 & %
     Recorded derivation of test data & %
@@ -805,7 +805,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
   \hline
   SD.23 & Reverse Translation & \dsiwgTextTT{..D..} & - & R & HR & HR & To verify data output of a process is correct, by attempting to create the source data from the output data and comparing this with the original source. & \dsiwgTextTT{IC.Y...T..............X}\\
   \hline
-  SD.24 & Metadata & \dsiwgTextTT{..DP.} & - & R & HR & HR & Auditable data are sent with the data that is about the data (e.g., source, issue state, expiry date). & \dsiwgTextTT{..N....T.V..PQ....E..ZX}\\
+  SD.24 & \Gls{metadata} & \dsiwgTextTT{..DP.} & - & R & HR & HR & Auditable data are sent with the data that is about the data (e.g., source, issue state, expiry date). & \dsiwgTextTT{..N....T.V..PQ....E..ZX}\\
   \hline
 \end{longtable}
 
