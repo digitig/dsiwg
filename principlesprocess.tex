@@ -25,18 +25,18 @@ Hawkins \dsiwgTextIT{et.\ al.} established some generic software safety assuranc
 Data pervades active system operation, as well as the system's specification, realisation, verification, validation, certification,  training, maintenance, and retirement. Moreover, data may be passed from one system to another; sometimes over a significant period of time. Data may be assimilated, and converted from prior uses into new uses, or simply used as-is by many systems. It is stored in media whose storage \gls{integrity} decays. The system context for \index{Safety Requirement!Data}Data Safety Requirements may be specific to a particular system's (or [safety] engineering process's) use of the data, or it may be generalised to a class of related systems. Hence \index{Safety Requirement!Data}Data Safety Requirements are needed for any safety-related system that interacts with data.
 
 \subsubsection{Principle 2: The intent of the \index{Safety Requirement!Data}Data Safety Requirements shall be maintained throughout requirements decomposition}
-\index{Safety Requirement!Data}Data Safety Requirements establish the system's \index{Property!Safety}safety properties for data, for the system's use of data, for the management of data and for the engineering lifecycle\index{Lifecycle!Engineering} of both the system and its associated data. The system's requirements hierarchy must preserve the intent of the \index{Safety Requirement!Data}Data Safety Requirements (and hence the system's safety-related \index{Property!Data}Data Properties). Moreover, the applied engineering process for both the system's realisation and subsequent lifecycle\index{Lifecycle!System} stages shall demonstrate that the data safety properties are preserved.
+\index{Safety Requirement!Data}Data Safety Requirements establish the system's \index{Property!Safety}safety properties for data, for the system's use of data, for the management of data and for the engineering lifecycle\index{Lifecycle!Engineering} of both the system and its associated data. The system's requirements hierarchy must preserve the intent of the \index{Safety Requirement!Data}Data Safety Requirements (and hence the system's safety-related \index{Property!Data}\glspl{data property}). Moreover, the applied engineering process for both the system's realisation and subsequent lifecycle\index{Lifecycle!System} stages shall demonstrate that the data safety properties are preserved.
 
 \subsubsection{Principle 3: \index{Safety Requirement!Data}Data Safety Requirements shall be satisfied}
-Evidence is required that the system satisfies all of the \index{Safety Requirement!Data}Data Safety Requirements imposed on it for all anticipated operating conditions. Moreover, the \index{Safety Requirement!Data}Data Safety Requirements that pertain to the data's lifecycle\index{Lifecycle!Data} outside of the system shall be evidentially demonstrated prior to the system acting on such data, or else the system shall be able to adequately defend against unsatisfied \index{Safety Requirement!Data}Data Safety Requirements. In other words, either the data can be shown to demonstrate the required \index{Property!Data}Data Properties prior to being used, or the system can implement adequate defences and mitigations\index{Mitigation} against data that does not conform to the required \index{Property!Safety}safety properties.
+Evidence is required that the system satisfies all of the \index{Safety Requirement!Data}Data Safety Requirements imposed on it for all anticipated operating conditions. Moreover, the \index{Safety Requirement!Data}Data Safety Requirements that pertain to the data's lifecycle\index{Lifecycle!Data} outside of the system shall be evidentially demonstrated prior to the system acting on such data, or else the system shall be able to adequately defend against unsatisfied \index{Safety Requirement!Data}Data Safety Requirements. In other words, either the data can be shown to demonstrate the required \index{Property!Data}\glspl{data property} prior to being used, or the system can implement adequate defences and mitigations\index{Mitigation} against data that does not conform to the required \index{Property!Safety}safety properties.
 
 \subsubsection{Principle 4: Hazardous system behaviour arising from the system's use of data shall be identified and mitigated\index{Mitigation}}
 This is an intentionally broad statement because data is conceptual and not physical; it is the contextualised use of data that could result in a system hazard. Data Safety Assurance Principle 1 deals with system-level hazards arising from data, whereas Data Safety Assurance Principle 4 is concerned with hazards that arise from the way the system uses its data; that is, whether the system's design and implementation introduce further hazards. An example is a ship navigation system's display of hydrographic chart data, where a wide field display results in small features disappearing (due to image scale) when it is critical that situational awareness of such hazards is maintained.
 
 \subsubsection{Principle 4+1: The confidence established in addressing the Data Safety Assurance Principles shall be commensurate to the contribution of the data to system risk}
-The confidence in the evidence that demonstrates establishment of the first four Data Safety Assurance Principles shall be proportionate to the contribution data (or a particular \index{Artefact, Data}data artefact) makes to the system hazards.
+The confidence in the evidence that demonstrates establishment of the first four Data Safety Assurance Principles shall be proportionate to the contribution data (or a particular \index{Artefact, Data}\gls{data artefact}) makes to the system hazards.
 
-\cbstart\subsection{Data Safety Management Process}
+\subsection{Data Safety Management Process}
 To assist organizations with integrating data safety considerations into their existing processes and,
 in due course, their Safety Management System, an outline Data Safety Management Process has
 been developed.
@@ -98,10 +98,10 @@ the \gls{dsmp} are intended to assist from the perspective of data safety.
 \end{figure}
 
 \autoref{fig:process} provides an overview of how the of the \gls{dsmp}
-integrates with a typical system lifecycle. In practice, the main data safety assessments activities will
-occur as part of the normal Safety Assessment process lifecycles, so for example, when risks arising
+integrates with a typical system lifecycle. In practice, the main \cbstart\gls{safety assessment}\cbend\ activities will
+occur as part of the normal safety assessment process lifecycles, so for example, when risks arising
 from failures of the software and hardware of a system, loss of properties of data should also be
-considered. However, data pervades all aspects of a systems lifecycle so the Data Safety Assessment
+considered. However, data pervades all aspects of a systems lifecycle so the \gls{safety assessment}
 process can occur throughout the system lifecycle depending on the type of data that is being
 assessed. Some \glspl{item data} such as Context, Implementation and Built System Data are relevant for
 specific process phases of the lifecycle, while others such as Configuration, Capability, Compliance and
@@ -111,7 +111,7 @@ categories are covered in more detail in \autoref{bkm:datacategories}.
 
 The bottom section of the figure shows a typical basic lifecycle for a system from its inception
 through to end of life. The types of data that are of concern for each process step including those
-that apply to all steps are shown and these feed into the Data Safety Assessment Process. Further
+that apply to all steps are shown and these feed into the data \gls{safety assessment} process. Further
 examples of lifecycles are given in \autoref{bkm:lifecycle}.
 \cbend
 

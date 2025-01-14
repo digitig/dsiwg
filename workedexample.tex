@@ -41,7 +41,7 @@ From a data perspective, fundamental to fulfilling these requirements is establi
 	\item Describe the organizational context;
 	\item Describe the system context;
 	\item Plan the assessment; and
-	\item Identify Data Artefacts.
+	\item Identify \glspl{data artefact}.
 \end{itemize}
 
 %
@@ -143,7 +143,7 @@ by the Manufacturer. On balance, this question is assessed as: \dsiwgTextBF{8c};
 
 The final score is \dsiwgTextBF{26}, which corresponds to \dsiwgTextBF{ODR2}. The Manufacturer therefore concludes that there is low to medium risk that loss of \index{Property!Data}properties of data in the system can contribute to or give rise to harm. The Manufacturer has an internal policy for engagements based on the \gls{odr} level that dictates how the organization shall \dsiwgTextBF{\dsiwgTextIT{Plan the assessment}}; this policy dictates the amount of proportional effort it needs to spend on safety data management and the level of rigour to be employed. In this case, the policy dictates, amongst other requirements, that a separate section covering Safety Data Management is required in its Clinical Risk Management Plan.
 
-The Manufacturer aims now to \dsiwgTextBF{\dsiwgTextIT{Identify Data Artefacts}} that are potential sources of safety hazards. The Manufacturer also knows that the safety dependency of data is dictated by the context in which it is used so it now develops an understanding of when in its process lifecycle\index{Lifecycle!Process} the data will be used and relied upon. The Manufacturer plans to build an early prototype to show to clients to help elicit requirements definition. To support this, the Manufacturer plans to create a test data set that comprises a typical range of scenarios that the system will encounter. This form of data is identified as \dsiwgTextBF{Verification Data}. The system also needs to be configured to support deploying Health Organizations' policies. This data is \dsiwgTextBF{Infrastructure Data}\index{Infrastructure Data} and, for the prototyping phase, the Manufacturer plans to use largely default values.
+The Manufacturer aims now to \dsiwgTextBF{\dsiwgTextIT{identify \glspl{data artefact}}} that are potential sources of safety hazards. The Manufacturer also knows that the safety dependency of data is dictated by the context in which it is used so it now develops an understanding of when in its process lifecycle\index{Lifecycle!Process} the data will be used and relied upon. The Manufacturer plans to build an early prototype to show to clients to help elicit requirements definition. To support this, the Manufacturer plans to create a test data set that comprises a typical range of scenarios that the system will encounter. This form of data is identified as \dsiwgTextBF{Verification Data}. The system also needs to be configured to support deploying Health Organizations' policies. This data is \dsiwgTextBF{Infrastructure Data}\index{Infrastructure Data} and, for the prototyping phase, the Manufacturer plans to use largely default values.
 
 In later phases when the system functionality is specified and the system is being built, the Manufacturer plans to create a test data set that will be key to demonstrating the correct functioning of the system and hence acceptance by the deploying Health Organization. This still involves the use of \dsiwgTextBF{Verification Data}\index{Verification Data} and \dsiwgTextBF{Infrastructure Data}\index{Infrastructure Data} but there will be far greater dependency on these data sets than the prototyping case. The Manufacturer therefore documents the planned use of each of the data categories\index{Category!Data} during the entire delivery lifecycle\index{Lifecycle!Delivery} in the Clinical Risk Management Plan.
 
@@ -199,7 +199,7 @@ compliant safety management system. This question is assessed as \dsiwgTextBF{5d
 The resulting score for the Health Organization is \dsiwgTextBF{43}. This is \dsiwgTextBF{ODR3}; medium to high risk.
 The Health Organization aims to \dsiwgTextBF{\dsiwgTextIT{Plan the assessment}} through a Clinical Risk Management Plan. This plan defines the organization and system context in more detail and lays out the planned activities for identifying, evaluating and treating data safety related risks.
 
-As with the Manufacturer, the Health Organization needs to \dsiwgTextBF{\dsiwgTextIT{Identify Data Artefacts}} that are potential sources of safety hazards and understand the context of their use in the procurement / deployment lifecycles of the Health Organisation\index{Lifecycle}.
+As with the Manufacturer, the Health Organization needs to \dsiwgTextBF{\dsiwgTextIT{identify \glspl{data artefact}s}} that are potential sources of safety hazards and understand the context of their use in the procurement / deployment lifecycles of the Health Organisation\index{Lifecycle}.
 Post acceptance, the procuring Health Organization plans to run a series of user training sessions for clinicians.
 Once users are trained, the system will be integrated into live operations.
 The Health Organization identifies the Infrastructure\index{Infrastructure Data},
@@ -258,9 +258,9 @@ On completion of the risk identification phase the Manufacturer \dsiwgTextBF{\ds
 As with the Manufacturer, both a \dsiwgTextBF{\dsiwgTextIT{Top-down approach}} and a \dsiwgTextBF{\dsiwgTextIT{Bottom-up approach}} is adopted. From the Health Organization's perspective, one key focus for \gls{hazard} identification is in the use of \dsiwgTextBF{Dynamic Data}, i.e., data that will be delivered into the new system from existing system data sources, and the data presented to the user. For the interactions identified in the supply chain, the Health Organization needs to consider the risks associated with loss of \index{Property!Data}properties of the data it will receive. Questions the Health Organization will need to consider and address more formally in the Clinical Risk Management Plan are as follows:
 \clearpage% Required on 3.3 to keep page breaks as 3.2
 \begin{itemize}
-  \item Which data sets or \cbstart\glspl{item data}\cbend\ being received from other systems have \index{Property!Data}Data Properties (such as timeliness\index{Timeliness Property}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Fidelity/Representation Property}\cbstart\gls{fidelity}\cbend\ etc.) that are significant to patient safety? 
-  \item What data presented to the user has \index{Property!Data}Data Properties (such as \index{Availability Property}\gls{availability}, format, resolution\index{Resolution Property}, etc.) that are significant to patient safety?
-  \item What existing barriers or mitigations\index{Mitigation} (physical, technical, procedural) exist to reduce the risk of loss of \index{Property!Data}Data Properties?
+  \item Which data sets or \cbstart\glspl{item data}\cbend\ being received from other systems have \index{Property!Data}\glspl{data property} (such as timeliness\index{Timeliness Property}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Fidelity/Representation Property}\cbstart\gls{fidelity}\cbend\ etc.) that are significant to patient safety? 
+  \item What data presented to the user has \index{Property!Data}\glspl{data property} (such as \index{Availability Property}\gls{availability}, format, \gls{resolution}\index{Resolution Property}, etc.) that are significant to patient safety?
+  \item What existing barriers or mitigations\index{Mitigation} (physical, technical, procedural) exist to reduce the risk of loss of \index{Property!Data}\glspl{data property}?
   \item
   Will any existing barriers be lost as a consequence of the new system?
 \end{itemize}
@@ -282,7 +282,7 @@ On completion of the Risk Identification phase the Health Organization will \dsi
 
 The Manufacturer will \dsiwgTextBF{\dsiwgTextIT{Establish \glspl{dsal}\index{Assurance Level!Data}}} by considering cases where the use of specific categories of data\index{Category!Data} could give rise to \glspl{hazard}. In the first, the prototyping phase, the Manufacturer sees no use of the data that can give rise to credible clinical risk and assessing the \gls{dsal}\index{Assurance Level!Data} for that data set as \dsiwgTextBF{DSAL0}. 
 
-In the second phase of the development lifecycle\index{Lifecycle!Development}, where \dsiwgTextBF{Verification Data}\index{Verification Data} and \dsiwgTextBF{Infrastructure Data}\index{Infrastructure Data} is being used to demonstrate the correct functioning of the system, the Manufacturer considers that loss of any of the Data Properties of \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, Resolution{Resolution! Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} of this data could give rise to \glspl{hazard}.
+In the second phase of the development lifecycle\index{Lifecycle!Development}, where \dsiwgTextBF{Verification Data}\index{Verification Data} and \dsiwgTextBF{Infrastructure Data}\index{Infrastructure Data} is being used to demonstrate the correct functioning of the system, the Manufacturer considers that loss of any of the \glspl{data property} of \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, \gls{resolution}\index{Resolution!Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} of this data could give rise to \glspl{hazard}.
 
 For example, if the verification data set selected is not representative of the eventual diversity experienced in practice (loss of \index{Fidelity/Representation Property}\gls{fidelity}), then it is possible that the system may contain latent software errors that could give rise to harm. However, the Manufacturer acknowledges that the system will be subject to further testing and trials in the clinical setting and so there will be other opportunities to detect errors in the system. Overall:
 \begin{itemize}
@@ -305,13 +305,13 @@ in the Clinical Risk Management Plan.
 \end{minipage}
 
 \begin{itemize}
-  \item How likely is it that there would be a loss of the given \index{Property!Data}Data Property?
-  \item How would such a loss of a \index{Property!Data}Data Property be detected?
+  \item How likely is it that there would be a loss of the given \index{Property!Data}\gls{data property}?
+  \item How would such a loss of a \index{Property!Data}\glspl{data property} be detected?
   \item How would such as loss be isolated to prevent further risks of harm?
   \item What recovery action would be required to resolve the issue to maintain patient safety?
 \end{itemize}
 
-Concerns were raised about the vulnerability of the system to inadvertent data overload from the large number of potential data sources, and possibly from malicious activity. This led to the addition of the \dsiwgTextBF{Goldilocks}\index{Goldilocks Property} property to the list of \index{Property!Data}Data Properties applicable to the live system.
+Concerns were raised about the vulnerability of the system to inadvertent data overload from the large number of potential data sources, and possibly from malicious activity. This led to the addition of the \dsiwgTextBF{Goldilocks}\index{Goldilocks Property} property to the list of \index{Property!Data}\glspl{data property} applicable to the live system.
 
 In considering the receipt of outcome measures data received from a clinic or hospital, the Health Organization considers that it is likely that some credible errors would not be readily detected by their new system; if the hospital system confused a result or there were errors in the precision of data then there would be few chances to catch these once received by the system.
 \begin{itemize}
@@ -350,7 +350,7 @@ Having decided that further risk reduction is necessary, the Manufacturer needs 
   \item Justification in the case where a technique is not to be adopted.
 \end{itemize}
 
-For \dsiwgTextBF{DSAL1}\index{Assurance Level!Data} Verification Data, the tables show that the following are recommended (R) or highly recommended (HR) where loss of Data Properties \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, Resolution{Resolution! Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} can give rise to
+For \dsiwgTextBF{DSAL1}\index{Assurance Level!Data} Verification Data, the tables show that the following are recommended (R) or highly recommended (HR) where loss of \glspl{data property} \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, \gls{resolution}{Resolution!Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} can give rise to
 a number of \glspl{hazard}. The extracts below indicate the mitigation\index{Mitigation} techniques identified from the tables which should form the basis of the \index{Safety Requirement!Data}data safety requirements. 
 
 \begin{longtable}{|C{\dsiwgColumnWidth{0.08}}|L{\dsiwgColumnWidth{0.15}}|C{\dsiwgColumnWidth{0.08}}|L{\dsiwgColumnWidth{0.69}}|}

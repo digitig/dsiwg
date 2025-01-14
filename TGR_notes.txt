@@ -11,7 +11,8 @@
 11. I've not referenced "data" because it would have made too many hyperlinks.
 12. I've changed the definition of Hazard Log from "A Hazard Log records all hazard analysis, safety risk assessment and safety risk reduction activities for the 'whole-of-life' of a safety-related system." to "A record of all [...]"
 13. I've added SPM as an acronym.
-
+14. Data products only appear in the definition of data products, so definition removed.
+14 "Quality attribute" does not appear in the document.
 TODO
 1. Update contributors to current version
 2. Consider adding "mitigation" to definitions.
