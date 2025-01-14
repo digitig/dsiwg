@@ -33,11 +33,11 @@ To facilitate this integration, the following paragraphs describe the connection
 standard for risk management.
 The \gls{odr} itself is presented in \autoref{bkm:assessment}.
 
-Establishing the context of a risk assessment ensures that the system being considered and the scope of any assessment is well defined. This helps prevent an overrun of the assessment's boundaries and allows those items that are out of scope to be explicitly communicated to all \index{Stakeholder}Stakeholders. In addition, it is the role of this activity to produce the criteria that a system will be judged on. The \gls{odr} assessment links directly to the sub-tasks identified by \acrshort{iso} 31000 for establishing the risk assessment context and introduces aspects to guide the assessor into focusing on data-specific risks.
+Establishing the context of a risk assessment ensures that the system being considered and the scope of any assessment is well defined. This helps prevent an overrun of the assessment's boundaries and allows those items that are out of scope to be explicitly communicated to all \index{Stakeholder}\glspl{stakeholder}. In addition, it is the role of this activity to produce the criteria that a system will be judged on. The \gls{odr} assessment links directly to the sub-tasks identified by \acrshort{iso} 31000 for establishing the risk assessment context and introduces aspects to guide the assessor into focusing on data-specific risks.
 
 Questions 2, 3 and 4 of the \gls{odr} align directly with establishing the external context of the risk assessment
 (Activity 6.3.3 from \acrshort{iso} 31000).
-They guide the assessor into judging the risk appetite of external \index{Stakeholder}Stakeholders, the level of risk that is allocated to the organization and the regulatory environment within the project will operate.
+They guide the assessor into judging the risk appetite of external \index{Stakeholder}\glspl{stakeholder}, the level of risk that is allocated to the organization and the regulatory environment within the project will operate.
 
 Question 5 is concerned with establishing the internal context of the risk assessment
 (Activity 6.3.3),
@@ -61,7 +61,7 @@ To support this, a separate questionnaire has been developed to explore the spec
 More details on the Data Safety Culture Questionnaire are provided in \autoref{bkm:culture}.
 
 \subsubsection{System Definition}
-The system under consideration should be understood and documented, including interfaces\index{Interface!System} and safety-related data aspects. The process of documenting the system of interest furthers the understanding of \index{Stakeholder}Stakeholders and approvers so they can make sensible judgements about the system. It also formally declares assumptions that are being made while assessing the system and clearly defines the limits of the assessment. In addition, different levels of risk may be associated with composites of safety-related data, which may be easier to manage than individual \index{Artefact, Data}\cbstart\glspl{data artefact}\cbend, or where independence cannot be demonstrated or maintained. Hence, the partitioning of data sets should also be considered during this phase.
+The system under consideration should be understood and documented, including interfaces\index{Interface!System} and safety-related data aspects. The process of documenting the system of interest furthers the understanding of \index{Stakeholder}\glspl{stakeholder} and approvers so they can make sensible judgements about the system. It also formally declares assumptions that are being made while assessing the system and clearly defines the limits of the assessment. In addition, different levels of risk may be associated with composites of safety-related data, which may be easier to manage than individual \index{Artefact, Data}\cbstart\glspl{data artefact}\cbend, or where independence cannot be demonstrated or maintained. Hence, the partitioning of data sets should also be considered during this phase.
 
 \subsubsection{Supplier Data Maturity}
 As noted above, a number of usage scenarios involve data being supplied by subcontracted organizations. It is expected that some formal process will be used to select these suppliers. A questionnaire has been developed to help ensure that the supplier has suitable processes in place to manage data safety-related issues. This is available in \autoref{bkm:maturity}.
@@ -215,7 +215,7 @@ We therefore need to ensure that it is possible to analyse it for key characteri
 \paragraph{The Explainability\index{Explainability Property|textbf} Property}\label{bkm:guidance:explainability}
 ``Explainability'' has been added because it is necessary to establish, especially for learning or AI-based systems,
 what the purpose and effect data (and especially changes to data) has on a system
-and explain this to relevant stakeholders in terms that they can understand.
+and explain this to relevant \glspl{stakeholder} in terms that they can understand.
 This could be, for example, \gls{ml} training data or system \gls{configuration data}.
 This property is related to analysability and may be performed by the same set of tools or techniques.
 %
@@ -522,7 +522,7 @@ When considering the possibility of data affecting software or software affectin
 With regards to the first case (i.e., \dsiwgTextBF{data affecting software}) the issue is that the data used by the system may affect the software execution in a way that could credibly lead to \glspl{hazard}, but only where this data-induced effect is not easily detected or mitigated by other means. If this is the situation then appropriate measures need to be put in place \dsiwgTextIT{within the data} to mitigate this risk. Alternatively (or additionally), if the software within the system can be modified, mitigations\index{Mitigation} could be placed \dsiwgTextIT{within the software} to achieve or enhance the mitigation needed:
 
 \begin{enumerate}
-  \item \dsiwgTextBF{Mitigation within the data}\index{Mitigation} In many cases the best or only option is to improve the quality of the data to avoid the issue. This can be done by introducing a \gls{dsal}\index{Assurance Level!Data} for the data, related to the severity of the \gls{hazard} which may be induced, and thereby addressing the issue at cause. In this case, the \gls{dsal} is bearing a large amount of responsibility. This may mean that a greater number of the ``Recommended'' risk \index{Treatment!Risk}treatment methods and approaches (identified in the following phase) need to be implemented.
+  \item \dsiwgTextBF{Mitigation within the data}\index{Mitigation} In many cases the best or only option is to improve the quality of the data to avoid the issue. This can be done by introducing a \gls{dsal}\index{Assurance Level!Data} for the data, related to the severity of the \gls{hazard} which may be induced, and thereby addressing the issue at cause. In this case, the \gls{dsal} is bearing a large amount of responsibility. This may mean that a greater number of the ``Recommended'' risk \index{Treatment!Risk}\gls{treatment} methods and approaches (identified in the following phase) need to be implemented.
   \item \dsiwgTextBF{Mitigation within the software} If the data cannot be assured to a \gls{dsal}\index{Assurance Level!Data} (e.g., if it is supplied by a third party or legacy system), sometimes changes can be made to the software in the system to improve the situation. These mitigations could be functional (e.g., introduction of better range checking, rejection of illegal combinations of data values). This requires not only specific software changes but also associated verification of these new features and any software changes will have to be implemented to an appropriate \index{Assurance Level!Software}\gls{software assurance level}. However there may be no particular functional mitigation\index{Mitigation} or set of mitigations that can be targeted at the particular issue (e.g., testing for illegal combinations of values is too complex). In this latter case, potentially the complete set of software within the system responsible for manipulating the data should be developed (or re-developed) to a suitable \index{Assurance Level!Software}\gls{software assurance level}. This level should be related to the severity of \gls{hazard} it is mitigating.
 \end{enumerate}
 
@@ -535,7 +535,7 @@ It is necessary to decide how effective the functional mitigations\index{Mitigat
 \clearpage %Manual page break
 \subsection{Evaluate and Treat Risks}
 \label{bkm:EvaluateAndTreat}
-\subsubsection{Risk \index{Treatment!Risk}Treatment}
+\subsubsection{Risk \index{Treatment!Risk}\\Glsfmttext{treatment}}
 There are a range of approaches that could be used to treat data-related risks. One option might be to redesign part of a system, either to remove the risk or to incorporate safety devices. Alternatively, ways of mitigating (or, more generally, treating) the risk could be devised. Another option could be to conduct further analysis, for example to better understand the likelihood of a risk occurring. In extreme cases, risk evaluation may lead to a recommendation to cancel a project.
 
 It is apparent that some of these approaches involve repeating activities (or part of activities) discussed in earlier sections of this document. This type of repetition is to be expected given the iterative nature of risk management.

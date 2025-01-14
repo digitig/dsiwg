@@ -236,7 +236,7 @@ Questions the Health Organization will need to address when establishing the con
     \includegraphics[width=\textwidth]{images/manufacturer}}
 \end{minipage}
 
-Before embarking on any hazard analysis, the Manufacturer ensures that \index{Stakeholder}Stakeholders \dsiwgTextBF{\dsiwgTextIT{Review the general, historical perspective}}. This takes the form of a refresh briefing to raise awareness of issues that are specific to data such as ageing, biasing and defaults.
+Before embarking on any hazard analysis, the Manufacturer ensures that \index{Stakeholder}\glspl{stakeholder} \dsiwgTextBF{\dsiwgTextIT{review the general, historical perspective}}. This takes the form of a refresh briefing to raise awareness of issues that are specific to data such as ageing, biasing and defaults.
 
 The Manufacturer of the Health IT System decides that during the prototyping phase there is little safety dependency of the test and \gls{configuration data} sets as no clinical decisions will be made based on their content; the data is simply being used to support the elaboration of requirements.
 
@@ -248,7 +248,7 @@ On completion of the risk identification phase the Manufacturer \dsiwgTextBF{\ds
 
 \begin{minipage}[t]{0.73\textwidth}
   The Health Organization will likewise need to conduct risk identification relevant to their deployment context. \Gls{hazard} arising from data sources that are to be delivered into the new system from existing systems need to be assessed for data risks.
-  As with the Manufacturer, a briefing to \index{Stakeholder}Stakeholders to \dsiwgTextBF{\dsiwgTextIT{Review the general, historical perspective}} is first conducted to cover generic data safety issues but also to highlight lessons learned from previous accidents and incidents that have occurred in the Health Organization itself.
+  As with the Manufacturer, a briefing to \index{Stakeholder}\glspl{stakeholder} to \dsiwgTextBF{\dsiwgTextIT{Review the general, historical perspective}} is first conducted to cover generic data safety issues but also to highlight lessons learned from previous accidents and incidents that have occurred in the Health Organization itself.
 \end{minipage}
 \begin{minipage}[t]{0.25\textwidth}
   \centering\raisebox{\dimexpr \topskip-\height}{%
@@ -325,14 +325,14 @@ The Health Organization takes care to \dsiwgTextBF{\dsiwgTextIT{Analyse \glspl{d
 DCB0160
 requirements) in the Clinical Risk Management Plan.
 
-\subsection{Risk Evaluation and \index{Treatment!Risk}Treatment}
+\subsection{Risk Evaluation and \index{Treatment!Risk}\Glsfmttext{treatment}}
 
 \begin{minipage}[t]{0.73\textwidth}
   The Manufacturer carries out the following activities to meet the guidance objectives:
   \begin{itemize}
     \item Review each risk and either: Avoid; Accept; Transfer; Treat;
     \item Establish \index{Treatment!Risk} methods for relevant risks; and
-    \item Implement and verify \index{Treatment!Risk}treatment methods.
+    \item Implement and verify \index{Treatment!Risk}\gls{treatment} methods.
   \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.25\textwidth}
@@ -342,7 +342,7 @@ requirements) in the Clinical Risk Management Plan.
 
 The Manufacturer decides to \dsiwgTextBF{\dsiwgTextIT{Review each risk and either: Avoid; Accept; Transfer; or Treat the risk}}. It decides to \dsiwgTextBF{Accept} the \dsiwgTextBF{DSAL0}\index{Assurance Level!Data} risk but as it has determined there is some, albeit low, risk (\dsiwgTextBF{DSAL1}) associated with its use of data at a specific point of its lifecycle\index{Lifecycle!Data}, it decides to \dsiwgTextBF{Treat} that risk. The Manufacturer evaluates this risk and considers that the risks should be reduced further by taking some reasonably practicable steps.
 
-Having decided that further risk reduction is necessary, the Manufacturer needs to \dsiwgTextBF{\dsiwgTextIT{Establish \index{Treatment!Risk}treatment methods for relevant risks}} that are appropriate for DSAL1\index{Assurance Level!Data}data and in doing so demonstrate that reasonably practicable steps have been taken to reduce the risk. The Manufacturer therefore refers to the tables in the \gls{dsg} document. The Manufacturer then documents in its Clinical Risk Management Plan:
+Having decided that further risk reduction is necessary, the Manufacturer needs to \dsiwgTextBF{\dsiwgTextIT{establish \index{Treatment!Risk}\gls{treatment} methods for relevant risks}} that are appropriate for DSAL1\index{Assurance Level!Data}data and in doing so demonstrate that reasonably practicable steps have been taken to reduce the risk. The Manufacturer therefore refers to the tables in the \gls{dsg} document. The Manufacturer then documents in its Clinical Risk Management Plan:
 
 \begin{itemize}
   \item Planned compliance with the tables;
@@ -351,7 +351,7 @@ Having decided that further risk reduction is necessary, the Manufacturer needs 
 \end{itemize}
 
 For \dsiwgTextBF{DSAL1}\index{Assurance Level!Data} Verification Data, the tables show that the following are recommended (R) or highly recommended (HR) where loss of \glspl{data property} \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}Format, \index{Accuracy Property}\gls{accuracy}, \gls{resolution}{Resolution!Data}, Timeliness\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity/Representation Property}\gls{fidelity}, Sequencing\index{Sequencing, Data}, Intended Destination / Usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, Explainability\index{Explainability Property}} can give rise to
-a number of \glspl{hazard}. The extracts below indicate the mitigation\index{Mitigation} techniques identified from the tables which should form the basis of the \index{Safety Requirement!Data}data safety requirements. 
+a number of \glspl{hazard}. The extracts below indicate the mitigation\index{Mitigation} techniques identified from the tables which should form the basis of the \index{Safety Requirement!Data}\glspl{data safety requirement}. 
 
 \begin{longtable}{|C{\dsiwgColumnWidth{0.08}}|L{\dsiwgColumnWidth{0.15}}|C{\dsiwgColumnWidth{0.08}}|L{\dsiwgColumnWidth{0.69}}|}
   \caption{Worked Example: Filtered Techniques Tables}
@@ -504,11 +504,11 @@ a number of \glspl{hazard}. The extracts below indicate the mitigation\index{Mit
 From these tables the Manufacturer decides on a series of activities to implement the recommendations that are applicable to its particular endeavour. These activities are expressed as a series of requirements that can be placed on the Manufacturer's delivery organization and tracked through to completion. 
 
 \begin{longtable}{|C{\dsiwgColumnWidth{0.07}}|L{\dsiwgColumnWidth{0.78}}|C{\dsiwgColumnWidth{0.15}}|}
-\caption{Worked Example: Derived \index{Safety Requirement!Data!Derived}Data Safety Requirements}
+\caption{Worked Example: Derived \index{Safety Requirement!Data!Derived}\ecapitalisewords{\glsentrylong{data safety requirement}}}
   \\\hline\TableHeadColourC{} & \TableHeadColour{} & \TableHeadColourCX{Guidance}\\
   \multirow{-2}*{\TableHeadColourC{Ref}} & \multirow{-2}*{\TableHeadColour{Requirement}} & \TableHeadColourCX{Reference}\\\hline
   \endfirsthead
-    \caption[]{Worked Example: Derived \index{Safety Requirement!Data!Derived}Data Safety Requirements (continued)}
+    \caption[]{Worked Example: Derived \index{Safety Requirement!Data!Derived}\ecapitalisewords{\glsentrylong{data safety requirement}} (continued)}
   \\\hline\TableHeadColourC{} & \TableHeadColour{} & \TableHeadColourCX{Guidance}\\
   \multirow{-2}*{\TableHeadColourC{Ref}} & \multirow{-2}*{\TableHeadColour{Requirement}} & \TableHeadColourCX{Reference}\\\hline
   \endhead
@@ -543,11 +543,11 @@ From these tables the Manufacturer decides on a series of activities to implemen
 The following guidance recommendations were not adopted by the Manufacturer for the reasons given. Note that some may however become relevant in the future so actions are set, where appropriate, to review the applicability of the recommendation when the given condition is met.
 
 \begin{longtable}{|C{\dsiwgColumnWidth{0.07}}|C{\dsiwgColumnWidth{0.13}}|L{\dsiwgColumnWidth{0.55}}|L{\dsiwgColumnWidth{0.25}}|}
-\caption{Worked Example: \index{Safety Requirement!Data!Rejected}Rejected Data Safety Requirements}
+\caption{Worked Example: \index{Safety Requirement!Data!Rejected}Rejected \ecapitalisewords{\glsentryplural{data dafety requirement}}}
   \\\hline\TableHeadColourC{} & \TableHeadColourC{Guidance} & \TableHeadColour{} & \TableHeadColourCX{}\\
   \multirow{-2}*{\TableHeadColourC{Ref}} & \TableHeadColourC{Reference} & \multirow{-2}*{\TableHeadColour{Justification}} & \multirow{-2}*{\TableHeadColourCX{Action}}\\\hline
   \endfirsthead
-\caption[]{Worked Example: \index{Safety Requirement!Data!Rejected}Rejected Data Safety Requirements (continued)}
+\caption[]{Worked Example: \index{Safety Requirement!Data!Rejected}Rejected \ecapitalisewords{\glsentryplural{data safety requirement}} (continued)}
   \\\hline\TableHeadColourC{} & \TableHeadColourC{Guidance} & \TableHeadColour{} & \TableHeadColourCX{}\\
   \multirow{-2}*{\TableHeadColourC{Ref}} & \TableHeadColourC{Reference} & \multirow{-2}*{\TableHeadColour{Justification}} & \multirow{-2}*{\TableHeadColourCX{Action}}\\\hline
   \endhead
@@ -562,7 +562,7 @@ The following guidance recommendations were not adopted by the Manufacturer for 
   \hline
 \end{longtable}
 
-Having determined the requirements arising from the data safety analysis the Manufacturer ensures these are included along with other system requirements as part of the overall delivery and operation of the system. It then remains for the Manufacturer to \dsiwgTextBF{\dsiwgTextIT{Implement and verify \index{Treatment!Risk} methods}}, that is, as well as defining requirements the Clinical Risk Management Plan needs to ensure activities are in place to verify and evidence that \index{Treatment!Risk}treatments have actually been implemented.
+Having determined the requirements arising from the data safety analysis the Manufacturer ensures these are included along with other system requirements as part of the overall delivery and operation of the system. It then remains for the Manufacturer to \dsiwgTextBF{\dsiwgTextIT{Implement and verify \index{Treatment!Risk} methods}}, that is, as well as defining requirements the Clinical Risk Management Plan needs to ensure activities are in place to verify and evidence that \index{Treatment!Risk}\glspl{treatment} have actually been implemented.
 
 \begin{minipage}[t]{0.79\textwidth}
   Likewise, the Health Organization has identified DSAL2\index{Assurance Level!Data} data and in deciding to Treat the risk, it aims to ensure risks are reduced as low as reasonably practicable. 
