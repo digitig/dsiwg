@@ -138,19 +138,19 @@ Most of the current collection of accidents and incidents fall into three catego
 There are some risk-inducing issues that are different or more prevalent for data than for other system elements. An incomplete collection of examples is provided below. This list may provide a quick way of identifying risks, which could be especially useful at an early stage of a project:
 
 \begin{itemize}
-  \item \dsiwgTextBF{Fluidity} Hardware and software can undergo significant amounts of product assurance and once assured may change relatively infrequently. Where change is required to hardware or software, it can be carefully managed and the impact on the safety case appraised. This is not always the case for data, which is often much more fluid; indeed the ease with which data can be changed is one motivation for the move towards \glspl{data-driven system}. This fluidity means that it is not always possible to revisit safety cases when data changes --- for example, the safety case for an autonomous vehicle cannot be updated every time that the vehicle acquires new knowledge during operation. Instead, the fact that data can change, along with any associated safety impacts, may need to be captured in the system safety case. Fluidity can also provide a temptation for unscrupulous operators to falsify data, for example, after an incident has occurred. Rigorous configuration control procedures can help protect against this type of behaviour.
+  \item \dsiwgTextBF{Fluidity} Hardware and software can undergo significant amounts of product assurance and once assured may change relatively infrequently. Where change is required to hardware or software, it can be carefully managed and the impact on the safety case appraised. This is not always the case for data, which is often much more fluid; indeed the ease with which data can be changed is one motivation for the move towards \glspl{data-driven system}. This fluidity means that it is not always possible to revisit safety cases when data changes -- for example, the safety case for an autonomous vehicle cannot be updated every time that the vehicle acquires new knowledge during operation. Instead, the fact that data can change, along with any associated safety impacts, may need to be captured in the system safety case. Fluidity can also provide a temptation for unscrupulous operators to falsify data, for example, after an incident has occurred. Rigorous configuration control procedures can help protect against this type of behaviour.
 
   \item \dsiwgTextBF{Reuse} For the purposes of this discussion, ``reuse'' is interpreted as use of the same data in a different system or system context (e.g., lifecycle\index{Lifecycle!System} phase). Just because data was valid for use in a particular system, it does not immediately follow that it can be reused again in a similar system. Many considerations associated with data reuse are similar to those of software reuse, for example: similarity of requirements; similarity of role in system; and similarity in required \index{Integrity Property}\gls{integrity} / \index{Assurance Level}assurance level. One consideration that is different is that of \gls{timeliness}\index{Timeliness Property}: data that was valid for use in a particular system at a particular time is not necessarily valid for reuse in the same system at a different time.
 
   \item \dsiwgTextBF{Ageing} As highlighted above, all safety-related data has a lifetime and this needs to be explicitly managed. This can involve, for example, purging, deletion and alerting. It is also important to note that ageing can occur as a result of changes external to the system (for example, records of the positions of other aircraft, newly discovered drug interactions, or new software patches) or it can result from internal changes (e.g., valves gradually becoming less responsive, \gls{configuration data} becoming out of date, or data schemas evolving over time).
 
-  \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes --- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}; data can also appear to become something else. Without careful management the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., \gls{validation} checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
+  \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes -- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}; data can also appear to become something else. Without careful management the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., \gls{validation} checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
 
   \item \dsiwgTextBF{\index{Data!Owner}Ownership} The transformation of data can result in a lack of clarity regarding who has ownership of, and responsibility for, the data (if anyone). It is important that responsibility for \cbstart\glspl{error}\cbend\ can be tracked, for example, to determine whether they were present in the initial data or whether they arose as part of the transformation process. Establishing clear roles within the data supply chain can help mitigate these issues.
 
   \item \dsiwgTextBF{Archiving and Retrieval} Safety-related data needs to be available when required. There is thus a need to think about data accessibility over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
 
-  \item \dsiwgTextBF{Biasing} This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation and interpretation of data. It is usually an unintentional distortion in the \gls{dataset} --- one example of this is the confirmation bias that may be applied to safety claims,
+  \item \dsiwgTextBF{Biasing} This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation and interpretation of data. It is usually an unintentional distortion in the \gls{dataset} -- one example of this is the confirmation bias that may be applied to safety claims,
     while another example is that synthetic autonomous vehicle training \glspl{database} can have issues with artificial data if not realistic.
     Although there is no perfect way of checking for this within the system, \index{Completeness!Checks}\gls{completeness}, statistical and validity checks on \glspl{dataset} may help.
 
@@ -160,9 +160,9 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
   \item \dsiwgTextBF{Sentinels} A sentinel value is a data value that is used to indicate a special action needs to be taken, typically indicating the end of a record or a \gls{dataset}. The sentinel value should be one that is not allowable in the \gls{dataset} itself, but often is not properly considered and may use common sequences (e.g., five zeroes). Sentinels can cause problems in two ways: (i) where they are not recognized and so, for example, processing continues past the sentinel; (ii) where the data itself somehow contains the sentinel value and so processing is erroneously interrupted. Sentinels can be a particular risk in long-lived systems and \glspl{dataset}. As with the issue above, the management or elimination of this issue may often be achieved through improved data structures.
 
-  \item \dsiwgTextBF{Aliasing} This is an effect that causes different data to become indistinguishable when accessed; that is, there is only one record when there should be several --- for example, two patients with similar names inadvertently sharing a single set of medical records. This could be due to the way the data is filtered, sampled, indexed, stored or retrieved. The data issues are typically related to loss of \gls{resolution}\index{Resolution Property} leading to similar data points appearing to be identical. Hence, methods to maintain \gls{resolution}\index{Resolution Property}, including use of unique indexes, may be beneficial.
+  \item \dsiwgTextBF{Aliasing} This is an effect that causes different data to become indistinguishable when accessed; that is, there is only one record when there should be several -- for example, two patients with similar names inadvertently sharing a single set of medical records. This could be due to the way the data is filtered, sampled, indexed, stored or retrieved. The data issues are typically related to loss of \gls{resolution}\index{Resolution Property} leading to similar data points appearing to be identical. Hence, methods to maintain \gls{resolution}\index{Resolution Property}, including use of unique indexes, may be beneficial.
 
-    One specific case of aliasing has come to light recently regarding ``Homophones'' --- words which sound the same but are different such as ``Flower'' / ``Flour'' and ``Bare'' / ``Bear'' \cite{citation:homonym}.
+    One specific case of aliasing has come to light recently regarding ``Homophones'' -- words which sound the same but are different such as ``Flower'' / ``Flour'' and ``Bare'' / ``Bear'' \cite{citation:homonym}.
     If these words are read out over a phone there may be confusion as to which is intended.
     Location services based on a number of words such as W3W don't avoid all homophones,
     and so there may be issues when the words are given verbally in an emergency. The issue is discussed further in \autoref{bkm:incacc:w3w}.
@@ -171,12 +171,12 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
   \item \dsiwgTextBF{Masking} This issue can arise if a notable proportion of a \gls{dataset} is of a poor \cbstart\gls{quality}\cbend, for example, if sensors producing the data are faulty or measurements are taken from the wrong source. This poor quality data can mask errors in the way that the system handles the good quality data. One way of protecting against this issue is the generation and use of test sets of appropriate size and quality, although for some applications this may be a non-trivial task.
 
-  \item \dsiwgTextBF{\index{Completeness!Property}Incompleteness} Not all the data that is needed is always available; there may be known, and sometimes, unknown gaps or missing data points. The missing data points ("Dark Data"\index{Dark Data} --- see \autoref{bkm:darkdata}) can be critical and in some cases, more important than the data that is available. Incomplete data can arise, for example, from limitations on how much data can be physically captured (eg.~sampling frequencies, storage / time constraints) or from the unintentional or deliberate darkening of data (eg.~for privacy, security, political or commercial reasons).
+  \item \dsiwgTextBF{\index{Completeness!Property}Incompleteness} Not all the data that is needed is always available; there may be known, and sometimes, unknown gaps or missing data points. The missing data points ("Dark Data"\index{Dark Data} -- see \autoref{bkm:darkdata}) can be critical and in some cases, more important than the data that is available. Incomplete data can arise, for example, from limitations on how much data can be physically captured (eg.~sampling frequencies, storage / time constraints) or from the unintentional or deliberate darkening of data (eg.~for privacy, security, political or commercial reasons).
 
   \item \dsiwgTextBF{Volume} Data can be so large and unstructured that it is not manageable in practicable timeframes.
     For example, video records of rail track could take days to inspect manually.
 
-  \item \dsiwgTextBF{Interpretation} Data can be misinterpreted --- too much or too little deduced from available data, or data extrapolated incorrectly to derive unsound results.
+  \item \dsiwgTextBF{Interpretation} Data can be misinterpreted -- too much or too little deduced from available data, or data extrapolated incorrectly to derive unsound results.
     An example is \gls{ml} data\index{Machine Learning Data}, especially real or recorded data that may not contain critical edge / corner cases.
 
   \item \dsiwgTextBF{Distribution}
@@ -253,7 +253,7 @@ This property is related to analysability and may be performed by the same set o
   {History}\index{History Property} & H & {The data has an audit trail of changes}\\\hline
   {Lifetime}\index{Lifetime Property} & E & {When does the safety-related data expire}\\\hline
   {Disposability / Deletability}\index{Disposability/Deletability Property} & D & {The data can be permanently removed when required}\\\hline
-  {Goldilocks\index{Goldilocks Property}} & G & {The data is just the right size --- not too much and not too little}\\\hline
+  {Goldilocks\index{Goldilocks Property}} & G & {The data is just the right size -- not too much and not too little}\\\hline
   {Analysability\index{Analysability Property}} & Z & {The data is of a suitable size, type and representation (including any \gls{metadata}) to enable it be usefully analysed}\\\hline
   {Explainability\index{Explainability Property}} & X & {The data can be meaningfully explained to those who need to understand it by a suitable mechanism}\\\hline
 \end{longtable}
@@ -657,7 +657,7 @@ For each \index{Assurance Level!Data}\gls{dsal}, the tables indicate whether the
 The following collection of tables details methods and approaches which may be used by practitioners conducting \index{Safety Assessment}safety assessments. The tables map the methods and approaches to Data Categories. To aid both legibility and usability, these data categories are abbreviated using the scheme shown in
 \autoref{tab:DataCategoryAbbreviations}.
 
-It should be noted that the five Data Categories\index{Category!Data} presented in \autoref{tab:DataCategoryAbbreviations} are a subset of those presented in \autoref{tab:CategoriesShort}, which presents a comprehensive list of Data Categories\index{Category!Data}. The five presented in \autoref{tab:DataCategoryAbbreviations} have been used to populate the tables within this document which are used for the selection of methods and approaches. The addition of further Data Categories\index{Category!Data} to \autoref{tab:DataCategoryAbbreviations} is likely to be associated with expansion or customisation of the methods and approaches tables. Future versions of this guidance may incorporate these enhancements --- however users of the guidance are also encouraged to do this as part of the customisation process associated with their own organizations or projects.
+It should be noted that the five Data Categories\index{Category!Data} presented in \autoref{tab:DataCategoryAbbreviations} are a subset of those presented in \autoref{tab:CategoriesShort}, which presents a comprehensive list of Data Categories\index{Category!Data}. The five presented in \autoref{tab:DataCategoryAbbreviations} have been used to populate the tables within this document which are used for the selection of methods and approaches. The addition of further Data Categories\index{Category!Data} to \autoref{tab:DataCategoryAbbreviations} is likely to be associated with expansion or customisation of the methods and approaches tables. Future versions of this guidance may incorporate these enhancements -- however users of the guidance are also encouraged to do this as part of the customisation process associated with their own organizations or projects.
 
 \begin{longtable}{|L{\dsiwgColumnWidth{0.2}}|C{\dsiwgColumnWidth{0.2}}|}
   \caption{Data Category\index{Category!Data} Abbreviations}
@@ -722,7 +722,7 @@ To give a specific example, consider the row corresponding to the first Techniqu
 \end{itemize}
 In such a case, the Technique would be Highly Recommended if the \index{Artefact, Data}\gls{data artefact} were of \gls{dsal}\index{Assurance Level!Data} 3 or 4, Recommended if the \gls{dsal} were 2, or should merely be considered if the \gls{dsal} were 1.
 
-Many dots have been placed in the table to indicate Data Categories\index{Category!Data} and \index{Property!Data}Data Properties which are not applicable to the Technique under consideration. The dots enable the tables to be assessed very quickly, as they enable the letters representing specific Data Categories\index{Category!Data} and \index{Property!Data}\glspl{data property} to always be presented in the same position within the table. For example, the \index{Property!Data}\gls{data property} \gls{verifiability}\index{Verifiability Property} (``V'' from \autoref{tab:PropertiesOfData} can easily be seen to appear against the first two Techniques of \autoref{tab:MethodsSystemDesign}, whereas it does not appear in the next seven Techniques --- this can be seen without actually reading the text, but merely looking at the pattern presented by the letters and dots. 
+Many dots have been placed in the table to indicate Data Categories\index{Category!Data} and \index{Property!Data}Data Properties which are not applicable to the Technique under consideration. The dots enable the tables to be assessed very quickly, as they enable the letters representing specific Data Categories\index{Category!Data} and \index{Property!Data}\glspl{data property} to always be presented in the same position within the table. For example, the \index{Property!Data}\gls{data property} \gls{verifiability}\index{Verifiability Property} (``V'' from \autoref{tab:PropertiesOfData} can easily be seen to appear against the first two Techniques of \autoref{tab:MethodsSystemDesign}, whereas it does not appear in the next seven Techniques -- this can be seen without actually reading the text, but merely looking at the pattern presented by the letters and dots. 
 
 Within each table, the ``Serial'' column lists a unique serial number for each technique. The serial numbers simply provide a unique reference which aligns with those implemented within the toolset.
 
@@ -1165,7 +1165,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation Methods: Data Media Handling --- Paper / Physical Storage}\index{Mitigation}
+  \caption{Mitigation Methods: Data Media Handling -- Paper / Physical Storage}\index{Mitigation}
   \label{tab:MethodsDataMediaPhysical}
   \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
@@ -1175,7 +1175,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
 \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endfirsthead
-  \caption[]{Mitigation Methods: Data Media Handling --- Paper / Physical Storage (continued)}\index{Mitigation}
+  \caption[]{Mitigation Methods: Data Media Handling -- Paper / Physical Storage (continued)}\index{Mitigation}
 \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
@@ -1220,7 +1220,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation Methods: Data Media Handling --- Electronic Storage}\index{Mitigation}
+  \caption{Mitigation Methods: Data Media Handling -- Electronic Storage}\index{Mitigation}
   \label{tab:MethodsDataMediaElectronic}
   \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
@@ -1230,7 +1230,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
 \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endfirsthead
-  \caption[]{Mitigation Methods: Data Media Handling --- Electronic Storage (continued)}\index{Mitigation}
+  \caption[]{Mitigation Methods: Data Media Handling -- Electronic Storage (continued)}\index{Mitigation}
 \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}

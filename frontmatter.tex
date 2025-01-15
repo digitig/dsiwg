@@ -120,7 +120,7 @@ While the authors and the publishers have used reasonable endeavours to ensure t
   \\\hline
   {3.5} & {The \gls{dsiwg} Team} & {For publication at \gls{sss}'23} & {07-FEB-2023}
   \\\hline
-  {3.6} & {The \gls{dsiwg} Team} & {For publication at \gls{sss}'24} & { 13-FEB-2024}
+  {3.6} & {The \gls{dsiwg} Team} & {For publication at \gls{sss}'24} & {13-FEB-2024}
   \\\hline
 \end{longtable}
 %
@@ -202,7 +202,7 @@ and include:
 \item guidance on the application of the Data Safety Culture Questionnaire,
 \end{itemize}
 Several of these changes are likely to
-cause parts of the document to be re-ordered --- they have therefore been deferred to the next major update, in version 4.0 of the guidance.
+cause parts of the document to be re-ordered -- they have therefore been deferred to the next major update, in version 4.0 of the guidance.
 
 If you or your organization are interested in learning more about the work of the \gls{dsiwg} or joining either of the sub-groups,
 please visit the \gls{scsc} website, where more information including contact details may be found on the ``Working groups'' section of the site. For direct access to the \gls{dsiwg} area of the site, please visit \href{https://scsc.uk/gd}{https://scsc.uk/gd}
@@ -242,26 +242,27 @@ A current list of working groups, with links to further details on the work of e
 
 \dsiwgTextBF{Data is here}:
 Data is becoming ever more important in our lives: influencing, managing and even controlling many critical aspects.
-The use of \gls{ai} systems is a new, exciting but potentially hazardous use of data. \gls{llm} based systems are trained on vast amount of data, and it this data which enables them to be useful.
+\cbstart The use of \gls{ai} systems is a new, exciting, but potentially hazardous use of data. \gls{llm} based systems are trained on vast amount of data, and it this data which enables them to be useful.
+
 Some of this data is related to our personal safety and well-being.
 Consider, for example, the importance of data defining the layout of railway signals,
 data that indicates the position of underwater obstructions in nautical channels or data that
 is used to train a vision recognition system to detect tumours in medical images.
 Organizations now make significant decisions (including safety-related decisions) based solely on data held in systems.
 Hence, organizations need to safely manage, control and process their data.
-In particular, key \index{Property!Data}\glspl{data property} that preserve safety must be actively managed.
+In particular, they must actively manage key \index{Property!Data}\glspl{data property} that preserve safety.\cbend\
 
 \dsiwgTextBF{Data is growing}: There are at least two reasons why the use of data has grown and, equally important, why it is expected to continue to grow. The  first relates to the rapid expansion of the area loosely termed ``Big Data'', including the use of large \glspl{dataset} to support machine learning and \gls{ai} applications. The second is the growing use of systems of systems, where data is the lifeblood that connects together disparate elements and allows a cohesive capability to be built. Put simply, the need to address data-related issues is a pressing problem and will continue to be so.
 
 \dsiwgTextBF{Data is causing harm}: Strictly speaking,
 data can neither cause nor prevent harm.
-However, mistakes introduced in data, or the inappropriate use of data, within safety-related systems have been factors in a number of documented accidents and incidents. Examples include: aircraft attempting to take off from the wrong runway (and consequently crashing); ships running aground; and patients being exposed to higher than planned doses of radiation.
+However, \cbstart mistakes in\cbend\ data, or the inappropriate use of data, within safety-related systems have been factors in a number of documented accidents and incidents. Examples include aircraft attempting to take off from the wrong runway (and consequently crashing), ships running aground, and patients being exposed to higher than planned doses of radiation.
 
 Against this background, the \gls{dsiwg} was established under the auspices of the \gls{scsc}. The \gls{dsiwg}'s aim is to develop clear, cross-sector guidance that reflects emerging best practice on how data (as opposed to software or hardware) should be managed in a safety-related context.
 For the most part, this guidance is based on well-established techniques,
 and it has been designed to be compatible with current safety standards and to integrate with existing safety management systems.
 What is new, however, is the explicit and relentless focus on data, making it a ``first-class citizen'' within system safety analyses.
-By doing so, this guidance should help organizations identify, analyse, evaluate and treat data-related risks, thus reducing the likelihood of data-related issues causing harm in the future.
+\cbstart Because of this focus\cbend, this guidance should help organizations identify, analyse, evaluate and treat data-related risks, thus reducing the likelihood of data-related issues causing harm in the future.
 
 \clearpage
 \section*{Quick Start Guide}
@@ -269,39 +270,39 @@ By doing so, this guidance should help organizations identify, analyse, evaluate
 
 \dsiwgSectionQuote{Data really powers everything that we do.}{Jeff Weiner}
 
-The following bullets provide a single-page introduction to \gls{dsg}. For first-time readers this should help place individual sections within an appropriate context; it should also help returning readers quickly navigate the document's contents.
+\cbstart This section provides a single-page introduction to \gls{dsg}. For first-time readers this should help place individual sections within an appropriate context. It should also help returning readers quickly navigate the document's contents.\cbend\
 
 \begin{itemize}
   \item Systems are changing. The role of data is becoming more prominent. Hence, data needs to be considered as a ``first-class citizen'' in system safety analyses. This will help mitigate organizational and system-level risks associated with the use of data.
 
-  \item A Data Safety Management Process has been developed. This is based on four phases:
+  \item A data safety management process has been developed. This is based on four phases:
     \begin{itemize}
-      \item Establish Context;
-      \item Identify Risks;
-      \item Analyse Risks; and
-      \item Evaluate and Treat Risks.
+      \item establish context;
+      \item identify risks;
+      \item analyse risks; and
+      \item evaluate and treat risks.
     \end{itemize}
-	\item The underlying principles and an overview of the process may be found in \autoref{bkm:principlesprocess}.
-	\item Definitions and abbreviations (associated with normative text) are listed in \autoref{bkm:definitionsabbreviations}.
-	\item The objectives associated with, and the outputs produced by, each phase are provided in \autoref{bkm:objectivesoutputs}.
+	\item The underlying principles and an overview of the process \cbstart are described\cbend\ in \autoref{bkm:principlesprocess}.
+	\item \cbstart Normative definitions and abbreviations are \cbstart described\cbend\ in \autoref{bkm:definitionsabbreviations}.
+	\item The objectives associated with, and the outputs produced by, each phase are \cbstart described\cbend\ in \autoref{bkm:objectivesoutputs}.
 	\item The activities of each phase (and associated tailoring \gls{information}) are described in \autoref{bkm:activitiestailoring}.
-	\item Additional guidance \gls{information} for each phase is contained in \autoref{bkm:guidance}.
+	\item Additional guidance \gls{information} for each phase is \cbstart described\cbend\ in \autoref{bkm:guidance}.
   \item A worked example is provided in \autoref{bkm:workedexample}.
   \item A collection of Appendices provide more detail, including:
     \begin{itemize}
       \item A discussion illustrating how the underlying principles link to the objectives (\dsiwgRef{Appendix}{bkm:principlesobjectives}); 
-      \item An Organization Data Risk assessment questionnaire (\dsiwgRef{Appendix}{bkm:assessment});
-      \item A Data Safety Culture questionnaire (\dsiwgRef{Appendix}{bkm:culture});
-      \item A questionnaire to help assess ``data maturity'' of a supplier (\dsiwgRef{Appendix}{bkm:maturity});
+      \item An \gls{odr} assessment questionnaire (\dsiwgRef{Appendix}{bkm:assessment});
+      \item A data safety culture questionnaire (\dsiwgRef{Appendix}{bkm:culture});
+      \item A questionnaire to help assess \cbstart the\cbend\ data maturity of a supplier (\dsiwgRef{Appendix}{bkm:maturity});
       \item A list of Data Categories (\dsiwgRef{Appendix}{bkm:categories});
-      \item A collection of Hazard and Operability Study Guidewords (\dsiwgRef{Appendix}{bkm:guidewords});
+      \item A collection of \gls{hazop} guidewords (\dsiwgRef{Appendix}{bkm:guidewords});
       \item The suggested contents of a \gls{dsmp} (\dsiwgRef{Appendix}{bkm:plan});
       \item A summary of accidents and incidents in which data was potentially a causal factor (\dsiwgRef{Appendix}{bkm:accidents});
       \item A discussion of topics loosely related to system lifecycles (\dsiwgRef{Appendix}{bkm:lifecycle});
       \item Considerations regarding \gls{ml} (\dsiwgRef{Appendix}{bkm:MachineLearning});
 %      \item A discussion of the risks of AI and autonomy (\dsiwgRef{Appendix}{bkm:autonomy});
-      \item An introduction to the concepts of both Dark and Dazzle Data (\dsiwgRef{Appendix}{bkm:darkdazzledata});
-      \item The concepts of Black Swan, Dragon King, Perfect Storm and Pudding Lane data (\dsiwgRef{Appendix}{bkm:cygnology}).
+      \item An introduction to the concepts of both dark and dazzle data (\dsiwgRef{Appendix}{bkm:darkdazzledata});
+      \item The concepts of black swan, dragon king, perfect storm and Pudding Lane data (\dsiwgRef{Appendix}{bkm:cygnology}).
       \item Considerations for the assurance and qualification of data-handling tools (\dsiwgRef{Appendix}{bkm:tools}).
 %      \item An introduction to the Radish tool, that has been developed to assist in the application of the guidance within this document (\dsiwgRef{Appendix}{bkm:radish}).
       \item Issues that may arise when migrating, porting, importing or exporting data (\dsiwgRef{Appendix}{bkm:migration}).            
