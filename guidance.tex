@@ -171,13 +171,13 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
   \item \dsiwgTextBF{Masking} This issue can arise if a notable proportion of a \gls{dataset} is of a poor \cbstart\gls{quality}\cbend, for example, if sensors producing the data are faulty or measurements are taken from the wrong source. This poor quality data can mask errors in the way that the system handles the good quality data. One way of protecting against this issue is the generation and use of test sets of appropriate size and quality, although for some applications this may be a non-trivial task.
 
-  \item \dsiwgTextBF{\index{Completeness!Property}Incompleteness} Not all the data that is needed is always available; there may be known, and sometimes, unknown gaps or missing data points. The missing data points ("Dark Data"\index{Dark Data} --- see \autoref{bkm:darkdata}) can be critical and in some cases, more important than the data that is available. Incomplete data can arise, for example, from limitations on how much data can be physically captured (eg.~sampling frequencies, storage/time constraints) or from the unintentional or deliberate darkening of data (eg.~for privacy, security, political or commercial reasons).
+  \item \dsiwgTextBF{\index{Completeness!Property}Incompleteness} Not all the data that is needed is always available; there may be known, and sometimes, unknown gaps or missing data points. The missing data points ("Dark Data"\index{Dark Data} --- see \autoref{bkm:darkdata}) can be critical and in some cases, more important than the data that is available. Incomplete data can arise, for example, from limitations on how much data can be physically captured (eg.~sampling frequencies, storage / time constraints) or from the unintentional or deliberate darkening of data (eg.~for privacy, security, political or commercial reasons).
 
   \item \dsiwgTextBF{Volume} Data can be so large and unstructured that it is not manageable in practicable timeframes.
     For example, video records of rail track could take days to inspect manually.
 
   \item \dsiwgTextBF{Interpretation} Data can be misinterpreted --- too much or too little deduced from available data, or data extrapolated incorrectly to derive unsound results.
-    An example is \gls{ml} data\index{Machine Learning Data}, especially real or recorded data that may not contain critical edge/corner cases.
+    An example is \gls{ml} data\index{Machine Learning Data}, especially real or recorded data that may not contain critical edge / corner cases.
 
   \item \dsiwgTextBF{Distribution}
     Data can be decentralised, decomposed or distributed across many sources (e.g. channels, \glspl{database}, websites) and needs to be consistently integrated to make a coherent picture. In the health sector often many IT systems have to work together feeding in different parts of a patient medical record to make a complete health picture. If parts of this distributed data are missing (for instance diagnostic test results) then it is difficult if not impossible to obtain the complete picture, and mistakes may be made.
@@ -287,7 +287,7 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   & \rotatebox{90}{\index{Availability Property}\Gls{availability}}
   & \rotatebox{90}{\index{\Gls{fidelity} Property}\Gls{fidelity}}
   & \rotatebox{90}{Priority} & \rotatebox{90}{\Gls{sequencing}\index{Sequencing, Data}}
-  & \rotatebox{90}{Intended Destination/Usage\index{Intended Destination/Usage Property}\ }
+  & \rotatebox{90}{Intended Destination / Usage\index{Intended Destination / Usage Property}\ }
   & \rotatebox{90}{Accessibility}
   & \rotatebox{90}{Suppression}
   & \rotatebox{90}{History}
@@ -1278,4 +1278,4 @@ The Data Safety Management Plan can be used to document:
   \item Planned compliance with the tables; and
   \item Confirmation that the mitigation measures are sufficiently complete and consistent.
 \end{itemize}  
-The overall safety justification for the given project/service/operational context must then provide evidence of compliance against the plan.
+The overall safety justification for the given project / service / operational context must then provide evidence of compliance against the plan.

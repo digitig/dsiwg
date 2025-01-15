@@ -1,4 +1,4 @@
-%================================================================================
+\%================================================================================
 %       Safety Critical Systems Club - Data Safety Initiative Working Group
 %================================================================================
 %                       DDDD    SSSS  IIIII  W   W   GGGG
@@ -147,7 +147,7 @@ This was considered similar to case~\ref{bkm:dark2} in impact terms, and might w
 Mitigations\index{Mitigation} include independence as~\ref{bkm:dark3} and~\ref{bkm:dark4} but also “taking a step back” to look at the bigger picture.
 
 \paragraph{Data Which Might Have Been}\index{Dark Data!Data Which Might Have Been}\label{bkm:dark6}
-This is where it is impossible to obtain the relevant data as a consequence of how the system/scenario is constructed. This was considered an interesting and important case.
+This is where it is impossible to obtain the relevant data as a consequence of how the system / scenario is constructed. This was considered an interesting and important case.
 
 This could for example, be due to an inappropriate system architecture e.g.\ single data channel when a multiple channel approach should have been used, such as in the \index{Boeing 737}Boeing 737 MAX~8 accidents (see section H.2). It is therefore important that Mitigations\index{Mitigation} are in place at design time, as they are often very difficult to retro-fit.
 
@@ -168,7 +168,7 @@ This was considered a common case for systems with \glspl{database} or those exc
 \begin{itemize}
 \item Taxonomies e.g.\ in machine learning categorisation schemes
   \item Data schemas in medical record systems 
-  \item Interface specifications\index{Interface!Specification} and data definitions\index{Data!Definition}, which often evolve over time. These can render old data obsolete / subject to misinterpretation, and often needing migration/translation or re-interpretation.
+  \item Interface specifications\index{Interface!Specification} and data definitions\index{Data!Definition}, which often evolve over time. These can render old data obsolete / subject to misinterpretation, and often needing migration / translation or re-interpretation.
 \end{itemize}
 
 Mitigations\index{Mitigation} include keeping a list of known changes / incompatibilities and documenting the changes or fixes that have to be applied to make the data usable or consistent.
@@ -237,7 +237,7 @@ Systems, especially machine learning systems (see Appendix J) have to cope with 
 \item Bizarre results from recognition / detection systems may result
 \end{itemize}
 
-Mitigations\index{Mitigation} include use of machine learning training data\index{Machine Learning Data} containing edge/corner cases, boundary cases, and testing well beyond normal or acceptable ranges to give insight into the system degradation behaviour.
+Mitigations\index{Mitigation} include use of machine learning training data\index{Machine Learning Data} containing edge / corner cases, boundary cases, and testing well beyond normal or acceptable ranges to give insight into the system degradation behaviour.
 \subsubsection{Summary of Dark Data}
 Dark Data is a very useful way of thinking about problems and solutions. It is important to always think of the bigger picture, considering what \gls{information} is not known:
 
@@ -427,10 +427,10 @@ Machine learning systems have to cope with values outside of their training data
     \item Image components mislabelled leading to strange results
 \end{itemize}
 
-Mitigations\index{Mitigation} include checking of the values that are used in training, analysis of outliers and repeats, deletion of duplicates and use of machine learning validation data\index{Machine Learning Data} containing edge/corner cases and boundary cases.
+Mitigations\index{Mitigation} include checking of the values that are used in training, analysis of outliers and repeats, deletion of duplicates and use of machine learning validation data\index{Machine Learning Data} containing edge / corner cases and boundary cases.
 
 \paragraph{A Note on Sensors}
-Sensors can degrade and fail over time, especially in harsh environments such as automotive, marine or aviation. In such cases sensors may feed erroneous or additional data into systems (e.g. if an out of normal range situation is detected), leading to misleading processing or false alarms. The \index{Boeing 737}Boeing 737 MAX~8 accidents might fall into this category as the angle-of-attack sensor erroneously generated high values, and certainly the systems/processing which passed on the values created spurious data. Some examples are:
+Sensors can degrade and fail over time, especially in harsh environments such as automotive, marine or aviation. In such cases sensors may feed erroneous or additional data into systems (e.g. if an out of normal range situation is detected), leading to misleading processing or false alarms. The \index{Boeing 737}Boeing 737 MAX~8 accidents might fall into this category as the angle-of-attack sensor erroneously generated high values, and certainly the systems / processing which passed on the values created spurious data. Some examples are:
 \begin{itemize}
     \item Faulty sensors
     \item Multiple sensors that do not have their values properly combined
