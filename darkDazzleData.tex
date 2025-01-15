@@ -58,7 +58,7 @@ A meeting was held prior to the fatal Challenger disaster in January 1986, to de
 
 On this basis, it was concluded that: 
 ``there is nothing irregular in the distribution of O-ring ‘distress’ over the spectrum of joint temperatures at launch between 53 degrees Fahrenheit and 75 degrees Fahrenheit.''
-However, there was Dark Data in this dataset --- the data points that show the temperatures for successful launches when there were no O-ring problems were left out. These are shown as the red points in \autoref{fig:o-ringperformance}.
+However, there was Dark Data in this \gls{dataset} --- the data points that show the temperatures for successful launches when there were no O-ring problems were left out. These are shown as the red points in \autoref{fig:o-ringperformance}.
 
 \begin{figure}[htbp]
   \centering
@@ -317,7 +317,7 @@ Electromagnetic interference (EMI) affecting transmitted data is a good example 
 In many cases we do not know what changes or corruptions may affect the data, but we have strong correction mechanisms to cope with the problems regardless. A good example is data stores on a spacecraft which have redundancy and error correcting codes built-in and so can deal with the majority of corruptions caused by cosmic rays.
 
 \paragraph{Data We Are Not Aware Of --- Not Recognised as Spurious}\index{Dazzle Data!Data We Don't Know are Spurious or Unneeded}
-An example of this is where data is mistakenly added to a machine learning training data\index{Machine Learning Data} set resulting in bizarre and possibly hazardous behaviours of the system using it (e.g. an autonomous road vehicle). It is paramount that data used for such image recognition systems filters and excludes potentially dangerous extraneous data arising from unanticipated situations 
+An example of this is where data is mistakenly added to a machine learning training \gls{dataset}\index{Machine Learning Data} resulting in bizarre and possibly hazardous behaviours of the system using it (e.g. an autonomous road vehicle). It is paramount that data used for such image recognition systems filters and excludes potentially dangerous extraneous data arising from unanticipated situations 
 
 \subsubsection{Dazzle Data Varieties\index{Dazzle Data} and Safety Examples}
 In his book, David Hand introduces a taxonomy of fifteen varieties of Dark Data\index{Dark Data}. This section discuses each form of Dazzle Data and considers it from a systems and safety assurance perspective.
@@ -336,7 +336,7 @@ Common examples include:
     \item Repeated stall warnings when the aircraft is under control
     \item Assurance \gls{information} in a safety case is included for components which are not part of the solution in use at that site or situation
     \item Assurance \gls{information} about old or legacy components is included but these are now not in service
-    \item Machine learning training data\index{Machine Learning Data} contains many cases which are duplicates or very closely related, so adding nothing to the learned behaviour but making the set hard to deal with
+    \item Machine learning training data\index{Machine Learning Data} contains many cases which are duplicates or very closely related, so adding nothing to the learned behaviour but making the \cbstart\gls{dataset}\cbend\ hard to deal with
 \end{itemize}
 This case can be mitigated\index{Mitigation} in several ways, including careful filtering, review, use of concise  notations (such as Goal Structuring Notation) to extract the essence, and periodic audits and cleans. 
 
@@ -360,7 +360,7 @@ Data found to be erroneous (i.e. it should not ever have been in the system or i
 \end{enumerate}
 
 \paragraph{Data Obscuration: Missing What Matters}\index{Dazzle Data!Data Obscuration}
-This is where the meaning of the overall data set becomes obscured due to the extra unnecessary data. Examples might be:
+This is where the meaning of the overall \gls{dataset} becomes obscured due to the extra unnecessary data. Examples might be:
 \begin{itemize}
     \item Measuring the wrong things due to excessive noise or too much data to deal with
     \item Processing involving sampling only picks bad data elements
@@ -394,7 +394,7 @@ This is considered a common case for systems exchanging data with external syste
     \item Text messages re-sent to a mobile phone when coverage restored
 \end{itemize}
 
-Mitigations\index{Mitigation} include making sure interface\index{Interface!Specification} specifications are clear and ambiguous, rejecting incorrect size or scale data sets, keeping a list of known changes / incompatibilities and documenting the changes or fixes that have to be applied to make the data usable or consistent.
+Mitigations\index{Mitigation} include making sure interface\index{Interface!Specification} specifications are clear and ambiguous, rejecting incorrect size or scale \glspl{dataset}, keeping a list of known changes / incompatibilities and documenting the changes or fixes that have to be applied to make the data usable or consistent.
 
 \paragraph{Summaries of Data}\index{Dazzle Data!Summaries of Data}
 Spurious data can affect summaries in a significant way if composite values are calculated, e.g.
@@ -515,11 +515,11 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   If the system cannot distinguish between different data values that actually are different, then data could become hidden or lost and hence dark. If the data is masked then it may also be a case of dazzle data.\\
   \hline
   %
-  Traceability (T) & The data can be linked back to its source or derivation & \tick & - &
-  If traceability is lost then the data effectively becomes darker as its origins and derivation are lost, and may not be able to be used.\\
+  \Gls{traceability} (T) & The data can be linked back to its source or derivation & \tick & - &
+  If \gls{traceability} is lost then the data effectively becomes darker as its origins and derivation are lost, and may not be able to be used.\\
   \hline
   %
-  Timeliness (M) & The data is as up to date as required & \tick & \tick &
+  \Gls{timeliness} (M) & The data is as up to date as required & \tick & \tick &
   If data is not, or thought to be not, up to date then it may be rejected and hence become dark data. But clocks can become out of sync across different systems leading to erroneous rejection so the timestamps may then be thought of as dazzling the system.\\
   \hline
   %
@@ -540,7 +540,7 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   If data is not prioritised to be available when needed it is effectively dark. This could be because other data is taking precedence so could be a dazzle case.\\
   \hline
   %
-  Sequencing (Q) & The data is preserved in the order required &
+  \gls{sequencing}\index{Sequencing, Data} (Q) & The data is preserved in the order required &
   \tick & \tick &
   If data is not sequenced as needed it may be rejected or ignored and then is effectively dark. Other data which is out of order or sequence may cause the whole message, set or file to be rejected – a dazzle case.\\
   \hline

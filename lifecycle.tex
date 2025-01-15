@@ -36,14 +36,14 @@ The producer investigates how the safety-related data is collected and what erro
 In some cases a producer will be providing safety-related data without any knowledge of a specific user (e.g., mapping data or generic \glspl{database} that are sold to many users). In these cases the producer will need to make some assumptions about possible users, and then clearly state what level of \index{Integrity Property}\gls{integrity} the data has been produced to. It is then up to the users to check whether the declared \index{Integrity Property}\gls{integrity} matches their need.
 
 \subsection{Data in System Lifecycles}
-Like other components of a safety-related system, the safety dependency of data is dictated by the context in which it is used and the causal links that become established where loss of one or more of the required \index{Property!Data}properties can contribute to hazardous system states. For example, a given data set (say \gls{configuration data}) could be used in a number of separate contexts such as:
+Like other components of a safety-related system, the safety dependency of data is dictated by the context in which it is used and the causal links that become established where loss of one or more of the required \index{Property!Data}properties can contribute to hazardous system states. For example, a given \gls{dataset} (say \gls{configuration data}) could be used in a number of separate contexts such as:
 \begin{itemize}
   \item prototyping a system to demonstrate solution feasibility of a safety-related system;
   \item development testing of a safety-related system; and
   \item live operational use of a safety-related system.
 \end{itemize}
 
-In these cases, the data set is the same but the context of its use changes the safety significance and therefore the level of assurance that it may require. It follows that the assessed \index{Assurance Level!Data}assurance level of a data set is also predicated on where and when in the lifecycle the data set will be applied. 
+In these cases, the \gls{dataset} is the same but the context of its use changes the safety significance and therefore the level of assurance that it may require. It follows that the assessed \index{Assurance Level!Data}assurance level of a \gls{dataset} is also predicated on where and when in the lifecycle the \gls{dataset} will be applied. 
 
 To illustrate this concept, a number of generic model lifecycles are discussed below. Note that these are not intended to be prescriptive or mandate the use of any particular model. Instead, they are being used to illustrate how the Data Safety Management Plan could articulate these lifecycle considerations.
 
@@ -93,7 +93,7 @@ This model represents the interactions between three key organizations:
 
 Note that these may be three separate organizations, or they may be separate business units within the same, larger, organization.
 
-In this supply chain, the Commissioning User is a Consumer of the data and the Data Acquirer is a Producer of data. The Data Provisioner acts both as a Consumer (from the Data Acquirer) and Producer (to the Commissioning User) of data. Similarly, an organization that augments data sets is both a Consumer and Producer of data in the supply chain.
+In this supply chain, the Commissioning User is a Consumer of the data and the Data Acquirer is a Producer of data. The Data Provisioner acts both as a Consumer (from the Data Acquirer) and Producer (to the Commissioning User) of data. Similarly, an organization that augments \glspl{dataset} is both a Consumer and Producer of data in the supply chain.
 
 The Commissioning User Requirement Analysis is the key process step where the Commissioning User's expectations for data (including \index{Fidelity/Representation Property}fidelity levels for associated \index{Property!Data}properties) are agreed with the Data Provisioner. The requirements may be adjusted because of physical constraints (e.g., loss of precision because of physical measuring device constraints) and may include additional requirements to augment the captured data with additional \gls{information} (e.g., airport codes added to a measurement of a given runway length).
 
@@ -148,7 +148,7 @@ Some suggestions for test data for safety-related systems are:
   \item Where appropriate, use values related to timing, rollover or date boundaries;
   \item Where possible, use white box values (i.e., those derived from an understanding of the system);
   \item Use a set of values with drift or bias over time;
-  \item Use data sets with particular \index{Property!Statistical}statistical properties (e.g., distribution, patterns etc.);
+  \item Use \glspl{dataset} with particular \index{Property!Statistical}statistical properties (e.g., distribution, patterns etc.);
   \item Use data which has incorrect formatting, ordering, or out of sequence, etc.; and
   \item Try data which has repeated sets of values or pseudo-random characteristics.
 \end{itemize}
@@ -156,7 +156,7 @@ Typically very complex test data is derived from recorded live feeds of real dat
 
 Simulator / emulator derived values can be useful, but again the issue is how realistic the values are: often the \index{Accuracy Property}\gls{accuracy}, \gls{resolution} or timing of simulated values may be different to real data.
 
-Coverage with test data is something to consider. Sometimes the same data set is used for multiple test scenarios, when in fact it is not stressing all of them to the same degree. Test data coverage can be collected over requirements, code or design, but it is important not to forget hazards: coverage of the hazards and mitigations\index{Mitigation} identified in the \gls{hazard log} is a key aim. 
+Coverage with test data is something to consider. Sometimes the same \gls{dataset} is used for multiple test scenarios, when in fact it is not stressing all of them to the same degree. Test data coverage can be collected over requirements, code or design, but it is important not to forget hazards: coverage of the hazards and mitigations\index{Mitigation} identified in the \gls{hazard log} is a key aim. 
 
 In general some measure of the quality and suitability of the test data can be useful. This could be based on {Property!Statistical}statistical properties, coverage of hazards or coverage of requirements. 
 

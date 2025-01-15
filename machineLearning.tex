@@ -21,7 +21,7 @@
 
 \subsection{\ecapitalisewords{\glsentrylong{ml}} Training Data}\index{Machine Learning Data|textbf}
 A complete discussion about the assurance of \gls{ml} /\gls{ai} algorithms is beyond the scope of this document.
-However, as such algorithms are inherently data-driven, the Data Safety Guidance provides the following notes on good practice for data sets used for \gls{ml} / \gls{ai} applications.
+However, as such algorithms are inherently data-driven, the Data Safety Guidance provides the following notes on good practice for \glspl{dataset} used for \gls{ml} / \gls{ai} applications.
 
 The data for real-world \gls{ml} scenarios may be effectively infinite (for example, with self-driving cars, where the environment is largely unbounded) and can only be approximated by a finite number of scenarios.
 Therefore it is crucial to have an extension process in place to extend the system when previously unknown situations are experienced. 
@@ -35,23 +35,23 @@ Three data categories are discussed: \cbstart\gls{ml} training data\index{Machin
 validation data (used to independently verify the trained model).  
 
 \subsection{Real-world Data}
-It is important to obtain sufficient quantities of data for the training data. It is generally assumed that this is sufficiently representative of situations that could be encountered to allow the algorithm to generalise the appropriate behaviour for all encountered situations.  However, there are problems with real-life training data. Firstly, it is possible that rare, hazardous cases are never encountered during the capture of a data set (as those events have been engineered to be statistically unlikely) and are too dangerous, or expensive, to generate deliberately. Poor representation of rare cases in training data will result in a model that is insufficiently prepared to handle those important scenarios. Poor representation (or weighting) of rare cases in
+It is important to obtain sufficient quantities of data for the training data. It is generally assumed that this is sufficiently representative of situations that could be encountered to allow the algorithm to generalise the appropriate behaviour for all encountered situations.  However, there are problems with real-life training data. Firstly, it is possible that rare, hazardous cases are never encountered during the capture of a \gls{dataset} (as those events have been engineered to be statistically unlikely) and are too dangerous, or expensive, to generate deliberately. Poor representation of rare cases in training data will result in a model that is insufficiently prepared to handle those important scenarios. Poor representation (or weighting) of rare cases in
 \gls{ml} test data or \gls{ml}
 validation data can result in error heuristics that do not provide adequate insight into the system’s performance\index{Performance, System} in rare situations. A second issue with real-world data is that amassing, understanding, verifying and validating it at scale is resource intensive.
 Hence it is not just a case of more testing, a more cost-effective approach is needed. Some possible techniques are: artificial
 \gls{ml}
-test data set generation, data fault injection and simulation. It may well be more practicable to use simulated training data during the training phase to give more control and avoid the cost and effort of real-world testing. The issue then is how realistic the simulated data (and the associated simulation) can be. Note that artificial data sets can also be used to increase the frequency of rare events, thus biasing the algorithm to managing those rare events effectively, but doing so, could impair the ``sunny day'' performance\index{Performance, System} of the system.
+test \gls{dataset} generation, data fault injection and simulation. It may well be more practicable to use simulated training data during the training phase to give more control and avoid the cost and effort of real-world testing. The issue then is how realistic the simulated data (and the associated simulation) can be. Note that artificial \glspl{dataset} can also be used to increase the frequency of rare events, thus biasing the algorithm to managing those rare events effectively, but doing so, could impair the ``sunny day'' performance\index{Performance, System} of the system.
 
 \subsection{Sensor Data}
 In many cases sensors will be on-board and embedded (e.g.\ on an automated vehicle) and will be subject to many real-world influences. Sensor data may be changed or degraded by both internal influences, e.g.\ system environment temperature, and external factors e.g.\ humidity, ambient light, weather conditions such as snow or fog, and rarely encountered extremes such as lightning or flood. 
-Sensors may also suffer degradation due to ageing and specific faults due to their positioning, construction or configuration. Sensors may need to be diverse to increase resilience and give an overall more reliable output. Realistic data variations, informed by an understanding of likely sensor failure modes, need to be incorporated in the training data set (c.f.\ the AoA sensor in the Boeing 737 MAX~8, discussed in \autoref{bkm:incacc:737max8}).
+Sensors may also suffer degradation due to ageing and specific faults due to their positioning, construction or configuration. Sensors may need to be diverse to increase resilience and give an overall more reliable output. Realistic data variations, informed by an understanding of likely sensor failure modes, need to be incorporated in the training \gls{dataset} (c.f.\ the AoA sensor in the Boeing 737 MAX~8, discussed in \autoref{bkm:incacc:737max8}).
 Sensor fusion can effectively create ``composite data'', e.g.\ from merging of Lidar, Radar and Camera data; this will have different (and possibly hard to predict) \index{Property!Data}properties compared to the individual sensors.
 
 \subsection{Data Coverage}
-Some notion of data coverage, that is, how well the training data covers the intended operational domain, is needed: this could be based on use of all known data sets, all known hazardous situations or some other measure. White box techniques involved in exercising all connected sensors or coverage of nodes in a neural network may have some value. Regardless, it will be essential that the training data covers all required safety test scenarios.
+Some notion of data coverage, that is, how well the training data covers the intended operational domain, is needed: this could be based on use of all known \glspl{dataset}, all known hazardous situations or some other measure. White box techniques involved in exercising all connected sensors or coverage of nodes in a neural network may have some value. Regardless, it will be essential that the training data covers all required safety test scenarios.
 
-\subsection{Data Set Assurance}
-There is a need to have assurance about the data sets themselves, including their configuration management. Assessment of the quality and suitability of the training data sets should be included in the safety argument.
+\subsection{\Glsfmttext{dataset} Assurance}
+There is a need to have assurance about the \glspl{dataset} themselves, including their configuration management. Assessment of the quality and suitability of the training \glspl{dataset} should be included in the safety argument.
 
 The University of York has developed a method for the Assurance of Machine Learning for use in Autonomous Systems (AMLAS)
 \cite{citation:machinelearning:amlas}.
@@ -59,7 +59,7 @@ The University's approach is intended to assist in the development of a compelli
 to feed into a system safety case.
 
 \subsection{Data Diversity}
-The degree of data diversity is important. Common \glspl{item data} across data sets need to be avoided, especially across training and
+The degree of data diversity is important. Common \glspl{item data} across \glspl{dataset} need to be avoided, especially across training and
 \gls{ml}
 validation data. Common data may include data derived from the same sources, environments, simulators, tools, techniques or mathematical models.
 
@@ -109,7 +109,7 @@ Trust and Reliability Issues: Frequent hallucinations can undermine the trust in
 
 Security Vulnerabilities: \gls{ai} hallucinations can be exploited in cybersecurity. For example, if an \gls{ai} system responsible for network security misinterprets data or hallucinates a threat, it could either overlook actual threats or allocate resources to non-existent threats.
 
-Privacy Concerns: There’s a risk that an \gls{ai} model might inadvertently reveal or imply private \gls{information} in its outputs, especially if it has been trained on sensitive datasets. While not a hallucination in the traditional sense, this is related to the broader issue of how \gls{ai} handles and interprets data.
+Privacy Concerns: There’s a risk that an \gls{ai} model might inadvertently reveal or imply private \gls{information} in its outputs, especially if it has been trained on sensitive \glspl{dataset}. While not a hallucination in the traditional sense, this is related to the broader issue of how \gls{ai} handles and interprets data.
 
 Ethical and Legal Implications: \gls{ai} hallucinations can lead to ethical and legal challenges, especially if they result in harm or damage. Determining liability in cases where AI-generated misinformation leads to real-world consequences is complex.
 
@@ -146,13 +146,13 @@ Establishing ethical guidelines and regulations: Clear ethical frameworks and re
 By acknowledging the dangers of hallucinations and taking proactive steps to address them, we can minimize their impact on data safety and build trust in \gls{ai}-powered technologies.
 \end{aibox}
 
-\subsection{Data Set Management}
-Data sets will be large and complex and ensuring quality and \index{Consistency!Property}\gls{consistency} will be difficult. Measures will have to be taken to control, manage and archive large amounts of data. Data sets should be subject to formal change control and monitoring. Tools will be needed to manage the data.
+\subsection{\Glsfmttext{dataset} Management}
+\Glspl{dataset} will be large and complex and ensuring quality and \index{Consistency!Property}\gls{consistency} will be difficult. Measures will have to be taken to control, manage and archive large amounts of data. \Glspl{dataset} should be subject to formal change control and monitoring. Tools will be needed to manage the data.
 
 \subsection{Optimization}
 What is an optimal size of a training or
 \gls{ml}
-validation data set? A data set may contain many repeated or redundant values. If these do not add to the training outcome it is possible that some values may be removed. Also if there are ways in which the data set could be compressed or optimized then these should be considered to assist management and curation.
+validation \gls{dataset}? A \gls{dataset} may contain many repeated or redundant values. If these do not add to the training outcome it is possible that some values may be removed. Also if there are ways in which the \gls{dataset} could be compressed or optimized then these should be considered to assist management and curation.
 
 \subsection{Compliance}
 A ``safety by compliance'' strategy for such data is difficult to implement as there are currently
@@ -171,6 +171,6 @@ the preservation of \index{Property!Data}\glspl{data property} as described with
 This appendix provides only a brief overview of the issues around the application of data safety techniques to machine learning. It is based upon \gls{information} in the following documents, which should be consulted for further details:
 \begin{itemize}
 \item Assuring the Machine Learning Lifecycle: Desiderata, Methods, and Challenges \cite{citation:Ashmore2019}
-\item Quantifying Data set \index{Property!Data}Properties for Systematic Artificial Neural Network Classifier Verification \cite{citation:Hond2020}
-\item Safety Critical Integrity Assurance in Large Data sets \cite{citation:Sutherland2020}
+\item Quantifying Data Set \index{Property!Data}Properties for Systematic Artificial Neural Network Classifier Verification \cite{citation:Hond2020}
+\item Safety Critical Integrity Assurance in Large Data Sets \cite{citation:Sutherland2020}
 \end{itemize}

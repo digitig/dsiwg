@@ -61,7 +61,7 @@ To support this, a separate questionnaire has been developed to explore the spec
 More details on the Data Safety Culture Questionnaire are provided in \autoref{bkm:culture}.
 
 \subsubsection{System Definition}
-The system under consideration should be understood and documented, including interfaces\index{Interface!System} and safety-related data aspects. The process of documenting the system of interest furthers the understanding of \index{Stakeholder}\glspl{stakeholder} and approvers so they can make sensible judgements about the system. It also formally declares assumptions that are being made while assessing the system and clearly defines the limits of the assessment. In addition, different levels of risk may be associated with composites of safety-related data, which may be easier to manage than individual \index{Artefact, Data}\cbstart\glspl{data artefact}\cbend, or where independence cannot be demonstrated or maintained. Hence, the partitioning of data sets should also be considered during this phase.
+The system under consideration should be understood and documented, including interfaces\index{Interface!System} and safety-related data aspects. The process of documenting the system of interest furthers the understanding of \index{Stakeholder}\glspl{stakeholder} and approvers so they can make sensible judgements about the system. It also formally declares assumptions that are being made while assessing the system and clearly defines the limits of the assessment. In addition, different levels of risk may be associated with composites of safety-related data, which may be easier to manage than individual \index{Artefact, Data}\cbstart\glspl{data artefact}\cbend, or where independence cannot be demonstrated or maintained. Hence, the partitioning of \glspl{dataset} should also be considered during this phase.
 
 \subsubsection{Supplier Data Maturity}
 As noted above, a number of usage scenarios involve data being supplied by subcontracted organizations. It is expected that some formal process will be used to select these suppliers. A questionnaire has been developed to help ensure that the supplier has suitable processes in place to manage data safety-related issues. This is available in \autoref{bkm:maturity}.
@@ -128,7 +128,7 @@ Ideally, data safety risks would be identified and mitigated before they led to 
 To support this type of analysis a number of previous accidents and incidents have been collected in \autoref{bkm:accidents}.
 These include cases which relate to a number of \glspl{data property} (see
 \hyperref[bkm:guidance:dataproperties]{section}~\ref{bkm:guidance:dataproperties}), %Clunky, but \autoref inserted "subsubsection"
-for example the properties of \index{Completeness!Property}\gls{completeness}, \index{Integrity Property}\gls{integrity} and timeliness\index{Timeliness Property}.
+for example the properties of \index{Completeness!Property}\gls{completeness}, \index{Integrity Property}\gls{integrity} and \gls{timeliness}\index{Timeliness Property}.
 They also highlight the importance of the \gls{adaptation data}\index{Adaptation Data} category\index{Category!Data} and dangers associated with the inappropriate use of default data values.
 
 Most of the current collection of accidents and incidents fall into three categories: aviation; maritime; and medical. However, the lessons that can be learned span a much wider range of application areas.
@@ -140,25 +140,25 @@ There are some risk-inducing issues that are different or more prevalent for dat
 \begin{itemize}
   \item \dsiwgTextBF{Fluidity} Hardware and software can undergo significant amounts of product assurance and once assured may change relatively infrequently. Where change is required to hardware or software, it can be carefully managed and the impact on the safety case appraised. This is not always the case for data, which is often much more fluid; indeed the ease with which data can be changed is one motivation for the move towards \glspl{data-driven system}. This fluidity means that it is not always possible to revisit safety cases when data changes --- for example, the safety case for an autonomous vehicle cannot be updated every time that the vehicle acquires new knowledge during operation. Instead, the fact that data can change, along with any associated safety impacts, may need to be captured in the system safety case. Fluidity can also provide a temptation for unscrupulous operators to falsify data, for example, after an incident has occurred. Rigorous configuration control procedures can help protect against this type of behaviour.
 
-  \item \dsiwgTextBF{Reuse} For the purposes of this discussion, ``reuse'' is interpreted as use of the same data in a different system or system context (e.g., lifecycle\index{Lifecycle!System} phase). Just because data was valid for use in a particular system, it does not immediately follow that it can be reused again in a similar system. Many considerations associated with data reuse are similar to those of software reuse, for example: similarity of requirements; similarity of role in system; and similarity in required \index{Integrity Property}\gls{integrity} / \index{Assurance Level}assurance level. One consideration that is different is that of timeliness\index{Timeliness Property}: data that was valid for use in a particular system at a particular time is not necessarily valid for reuse in the same system at a different time.
+  \item \dsiwgTextBF{Reuse} For the purposes of this discussion, ``reuse'' is interpreted as use of the same data in a different system or system context (e.g., lifecycle\index{Lifecycle!System} phase). Just because data was valid for use in a particular system, it does not immediately follow that it can be reused again in a similar system. Many considerations associated with data reuse are similar to those of software reuse, for example: similarity of requirements; similarity of role in system; and similarity in required \index{Integrity Property}\gls{integrity} / \index{Assurance Level}assurance level. One consideration that is different is that of \gls{timeliness}\index{Timeliness Property}: data that was valid for use in a particular system at a particular time is not necessarily valid for reuse in the same system at a different time.
 
   \item \dsiwgTextBF{Ageing} As highlighted above, all safety-related data has a lifetime and this needs to be explicitly managed. This can involve, for example, purging, deletion and alerting. It is also important to note that ageing can occur as a result of changes external to the system (for example, records of the positions of other aircraft, newly discovered drug interactions, or new software patches) or it can result from internal changes (e.g., valves gradually becoming less responsive, \gls{configuration data} becoming out of date, or data schemas evolving over time).
 
-  \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new data sets as a result. \Glspl{data property} are not necessarily preserved by these processes --- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}; data can also appear to become something else. Without careful management the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., validation checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
+  \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes --- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}; data can also appear to become something else. Without careful management the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., validation checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
 
   \item \dsiwgTextBF{\index{Data!Owner}Ownership} The transformation of data can result in a lack of clarity regarding who has ownership of, and responsibility for, the data (if anyone). It is important that responsibility for \cbstart\glspl{error}\cbend\ can be tracked, for example, to determine whether they were present in the initial data or whether they arose as part of the transformation process. Establishing clear roles within the data supply chain can help mitigate these issues.
 
   \item \dsiwgTextBF{Archiving and Retrieval} Safety-related data needs to be available when required. There is thus a need to think about data accessibility over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
 
-  \item \dsiwgTextBF{Biasing} This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation and interpretation of data. It is usually an unintentional distortion in the data set --- one example of this is the confirmation bias that may be applied to safety claims,
+  \item \dsiwgTextBF{Biasing} This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation and interpretation of data. It is usually an unintentional distortion in the \gls{dataset} --- one example of this is the confirmation bias that may be applied to safety claims,
     while another example is that synthetic autonomous vehicle training \glspl{database} can have issues with artificial data if not realistic.
-    Although there is no perfect way of checking for this within the system, \index{Completeness!Checks}\gls{completeness}, statistical and validity checks on data sets may help.
+    Although there is no perfect way of checking for this within the system, \index{Completeness!Checks}\gls{completeness}, statistical and validity checks on \glspl{dataset} may help.
 
   \item \dsiwgTextBF{Falsification / Misinformation} This issue arises where data is created, modified or deleted either accidentally or deliberately so as to mislead or misinform potential consumers of that data. Examples from policing and criminal justice might be: notes taken with fabricated times or dates; or accidentally adding or removing a crime from the wrong individual in a \gls{database}. Another example might be a supplier falsifying quality records for materials or goods. There have been many cases of misinformation related to the Covid-19\index{Covid-19} pandemic (for example on social media) where people have been deliberately misled and sometimes this has led to harm (drinking bleach as a cure for instance). Some mitigations\index{Mitigation} involve digitally signing transmitted data, strong access controls, independent fact-checking and audit records.
 
-  \item \dsiwgTextBF{Defaulting} Many systems use default or initial values for \glspl{item data}; sometimes in data sets and sometimes embedded in software. Often these default values are designed to be neutral (e.g., ``0'') or unrealistic (e.g., ``VOID''). There are essentially two cases: (i) initialisation data which may persist and be mistakenly taken as a real value when in fact it should have been changed; (ii) data that is used when no meaningful value has been assigned (e.g., during data migration or data exchange between systems). These issues can often be managed through good design of data structures, for example by the inclusion of a validity flag.
+  \item \dsiwgTextBF{Defaulting} Many systems use default or initial values for \glspl{item data}; sometimes in \glspl{dataset} and sometimes embedded in software. Often these default values are designed to be neutral (e.g., ``0'') or unrealistic (e.g., ``VOID''). There are essentially two cases: (i) initialisation data which may persist and be mistakenly taken as a real value when in fact it should have been changed; (ii) data that is used when no meaningful value has been assigned (e.g., during data migration or data exchange between systems). These issues can often be managed through good design of data structures, for example by the inclusion of a validity flag.
 
-  \item \dsiwgTextBF{Sentinels} A sentinel value is a data value that is used to indicate a special action needs to be taken, typically indicating the end of a record or a data set. The sentinel value should be one that is not allowable in the data set itself, but often is not properly considered and may use common sequences (e.g., five zeroes). Sentinels can cause problems in two ways: (i) where they are not recognized and so, for example, processing continues past the sentinel; (ii) where the data itself somehow contains the sentinel value and so processing is erroneously interrupted. Sentinels can be a particular risk in long-lived systems and data sets. As with the issue above, the management or elimination of this issue may often be achieved through improved data structures.
+  \item \dsiwgTextBF{Sentinels} A sentinel value is a data value that is used to indicate a special action needs to be taken, typically indicating the end of a record or a \gls{dataset}. The sentinel value should be one that is not allowable in the \gls{dataset} itself, but often is not properly considered and may use common sequences (e.g., five zeroes). Sentinels can cause problems in two ways: (i) where they are not recognized and so, for example, processing continues past the sentinel; (ii) where the data itself somehow contains the sentinel value and so processing is erroneously interrupted. Sentinels can be a particular risk in long-lived systems and \glspl{dataset}. As with the issue above, the management or elimination of this issue may often be achieved through improved data structures.
 
   \item \dsiwgTextBF{Aliasing} This is an effect that causes different data to become indistinguishable when accessed; that is, there is only one record when there should be several --- for example, two patients with similar names inadvertently sharing a single set of medical records. This could be due to the way the data is filtered, sampled, indexed, stored or retrieved. The data issues are typically related to loss of \gls{resolution}\index{Resolution Property} leading to similar data points appearing to be identical. Hence, methods to maintain \gls{resolution}\index{Resolution Property}, including use of unique indexes, may be beneficial.
 
@@ -169,7 +169,7 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
   \item \dsiwgTextBF{Disassociation} This effect is, in some senses, the opposite of aliasing; there are several records when there should only be one. This could occur, for example, if two records are created for the same individual using slightly different names. It could also arise if different systems use different indexing methods and the association between the indexes becomes corrupted. Again, methods to maintain data \gls{resolution}\index{Resolution Property} can be beneficial.
 
-  \item \dsiwgTextBF{Masking} This issue can arise if a notable proportion of a data set is of a poor \cbstart\gls{quality}\cbend, for example, if sensors producing the data are faulty or measurements are taken from the wrong source. This poor quality data can mask errors in the way that the system handles the good quality data. One way of protecting against this issue is the generation and use of test sets of appropriate size and quality, although for some applications this may be a non-trivial task.
+  \item \dsiwgTextBF{Masking} This issue can arise if a notable proportion of a \gls{dataset} is of a poor \cbstart\gls{quality}\cbend, for example, if sensors producing the data are faulty or measurements are taken from the wrong source. This poor quality data can mask errors in the way that the system handles the good quality data. One way of protecting against this issue is the generation and use of test sets of appropriate size and quality, although for some applications this may be a non-trivial task.
 
   \item \dsiwgTextBF{\index{Completeness!Property}Incompleteness} Not all the data that is needed is always available; there may be known, and sometimes, unknown gaps or missing data points. The missing data points ("Dark Data"\index{Dark Data} --- see \autoref{bkm:darkdata}) can be critical and in some cases, more important than the data that is available. Incomplete data can arise, for example, from limitations on how much data can be physically captured (eg.~sampling frequencies, storage/time constraints) or from the unintentional or deliberate darkening of data (eg.~for privacy, security, political or commercial reasons).
 
@@ -193,7 +193,7 @@ There are some risk-inducing issues that are different or more prevalent for dat
 Further examples of how data may cause issues in many scenarios is given in a recently published book~\cite{citation:datacentric}.
 
 \subsubsection{\ecapitalisewords{\glsentryplural{data property}}}\label{bkm:guidance:dataproperties}
-\Glspl{data property} are used to establish what aspects of the data (e.g., timeliness\index{Timeliness Property}, \gls{accuracy}\index{Accuracy Property}) need to be guaranteed in order that the system operates in a safe manner.
+\Glspl{data property} are used to establish what aspects of the data (e.g., \gls{timeliness}\index{Timeliness Property}, \gls{accuracy}\index{Accuracy Property}) need to be guaranteed in order that the system operates in a safe manner.
 
 James Inge's work \cite{citation:inge2008improving} produced a useful taxonomy of data categories, and went on to look at faults in data. He concluded that a rigid taxonomy of data categories was unhelpful due to various properties or characteristics of the data which vary independently. In short, it is the combination of Data Category\index{Category!Data} with the required \index{Property!Data}\glspl{data property} that facilitates safety analysis.
 
@@ -238,13 +238,13 @@ This property is related to analysability and may be performed by the same set o
   {Format}\index{Format Property} & O & {The data is represented in a way which is readable by those that need to use it}\\\hline
   {\Gls{accuracy}}\index{Accuracy Property} & A & {The data has sufficient detail for its intended use}\\\hline
   {\Gls{resolution}}\index{Resolution Property} & R & {The smallest difference between two adjacent values that can be represented in a data storage, display or transfer system}\\\hline
-  {Traceability} & T & {The data can be linked back to its source or derivation}\\\hline
-  {Timeliness}\index{Timeliness Property} & M & {The data is as up to date as required}\\\hline
+  {\Gls{traceability}} & T & {The data can be linked back to its source or derivation}\\\hline
+  {\Gls{timeliness}}\index{timeliness Property} & M & {The data is as up to date as required}\\\hline
   {Verifiability}\index{Verifiability Property} & V & {The data can be checked and its properties demonstrated to be correct}\\\hline
   {\Gls{availability}}\index{Availability Property} & L & {The data is accessible and usable when an authorized entity demands access}\\\hline
   {\Gls{fidelity}}\index{Fidelity/Representation Property} & F & {How well the data maps to the real-world entity it is trying to model}\\\hline
   {Priority}\index{Priority Property} & P & {The data is presented / transmitted / made available in the order required}\\\hline
-  {Sequencing\index{Sequencing, Data}} & Q & {The data is preserved in the order required}\\\hline
+  {\Gls{sequencing}\index{Sequencing, Data}} & Q & {The data is preserved in the order required}\\\hline
   {Intended Destination / Usage}\index{Intended Destination/Usage Property} & U & {The data is only sent to those that should have
   access to
   it}\\\hline
@@ -281,12 +281,12 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   & \rotatebox{90}{Format}
   & \rotatebox{90}{\index{Accuracy Property}\Gls{accuracy}}
   & \rotatebox{90}{\index{Resolution Property}\Gls{resolution}}
-  & \rotatebox{90}{Traceability}
-  & \rotatebox{90}{Timeliness\index{Timeliness Property}}
+  & \rotatebox{90}{\Gls{traceability}}
+  & \rotatebox{90}{\Gls{timeliness}\index{Timeliness Property}}
   & \rotatebox{90}{Verifiability}\index{Verifiability Property}
   & \rotatebox{90}{\index{Availability Property}\Gls{availability}}
   & \rotatebox{90}{\index{\Gls{fidelity} Property}\Gls{fidelity}}
-  & \rotatebox{90}{Priority} & \rotatebox{90}{Sequencing\index{Sequencing, Data}}
+  & \rotatebox{90}{Priority} & \rotatebox{90}{\Gls{sequencing}\index{Sequencing, Data}}
   & \rotatebox{90}{Intended Destination/Usage\index{Intended Destination/Usage Property}\ }
   & \rotatebox{90}{Accessibility}
   & \rotatebox{90}{Suppression}
@@ -386,13 +386,13 @@ The list is non-exhaustive. Other guidewords may be useful for particular system
   {Format}\index{Format Property} & {Loss, partial loss, incorrect, multiple}\\\hline
   {\Gls{accuracy}}\index{Accuracy Property} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
   {\Gls{resolution}\index{Resolution Property}} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
-  {Traceability}\index{Traceability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
-  {Timeliness\index{Timeliness Property}} & {Loss, partial loss}\\\hline
+  {\Gls{traceability}}\index{Traceability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
+  {\Gls{timeliness}\index{Timeliness Property}} & {Loss, partial loss}\\\hline
   {Verifiability}\index{Verifiability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {\Gls{availability}}\index{Availability Property} & {Loss, partial loss, multiple, too early, too late}\\\hline
   {\Gls{fidelity}}\index{Fidelity/Representation Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
   {Priority}\index{Priority Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
-  {Sequencing\index{Sequencing, Data}} & {Loss, partial loss, incorrect, multiple}\\\hline
+  {\Gls{sequencing}\index{Sequencing, Data}} & {Loss, partial loss, incorrect, multiple}\\\hline
   {Intended Destination / Usage\index{Intended Destination/Usage Property}} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {Accessibility}\index{Accessibility Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
   {Suppression}\index{Suppression Property} & {Loss, partial loss, incorrect, too early, too late, too much, too little}\\\hline
@@ -416,12 +416,12 @@ while potential approaches to customisation are described in \autoref{bkm:DsalCu
 Such customisation is encouraged, but it is essential that any customised approach is recorded in the \gls{dsmp}.
 
 The likelihood of a data safety related risk is qualitatively determined by
-consideration of the significance of a \gls{data error}, along with the defences currently in place against such errors. These factors may be addressed by
+consideration of the significance of a \gls{error}, along with the defences currently in place against such errors. These factors may be addressed by
 considering the following characteristics:
 
 \begin{enumerate}
   \item \dsiwgTextBF{Proximity}: how directly a data failure will lead to an accident;
-  \item \dsiwgTextBF{Dependency}: how dependent the application is on the data set;
+  \item \dsiwgTextBF{Dependency}: how dependent the application is on the \gls{dataset};
   \item \dsiwgTextBF{Prevention}: the ability of the systems architect / developers to guard against \cbstart\glspl{error}\cbend;
   \item \dsiwgTextBF{Detection}: the likelihood of being able to detect a data failure prior to an accident; and
   \item \dsiwgTextBF{Correction}: the ability of the system to work around or correct \cbstart\glspl{error}\cbend.
@@ -594,7 +594,7 @@ For each \index{Assurance Level!Data}\gls{dsal}, the tables indicate whether the
     e.g., governance model, \gls{icd}\index{Interface!Control Document}\\%
     \hline
   M.03 & %
-    Definition and traceability of data requirements & %
+    Definition and \gls{traceability} of data requirements & %
     HR & HR & HR & HR & %
     e.g., requirements management, use of test data / test cases\\
     \hline
@@ -763,13 +763,13 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
   \hline
   SD.02 & Cyclic / Continuous \gls{bit} & \dsiwgTextTT{..D..} & - & - & R & HR & Application applies tests to the data it is processing continuously (e.g., for a live data stream) or periodically (e.g., every nth message, every hour). & \dsiwgTextTT{IC.Y.....VL............}\\
   \hline
-  SD.03 & Backward recovery & \dsiwgTextTT{..D..} & R & R & HR & HR & If a fault in data has been detected, the system resets to an earlier internal data set, which has been proven consistent. & \dsiwgTextTT{IC.....................}\\
+  SD.03 & Backward recovery & \dsiwgTextTT{..D..} & R & R & HR & HR & If a fault in data has been detected, the system resets to an earlier internal \gls{dataset}, which has been proven consistent. & \dsiwgTextTT{IC.....................}\\
   \hline
   SD.04 & Parity Checks & \dsiwgTextTT{..D..} & R & R & HR & HR & Within data, e.g., Hamming codes, Reed-Solomon, Hagelbarger. & \dsiwgTextTT{I......................}\\
   \hline
   SD.05 & Automatic Error Correction & \dsiwgTextTT{..D..} & R & R & HR & HR & Detected errors are corrected automatically. & \dsiwgTextTT{IC.....................}\\
   \hline
-  SD.06 & Checksums / Cyclic Redundancy Checks (CRCs) / Hashes & \dsiwgTextTT{..D..} & - & R & HR & HR & Digests of data sets are produced, included with the data set and checked to provide confidence that the data is unaltered. & \dsiwgTextTT{IC..................G..}\\
+  SD.06 & Checksums / Cyclic Redundancy Checks (CRCs) / Hashes & \dsiwgTextTT{..D..} & - & R & HR & HR & Digests of \glspl{dataset} are produced, included with the \gls{dataset} and checked to provide confidence that the data is unaltered. & \dsiwgTextTT{IC..................G..}\\
   \hline
   SD.07 & Digital Signatures & \dsiwgTextTT{..D..} & - & R & HR & HR & For non-repudiation and \index{Integrity Property}\gls{integrity} of data. & \dsiwgTextTT{I......T......U.....G..}\\
   \hline
@@ -783,7 +783,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
   \hline
   SD.12 & Encapsulation & \dsiwgTextTT{..D..} & R & R & HR & HR & The hiding of data so that it is only accessible through well-defined interfaces. & \dsiwgTextTT{..............UB.......}\\
   \hline
-  SD.13 & Multiple Stores & \dsiwgTextTT{..D..} & - & - & R & HR & The same instance of a data set or \glspl{item data} is stored in multiple locations. & \dsiwgTextTT{...............B.H.....}\\
+  SD.13 & Multiple Stores & \dsiwgTextTT{..D..} & - & - & R & HR & The same instance of a \gls{dataset} or \glspl{item data} is stored in multiple locations. & \dsiwgTextTT{...............B.H.....}\\
   \hline
   SD.14 & Homogeneous Redundancy & \dsiwgTextTT{..D..} & - & - & R & HR & Data is processed using homogeneous redundant channels; detected faults in data of one channel cause processing to switch to another channel. & \dsiwgTextTT{IC.Y....M..............}\\
   \hline
@@ -795,7 +795,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
   \hline
   SD.18 & Data Correlation & \dsiwgTextTT{..D..} & R & R & HR & HR & Data from a number of sources exists to permit a cross-correlation of the data supplied from one source (the master) with other sources. & \dsiwgTextTT{ICNY...................}\\
   \hline
-  SD.19 & Data Partitioning & \dsiwgTextTT{..D..} & R & R & HR & HR & To separate data that is managed differently, creating independence so that a whole data set does not require validation after a change. & \dsiwgTextTT{...............B.......}\\
+  SD.19 & Data Partitioning & \dsiwgTextTT{..D..} & R & R & HR & HR & To separate data that is managed differently, creating independence so that a whole \gls{dataset} does not require validation after a change. & \dsiwgTextTT{...............B.......}\\
   \hline
   SD.20 & Syntax Checks & \dsiwgTextTT{VID..} & R & R & HR & HR & Semantic checking of data values and sequences based on defined rule sets. & \dsiwgTextTT{I.N.O...............G..}\\
   \hline
@@ -910,13 +910,13 @@ A number of issues need to be considered during the implementation phase of a pr
   \hline
   DI.07 & Defined Data Lifetime(s) & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & \Gls{information} showing when data validity expires. & \dsiwgTextTT{..................E....}\\
   \hline
-  DI.08 & \Gls{quality} Trend Analysis & \dsiwgTextTT{VIDPJ} & - & - & R & HR & Checking that a data set is consistent with a model of the expected data behaviour (e.g., vibration data increases over time). & \dsiwgTextTT{IC.Y.....V.F.........Z.}\\
+  DI.08 & \Gls{quality} Trend Analysis & \dsiwgTextTT{VIDPJ} & - & - & R & HR & Checking that a \gls{dataset} is consistent with a model of the expected data behaviour (e.g., vibration data increases over time). & \dsiwgTextTT{IC.Y.....V.F.........Z.}\\
   \hline
   DI.09 & Authorization & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & A security model is established to control who is authorized to create, view, edit, delete the data. & \dsiwgTextTT{..............UBS..D...}\\
   \hline
   DI.10 & Authentication & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Data is authenticated to validate its provenance. & \dsiwgTextTT{.......T.V............X}\\
   \hline
-  DI.11 & Defined Confidence / Trust Levels & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Criteria are established to provide an objective measurement of the confidence or trust in a given data set. & \dsiwgTextTT{IC.Y.....V.F..........X}\\
+  DI.11 & Defined Confidence / Trust Levels & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & Criteria are established to provide an objective measurement of the confidence or trust in a given \gls{dataset}. & \dsiwgTextTT{IC.Y.....V.F..........X}\\
   \hline
   DI.12 & Independent Check & \dsiwgTextTT{VIDPJ} & - & - & R & HR & A separate person or system is used to check the data independently. & \dsiwgTextTT{I........V.............}\\
   \hline
@@ -966,7 +966,7 @@ New entries DM.10 to DM.15 have been added to address issues identified during t
   \hline
   DM.04 & Client Supervision & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & The client provides independent supervision of activities checking processes, inputs and outputs at agreed points. & \dsiwgTextTT{ICNYOA.....F...........}\\
   \hline
-  DM.05 & Client Sign-off & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Formal acceptance of the migrated data sets in the target system. & \dsiwgTextTT{ICNYOA.....F...........}\\
+  DM.05 & Client Sign-off & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Formal acceptance of the migrated \glspl{dataset} in the target system. & \dsiwgTextTT{ICNYOA.....F...........}\\
   \hline
   DM.06 & Incremental switch-over & \dsiwgTextTT{..D..} & - & R & HR & HR & Users are incrementally switched over to the new system rather than as a ``big bang''. & \dsiwgTextTT{ICNYOA.....F...........}\\
   \hline
@@ -1039,7 +1039,7 @@ Meta-Data Preservation&
 - &
 R&
 R&
-Any meta-data as part of the original data set which cannot be incorporated or translated into the new system is preserved
+Any meta-data as part of the original \gls{dataset} which cannot be incorporated or translated into the new system is preserved
 &
 \dsiwgTextTT{IC.Y...T.........H...ZX}\\\hline
 \end{longtable}
@@ -1148,7 +1148,7 @@ Any meta-data as part of the original data set which cannot be incorporated or t
   \hline
   TD.12 & Client Sign-off & \dsiwgTextTT{V....} & R & R & HR & HR & Where possible, the client should formally agree and sign off the test data as appropriate. & \dsiwgTextTT{ICNY.A...V.F..........X}\\
   \hline
-  TD.13 & Error Seeding & \dsiwgTextTT{V....} & R & R & HR & HR & This is where errors are deliberately inserted into the data set to demonstrate the effectiveness of data validation. & \dsiwgTextTT{ICNYOAR.MV.F........G..}\\
+  TD.13 & Error Seeding & \dsiwgTextTT{V....} & R & R & HR & HR & This is where errors are deliberately inserted into the \gls{dataset} to demonstrate the effectiveness of data validation. & \dsiwgTextTT{ICNYOAR.MV.F........G..}\\
   \hline
   TD.14 & Data Reuse & \dsiwgTextTT{V....} & R & R & HR & HR & Reusing data for one project that was created and thoroughly assured for another project. This can be effective but the read-across should be established. & \dsiwgTextTT{ICNY.A.....F........G.X}\\
   \hline

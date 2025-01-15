@@ -218,10 +218,6 @@
 	name={data assurance level},
 	description={The required \index{Assurance Level}assurance level for the aeronautical data process is identified, based on the overall system architecture through allocation of risk determined using a preliminary \index{Safety Assessment!System}system safety assessment. RTCA/DO-200A \cite{citation:ED76}}}
 
-\newglossaryentry{aeronautical information}{
-	name={aeronautical information},
-	description={See \gls{information aeronautical}}}
-
 \longnewglossaryentry{adaptation data}{%
 	name={adaptation data},%
 	plural={adaptation data}}%
@@ -274,12 +270,12 @@
 	description={The property that \gls{information} is not made available or disclosed to unauthorized individuals, entities, or processes. ISO27001:2013 \cite{citation:ISO27001:2013}}}
 
 \newglossaryentry{consistency}{
-	name={consistency (data)},
+	name={consistency, data},
 	text={consistency},
 	description={The property that the data adheres to a common world view (e.g., units).} }
 
 \newglossaryentry{continuity}{
-	name={continuity (data)},
+	name={continuity, data},
 	text={continuity},
 	description={The property that the data is continuous and regular without gaps or breaks.}}
 
@@ -294,7 +290,7 @@
 	description={The dependence of a software component on data not exclusively under the control of that software component. RTCA/DO-178C \cite{citation:ED12C}}} %doesn't seem to appear in text.
 
 \newglossaryentry{criticality}{
-	name={criticality (data)},
+	name={criticality, data},
 	text={criticality},
 	description={Classification of data by the potential effect of erroneous data on the expected operation that is supported by that data. RTCA/DO-200A \cite{citation:ED76}}}
 
@@ -312,50 +308,6 @@
 	{A thing given or granted; something known or assumed as fact, and made the basis of reasoning or calculation; an assumption or premiss from which inferences are drawn. Oxford English Dictionary (OED)
 	
 	A reinterpretable representation of \gls{information} in a formalized manner suitable for communication, interpretation or processing. ISO/IEC\ 2382 \cite{citation:ISO23821}}
-
-\newglossaryentry{data consistency}{
-	name={data consistency},
-	description={See \glsname{consistency}}}
-
-\newglossaryentry{data continuity}{
-	name={data continuity},
-	description={See \glsname{continuity}}}
-
-\newglossaryentry{data correctness}{
-	name={data correctness},
-	description={See \glsname{correctness}}}
-
-\newglossaryentry{data criticality}{
-	name={data critiality},
-	description={See \glsname{criticality}}}
-
-\newglossaryentry{data customisation}{
-	name={data customisation},
-	description={See \glsname{customisation}}}
-
-\newglossaryentry{data error}{
-	name={data error},
-	description={See \glsname{error}}}
-
-\newglossaryentry{data fidelity}{
-	name={data fidelity / representation},
-	description={See \glsname{fidelity}}}
-
-\newglossaryentry{data hazard}{
-	name={data hazard},
-	description={See \glsname{hazard}}}
-
-\newglossaryentry{data item}{
-	name={data item},
-	description={See \glsname{item data}}}
-
-\newglossaryentry{data origination}{
-	name={data origination},
-	description={See \glsname{origination}}}
-
-\newglossaryentry{data quality}{
-	name={data quality},
-	description={See \glsname{quality}}}
 
 	
 \newglossaryentry{database}{
@@ -383,8 +335,10 @@
 	name={data-intensive system},
 	description={Systems which make extensive use of large amounts of data. N. Storey \cite{citation:StoreyFaulkner20031}}}
 
+\newglossaryentry{dataset}{name={dataset},description={Identifiable collection of data. Note that a dataset may be a smaller grouping of data which, though limited by some constraint such as spatial extent or feature type, is located physically within a larger dataset. Theoretically, a dataset may be as small as a single feature or feature attribute contained within a larger dataset. A hardcopy map or chart may be considered a dataset. BS EN ISO 19131:2008 \cite{citation:ISO19131}}}
+
 \longnewglossaryentry{error}{
-	name={error (data)},
+	name={error, data},
 	text={data error}}%
 	{Discrepancy with the universe of discourse. ISO\ 19138:2006 \cite{citation:ISO19138}
 
@@ -396,7 +350,7 @@
 	description={The property describing how well the data maps to the real world entity it is trying to model.}}
 
 \newglossaryentry{hazard}{
-	name={hazard (data)},
+	name={hazard, data},
 	text={hazard},
 	description={Use of data in the context of a system that could lead to an accident. \gls{scsc} \gls{dsiwg}}}
 
@@ -416,7 +370,7 @@
 	description={\Gls{information} resulting from the assembly, analysis and formatting of \gls{aeronautical data}. (EU) No 73/2010 \cite{citation:EU732010}}}
 
 \longnewglossaryentry{integrity}{
-	name={integrity (data)},
+	name={integrity, data},
 	text={integrity}}%
 	{The assurance that a data element retrieved from a storage system has not been corrupted or altered in any ways since the original data entry\index{Data!Entry} or latest authorised amendment. RTCA/DO-200A \cite{citation:ED76}
 
@@ -427,23 +381,23 @@
 	The property of protecting the \index{Accuracy Property}\gls{accuracy} and \gls{completeness} of assets, i.e., that which has value to the organization. ISO 27001:2013 \cite{citation:ISO27001:2013}}
 
 \newglossaryentry{item data}{
-	name={item (data)},
+	name={item, data},
 	text={data item}, 
-	description={Single attribute of a complete data set, which is allocated a value that defines its current status. (EU) No 73/2010 \cite{citation:EU732010}}}
+	description={Single attribute of a complete \gls{dataset}, which is allocated a value that defines its current status. (EU) No 73/2010 \cite{citation:EU732010}}}
 
 \newglossaryentry{metadata}{
 	name={metadata},
 	description={Data that represents \gls{information} about data itself. Note that one should distinguish between ``Structural Metadata'', which is data about the design and specification of data structures (and is more properly called ``data about the containers of data'') and ``Descriptive Metadata'', which is about individual instances of application data, the data content. J. Inge \cite{citation:inge2008improving}}}
 
 \newglossaryentry{origination}{
-	name={origination (data)},
+	name={origination, data},
 	text={origination},
 	description={Creation of a new \gls{item data} with its associated value, the modification of the value of an existing \gls{item data} or the deletion of an existing \gls{item data}. (EU) No 73/2010 \cite{citation:EU732010}}}
 
 \longnewglossaryentry{quality}{
-	name={quality (data)},
+	name={quality, data},
 	text={data quality}}%
-	{A degree or level of confidence that the data provided meet the requirements of the user. These requirements include levels of \gls{accuracy}\index{Accuracy Property}, \gls{resolution}\index{Resolution Property}, \cbstart\gls{dsal}assurance level\cbend\index{Assurance Level}, traceability, timeliness\index{Timeliness Property}, \gls{completeness}, and format. RTCA/DO-200A \cite{citation:ED76}
+	{A degree or level of confidence that the data provided meet the requirements of the user. These requirements include levels of \gls{accuracy}\index{Accuracy Property}, \gls{resolution}\index{Resolution Property}, \cbstart\gls{dsal}\cbend\index{Assurance Level}, \gls{traceability}, timeliness\index{Timeliness Property}, \gls{completeness}, and format. RTCA/DO-200A \cite{citation:ED76}
 
 	Process by which the \gls{ecs} \gls{database} is produced, the source materials, the \gls{resolution}\index{Resolution Property} and reproduction \index{Accuracy Property}\gls{accuracy} of chart features, and the \gls{correctness} and \gls{completeness} of data. ISO\ 19379:2003 \cite{citation:ISO19379}
 
@@ -458,3 +412,25 @@
 \newglossaryentry{routine data}{
 	name={routine data},
 	description={data with an \index{Integrity Property}\gls{integrity} level as defined in Chapter 3, Section 3.2 point 3.2.8(b) of Annex 15 to the Chicago Convention, i.e., \index{Integrity Property}\gls{integrity} level one in one thousand: there is a very low probability when using corrupted routine data that the continued safe flight and landing of an aircraft would be severely at risk with the potential for catastrophe. (EU) No 73/2010 \cite{citation:EU732010}}}
+
+\newglossaryentry{sequencing}{
+	name={sequencing},
+	description={The property that the data is preserved in the order required.}}
+
+\newglossaryentry{software lifecycle data}{
+	name={software lifecycle data},
+	description={data that is produced during the software lifecycle\index{Lifecycle!Software} to plan, direct, explain, define, record, or provide evidence of activities (including the software product itself). This data enables the software lifecycle\index{Lifecycle!Software} processes, system or equipment approval and post-approval modification of the software product. ED-153 \cite{citation:ED153}}}
+
+\longnewglossaryentry{timeliness}{
+	name={timeliness}}%
+	{A measure of the time delay between a change in the real world and the associated \gls{database} update being available to the user. P. Ensor \cite{citation:Ensor2009}
+
+	The difference between the time of output of a \gls{item data} and the time of applicability of that \gls{item data}. (EU) No 1207/2011 \cite{citation:EU12072011}}
+
+\newglossaryentry{traceability}{
+	name={traceability},
+	description={Ability to determine the origin of the data. RTCA/DO-200A \cite{citation:ED76}}}
+
+\newglossaryentry{trace data}{
+	name={trace data},
+	description={Data providing evidence of \gls{traceability} of development and verification processes \index{Lifecycle!Software}\gls{software lifecycle data} data without implying the production of any particular artefact. Trace data may show linkages, for example, through the use of naming conventions or through the use of references or pointers either embedded in or external to the \index{Lifecycle!Software}\gls{software lifecycle data}. RTCA/DO-178C \cite{citation:ED12C}}}
