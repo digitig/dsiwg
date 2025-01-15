@@ -93,7 +93,7 @@ where further detail on each entry is provided.
   \multicolumn{3}{|c|}{\dsiwgTextBF{Implementation}}\\\hline
   {6} & {Design and Development}\index{Design and Development Data} & {Data produced during development  and implementation}\\\hline
   {7} & {Software}\index{Software Data} & {Data that is compiled (or interpreted) and executed to achieve the desired system behaviour}\\\hline
-  {8} & {Verification}\index{Verification Data} & {Data used to test and analyse the system,
+  {8} & {\Gls{verification}}\index{Verification Data} & {Data used to test and analyse the system,
     specifically to determine whether it has been built as intended}\\\hline
   \multicolumn{3}{|c|}{\dsiwgTextBF{Configuration}}\\\hline
 	{9} & {\Gls{ml}}\index{Machine Learning Data} & {Data used to train the system}\\\hline
@@ -144,7 +144,7 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
   \item \dsiwgTextBF{Ageing} As highlighted above, all safety-related data has a lifetime and this needs to be explicitly managed. This can involve, for example, purging, deletion and alerting. It is also important to note that ageing can occur as a result of changes external to the system (for example, records of the positions of other aircraft, newly discovered drug interactions, or new software patches) or it can result from internal changes (e.g., valves gradually becoming less responsive, \gls{configuration data} becoming out of date, or data schemas evolving over time).
 
-  \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes --- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}; data can also appear to become something else. Without careful management the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., validation checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
+  \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes --- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}; data can also appear to become something else. Without careful management the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., \gls{validation} checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
 
   \item \dsiwgTextBF{\index{Data!Owner}Ownership} The transformation of data can result in a lack of clarity regarding who has ownership of, and responsibility for, the data (if anyone). It is important that responsibility for \cbstart\glspl{error}\cbend\ can be tracked, for example, to determine whether they were present in the initial data or whether they arose as part of the transformation process. Establishing clear roles within the data supply chain can help mitigate these issues.
 
@@ -240,7 +240,7 @@ This property is related to analysability and may be performed by the same set o
   {\Gls{resolution}}\index{Resolution Property} & R & {The smallest difference between two adjacent values that can be represented in a data storage, display or transfer system}\\\hline
   {\Gls{traceability}} & T & {The data can be linked back to its source or derivation}\\\hline
   {\Gls{timeliness}}\index{timeliness Property} & M & {The data is as up to date as required}\\\hline
-  {Verifiability}\index{Verifiability Property} & V & {The data can be checked and its properties demonstrated to be correct}\\\hline
+  {\Gls{verifiability}}\index{Verifiability Property} & V & {The data can be checked and its properties demonstrated to be correct}\\\hline
   {\Gls{availability}}\index{Availability Property} & L & {The data is accessible and usable when an authorized entity demands access}\\\hline
   {\Gls{fidelity}}\index{Fidelity/Representation Property} & F & {How well the data maps to the real-world entity it is trying to model}\\\hline
   {Priority}\index{Priority Property} & P & {The data is presented / transmitted / made available in the order required}\\\hline
@@ -283,7 +283,7 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   & \rotatebox{90}{\index{Resolution Property}\Gls{resolution}}
   & \rotatebox{90}{\Gls{traceability}}
   & \rotatebox{90}{\Gls{timeliness}\index{Timeliness Property}}
-  & \rotatebox{90}{Verifiability}\index{Verifiability Property}
+  & \rotatebox{90}{\Gls{verifiability}}\index{Verifiability Property}
   & \rotatebox{90}{\index{Availability Property}\Gls{availability}}
   & \rotatebox{90}{\index{\Gls{fidelity} Property}\Gls{fidelity}}
   & \rotatebox{90}{Priority} & \rotatebox{90}{\Gls{sequencing}\index{Sequencing, Data}}
@@ -388,7 +388,7 @@ The list is non-exhaustive. Other guidewords may be useful for particular system
   {\Gls{resolution}\index{Resolution Property}} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
   {\Gls{traceability}}\index{Traceability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {\Gls{timeliness}\index{Timeliness Property}} & {Loss, partial loss}\\\hline
-  {Verifiability}\index{Verifiability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
+  {\Gls{verifiability}}\index{Verifiability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {\Gls{availability}}\index{Availability Property} & {Loss, partial loss, multiple, too early, too late}\\\hline
   {\Gls{fidelity}}\index{Fidelity/Representation Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
   {Priority}\index{Priority Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
@@ -523,7 +523,7 @@ With regards to the first case (i.e., \dsiwgTextBF{data affecting software}) the
 
 \begin{enumerate}
   \item \dsiwgTextBF{Mitigation within the data}\index{Mitigation} In many cases the best or only option is to improve the quality of the data to avoid the issue. This can be done by introducing a \gls{dsal}\index{Assurance Level!Data} for the data, related to the severity of the \gls{hazard} which may be induced, and thereby addressing the issue at cause. In this case, the \gls{dsal} is bearing a large amount of responsibility. This may mean that a greater number of the ``Recommended'' risk \index{Treatment!Risk}\gls{treatment} methods and approaches (identified in the following phase) need to be implemented.
-  \item \dsiwgTextBF{Mitigation within the software} If the data cannot be assured to a \gls{dsal}\index{Assurance Level!Data} (e.g., if it is supplied by a third party or legacy system), sometimes changes can be made to the software in the system to improve the situation. These mitigations could be functional (e.g., introduction of better range checking, rejection of illegal combinations of data values). This requires not only specific software changes but also associated verification of these new features and any software changes will have to be implemented to an appropriate \index{Assurance Level!Software}\gls{software assurance level}. However there may be no particular functional mitigation\index{Mitigation} or set of mitigations that can be targeted at the particular issue (e.g., testing for illegal combinations of values is too complex). In this latter case, potentially the complete set of software within the system responsible for manipulating the data should be developed (or re-developed) to a suitable \index{Assurance Level!Software}\gls{software assurance level}. This level should be related to the severity of \gls{hazard} it is mitigating.
+  \item \dsiwgTextBF{Mitigation within the software} If the data cannot be assured to a \gls{dsal}\index{Assurance Level!Data} (e.g., if it is supplied by a third party or legacy system), sometimes changes can be made to the software in the system to improve the situation. These mitigations could be functional (e.g., introduction of better range checking, rejection of illegal combinations of data values). This requires not only specific software changes but also associated \gls{verification} of these new features and any software changes will have to be implemented to an appropriate \index{Assurance Level!Software}\gls{software assurance level}. However there may be no particular functional mitigation\index{Mitigation} or set of mitigations that can be targeted at the particular issue (e.g., testing for illegal combinations of values is too complex). In this latter case, potentially the complete set of software within the system responsible for manipulating the data should be developed (or re-developed) to a suitable \index{Assurance Level!Software}\gls{software assurance level}. This level should be related to the severity of \gls{hazard} it is mitigating.
 \end{enumerate}
 
 With regards to the second case (i.e., \dsiwgTextBF{software affecting data}) the issue is that the software may affect (e.g., corrupt, delete) the data in a way that key \index{Property!Safety}safety properties may be lost and, furthermore, that loss may not be easily detected. In general the key \index{Property!Data}\glspl{data property} should be considered to see if any important ones for this data may be jeopardised. If so, a \index{Assurance Level!Software}\gls{software assurance level} from an appropriate standard or guideline should be introduced that mitigates this risk of undetected property loss. This \index{Assurance Level!Software}\gls{software assurance level} should be determined by the hazards that could be caused, and may be localised to the software that can cause the problem.
@@ -674,7 +674,7 @@ It should be noted that the five Data Categories\index{Category!Data} presented 
     \multicolumn{2}{r}{\sl Continued on next page}
   \endfoot
   \endlastfoot
-  Verification\index{Verification Data} & V\\\hline
+  \Gls{verification}\index{Verification Data} & V\\\hline
   Infrastructure\index{Infrastructure Data} & I\\\hline
   Dynamic\index{Dynamic Data} & D\\\hline
   Performance\index{Performance Data} & P\\\hline
@@ -718,11 +718,11 @@ then the row is likely to be applicable to the \index{Artefact, Data}\cbstart\gl
 To give a specific example, consider the row corresponding to the first Technique in \autoref{tab:MethodsSystemDesign}. This Technique will apply to \index{Artefact, Data}\glspl{data artefact} where:
 \begin{itemize}
     \item The Data Category\index{Dynamic Data} is Dynamic (``D'' from \autoref{tab:DataCategoryAbbreviations}) and
-    \item The \index{Artefact, Data}\gls{data artefact} holds one or more of the \index{Integrity Property}properties \index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness} or Verifiability\index{Verifiability Property} (``I'', ``C'' or ``V'' from \autoref{tab:PropertiesOfData}).
+    \item The \index{Artefact, Data}\gls{data artefact} holds one or more of the \index{Integrity Property}properties \index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness} or \gls{verifiability}\index{Verifiability Property} (``I'', ``C'' or ``V'' from \autoref{tab:PropertiesOfData}).
 \end{itemize}
 In such a case, the Technique would be Highly Recommended if the \index{Artefact, Data}\gls{data artefact} were of \gls{dsal}\index{Assurance Level!Data} 3 or 4, Recommended if the \gls{dsal} were 2, or should merely be considered if the \gls{dsal} were 1.
 
-Many dots have been placed in the table to indicate Data Categories\index{Category!Data} and \index{Property!Data}Data Properties which are not applicable to the Technique under consideration. The dots enable the tables to be assessed very quickly, as they enable the letters representing specific Data Categories\index{Category!Data} and \index{Property!Data}\glspl{data property} to always be presented in the same position within the table. For example, the \index{Property!Data}\gls{data property} Verifiability\index{Verifiability Property} (``V'' from \autoref{tab:PropertiesOfData} can easily be seen to appear against the first two Techniques of \autoref{tab:MethodsSystemDesign}, whereas it does not appear in the next seven Techniques --- this can be seen without actually reading the text, but merely looking at the pattern presented by the letters and dots. 
+Many dots have been placed in the table to indicate Data Categories\index{Category!Data} and \index{Property!Data}Data Properties which are not applicable to the Technique under consideration. The dots enable the tables to be assessed very quickly, as they enable the letters representing specific Data Categories\index{Category!Data} and \index{Property!Data}\glspl{data property} to always be presented in the same position within the table. For example, the \index{Property!Data}\gls{data property} \gls{verifiability}\index{Verifiability Property} (``V'' from \autoref{tab:PropertiesOfData} can easily be seen to appear against the first two Techniques of \autoref{tab:MethodsSystemDesign}, whereas it does not appear in the next seven Techniques --- this can be seen without actually reading the text, but merely looking at the pattern presented by the letters and dots. 
 
 Within each table, the ``Serial'' column lists a unique serial number for each technique. The serial numbers simply provide a unique reference which aligns with those implemented within the toolset.
 
@@ -795,7 +795,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
   \hline
   SD.18 & Data Correlation & \dsiwgTextTT{..D..} & R & R & HR & HR & Data from a number of sources exists to permit a cross-correlation of the data supplied from one source (the master) with other sources. & \dsiwgTextTT{ICNY...................}\\
   \hline
-  SD.19 & Data Partitioning & \dsiwgTextTT{..D..} & R & R & HR & HR & To separate data that is managed differently, creating independence so that a whole \gls{dataset} does not require validation after a change. & \dsiwgTextTT{...............B.......}\\
+  SD.19 & Data Partitioning & \dsiwgTextTT{..D..} & R & R & HR & HR & To separate data that is managed differently, creating independence so that a whole \gls{dataset} does not require \gls{validation} after a change. & \dsiwgTextTT{...............B.......}\\
   \hline
   SD.20 & Syntax Checks & \dsiwgTextTT{VID..} & R & R & HR & HR & Semantic checking of data values and sequences based on defined rule sets. & \dsiwgTextTT{I.N.O...............G..}\\
   \hline
@@ -864,7 +864,7 @@ This table addresses design aspects, including the construction of data storage 
 \end{longtable}
 
 \clearpage% Avoids having the following title as a widow on the first page
-\paragraph{Data Verification}
+\paragraph{Data \Glsfmttext{verification}}
 \label{bkm:dataVerification}
 A number of issues need to be considered during the implementation phase of a programme, to ensure that at any point in the programme we know how much we can rely upon the data. \autoref{tab:MethodsDataProcedures} addresses those mitigations\index{Mitigation} relevant to this whole programme phase, not just from data capture or generation. It therefore includes aspects of data management, checking and expiry.
 \begin{longtable}
@@ -874,7 +874,7 @@ A number of issues need to be considered during the implementation phase of a pr
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation Methods: Data Verification}\index{Mitigation}
+  \caption{Mitigation Methods: Data \Glsfmttext{verification}}\index{Mitigation}
   \label{tab:MethodsDataProcedures}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data}& %
@@ -884,7 +884,7 @@ A number of issues need to be considered during the implementation phase of a pr
   \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endfirsthead
-  \caption[]{Mitigation Methods: Data Verification (continued)}\index{Mitigation}
+  \caption[]{Mitigation Methods: Data \Glsfmttext{verification} (continued)}\index{Mitigation}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\gls{dsal}}}\index{Assurance Level!Data} & %
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
@@ -906,9 +906,9 @@ A number of issues need to be considered during the implementation phase of a pr
   \hline
   DI.05 & Tracing & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Ability to trace data from source across multiple participants in the data supply chain. & \dsiwgTextTT{.......T.V............X}\\
   \hline
-  DI.06 & Defined Verification Frequency & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Data should contain an indicator of how often it should be revalidated against other (e.g., real-world) source. & \dsiwgTextTT{.........V........E....}\\
+  DI.06 & Defined \gls{verification} frequency & \dsiwgTextTT{VIDPJ} & - & R & HR & HR & Data should contain an indicator of how often it should be revalidated against other (e.g., real-world) source. & \dsiwgTextTT{.........V........E....}\\
   \hline
-  DI.07 & Defined Data Lifetime(s) & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & \Gls{information} showing when data validity expires. & \dsiwgTextTT{..................E....}\\
+  DI.07 & Defined Data Lifetime(s) & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & \Gls{information} showing when data \gls{validity} expires. & \dsiwgTextTT{..................E....}\\
   \hline
   DI.08 & \Gls{quality} Trend Analysis & \dsiwgTextTT{VIDPJ} & - & - & R & HR & Checking that a \gls{dataset} is consistent with a model of the expected data behaviour (e.g., vibration data increases over time). & \dsiwgTextTT{IC.Y.....V.F.........Z.}\\
   \hline
@@ -958,7 +958,7 @@ New entries DM.10 to DM.15 have been added to address issues identified during t
   \multicolumn{9}{r}{\sl Continued on next page}
   \endfoot
   \endlastfoot
-  DM.01 & Manual Load & \dsiwgTextTT{..D..} & R & R & - & - & Data is entered into the system manually relying on human validation and verification. & \dsiwgTextTT{ICNYOA.....F...........}\\
+  DM.01 & Manual Load & \dsiwgTextTT{..D..} & R & R & - & - & Data is entered into the system manually relying on human \gls{validation} and \gls{verification}. & \dsiwgTextTT{ICNYOA.....F...........}\\
   \hline
   DM.02 & Dedicated Translation and Loading Platform & \dsiwgTextTT{..D..} & - & R & HR & HR & For example, using mature enterprise migration \gls{cots} products. & \dsiwgTextTT{ICNYOA.T...F...........}\\
   \hline
@@ -974,7 +974,7 @@ New entries DM.10 to DM.15 have been added to address issues identified during t
   \hline
   DM.08 & Shadowing & \dsiwgTextTT{..D..} & - & R & HR & HR & Parallel running of the new system alongside the existing system, only data from the existing system is used operationally, with an experienced user crosschecking between the two systems. & \dsiwgTextTT{ICNYOA.....F...........}\\
   \hline
-  DM.09 & End to End Import-Export Verification & \dsiwgTextTT{..D..} & - & R & HR & HR & Data is traced and verified at all stages through the entire end to end migration process. & \dsiwgTextTT{ICNYOA.T...F..........X}\\
+  DM.09 & End-to-end import-export \gls{verification} & \dsiwgTextTT{..D..} & - & R & HR & HR & Data is traced and verified at all stages through the entire end to end migration process. & \dsiwgTextTT{ICNYOA.T...F..........X}\\
   \hline
 DM.10&
 End-to-end Size Compare&
@@ -999,13 +999,13 @@ Data is extracted from new or final system and compared with original data as in
 \dsiwgTextTT{ICN....T.V.F...........}\\\hline
 %
 DM.12&
-Validation Campaign&
+\Gls{validation} Campaign&
 \dsiwgTextTT{..D..}&
 R&
 R&
 HR&
 HR&
-An extensive set of validation checks is performed on the migrated data.
+An extensive set of \gls{validation} checks is performed on the migrated data.
 &
 \dsiwgTextTT{ICNY.....V.............}\\\hline
 %
@@ -1148,7 +1148,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
   \hline
   TD.12 & Client Sign-off & \dsiwgTextTT{V....} & R & R & HR & HR & Where possible, the client should formally agree and sign off the test data as appropriate. & \dsiwgTextTT{ICNY.A...V.F..........X}\\
   \hline
-  TD.13 & Error Seeding & \dsiwgTextTT{V....} & R & R & HR & HR & This is where errors are deliberately inserted into the \gls{dataset} to demonstrate the effectiveness of data validation. & \dsiwgTextTT{ICNYOAR.MV.F........G..}\\
+  TD.13 & Error Seeding & \dsiwgTextTT{V....} & R & R & HR & HR & This is where errors are deliberately inserted into the \gls{dataset} to demonstrate the effectiveness of data \gls{validation}. & \dsiwgTextTT{ICNYOAR.MV.F........G..}\\
   \hline
   TD.14 & Data Reuse & \dsiwgTextTT{V....} & R & R & HR & HR & Reusing data for one project that was created and thoroughly assured for another project. This can be effective but the read-across should be established. & \dsiwgTextTT{ICNY.A.....F........G.X}\\
   \hline
