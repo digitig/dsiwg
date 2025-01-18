@@ -122,101 +122,106 @@ These include cases which relate to a number of \glspl{data property} (see
 for example the properties of \index{Completeness!Property}\gls{completeness}, \index{Integrity Property}\gls{integrity} and \gls{timeliness}\index{Timeliness Property}.
 They also highlight the importance of the \gls{adaptation data}\index{Adaptation Data} category\index{Category!Data} and dangers associated with the inappropriate use of default data values.
 
-Most of the current collection of accidents and incidents fall into three categories: aviation; maritime; and medical. However, the lessons that can be learned span a much wider range of application areas.
+Most of the current collection of accidents and incidents fall into three categories: aviation, maritime, and medical. However, the lessons that can be learned span a much wider range of application areas.
 
 \subsubsection{Ways that Data Can Cause Problems}
 \label{tab:issues}
 There are some risk-inducing issues that are different or more prevalent for data than for other system elements. An incomplete collection of examples is provided below. This list may provide a quick way of identifying risks, which could be especially useful at an early stage of a project:
 
-\begin{itemize}
-  \item \dsiwgTextBF{Fluidity} Hardware and software can undergo significant amounts of product assurance and once assured may change relatively infrequently. Where change is required to hardware or software, it can be carefully managed and the impact on the safety case appraised. This is not always the case for data, which is often much more fluid; indeed the ease with which data can be changed is one motivation for the move towards \glspl{data-driven system}. This fluidity means that it is not always possible to revisit safety cases when data changes -- for example, the safety case for an autonomous vehicle cannot be updated every time that the vehicle acquires new knowledge during operation. Instead, the fact that data can change, along with any associated safety impacts, may need to be captured in the system safety case. Fluidity can also provide a temptation for unscrupulous operators to falsify data, for example, after an incident has occurred. Rigorous configuration control procedures can help protect against this type of behaviour.
+\begin{description}
+\item[Fluidity:] Hardware and software can undergo significant amounts of product assurance and once assured may change relatively infrequently. Where change is required to hardware or software, it can be carefully managed and the impact on the safety case appraised. This is not always the case for data, which is often much more fluid. Indeed the ease with which data can be changed is one motivation for the move towards \glspl{data-driven system}. This fluidity means that it is not always possible to revisit safety cases when data changes. For example, the safety case for an autonomous vehicle cannot be updated every time that the vehicle acquires new knowledge during operation. Instead, the fact that data can change, along with any associated safety impacts, may need to be captured in the system safety case. Fluidity can also provide a temptation for unscrupulous operators to falsify data, for example, after an incident has occurred. Rigorous configuration control procedures can help protect against this type of behaviour.
 
-  \item \dsiwgTextBF{Reuse} For the purposes of this discussion, ``reuse'' is interpreted as use of the same data in a different system or system context (e.g., lifecycle\index{Lifecycle!System} phase). Just because data was valid for use in a particular system, it does not immediately follow that it can be reused again in a similar system. Many considerations associated with data reuse are similar to those of software reuse, for example: similarity of requirements; similarity of role in system; and similarity in required \index{Integrity Property}\gls{integrity} / \index{Assurance Level}assurance level. One consideration that is different is that of \gls{timeliness}\index{Timeliness Property}: data that was valid for use in a particular system at a particular time is not necessarily valid for reuse in the same system at a different time.
+\item[Reuse:] For the purposes of this discussion, ``reuse'' is interpreted as use of the same data in a different system or system context (e.g., lifecycle\index{Lifecycle!System} phase). Just because data was valid for use in a particular system, it does not immediately follow that it can be reused again in a similar system. Many considerations associated with data reuse are similar to those of software reuse, for example, similarity of requirements, similarity of role in the system, and similarity of required \index{Integrity Property}\gls{integrity} / \index{Assurance Level}assurance level. One consideration that is different is that of \gls{timeliness}\index{Timeliness Property}: data that was valid for use in a particular system at a particular time is not necessarily valid for reuse in the same system at a different time.
 
-  \item \dsiwgTextBF{Ageing} As highlighted above, all safety-related data has a lifetime and this needs to be explicitly managed. This can involve, for example, purging, deletion and alerting. It is also important to note that ageing can occur as a result of changes external to the system (for example, records of the positions of other aircraft, newly discovered drug interactions, or new software patches) or it can result from internal changes (e.g., valves gradually becoming less responsive, \gls{configuration data} becoming out of date, or data schemas evolving over time).
+\item[Ageing:] As highlighted above, all safety-related data has a lifetime and this needs to be explicitly managed. This can involve, for example, purging, deleting and alerting. \cbstart Ageing can occur as a result of changes external to the system (for example, records of the positions of other aircraft, newly discovered drug interactions, or new software patches), or it can result from internal changes (e.g., valves gradually becoming less responsive, \gls{configuration data} becoming out of date, or data schemas evolving over time).\cbend\
 
-  \item \dsiwgTextBF{Transformation} Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes -- sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}; data can also appear to become something else. Without careful management the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., \gls{validation} checks, sanity checks) or assurance measures may need to be put in place to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
+\item[Transformation:] Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes. Sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}. Data can also appear to become something else. Without careful management, the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., \gls{validation} checks, sanity checks) or assurance measures may \cbstart be needed\cbend\ to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
 
-  \item \dsiwgTextBF{\index{Data!Owner}Ownership} The transformation of data can result in a lack of clarity regarding who has ownership of, and responsibility for, the data (if anyone). It is important that responsibility for \cbstart\glspl{error}\cbend\ can be tracked, for example, to determine whether they were present in the initial data or whether they arose as part of the transformation process. Establishing clear roles within the data supply chain can help mitigate these issues.
+\item[Archiving and retrieval:] Safety-related data needs to be available when required. \cbstart Data accessibility needs to be considered\cbend over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
 
-  \item \dsiwgTextBF{Archiving and Retrieval} Safety-related data needs to be available when required. There is thus a need to think about data accessibility over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
+\item[Biasing:] This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation, and interpretation of data. It is usually an unintentional distortion in the \gls{dataset}. One example of this is the confirmation bias that may be applied to safety claims, and another example is that synthetic autonomous vehicle training \glspl{database} can have issues with artificial data if it is not realistic.
+Although there is no perfect way of checking for this within the system, \index{Completeness!Checks}\gls{completeness}, statistical and validity checks on \glspl{dataset} may help.
 
-  \item \dsiwgTextBF{Biasing} This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation and interpretation of data. It is usually an unintentional distortion in the \gls{dataset} -- one example of this is the confirmation bias that may be applied to safety claims,
-    while another example is that synthetic autonomous vehicle training \glspl{database} can have issues with artificial data if not realistic.
-    Although there is no perfect way of checking for this within the system, \index{Completeness!Checks}\gls{completeness}, statistical and validity checks on \glspl{dataset} may help.
+\item[Falsification / misinformation:] This issue arises where data is created, modified, or deleted either accidentally or deliberately so as to mislead or misinform potential consumers of that data. Examples from policing and criminal justice might \cbstart include notes being taken with fabricated times or dates or a crime from the wrong individual in a \gls{database} being accidentally added or removed\cbend. Another example might be a supplier falsifying quality records for materials or goods. There have been many cases of misinformation related to the Covid-19\index{Covid-19} pandemic (for example on social media) where people have been deliberately misled, and sometimes this has led to harm (\cbstart for example, bleach being drunk as a cure\cbend). \cbstart Possible mitigations\index{Mitigation}\cbend\ include digitally signing transmitted data, strong access controls, independent fact-checking, and audit records.
 
-  \item \dsiwgTextBF{Falsification / Misinformation} This issue arises where data is created, modified or deleted either accidentally or deliberately so as to mislead or misinform potential consumers of that data. Examples from policing and criminal justice might be: notes taken with fabricated times or dates; or accidentally adding or removing a crime from the wrong individual in a \gls{database}. Another example might be a supplier falsifying quality records for materials or goods. There have been many cases of misinformation related to the Covid-19\index{Covid-19} pandemic (for example on social media) where people have been deliberately misled and sometimes this has led to harm (drinking bleach as a cure for instance). Some mitigations\index{Mitigation} involve digitally signing transmitted data, strong access controls, independent fact-checking and audit records.
+item[Defaulting:] Many systems use default or initial values for \glspl{item data}; sometimes in \glspl{dataset} and sometimes embedded in software. Often these default values are designed to be neutral (e.g., ``0'') or unrealistic (e.g., ``VOID''). There are essentially two cases:
+\begin{enumerate}
+	\item initialisation data which may persist and be mistakenly taken as a real value when in fact it should have been changed; and
+	\item data that is used when no meaningful value has been assigned (e.g., during data migration or data exchange between systems).
+\end{enumerate}	
+These issues can often be managed through good design of data structures, for example by the inclusion of a validity flag.
 
-  \item \dsiwgTextBF{Defaulting} Many systems use default or initial values for \glspl{item data}; sometimes in \glspl{dataset} and sometimes embedded in software. Often these default values are designed to be neutral (e.g., ``0'') or unrealistic (e.g., ``VOID''). There are essentially two cases: (i) initialisation data which may persist and be mistakenly taken as a real value when in fact it should have been changed; (ii) data that is used when no meaningful value has been assigned (e.g., during data migration or data exchange between systems). These issues can often be managed through good design of data structures, for example by the inclusion of a validity flag.
+\item[Sentinels:] A sentinel value is a data value that is used to indicate a special action needs to be taken, typically indicating the end of a record or a \gls{dataset}. The sentinel value should be one that is not allowable in the \gls{dataset} itself, but often is not properly considered and may use common sequences (e.g., five zeroes). Sentinels can cause problems in two ways:
+\begin{enumerate}
+	\item where they are not recognized and so, for example, processing \cbstart includes or continues\cbend\ past the sentinel; and
+	\item where the data itself somehow contains the sentinel value and so processing is erroneously interrupted.
+\end{enumerate}
+Sentinels can be a particular risk in long-lived systems and \glspl{dataset}. As with \cbstart defaulting\cbend, the management or elimination of this issue may often be achieved through improved data structures.
 
-  \item \dsiwgTextBF{Sentinels} A sentinel value is a data value that is used to indicate a special action needs to be taken, typically indicating the end of a record or a \gls{dataset}. The sentinel value should be one that is not allowable in the \gls{dataset} itself, but often is not properly considered and may use common sequences (e.g., five zeroes). Sentinels can cause problems in two ways: (i) where they are not recognized and so, for example, processing continues past the sentinel; (ii) where the data itself somehow contains the sentinel value and so processing is erroneously interrupted. Sentinels can be a particular risk in long-lived systems and \glspl{dataset}. As with the issue above, the management or elimination of this issue may often be achieved through improved data structures.
+\item[Aliasing:] This is an effect that causes different data to become indistinguishable when accessed; that is, there is only one record when there should be several -- for example, two patients with similar names inadvertently sharing a single set of medical records. This could be due to the way the data is filtered, sampled, indexed, stored, or retrieved. The data issues are typically related to loss of resolution leading to similar data points appearing to be identical. \cbstart Methods to maintain resolution, including use of unique indexes, may be beneficial.\cbend\
 
-  \item \dsiwgTextBF{Aliasing} This is an effect that causes different data to become indistinguishable when accessed; that is, there is only one record when there should be several -- for example, two patients with similar names inadvertently sharing a single set of medical records. This could be due to the way the data is filtered, sampled, indexed, stored or retrieved. The data issues are typically related to loss of \gls{resolution}\index{Resolution Property} leading to similar data points appearing to be identical. Hence, methods to maintain \gls{resolution}\index{Resolution Property}, including use of unique indexes, may be beneficial.
+One specific case of aliasing \cbstart\ concerns \cbend homophones -- words which sound the same but are different such as ``flower'' / ``flour'' and ``bare'' / ``bear'' \cite{citation:homonym}.
+If these words are read out over a phone there may be confusion as to which is intended.
+Location services based on a number of words such as W3W don't avoid all homophones,
+and so there may be issues when the words are given verbally in an emergency. The issue is discussed further in \autoref{bkm:incacc:w3w}.
 
-    One specific case of aliasing has come to light recently regarding ``Homophones'' -- words which sound the same but are different such as ``Flower'' / ``Flour'' and ``Bare'' / ``Bear'' \cite{citation:homonym}.
-    If these words are read out over a phone there may be confusion as to which is intended.
-    Location services based on a number of words such as W3W don't avoid all homophones,
-    and so there may be issues when the words are given verbally in an emergency. The issue is discussed further in \autoref{bkm:incacc:w3w}.
+\item[Disassociation:] This effect is, in some senses, the opposite of aliasing: there are several records when there should only be one. This could occur, for example, if two records are created for the same individual using slightly different names. It could also arise if different systems use different indexing methods and the association between the indexes becomes corrupted. Again, methods to maintain data resolution can be beneficial.
 
-  \item \dsiwgTextBF{Disassociation} This effect is, in some senses, the opposite of aliasing; there are several records when there should only be one. This could occur, for example, if two records are created for the same individual using slightly different names. It could also arise if different systems use different indexing methods and the association between the indexes becomes corrupted. Again, methods to maintain data \gls{resolution}\index{Resolution Property} can be beneficial.
+\item[Masking:] This issue can arise if a notable proportion of a \gls{dataset} is of a poor \cbstart\gls{quality}\cbend, for example, if sensors producing the data are faulty or measurements are taken from the wrong source. This poor quality data can mask errors in the way that the system handles the good quality data. One way of protecting against this issue is the generation and use of test sets of appropriate size and quality, although for some applications this may be a non-trivial task.
 
-  \item \dsiwgTextBF{Masking} This issue can arise if a notable proportion of a \gls{dataset} is of a poor \cbstart\gls{quality}\cbend, for example, if sensors producing the data are faulty or measurements are taken from the wrong source. This poor quality data can mask errors in the way that the system handles the good quality data. One way of protecting against this issue is the generation and use of test sets of appropriate size and quality, although for some applications this may be a non-trivial task.
+\item[Incompleteness:]\index{Completeness!Property} Not all the data that is needed is always available; there may be known, and sometimes, unknown gaps or missing data points. The missing data points ("dark data"\index{Dark Data} -- see \autoref{bkm:darkdata}) can be critical and in some cases, more important than the data that is available. Incomplete data can arise, for example, from limitations on how much data can be physically captured (eg.~sampling frequencies, storage / time constraints) or from the unintentional or deliberate darkening of data (eg.~for privacy, security, political or commercial reasons).
 
-  \item \dsiwgTextBF{\index{Completeness!Property}Incompleteness} Not all the data that is needed is always available; there may be known, and sometimes, unknown gaps or missing data points. The missing data points ("Dark Data"\index{Dark Data} -- see \autoref{bkm:darkdata}) can be critical and in some cases, more important than the data that is available. Incomplete data can arise, for example, from limitations on how much data can be physically captured (eg.~sampling frequencies, storage / time constraints) or from the unintentional or deliberate darkening of data (eg.~for privacy, security, political or commercial reasons).
+item[Volume:] Data can be so large and unstructured that it is not manageable in practicable timeframes.
+For example, video records of rail track could take days to inspect manually.
 
-  \item \dsiwgTextBF{Volume} Data can be so large and unstructured that it is not manageable in practicable timeframes.
-    For example, video records of rail track could take days to inspect manually.
+\item[Interpretation:] Data can be misinterpreted -- too much or too little deduced from available data, or data extrapolated incorrectly to derive unsound results.
+An example is \gls{ml} data\index{Machine Learning Data}, especially real or recorded data that may not contain critical edge / corner cases.
 
-  \item \dsiwgTextBF{Interpretation} Data can be misinterpreted -- too much or too little deduced from available data, or data extrapolated incorrectly to derive unsound results.
-    An example is \gls{ml} data\index{Machine Learning Data}, especially real or recorded data that may not contain critical edge / corner cases.
-
-  \item \dsiwgTextBF{Distribution}
-    Data can be decentralised, decomposed or distributed across many sources (e.g. channels, \glspl{database}, websites) and needs to be consistently integrated to make a coherent picture. In the health sector often many IT systems have to work together feeding in different parts of a patient medical record to make a complete health picture. If parts of this distributed data are missing (for instance diagnostic test results) then it is difficult if not impossible to obtain the complete picture, and mistakes may be made.
-    There are several parts to this problem:
-    \begin{enumerate}[label=\alph*]
-    	\item \dsiwgTextBF{Integration} - multiple elements of data have to be brought together in a coherent way, addressing aspects such as which data should supercede or replace other data;
-    	\item \dsiwgTextBF{Communication} - having correct and current \gls{information} about what data is available and its location so it can be requested; and
-    	\item \dsiwgTextBF{Contingency} - what to to if part of the distributed data is unavailable or late.
-    \end{enumerate}
-\end{itemize}
+\item[Distribution:] Data can be decentralised, decomposed or distributed across many sources (e.g. channels, \glspl{database}, websites) and needs to be consistently integrated to make a coherent picture. In the health sector\cbstart\ many IT systems often \cbend have to work together feeding in different parts of a patient medical record to make a complete health picture. If parts of this distributed data are missing (for instance diagnostic test results) then it is difficult if not impossible to obtain the complete picture, and mistakes may be made.
+There are several parts to this problem:
+\begin{description}
+	\item[Integration] -- multiple elements of data have to be brought together in a coherent way, addressing aspects such as which data should supercede or replace other data;
+	\item[Communication] -- having correct and current \gls{information} about what data is available and its location so it can be requested; and
+	\item[Contingency:] -- what to to if part of the distributed data is unavailable or late.
+\end{description}
+\end{description}
 
 
-Further examples of how data may cause issues in many scenarios is given in a recently published book~\cite{citation:datacentric}.
+Further examples of how data may cause issues in many scenarios is given in \cbstart the book \dsiwgTextIT{Data-Centric Safety: Challenges, Approaches, and Incident Investigation} \cite{citation:datacentric}\cbend.
 
 \subsubsection{\ecapitalisewords{\glsentryplural{data property}}}\label{bkm:guidance:dataproperties}
 \Glspl{data property} are used to establish what aspects of the data (e.g., \gls{timeliness}\index{Timeliness Property}, \gls{accuracy}\index{Accuracy Property}) need to be guaranteed in order that the system operates in a safe manner.
 
-James Inge's work \cite{citation:inge2008improving} produced a useful taxonomy of data categories, and went on to look at faults in data. He concluded that a rigid taxonomy of data categories was unhelpful due to various properties or characteristics of the data which vary independently. In short, it is the combination of Data Category\index{Category!Data} with the required \index{Property!Data}\glspl{data property} that facilitates safety analysis.
+James Inge's work \cite{citation:inge2008improving} produced a useful taxonomy of data categories, and went on to look at faults in data. He concluded that a rigid taxonomy of data categories was unhelpful due to various properties or characteristics of the data which vary independently. In short, it is the combination of data category\index{Category!Data} with the required \index{Property!Data}\glspl{data property} that facilitates safety analysis.
 
-Data Categories were discussed in the preceding phase. A collection of \index{Property!Data}\glspl{data property} has been produced; this is documented in \autoref{tab:PropertiesOfData}. Typically speaking, it is the loss of one of these \cbstart\glspl{data property}\cbend\ that presents a \gls{hazard}. Note that, this notion of ``loss'' is dependent on the intended use: for example, what is ``timely'' for one use may not be for another. Also note that this list is non-exhaustive.
+Data categories were discussed in the preceding phase. \cbstart\autoref{tab:PropertiesOfData} documents a non-exhaustive collection of \index{Property!Data}\glspl{data property}. Typically, it is the loss of one of these \glspl{data property} that presents a \gls{hazard}. This notion of ``loss'' is dependent on the intended use; for example, what is ``timely'' for one use may not be for another.\cbend\
 
-\paragraph{The Goldilocks\index{Goldilocks Property|textbf} Property}\label{bkm:guidance:goldilocks}
-The ``Goldilocks'' property has been added to address appropriate sizing and quantity of data. A number of issues have been found to arise when there is too much or too little data. While it is particularly relevant to communications links, it may have relevance to other areas, such as \glspl{database} and also when people are involved in reviewing or checking data. The property is named ``Goldilocks'' as it refers to the need to have not too much, not too little, but just the right amount of data%
+The ``Goldilocks'' property \cbstart addresses\cbend\ appropriate sizing and quantity of data. A number of issues have been found to arise when there is too much or too little data. While it is particularly relevant to communications links, it may have relevance to other areas such as \glspl{database} and when people are involved in reviewing or checking data. The property is named ``Goldilocks'' as it refers to the need to have not too much, not too little, but just the right amount of data%
 %
-\footnote{A system where the property was lost involved a high speed bus that connected several safety-critical systems. A transceiver of that bus failed and transmitted random noise. The receivers employed parity checks and cyclic redundancy check, but the system had been designed to eliminate occasional \cbstart\glspl{error}\cbend. When random noise filled the bus, several apparently valid messages were created every second, resulting in potentially lethal behaviour.
+\footnote{A system where the property was lost involved a high speed \cbstart data\cbend\ bus that connected several safety-critical systems. A transceiver of that bus failed and transmitted random noise. The receivers employed parity checks and cyclic redundancy check, but the system had been designed to eliminate occasional \cbstart\glspl{error}\cbend. When random noise filled the bus, several apparently valid messages were created every second, resulting in potentially lethal behaviour.
 
-In a \gls{hazop}\index{HAZOP} carried out during 2020, based upon the \gls{hazop}\index{HAZOP} guidewords within previous versions of this document, the facilitator realised that certain failure modes had not been identified by the \gls{hazop} team. In addition to the issue of system overload already discussed, those omissions also concerned system behaviour following data rejection. In these cases, bad data was detected and rejected, but the consequences of data rejection over an extended period had not been considered.}.
+In a \gls{hazop}\index{HAZOP} carried out during 2020, based upon the \gls{hazop}\index{HAZOP} guidewords \cbstart in this guidance\cbend, the facilitator realised that certain failure modes had not been identified by the \gls{hazop} team. In addition to the issue of system overload already discussed, those omissions also concerned system behaviour following data rejection. In these cases, bad data was detected and rejected, but the consequences of data rejection over an extended period had not been considered.}.
 
-The Goldilocks\index{Goldilocks Property} property is related to the ``Volume'' problem of data discussed in \hyperref[tab:issues]{section}~\ref{tab:issues}, however given the importance of data sizing, and the experience of real-world incidents this is now a separate property.
+The Goldilocks\index{Goldilocks Property} property is related to the \cbstart data volume problem \cbend\ discussed in \hyperref[tab:issues]{section}~\ref{tab:issues}, however, given the importance of data sizing and the experience of real-world incidents this is now a separate property.
+
 %
-\paragraph{The Analysability\index{Analysability Property|textbf} Property}\label{bkm:guidance:analysability}
-The ``Analysability'' property has been added to recognize that data is now complex and extensive: often large scale, distributed and of a highly complex nature, and yet for safety purposes we need to make sure it is of suitable quality, and able to support system goals.
-We therefore need to ensure that it is possible to analyse it for key characteristics and establish, using tools or other means, meaningful results. This property is related to explainabilty and may be performed by the same set of tools or techniques.
+\paragraph{The analysability\index{Analysability Property|textbf} property}\label{bkm:guidance:analysability}
+The analysability property \cbstart recognizes\cbend\ that data is now \cbstart\ highly complex and extensive, often large scale, and distributed. And yet, for safety purposes we need to make sure it is of suitable quality and able to support system goals.\cbend\
+We therefore need to ensure that it is possible to analyse it for key characteristics and \cbstart establish meaningful results using tools or other means.\cbend\ This property is related to explainabilty and may be performed by the same set of tools or techniques.
 
-\paragraph{The Explainability\index{Explainability Property|textbf} Property}\label{bkm:guidance:explainability}
-``Explainability'' has been added because it is necessary to establish, especially for learning or AI-based systems,
-what the purpose and effect data (and especially changes to data) has on a system
-and explain this to relevant \glspl{stakeholder} in terms that they can understand.
+\paragraph{The explainability\index{Explainability Property|textbf} property}\label{bkm:guidance:explainability}
+Explainability \cbstart describes the ability to establish what the purpose and effect data (and especially changes to data) has on a system
+and explain this to relevant \glspl{stakeholder} in terms that they can understand. It is particularly important for learning and AI-based systems.\cbend\
 This could be, for example, \gls{ml} training data or system \gls{configuration data}.
 This property is related to analysability and may be performed by the same set of tools or techniques.
 %
-\clearpage
+
 \begin{longtable}{|L{\dsiwgColumnWidth{0.24}}|C{\dsiwgColumnWidth{0.15}}|L{\dsiwgColumnWidth{0.61}}|}
-  \caption{\index{Property!Data}Properties of Data}
+  \caption{\index{Property!Data}Properties of data}
   \label{tab:PropertiesOfData}
   \\\hline\TableHeadColour{Property} & \TableHeadColour{Abbreviation} & \TableHeadColour{Description}\\\hline
   \endfirsthead
-    \caption[]{Properties of Data (continued)}
+    \caption[]{Properties of data (continued)}
   \\\hline\TableHeadColour{Property} & \TableHeadColour{Abbreviation} & \TableHeadColour{Description}\\\hline
   \endhead
   \multicolumn{3}{r}{\sl Continued on next page}
@@ -236,24 +241,23 @@ This property is related to analysability and may be performed by the same set o
   {\Gls{fidelity}}\index{Fidelity/Representation Property} & F & {How well the data maps to the real-world entity it is trying to model}\\\hline
   {Priority}\index{Priority Property} & P & {The data is presented / transmitted / made available in the order required}\\\hline
   {\Gls{sequencing}\index{Sequencing, Data}} & Q & {The data is preserved in the order required}\\\hline
-  {Intended Destination / Usage}\index{Intended Destination/Usage Property} & U & {The data is only sent to those that should have
+  {Intended destination / Usage}\index{Intended Destination/Usage Property} & U & {The data is only sent to those that should have
   access to
   it}\\\hline
   {Accessibility}\index{Accessibility Property} & B & {The data is visible only to those that should see it}\\\hline
   {Suppression}\index{Suppression Property} & S & {The data is intended never to be used again}\\\hline
   {History}\index{History Property} & H & {The data has an audit trail of changes}\\\hline
   {Lifetime}\index{Lifetime Property} & E & {When does the safety-related data expire}\\\hline
-  {Disposability / Deletability}\index{Disposability/Deletability Property} & D & {The data can be permanently removed when required}\\\hline
+  {Disposability / deletability}\index{Disposability/Deletability Property} & D & {The data can be permanently removed when required}\\\hline
   {Goldilocks\index{Goldilocks Property}} & G & {The data is just the right size -- not too much and not too little}\\\hline
   {Analysability\index{Analysability Property}} & Z & {The data is of a suitable size, type and representation (including any \gls{metadata}) to enable it be usefully analysed}\\\hline
   {Explainability\index{Explainability Property}} & X & {The data can be meaningfully explained to those who need to understand it by a suitable mechanism}\\\hline
 \end{longtable}
 
-\clearpage
 \autoref{tab:issuesCrossReference} illustrates where the data issues discussed in
-\hyperref[tab:issues]{section}~\ref{tab:issues} %Clunky, but \autoref inserted "subsubsection"
+\hyperref[tab:issues]{Section}~\ref{tab:issues} %Clunky, but \autoref inserted "subsubsection"
 can result in
-loss of one or more \index{Property!Data}Data Properties (x = potential loss of property).
+loss of one or more \index{Property!Data}data properties (x = potential loss of property).
 
 \begin{longtable}{|L{\dsiwgColumnWidth{0.16}}|%
     C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|%
@@ -262,7 +266,7 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
     C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|%
     C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|%
     C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|}
-  \caption{Properties that Can Be Lost through Issues}
+  \caption{Properties that can be lost through issues}
   \label{tab:issuesCrossReference}
   \\\hline
   & \rotatebox{90}{\index{Integrity Property}\Gls{integrity}}
@@ -278,12 +282,12 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   & \rotatebox{90}{\index{Availability Property}\Gls{availability}}
   & \rotatebox{90}{\index{\Gls{fidelity} Property}\Gls{fidelity}}
   & \rotatebox{90}{Priority} & \rotatebox{90}{\Gls{sequencing}\index{Sequencing, Data}}
-  & \rotatebox{90}{Intended Destination / Usage\index{Intended Destination / Usage Property}\ }
+  & \rotatebox{90}{Intended destination / usage\index{Intended Destination / Usage Property}\ }
   & \rotatebox{90}{Accessibility}
   & \rotatebox{90}{Suppression}
   & \rotatebox{90}{History}
   & \rotatebox{90}{Lifetime}
-  & \rotatebox{90}{Disposability/Deletability}
+  & \rotatebox{90}{Disposability / deletability}
   & \rotatebox{90}{Goldilocks\index{Goldilocks Property}}
   & \rotatebox{90}{Analysability\index{Analysability Property}}
   & \rotatebox{90}{Explainability\index{Explainability Property}}
@@ -296,7 +300,7 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   \TableHeadColour{S} & \TableHeadColour{H} & \TableHeadColour{E} & \TableHeadColour{D} &%
   \TableHeadColour{G} & \TableHeadColour{Z} & \TableHeadColour{X}\\\hline
   \endfirsthead
-    \caption[]{Properties that Can Be Lost through Issues (continued)}
+    \caption[]{Properties that can be lost through issues (continued)}
     \\\hline
     & \rotatebox{90}{\index{Integrity Property}Integrity}
     & \rotatebox{90}{\index{Completeness!Property}\gls{completeness}}
@@ -309,14 +313,14 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
     & \rotatebox{90}{Timeliness\index{Timeliness Property}}
     & \rotatebox{90}{Verifiability}\index{Verifiability Property}
     & \rotatebox{90}{\index{Availability Property}Availability}
-    & \rotatebox{90}{Fidelity/Representation\index{\Gls{fidelity} Property}}
+    & \rotatebox{90}{Fidelity / representation\index{\Gls{fidelity} Property}}
     & \rotatebox{90}{Priority} & \rotatebox{90}{Sequencing\index{Sequencing, Data}}
-    & \rotatebox{90}{Intended Destination/Usage\index{Intended Destination/Usage Property}\ }
+    & \rotatebox{90}{Intended destination / usage\index{Intended Destination/Usage Property}\ }
     & \rotatebox{90}{Accessibility}
     & \rotatebox{90}{Suppression}
     & \rotatebox{90}{History}
     & \rotatebox{90}{Lifetime}
-    & \rotatebox{90}{Disposability/Deletability}
+    & \rotatebox{90}{Disposability / deletability}
     & \rotatebox{90}{Goldilocks\index{Goldilocks Property}}
     & \rotatebox{90}{Analysability\index{Analysability Property}}
     & \rotatebox{90}{Explainability\index{Explainability Property}}
@@ -339,7 +343,7 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   \index{Data!Owner}Ownership      &   &   &   &   &   &   &   & x &   & x & x &   &   &   & x & x &   & x &   &   &   &   & x \\\hline
   Archiving / Retrieval &   &   &   &   &   &   &   &   &   &   &   &   &   &   & x & x & x & x & x & x &   & x & \\\hline
   Biasing        & x & x & x & x &   & x &   &   & x & x &   & x & x & x &   &   &   &   &   &   &   & x & x \\\hline
-  Falsification / Misinformation & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x \\\hline
+  Falsification / misinformation & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x \\\hline
   Defaulting     & x & x & x & x &   & x &   &   &   &   &   & x &   &   &   &   &   &   &   &   &   & x & \\\hline
   Sentinels      & x & x &   & x &   & x &   &   &   &   &   &   &   & x &   &   &   &   &   &   &   & x & \\\hline
   Aliasing       & x & x &   & x &   & x & x & x &   & x & x & x &   &   &   &   &   &   &   &   &   & x & x \\\hline
@@ -351,20 +355,20 @@ loss of one or more \index{Property!Data}Data Properties (x = potential loss of 
   Distribution   & x & x & x & x &   &   &   & x &   &   & x &   & x & x & x & x &   & x &   & x &   & x & x \\\hline
 \end{longtable}
 \clearpage
-\subsubsection{\glsxtrshort{hazop} Guidewords}\index{HAZOP}
+\subsubsection{\glsfmtshort{hazop} Guidewords}\index{HAZOP}
 \label{bkm:HazopGuidewords}
 A \gls{hazop} \cite{citation:iec61882:2016}
 provides a structured approach for identifying hazards. It involves a multidisciplinary team collaborating to identify potential hazards and operability problems. Structure and \index{Completeness!Hazard Identification}\gls{completeness} are supported through the use of guideword prompts, for example, considering the implications if software components perform functions early, late or not at all. These prompts are intended to stimulate imaginative thinking, to focus the study and to elicit ideas and discussion.
 
 \autoref{tab:HazopShort}\index{HAZOP} lists a set of guidewords for a data-focused \gls{hazop}, based upon the \index{Property!Data}properties defined in \autoref{tab:PropertiesOfData}. The intent here is to assess the impact of each guideword on the property under consideration. For example, the first row considers \dsiwgTextIT{loss} of \index{Integrity Property}\gls{integrity}, \dsiwgTextIT{partial loss} of \index{Integrity Property}\gls{integrity}, and so on.
-The list is non-exhaustive. Other guidewords may be useful for particular systems, or may be used to ensure the Data Safety Assessment is fully integrated within the system safety assessment\index{Safety Assessment!System}\index{System Safety Assessment|see{Safety Assessment, System}}. Note that a more detailed version of this table, including specific \gls{hazop}\index{HAZOP} Data Considerations, is available at \autoref{bkm:guidewords}.
+The list is non-exhaustive. Other guidewords may be useful for particular systems, or may be used to ensure the data safety assessment is fully integrated within the system safety assessment\index{Safety Assessment!System}\index{System Safety Assessment|see{Safety Assessment, System}}. \cbstart A\cbend\ more detailed version of this table, including specific \gls{hazop}\index{HAZOP} data considerations, is available at \autoref{bkm:guidewords}.
 
 \begin{longtable}{|L{\dsiwgColumnWidth{0.25}}|L{\dsiwgColumnWidth{0.75}}|}
-  \caption{\glsfmtshort{hazop} Guidewords: Concise Guide}\index{HAZOP}
+  \caption{\glsfmtshort{hazop} guidewords: concise guide}\index{HAZOP}
   \label{tab:HazopShort}
   \\\hline\TableHeadColour{Property} & \TableHeadColour{\glsfmtshort{hazop} Data Guidewords}\\\hline
   \endfirsthead
-  \caption[]{\glsfmtshort{hazop} Guidewords: Concise Guide (continued)}
+  \caption[]{\glsfmtshort{hazop} guidewords: concise guide (continued)}
   \\\hline\TableHeadColour{Property} & \TableHeadColour{\glsfmtshort{hazop} Data Guidewords}\\\hline
   \endhead
   \multicolumn{2}{r}{\sl Continued on next page}
@@ -384,12 +388,12 @@ The list is non-exhaustive. Other guidewords may be useful for particular system
   {\Gls{fidelity}}\index{Fidelity/Representation Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
   {Priority}\index{Priority Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
   {\Gls{sequencing}\index{Sequencing, Data}} & {Loss, partial loss, incorrect, multiple}\\\hline
-  {Intended Destination / Usage\index{Intended Destination/Usage Property}} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
+  {Intended destination / usage\index{Intended Destination/Usage Property}} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {Accessibility}\index{Accessibility Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
   {Suppression}\index{Suppression Property} & {Loss, partial loss, incorrect, too early, too late, too much, too little}\\\hline
   {History}\index{History Property} & {Loss, partial loss, incorrect, multiple}\\\hline
   {Lifetime}\index{Lifetime Property} & {Loss, too early, too late, incorrect, multiple, loss of sequence}\\\hline
-  {Disposability / Deletability}\index{Disposability/Deletability Property} & {Loss, partial loss, incorrect, too early, too late}\\\hline
+  {Disposability / deletability}\index{Disposability/Deletability Property} & {Loss, partial loss, incorrect, too early, too late}\\\hline
   {Goldilocks\index{Goldilocks Property}} & {Loss, partial loss, incorrect, too early, too late, too much,
     too little (insufficient), spurious}\\\hline
   {Analysability\index{Analysability Property}} & {Loss, partial loss, incorrect, too much, too little, loss of sequence, loss of tooling}\\\hline
