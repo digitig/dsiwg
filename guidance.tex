@@ -402,27 +402,27 @@ The list is non-exhaustive. Other guidewords may be useful for particular system
 
 \clearpage
 \subsection{Analyse Risks}
-\subsubsection{Establishing \glspl{dsal}}\index{Assurance Level!Data}
+\subsubsection{Establishing \glsfmtplural{dsal}}\index{Assurance Level!Data}
 \label{bkm:Establishing-DSALS}
 \hyperref[bkm:DSAL-table-section]{Section}~\ref{bkm:DSAL-table-section} %Clunky, but \autoref inserted "paragraph"
-presented a method for the assignment of \gls{dsal}s, by combining Severity and Likelihood through a risk matrix, such as \autoref{tab:DSAL-risk-matrix}. This section describes approaches that may be used to determine the Severity and Likelihood appropriate to the loss of any given \index{Property!Data}property. In principle, \autoref {tab:Likelihood} and \autoref{tab:Severity} are used together with \autoref{tab:DSAL-risk-matrix} to determine a \gls{dsal}. However it must be emphasised that the methods presented within this document to determine Severity and Likelihood, and to combine them to determine a \gls{dsal} should not be slavishly followed, but should be defined based upon the overall \index{Safety Requirement!System}safety requirements of the system being assessed. Examples of situations that may require such alternate approaches are described in
+presented a method for \cbstart assigning\cbend \gls{dsal}s, by combining severity and likelihood through a risk matrix, such as \autoref{tab:DSAL-risk-matrix}. This section describes approaches that may be used to determine the severity and likelihood appropriate to the loss of any given \index{Property!Data}property. In principle, \autoref {tab:Likelihood} and \autoref{tab:Severity} are used together with \autoref{tab:DSAL-risk-matrix} to determine a \gls{dsal}. However, \cbstart\ the methods to determine severity and likelihood, and to combine them to determine a \gls{dsal}, should not be followed rigidly, but should be defined based upon the overall \index{Safety Requirement!System}safety requirements of the system being assessed. Examples of situations that may require such alternate approaches are described in
 \hyperref[bkm:activities:analyse:partofsystemsafetyactivities]{section}~\ref{bkm:activities:analyse:partofsystemsafetyactivities}, %Clunky, again avoidging "paragraph"
 while potential approaches to customisation are described in \autoref{bkm:DsalCustomisation}.
-Such customisation is encouraged, but it is essential that any customised approach is recorded in the \gls{dsmp}.
+It is essential that any customised approach is recorded in the \gls{dsmp}\cbend.
 
 The likelihood of a data safety related risk is qualitatively determined by
 consideration of the significance of a \gls{error}, along with the defences currently in place against such errors. These factors may be addressed by
 considering the following characteristics:
 
-\begin{enumerate}
-  \item \dsiwgTextBF{Proximity}: how directly a data failure will lead to an accident;
-  \item \dsiwgTextBF{Dependency}: how dependent the application is on the \gls{dataset};
-  \item \dsiwgTextBF{Prevention}: the ability of the systems architect / developers to guard against \cbstart\glspl{error}\cbend;
-  \item \dsiwgTextBF{Detection}: the likelihood of being able to detect a data failure prior to an accident; and
-  \item \dsiwgTextBF{Correction}: the ability of the system to work around or correct \cbstart\glspl{error}\cbend.
-\end{enumerate}
+\begin{description}
+  \item[Proximity:] how directly a data failure will lead to an accident;
+  \item[Dependency:] how dependent the application is on the \gls{dataset};
+  \item[Preventability:] the ability of the systems architect / developers to guard against \cbstart\glspl{error}\cbend;
+  \item[Detectability:] the likelihood of being able to detect a data failure prior to an accident; and
+  \item[Correctability:] the ability of the system to work around or correct \cbstart\glspl{error}\cbend.
+\end{description}
 
-For example, errors that are easy to guard against are associated with low likelihoods. Conversely, errors that are difficult to detect are associated with high likelihoods. \autoref {tab:Likelihood} illustrates how aspects of these characteristics map to three, qualitative likelihoods.
+For example, errors that are easy to guard against are associated with low likelihoods. Conversely, errors that are difficult to detect are associated with high likelihoods. \autoref {tab:Likelihood} illustrates how aspects of these characteristics map to three, qualitative likelihoods.  \cbstart\ The table assumes the actions implied are taken. For example, a low likelihood for the ``prevention'' characteristic is only valid if the easy guard / barrier is actually implemented. Similarly, it is assumed that if an error is found, under the ``detection'' characteristic, an appropriate \index{Response}\gls{response} is implemented.\cbend\
 
 \begin{longtable}{|C{\dsiwgColumnWidth{0.19}}|C{\dsiwgColumnWidth{0.27}}|C{\dsiwgColumnWidth{0.27}}|C{\dsiwgColumnWidth{0.27}}|}
   \caption{Calculation of Likelihood}
@@ -449,9 +449,9 @@ For example, errors that are easy to guard against are associated with low likel
     Little reliance on data.\\
     \hline
   Prevention & %
-    Difficult or impossible to guard / barrier against errors. & %
-    Possible to guard / barrier against errors. & %
-    Easy to guard / barrier against error.\\
+    Difficult or impossible to \cbstart guard\cbend\ against errors. & %
+    Possible to \cbstart guard\cbend\ against errors. & %
+    Easy to \cbstart guard\cbend\ against error.\\
     \hline
   Detection & %
     Low or no chance of anything else detecting an error. & %
@@ -465,11 +465,8 @@ For example, errors that are easy to guard against are associated with low likel
     \hline
 \end{longtable}
 
-When applying this table to a specific data-related risk it is likely that consideration of different characteristics will result in different likelihoods. In order to provide an overall likelihood, it is assumed that the actions implied in the above table are taken. For example, a low likelihood for the ``prevention'' characteristic is only valid if the easy guard / barrier is actually implemented. Similarly, it is assumed that if an error is found, under the ``detection'' characteristic, an appropriate \index{Response}\gls{response} is implemented. With those assumptions in place, the overall \gls{dsal}\index{Assurance Level!Data} is
-associated with
-the lowest likelihood of any characteristic.
-
-Note that the approach described above in the determination of likelihood may seem non-intuitive, as we look for the {\bf lowest} likelihood, not the highest. However in doing so, it is important to only apply those rows of the table which are valid for the issue under consideration. Thus, for example, if it would be easy to implement a guard against a given error, but that guard is not actually in place, it would not be valid to claim that the likelihood is Low, on the basis of the Prevention row. In general, it should always be possible to determine likelihood based upon Proximity and Dependency, however the benefits of Prevention, Detection and Correction will not always be present.
+\cbstart Consideration of different characteristics is likely to result in different likelihoods. The overall \gls{dsal}\index{Assurance Level!Data} is that 
+associated with the lowest likelihood of any characteristic. Taking the lowest likelihood, not the highest, might  seem non-intuitive. However, in doing so, it is important to only apply those rows of the table which are valid for the issue under consideration. For example, if it would be easy to implement a guard against a given error, but that guard is not actually in place, it would not be valid to claim that the likelihood is low based on the prevention row. In theory it should always be possible to determine likelihood based upon proximity and dependency. However, the benefits of prevention, detection and correction will not always be present.\cbend\
 
 Risk severity is estimated against a five-point scale, as indicated in \autoref{tab:Severity}.
 
@@ -491,16 +488,16 @@ Risk severity is estimated against a five-point scale, as indicated in \autoref{
     Minor injury or temporary discomfort for one or two people. Minor environmental impact.\\
     \hline
   Moderate & %
-    An accident resulting in minor injuries affecting several people or one serious injury. Some environmental impact.\\
+    \cbstart Minor\cbend\ injuries affecting several people or one serious injury. Some environmental impact.\\
     \hline
   Significant & %
-    An accident resulting in minor injuries affecting many people or a few serious injuries. Significant environmental impact.\\
+    \cbstart Minor\cbend\ injuries affecting many people or a few serious injuries. Significant environmental impact.\\
     \hline
   Major & %
-    A serious accident resulting in serious injuries affecting a number of people, or a single death. Major environmental impact.\\
+    \cbstart Serious\cbend\ injuries affecting a number of people, or a single death. Major environmental impact.\\
     \hline
   Catastrophic & %
-    An accident resulting in several deaths. The accident could affect the general public or have wide and catastrophic environmental impact.\\
+    \cbstart Several deaths. Possibly affects the general public or has\cbend\ wide and catastrophic environmental impact.\\
     \hline
 \end{longtable}
 
@@ -511,27 +508,27 @@ As noted earlier, \glspl{dsal}\index{Assurance Level!Data} have some commonality
   \item These types of consideration are most closely related to system architecture, from which \index{Artefact, Data}\glspl{data artefact}, associated \index{Property!Data}\glspl{data property} and risks are derived. Hence, rather than applying any calculus at the \gls{dsal}\index{Assurance Level!Data} tier it is more appropriate to apply this to, for example, \glspl{fdal}, with \glspl{dsal} changing as a consequence of the revised system definition.
 \end{enumerate}
 
-\subsubsection{Analysing \glspl{dsal}}\index{Assurance Level!Data}
-When considering the possibility of data affecting software or software affecting data, the degree of contribution and existing mitigation\index{Mitigation} position are important. The mitigations should be proportionate and full credit for existing mitigations may reduce or obviate the need for additional work. A particular case is the use of strong checksums to ``wrap'' the data. If these are preserved through processing and can be checked later on, then undetected  corruption situations can be largely discounted.
+\subsubsection{Analysing \glsfmtplural{dsal}}\index{Assurance Level!Data}
+When considering the possibility of data affecting software or software affecting data, the degree of contribution and existing mitigation\index{Mitigation} position are important. The mitigations should be proportionate and full credit for existing mitigations may reduce or \cbstart remove\cbend\ the need for additional work. A particular case is the use of strong checksums to ``wrap'' the data. If these are preserved through processing and can be checked later on, then undetected  corruption \cbstart can\cbend\ be largely discounted.
 
-With regards to the first case (i.e., \dsiwgTextBF{data affecting software}) the issue is that the data used by the system may affect the software execution in a way that could credibly lead to \glspl{hazard}, but only where this data-induced effect is not easily detected or mitigated by other means. If this is the situation then appropriate measures need to be put in place \dsiwgTextIT{within the data} to mitigate this risk. Alternatively (or additionally), if the software within the system can be modified, mitigations\index{Mitigation} could be placed \dsiwgTextIT{within the software} to achieve or enhance the mitigation needed:
+\cbstart The with data affecting software is that the data used by the system might\cbend\ affect the software execution in a way that could credibly lead to \glspl{hazard}, but only where this data-induced effect is not easily detected or mitigated by other means. If this is the situation then appropriate measures need to be put in place \dsiwgTextIT{within the data} to mitigate this risk. Alternatively (or additionally), if the software within the system can be modified, mitigations\index{Mitigation} could be placed \dsiwgTextIT{within the software} to achieve or enhance the mitigation needed:
 
-\begin{enumerate}
-  \item \dsiwgTextBF{Mitigation within the data}\index{Mitigation} In many cases the best or only option is to improve the quality of the data to avoid the issue. This can be done by introducing a \gls{dsal}\index{Assurance Level!Data} for the data, related to the severity of the \gls{hazard} which may be induced, and thereby addressing the issue at cause. In this case, the \gls{dsal} is bearing a large amount of responsibility. This may mean that a greater number of the ``Recommended'' risk \index{Treatment!Risk}\gls{treatment} methods and approaches (identified in the following phase) need to be implemented.
-  \item \dsiwgTextBF{Mitigation within the software} If the data cannot be assured to a \gls{dsal}\index{Assurance Level!Data} (e.g., if it is supplied by a third party or legacy system), sometimes changes can be made to the software in the system to improve the situation. These mitigations could be functional (e.g., introduction of better range checking, rejection of illegal combinations of data values). This requires not only specific software changes but also associated \gls{verification} of these new features and any software changes will have to be implemented to an appropriate \index{Assurance Level!Software}\gls{software assurance level}. However there may be no particular functional mitigation\index{Mitigation} or set of mitigations that can be targeted at the particular issue (e.g., testing for illegal combinations of values is too complex). In this latter case, potentially the complete set of software within the system responsible for manipulating the data should be developed (or re-developed) to a suitable \index{Assurance Level!Software}\gls{software assurance level}. This level should be related to the severity of \gls{hazard} it is mitigating.
-\end{enumerate}
+\begin{description}
+  \item[Mitigation within the data:]\index{Mitigation} In many cases \cbstart\ this\cbend\ is the best or only option is to improve the quality of the data to avoid the issue. This can be done by introducing a \gls{dsal}\index{Assurance Level!Data} for the data, related to the severity of the \gls{hazard} which may be induced, and thereby addressing the issue at cause. In this case, the \gls{dsal} is bearing a large amount of responsibility. This may mean that a greater number of the ``recommended'' risk \index{Treatment!Risk}\gls{treatment} methods and approaches (identified in the following phase) need to be implemented.
+  \item[Mitigation within the software:] If the data cannot be assured to a \gls{dsal}\index{Assurance Level!Data} (e.g., if it is supplied by a third party or legacy system), sometimes changes can be made to the software in the system to improve the situation. These mitigations could be functional (e.g., introduction of better range checking, rejection of illegal combinations of data values). This requires not only specific software changes but also associated \gls{verification} of these new features, and any software changes will have to be implemented to an appropriate \index{Assurance Level!Software}\gls{software assurance level}. However there may be no particular functional \cbstart mitigations\index{Mitigation} that can be targeted at the particular issue (e.g., testing for illegal combinations of values might be\cbend\ too complex). \cbstart In this case, development (or re-development) to a suitable \index{Assurance Level!Software}\gls{software assurance level} of the complete set of software within the system should be considered\cbend\
+\end{description}
 
-With regards to the second case (i.e., \dsiwgTextBF{software affecting data}) the issue is that the software may affect (e.g., corrupt, delete) the data in a way that key \index{Property!Safety}safety properties may be lost and, furthermore, that loss may not be easily detected. In general the key \index{Property!Data}\glspl{data property} should be considered to see if any important ones for this data may be jeopardised. If so, a \index{Assurance Level!Software}\gls{software assurance level} from an appropriate standard or guideline should be introduced that mitigates this risk of undetected property loss. This \index{Assurance Level!Software}\gls{software assurance level} should be determined by the hazards that could be caused, and may be localised to the software that can cause the problem.
+\cbstart The issue with software affecting data\cbend\ is that the software may affect (e.g., corrupt, delete) the data in a way that key \index{Property!Safety}safety properties may be lost and\cbstart that such\cbend\ loss may not be easily detected. In general the key \index{Property!Data}\glspl{data property} should be considered to see if any important ones for this data may be jeopardised. If so, a \index{Assurance Level!Software}\gls{software assurance level} from an appropriate standard or guideline should be introduced that mitigates this risk of undetected property loss. This \index{Assurance Level!Software}\gls{software assurance level} should be determined by the hazards that could be caused, and may be localised to the software that can cause the problem.
 
-However there are specific functional and architectural approaches that may reduce or avoid the need for a \index{Assurance Level!Software}\gls{software assurance level}, including use of strong checksums and digital signatures, as well as techniques such as storing multiple copies, independent channels and so on. However it is important that the software performing the check of the \index{Property!Data}\gls{data property} will itself need to be developed to the introduced \index{Assurance Level!Software}\gls{software assurance level}. The key is to establish what the software in the system is doing to the data: if the operations are simple and non-changing, then the risk is lower; if the operations are complex involving transforming the data, using the data to calculate and insert new values, or reformatting the data then the risk is higher.
+However there are specific functional and architectural approaches that may reduce or avoid the need for a \index{Assurance Level!Software}\gls{software assurance level}, including use of strong checksums and digital signatures, as well as techniques such as storing multiple copies, independent channels and so on. \cbstart The\cbend\ software performing the check of the \index{Property!Data}\gls{data property} will itself need to be developed to the introduced \index{Assurance Level!Software}\gls{software assurance level}. The key is to establish what the software in the system is doing to the data: if the operations are simple and non-changing, then the risk is lower; if the operations are complex involving transforming the data, using the data to calculate and insert new values, or reformatting the data, then the risk is higher.
 
-It is necessary to decide how effective the functional mitigations\index{Mitigation} are in reducing impact to the particular \index{Property!Data}Data Properties, e.g., a strong checksum may be very effective at detecting unwanted change and therefore lower the \index{Assurance Level!Software}\gls{software assurance level} (from the perspective of data-related requirements). However a checksum may not help at all if the issue is one of timely message delivery. More \gls{information} on the use of checksums in the aviation domain is available in \cite{citation:koopman2015selection}; this \gls{information} is likely to be applicable to other domains as well.
+\cbstart The effectiveness of the functional mitigations\index{Mitigation} in reducing impact to the particular \index{Property!Data}data properties needs to be determined. For example, a strong checksum may be very effective at detecting unwanted change and therefore lower the \index{Assurance Level!Software}\gls{software assurance level} (from the perspective of data-related requirements). However, a checksum may not help at all if the issue is one of timely message delivery. More \gls{information} on the use of checksums in the aviation domain is available in \cite{citation:koopman2015selection}; this \gls{information} is likely to be applicable to other domains as well\cbend.
 
 \clearpage %Manual page break
 \subsection{Evaluate and Treat Risks}
 \label{bkm:EvaluateAndTreat}
-\subsubsection{Risk \index{Treatment!Risk}\\Glsfmttext{treatment}}
-There are a range of approaches that could be used to treat data-related risks. One option might be to redesign part of a system, either to remove the risk or to incorporate safety devices. Alternatively, ways of mitigating (or, more generally, treating) the risk could be devised. Another option could be to conduct further analysis, for example to better understand the likelihood of a risk occurring. In extreme cases, risk evaluation may lead to a recommendation to cancel a project.
+\subsubsection{Risk \index{Treatment!Risk}\Glsfmttext{treatment}}
+There is a range of approaches that could be used to treat data-related risks. One option might be to redesign part of a system, either to remove the risk or to incorporate safety devices. Alternatively, ways of mitigating (or, more generally, treating) the risk could be devised. Another option could be to conduct further analysis, for example to better understand the likelihood of a risk occurring. In extreme cases, risk evaluation may lead to a recommendation to cancel a project.
 
 It is apparent that some of these approaches involve repeating activities (or part of activities) discussed in earlier sections of this document. This type of repetition is to be expected given the iterative nature of risk management.
 
