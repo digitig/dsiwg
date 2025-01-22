@@ -135,14 +135,14 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
 \item[Ageing:] As highlighted above, all safety-related data has a lifetime and this needs to be explicitly managed. This can involve, for example, purging, deleting and alerting. \cbstart Ageing can occur as a result of changes external to the system (for example, records of the positions of other aircraft, newly discovered drug interactions, or new software patches), or it can result from internal changes (e.g., valves gradually becoming less responsive, \gls{configuration data} becoming out of date, or data schemas evolving over time).\cbend\
 
-\item[Transformation:] Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes. Sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}. Data can also appear to become something else. Without careful management, the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., \gls{validation} checks, sanity checks) or assurance measures may \cbstart be needed\cbend\ to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
+\item[Transformation:] Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes. Sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}. Data can also appear to become something else. Without careful management, the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., \gls{validation} checks,\cbstart\ credibility\cbend\ checks) or assurance measures may \cbstart be needed\cbend\ to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
 
 \item[Archiving and retrieval:] Safety-related data needs to be available when required. \cbstart Data accessibility needs to be considered\cbend over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
 
 \item[Biasing:] This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation, and interpretation of data. It is usually an unintentional distortion in the \gls{dataset}. One example of this is the confirmation bias that may be applied to safety claims, and another example is that synthetic autonomous vehicle training \glspl{database} can have issues with artificial data if it is not realistic.
 Although there is no perfect way of checking for this within the system, \index{Completeness!Checks}\gls{completeness}, statistical and validity checks on \glspl{dataset} may help.
 
-\item[Falsification / misinformation:] This issue arises where data is created, modified, or deleted either accidentally or deliberately so as to mislead or misinform potential consumers of that data. Examples from policing and criminal justice might \cbstart include notes being taken with fabricated times or dates or a crime from the wrong individual in a \gls{database} being accidentally added or removed\cbend. Another example might be a supplier falsifying quality records for materials or goods. There have been many cases of misinformation related to the Covid-19\index{Covid-19} pandemic (for example on social media) where people have been deliberately misled, and sometimes this has led to harm (\cbstart for example, bleach being drunk as a cure\cbend). \cbstart Possible mitigations\index{Mitigation}\cbend\ include digitally signing transmitted data, strong access controls, independent fact-checking, and audit records.
+\item[Falsification / misinformation:] This issue arises where data is created, modified, or deleted either accidentally or deliberately so as to mislead or misinform potential consumers of that data. Examples from policing and criminal justice might \cbstart include notes being taken with fabricated times or dates or a crime from the wrong individual in a \gls{database} being accidentally added or removed\cbend. Another example might be a supplier falsifying quality records for materials or goods. There have been many cases of misinformation related to the Covid-19\index{Covid-19} pandemic (for example on social media) where people have been deliberately misled, and sometimes this has led to harm (\cbstart for example, bleach being drunk as a cure\cbend). \cbstart Possible \glspl{mitigation}\index{Mitigation}\cbend\ include digitally signing transmitted data, strong access controls, independent fact-checking, and audit records.
 
 item[Defaulting:] Many systems use default or initial values for \glspl{item data}; sometimes in \glspl{dataset} and sometimes embedded in software. Often these default values are designed to be neutral (e.g., ``0'') or unrealistic (e.g., ``VOID''). There are essentially two cases:
 \begin{enumerate}
@@ -509,20 +509,20 @@ As noted earlier, \glspl{dsal}\index{Assurance Level!Data} have some commonality
 \end{enumerate}
 
 \subsubsection{Analysing \glsfmtplural{dsal}}\index{Assurance Level!Data}
-When considering the possibility of data affecting software or software affecting data, the degree of contribution and existing mitigation\index{Mitigation} position are important. The mitigations should be proportionate and full credit for existing mitigations may reduce or \cbstart remove\cbend\ the need for additional work. A particular case is the use of strong checksums to ``wrap'' the data. If these are preserved through processing and can be checked later on, then undetected  corruption \cbstart can\cbend\ be largely discounted.
+When considering the possibility of data affecting software or software affecting data, the degree of contribution and existing \gls{mitigation}\index{Mitigation} position are important. The \glspl{mitigation} should be proportionate and full credit for existing \glspl{mitigation} may reduce or \cbstart remove\cbend\ the need for additional work. A particular case is the use of strong checksums to ``wrap'' the data. If these are preserved through processing and can be checked later on, then undetected  corruption \cbstart can\cbend\ be largely discounted.
 
-\cbstart The with data affecting software is that the data used by the system might\cbend\ affect the software execution in a way that could credibly lead to \glspl{hazard}, but only where this data-induced effect is not easily detected or mitigated by other means. If this is the situation then appropriate measures need to be put in place \dsiwgTextIT{within the data} to mitigate this risk. Alternatively (or additionally), if the software within the system can be modified, mitigations\index{Mitigation} could be placed \dsiwgTextIT{within the software} to achieve or enhance the mitigation needed:
+\cbstart The with data affecting software is that the data used by the system might\cbend\ affect the software execution in a way that could credibly lead to \glspl{hazard}, but only where this data-induced effect is not easily detected or mitigated by other means. If this is the situation then appropriate measures need to be put in place \dsiwgTextIT{within the data} to mitigate this risk. Alternatively (or additionally), if the software within the system can be modified, \glspl{mitigation}\index{Mitigation} could be placed \dsiwgTextIT{within the software} to achieve or enhance the \gls{mitigation} needed:
 
 \begin{description}
-  \item[Mitigation within the data:]\index{Mitigation} In many cases \cbstart\ this\cbend\ is the best or only option is to improve the quality of the data to avoid the issue. This can be done by introducing a \gls{dsal}\index{Assurance Level!Data} for the data, related to the severity of the \gls{hazard} which may be induced, and thereby addressing the issue at cause. In this case, the \gls{dsal} is bearing a large amount of responsibility. This may mean that a greater number of the ``recommended'' risk \index{Treatment!Risk}\gls{treatment} methods and approaches (identified in the following phase) need to be implemented.
-  \item[Mitigation within the software:] If the data cannot be assured to a \gls{dsal}\index{Assurance Level!Data} (e.g., if it is supplied by a third party or legacy system), sometimes changes can be made to the software in the system to improve the situation. These mitigations could be functional (e.g., introduction of better range checking, rejection of illegal combinations of data values). This requires not only specific software changes but also associated \gls{verification} of these new features, and any software changes will have to be implemented to an appropriate \index{Assurance Level!Software}\gls{software assurance level}. However there may be no particular functional \cbstart mitigations\index{Mitigation} that can be targeted at the particular issue (e.g., testing for illegal combinations of values might be\cbend\ too complex). \cbstart In this case, development (or re-development) to a suitable \index{Assurance Level!Software}\gls{software assurance level} of the complete set of software within the system should be considered\cbend\
+  \item[\Gls{mitigation} within the data:]\index{Mitigation} In many cases \cbstart\ this\cbend\ is the best or only option is to improve the quality of the data to avoid the issue. This can be done by introducing a \gls{dsal}\index{Assurance Level!Data} for the data, related to the severity of the \gls{hazard} which may be induced, and thereby addressing the issue at cause. In this case, the \gls{dsal} is bearing a large amount of responsibility. This may mean that a greater number of the ``recommended'' risk \index{Treatment!Risk}\gls{treatment} methods and approaches (identified in the following phase) need to be implemented.
+  \item[\Gls{mitigation} within the software:] If the data cannot be assured to a \gls{dsal}\index{Assurance Level!Data} (e.g., if it is supplied by a third party or legacy system), sometimes changes can be made to the software in the system to improve the situation. These \glspl{mitigation} could be functional (e.g., introduction of better range checking, rejection of illegal combinations of data values). This requires not only specific software changes but also associated \gls{verification} of these new features, and any software changes will have to be implemented to an appropriate \index{Assurance Level!Software}\gls{software assurance level}. However there may be no particular functional \cbstart \glspl{mitigation}\index{Mitigation} that can be targeted at the particular issue (e.g., testing for illegal combinations of values might be\cbend\ too complex). \cbstart In this case, development (or re-development) to a suitable \index{Assurance Level!Software}\gls{software assurance level} of the complete set of software within the system should be considered\cbend\
 \end{description}
 
 \cbstart The issue with software affecting data\cbend\ is that the software may affect (e.g., corrupt, delete) the data in a way that key \index{Property!Safety}safety properties may be lost and\cbstart that such\cbend\ loss may not be easily detected. In general the key \index{Property!Data}\glspl{data property} should be considered to see if any important ones for this data may be jeopardised. If so, a \index{Assurance Level!Software}\gls{software assurance level} from an appropriate standard or guideline should be introduced that mitigates this risk of undetected property loss. This \index{Assurance Level!Software}\gls{software assurance level} should be determined by the hazards that could be caused, and may be localised to the software that can cause the problem.
 
 However there are specific functional and architectural approaches that may reduce or avoid the need for a \index{Assurance Level!Software}\gls{software assurance level}, including use of strong checksums and digital signatures, as well as techniques such as storing multiple copies, independent channels and so on. \cbstart The\cbend\ software performing the check of the \index{Property!Data}\gls{data property} will itself need to be developed to the introduced \index{Assurance Level!Software}\gls{software assurance level}. The key is to establish what the software in the system is doing to the data: if the operations are simple and non-changing, then the risk is lower; if the operations are complex involving transforming the data, using the data to calculate and insert new values, or reformatting the data, then the risk is higher.
 
-\cbstart The effectiveness of the functional mitigations\index{Mitigation} in reducing impact to the particular \index{Property!Data}data properties needs to be determined. For example, a strong checksum may be very effective at detecting unwanted change and therefore lower the \index{Assurance Level!Software}\gls{software assurance level} (from the perspective of data-related requirements). However, a checksum may not help at all if the issue is one of timely message delivery. More \gls{information} on the use of checksums in the aviation domain is available in \cite{citation:koopman2015selection}; this \gls{information} is likely to be applicable to other domains as well\cbend.
+\cbstart The effectiveness of the functional \glspl{mitigation}\index{Mitigation} in reducing impact to the particular \index{Property!Data}data properties needs to be determined. For example, a strong checksum may be very effective at detecting unwanted change and therefore lower the \index{Assurance Level!Software}\gls{software assurance level} (from the perspective of data-related requirements). However, a checksum may not help at all if the issue is one of timely message delivery. More \gls{information} on the use of checksums in the aviation domain is available in \cite{citation:koopman2015selection}; this \gls{information} is likely to be applicable to other domains as well\cbend.
 
 \clearpage %Manual page break
 \subsection{Evaluate and Treat Risks}
@@ -535,15 +535,15 @@ It is apparent that some of these approaches involve repeating activities (or pa
 Discussion is an important part of risk evaluation, allowing a variety of different perspectives to be brought to bear. Documentation is also important, partly to allow these discussions to occur on an even footing and partly to ensure that decisions and supporting rationale are recorded.
 
 \subsubsection{Mitigating Data Safety Risks}\index{Mitigation|textbf}
-A range of methods and approaches can be used to mitigate the identified data safety risks. Since mitigation\index{Mitigation} can be a complex process, requiring collaboration with all system engineering elements, a collection of high-level mitigation measures is provided. These may particularly assist those attempting to explain the process to non-practitioners or those conducting assessments in less regulated environments. \cbstart These high-level mitigation measures may prove sufficient for practitioners assessing systems which do not have a high safety criticality\cbend.
+A range of methods and approaches can be used to mitigate the identified data safety risks. Since \gls{mitigation}\index{Mitigation} can be a complex process, requiring collaboration with all system engineering elements, a collection of high-level \gls{mitigation} measures is provided. These may particularly assist those attempting to explain the process to non-practitioners or those conducting assessments in less regulated environments. \cbstart These high-level \gls{mitigation} measures may prove sufficient for practitioners assessing systems which do not have a high safety criticality\cbend.
 
-For practitioners conducting assessments in highly regulated environments, or for highly safety-critical systems, \cbstart appropriate\cbend\ mitigation\index{Mitigation} measures should be derived from the high-level table. To assist these practitioners, suggested methods and approaches are provided in a series of more detailed tables. These methods and approaches have been developed through cross-industry collaboration, but they may not be complete, especially for different types of system. 
+For practitioners conducting assessments in highly regulated environments, or for highly safety-critical systems, \cbstart appropriate\cbend\ \gls{mitigation}\index{Mitigation} measures should be derived from the high-level table. To assist these practitioners, suggested methods and approaches are provided in a series of more detailed tables. These methods and approaches have been developed through cross-industry collaboration, but they may not be complete, especially for different types of system. 
 
-The practitioner should always consider whether the mitigation\index{Mitigation} measures used to mitigate the data safety risks are sufficient for their purposes. In highly safety-critical systems, each data safety risk can be linked to a system-level \cbstart hazard\cbend. Each hazard \cbstart\ should be\cbend\ tracked in accordance with the existing system safety method, and mitigations \cbstart\ should be reviewed for their feasibility, potential to introduce new or amended hazards, and effectiveness\cbend.
+The practitioner should always consider whether the \gls{mitigation}\index{Mitigation} measures used to mitigate the data safety risks are sufficient for their purposes. In highly safety-critical systems, each data safety risk can be linked to a system-level \cbstart hazard\cbend. Each hazard \cbstart\ should be\cbend\ tracked in accordance with the existing system safety method, and \glspl{mitigation} \cbstart\ should be reviewed for their feasibility, potential to introduce new or amended hazards, and effectiveness\cbend.
 
-\paragraph{High-level mitigation measures}
-\autoref{tab:HighLevelMitigations} presents a number of generally applicable mitigation measures.
-Each of these mitigation measures should be reviewed to establish whether it is relevant to the system under assessment.
+\paragraph{High-level \glsfmttext{mitigation} measures}
+\autoref{tab:HighLevelMitigations} presents a number of generally applicable \gls{mitigation} measures.
+Each of these \gls{mitigation} measures should be reviewed to establish whether it is relevant to the system under assessment.
 
 For each \index{Assurance Level!Data}\gls{dsal}, the tables indicate whether the method / approach is:
 \begin{itemize}
@@ -557,11 +557,11 @@ For each \index{Assurance Level!Data}\gls{dsal}, the tables indicate whether the
     |C{\dsiwgColumnWidth{0.08}}|L{\dsiwgColumnWidth{0.22}}|C{\dsiwgColumnWidth{0.05}}|C{\dsiwgColumnWidth{0.05}}%
     |C{\dsiwgColumnWidth{0.05}}|C{\dsiwgColumnWidth{0.05}}|L{\dsiwgColumnWidth{0.5}}|%
   }%
-  \caption{High-level mitigation measures}\index{Mitigation}
+  \caption{High-level \glsfmttext{mitigation} measures}\index{Mitigation}
   \label{tab:HighLevelMitigations}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}\index{Assurance Level!Data}}}\index{Assurance Level!Data} & \TableHeadColour{}\\\cline{3-6}
-  \multirow{-2}*{\TableHeadColourCX{Ref}} & \multirow{-2}*{\TableHeadColour{Mitigation Measure}} & %
+  \multirow{-2}*{\TableHeadColourCX{Ref}} & \multirow{-2}*{\TableHeadColour{\Glsfmttext{mitigation} Measure}} & %
   \TableHeadColourCX{1} & \TableHeadColourCX{2} & \TableHeadColourCX{3} & \TableHeadColourCX{4} & \multirow{-2}*{\TableHeadColour{Example(s)}}\\\hline
   \hline
   \endfirsthead
@@ -729,7 +729,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation methods: system design}\index{Mitigation}
+  \caption{\Glsfmttext{mitigation} methods: system design}\index{Mitigation}
   \label{tab:MethodsSystemDesign}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
@@ -739,7 +739,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
     \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Gglsfmttext{data property}}}\\\hline
   \hline
   \endfirsthead
-  \caption[]{Mitigation methods: system design (continued)}\index{Mitigation}
+  \caption[]{\Glsfmttext{mitigation} methods: system design (continued)}\index{Mitigation}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
     \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
@@ -783,7 +783,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
   \hline
   SD.16 & Data \index{Integrity Property}\gls{integrity} sampling & \dsiwgTextTT{..D..} & HR & HR & R & R & The \index{Integrity Property}\gls{integrity} of subsets of data is periodically checked, in accordance with a given selection criteria (e.g., random, critical records). & \dsiwgTextTT{IC..O.....L............}\\
   \hline
-  SD.17 & Sanity / reasonability checks & \dsiwgTextTT{V.D..} & R & R & HR & HR & Dedicated processing is implemented to check that data is within reasonable tolerances and / or logically / semantically consistent (e.g., range checks, date checks, record counts, record sizes, special values - \gls{nan}). & \dsiwgTextTT{I...O...............G..}\\
+  SD.17 &\cbstart\ Credibility\cbend\ / reasonability checks & \dsiwgTextTT{V.D..} & R & R & HR & HR & Dedicated processing is implemented to check that data is within reasonable tolerances and / or logically / semantically consistent (e.g., range checks, date checks, record counts, record sizes, special values - \gls{nan}). & \dsiwgTextTT{I...O...............G..}\\
   \hline
   SD.18 & Data correlation & \dsiwgTextTT{..D..} & R & R & HR & HR & Data from a number of sources exists to permit a cross-correlation of the data supplied from one source (the master) with other sources. & \dsiwgTextTT{ICNY...................}\\
   \hline
@@ -811,7 +811,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation methods: data design}\index{Mitigation}
+  \caption{\Glsfmttext{mitigation} methods: data design}\index{Mitigation}
   \label{tab:MethodsDataDesign}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
@@ -821,7 +821,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
     \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endfirsthead
-   \caption[]{Mitigation methods: data design (continued)}\index{Mitigation}
+   \caption[]{\Glsfmttext{mitigation} methods: data design (continued)}\index{Mitigation}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
     \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
@@ -858,7 +858,7 @@ Within each table, the ``Serial'' column lists a unique serial number for each t
 \clearpage% Avoids having the following title as a widow on the first page
 \paragraph{Data \glsfmttext{verification}}
 \label{bkm:dataVerification}
-A number of issues need to be considered during the implementation phase of a programme, to ensure that at any point in the programme we know how much we can rely upon the data. \autoref{tab:MethodsDataProcedures} addresses those mitigations\index{Mitigation} relevant to this whole programme phase, not just from data capture or generation. It therefore includes aspects of data management, checking and expiry.
+A number of issues need to be considered during the implementation phase of a programme, to ensure that at any point in the programme we know how much we can rely upon the data. \autoref{tab:MethodsDataProcedures} addresses those \glspl{mitigation}\index{Mitigation} relevant to this whole programme phase, not just from data capture or generation. It therefore includes aspects of data management, checking and expiry.
 \begin{longtable}
   {%
     |C{\dsiwgColumnWidth{0.07}}%Index
@@ -866,7 +866,7 @@ A number of issues need to be considered during the implementation phase of a pr
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation methods: data \glsfmttext{verification}}\index{Mitigation}
+  \caption{\glsfmttext{mitigation} methods: data \glsfmttext{verification}}\index{Mitigation}
   \label{tab:MethodsDataProcedures}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data}& %
@@ -876,7 +876,7 @@ A number of issues need to be considered during the implementation phase of a pr
   \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endfirsthead
-  \caption[]{Mitigation methods: data \glsfmttext{verification} (continued)}\index{Mitigation}
+  \caption[]{\Glsfmttext{mitigation} methods: data \glsfmttext{verification} (continued)}\index{Mitigation}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
@@ -927,7 +927,7 @@ A number of issues need to be considered during the implementation phase of a pr
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation methods: data migration}\index{Mitigation}
+  \caption{\Glsfmttext{mitigation} methods: data migration}\index{Mitigation}
   \label{tab:MethodsDataMigration}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
@@ -937,7 +937,7 @@ A number of issues need to be considered during the implementation phase of a pr
   \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
   \hline
   \endfirsthead
-  \caption[]{Mitigation methods: data migration (continued)}\index{Mitigation}
+  \caption[]{\Glsfmttext{mitigation} methods: data migration (continued)}\index{Mitigation}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
   \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
@@ -1044,7 +1044,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation methods: data checking}\index{Mitigation}
+  \caption{\Glsfmttext{mitigation} methods: data checking}\index{Mitigation}
   \label{tab:MethodsDataChecking}
   \\\hline
   \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
@@ -1093,7 +1093,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation methods: test data}\index{Mitigation}
+  \caption{\Glsfmttext{mitigation} methods: test data}\index{Mitigation}
   \label{tab:MethodsTestData}
   \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
@@ -1103,7 +1103,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
 \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endfirsthead
-  \caption[]{Mitigation methods: test data (continued)}\index{Mitigation}
+  \caption[]{\Glsfmttext{mitigation} methods: test data (continued)}\index{Mitigation}
 \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
@@ -1156,7 +1156,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation methods: data media handling -- paper / physical storage}\index{Mitigation}
+  \caption{\Glsfmttext{mitigation} methods: data media handling -- paper / physical storage}\index{Mitigation}
   \label{tab:MethodsDataMediaPhysical}
   \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
@@ -1211,7 +1211,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
     |C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}|C{\dsiwgColumnWidth{0.04}}%DSALs
     |L{\dsiwgColumnWidth{0.25}}|C{\dsiwgColumnWidth{0.26}}|%Notes, Properties
   }%
-  \caption{Mitigation methods: data media handling -- electronic storage}\index{Mitigation}
+  \caption{\Glsfmttext{mitigation} methods: data media handling -- electronic storage}\index{Mitigation}
   \label{tab:MethodsDataMediaElectronic}
   \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
@@ -1221,7 +1221,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
 \multirow{-2}*{\TableHeadColour{Notes}} & \multirow{-2}*{\TableHeadColour{\index{Property!Data}Data Property}}\\\hline
 \hline
 \endfirsthead
-  \caption[]{Mitigation methods: data media handling -- electronic storage (continued)}\index{Mitigation}
+  \caption[]{\Glsfmttext{mitigation} methods: data media handling -- electronic storage (continued)}\index{Mitigation}
 \\\hline
 \TableHeadColour{} & \TableHeadColour{} & \TableHeadColour{Data} & \multicolumn{4}{c|}{\TableHeadColourCX{\glsfmtshort{dsal}}}\index{Assurance Level!Data} & %
 \TableHeadColour{} & \TableHeadColour{}\\\cline{3-6}
@@ -1261,12 +1261,12 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
   \hline
 \end{longtable}
 
-\paragraph{Recording the data safety risk mitigation}\index{Mitigation}
+\paragraph{Recording the data safety risk \glsfmttext{mitigation}}\index{Mitigation}
 The \gls{dsmp} can be used to document:
 \begin{itemize}
-  \item the tables of mitigation measures (or methods and approaches) used for the system, context, and planned implementation under assessment;
-  \item any specific mitigation measures identified for the system and their source / justification;
+  \item the tables of \gls{mitigation} measures (or methods and approaches) used for the system, context, and planned implementation under assessment;
+  \item any specific \gls{mitigation} measures identified for the system and their source / justification;
   \item planned compliance with the tables; and
-  \item confirmation that the mitigation measures are sufficiently complete and consistent.
+  \item confirmation that the \gls{mitigation} measures are sufficiently complete and consistent.
 \end{itemize}  
 The overall safety justification for the given \cbstart project, service, or operational context must then provide evidence of compliance with\cbend\ the plan.
