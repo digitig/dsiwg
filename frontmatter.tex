@@ -122,58 +122,23 @@ While the authors and the publishers have used reasonable endeavours to ensure t
   \\\hline
   {3.6} & {The \gls{dsiwg} Team} & {For publication at \gls{sss}'24} & {13-FEB-2024}
   \\\hline
+  {3.7} & {The \gls{dsiwg} Team} & {For publication at \gls{sss}'25} & {04-FEB-2024}
+  \\\hline
 \end{longtable}
 %
 \subsection*{Changes Since the Last Edition}%\todo{Update this whole section}
-In this update to the Guidance, one update has been made that introduces a slight incompatibility
-to previous updates of the 3.x series.
-Within \autoref{bkm:guidance}, item DD.10 has been deleted from \autoref{tab:MethodsDataDesign}
-and inserted as DI.13 into \autoref{tab:MethodsDataProcedures}.
-This concerns the technique ``Update Comparison'', that when data has been updated,
-it can be compared with its previous value.
-The change has been made because \autoref{tab:MethodsDataProcedures} is concerned with the
-\gls{verification} of data, and is therefore a more appropriate location for this technique.
-
-Other updates incorporated within this version of the guidance consist primarily of:%\todo{Update this later}
+The main changes in this edition are:
 \begin{itemize}
-\item \dsiwgRef{Section}{bkm:dataVerification} has been renamed from
-  ``Data Implementation'' to ``Data \Gls{verification}'', as it is a more accurate title.
-\item \autoref{tab:MethodsDataProcedures} has been renamed from
-  ``Mitigation methods: data implementation'' to ``Mitigation methods: data \gls{verification}''
-  as the new title is more descriptive of the techniques within the table.
-  \item Collection of accidents enhanced:
-    \begin{itemize}
-     \item New \autoref{tab:IncidentsByDomain}: A listing of all the accidents within that
-       appendix by domain, such as Air or Maritime.
-     \item New accident in \dsiwgRef{Appendix}{bkm:incacc:horizon}: Failure of the Post Office Horizon accounting system.
-     \item New accident in \dsiwgRef{Appendix}{bkm:incacc:agincourt}: Failure to understand capabilities of English longbow led to devestating losses.
-     \end{itemize}
-  \item \dsiwgRef{Appendix}{bkm:MachineLearning} enhanced by the addition of new
-    \autoref{bkm:MachineLearning:Hallucinations} to address the problem of hallucinations.
-%  \item New \dsiwgRef{Appendix}{bkm:autonomy} presents issues and concerns that should be considered when employing AI or autonomy. 
-   \item Modified \dsiwgRef{Appendix}{bkm:darkdata} by merging this appendix on Dark Data with the previous appendix on Dazzle Data, and adding \autoref{tab:DarkDazzleComparison}, which compares the properties of these two kinds of data.
-%   \item New \dsiwgRef{Appendix}{bkm:radish} to introduce the Radish tool,
-%  which is being developed to assist in the application of this Guidance document.
+\item the inclusion of a process flow diagram at \autoref{bkm:principlesprocess}; and
+\item the inclusion of an appendix (\autoref{bkm:radish}) on the Radish tool.
+\end{itemize}.
+The inclusion of the new \autoref{bkm:radish} means that subsequent appendix numbers have changed.
 
-  \item A number of small adjustments were also made to the text,
-  where further clarity had been recommended by users of the document. 
-%        including increasing the visibility and accuracy of hyperlinks within the electronic versions of the document.
-\end{itemize}
+Hyperlinks (in the electronic edition) to abbreviations, acronyms and defined terms have been substantially expanded and further abbreviations, acronyms and defined terms have been added.
 
-Since the last edition, \gls{ai} systems, particularly those based on
-\glspl{llm}\index{Language Model, Large}\index{LLM|see{Language Model, Large}} have received a
-lot of attention.
-These are very heavily \glspl{data-driven system}, but most of the hazards that have been identified are
-at the societal, system, or algorithmic level and so not within the scope of this guidance.
-However, issues of  \hyperref[tab:issues]{biasing, interpretation and, arguably, falsification}
-may arise, and those sections have been reviewed to ensure they remain applicable to this rapidly
-changing field.
-Similarly, the \glspl{data property}
-\gls{completeness}\index{Completeness!Property}, Analysability\index{Analysability Property},
-and Explainability\index{Explainability Property} have been reviewed to ensure their continued
-applicability.
+The body of text the guidance, but not yet the appendices, has been edited for clarity and consistency.
 
-To assist users of earlier 3.x versions of the guidance in ensuring that their existing data safety arguments have not been impacted by this update, a version of this document is available which has been annotated with change bars. The annotated version is available at \href{http://scsc.uk/scsc-127I}{http://scsc.uk/scsc-127I}
+To assist users of earlier 3.x versions of the guidance in ensuring that their existing data safety arguments have not been impacted by this update, a version of this document is available which has been annotated with change bars. To avoid clutter, minor changes that should not affect the meaning of the text have not been marked with change bars. The annotated version is available at \href{http://scsc.uk/scsc-127I}{http://scsc.uk/scsc-127J}
 
 
 \subsection*{Future work}
@@ -190,7 +155,6 @@ a number of improvements to the guidance are currently planned.
 These improvements are intended to clarify the application of the data safety process
 and include:
 \begin{itemize}
-\item the addition of a process flow diagram,
 \item further detail on the assurance of communications and data flows,
 \item data safety considerations associated with distributed \glspl{dataset} and Blockchain,
 \item addition of new \glspl{treatment} to the tables in \autoref{bkm:guidance},
@@ -199,32 +163,28 @@ and include:
 \item reordering of parts of the document to improve readability, especially as regards likelihood, 
 \item further detail on tool assurance,
 \item harmonisation of language and guidance on how organizations may expand the tables to incorporate their own internal processes.
-\item guidance on the application of the Data Safety Culture Questionnaire,
+\item guidance on the application of the data safety culture questionnaire,
 \end{itemize}
 Several of these changes are likely to
 cause parts of the document to be re-ordered -- they have therefore been deferred to the next major update, in version 4.0 of the guidance.
 
-If you or your organization are interested in learning more about the work of the \gls{dsiwg} or joining either of the sub-groups,
+If you or your organization are interested in learning more about the work of the \gls{dsiwg} or joining any of the sub-groups,
 please visit the \gls{scsc} website, where more information including contact details may be found on the ``Working groups'' section of the site. For direct access to the \gls{dsiwg} area of the site, please visit \href{https://scsc.uk/gd}{https://scsc.uk/gd}
 %
 %
 %
 \subsection*{Related working groups}
-The \gls{scsc} sponsors initiatives to develop methods and techniques through a number of working groups. These groups each address safety aspects peculiar to their domain, including data aspects when appropriate. The current list of working groups includes:
+\cbstart The \gls{scsc} sponsors initiatives to develop methods and techniques through a number of working groups. These groups each address safety aspects peculiar to their domain, including data aspects when appropriate. The current list of working groups includes:
 %
 \begin{itemize}
   \item Assurance Cases,
   \item Autonomous Systems Safety,
   \item Security Aspects of Safety,
-  \item Safe \gls{ai},
+  \item \Gls{saiwg},
   \item Safer Complex Systems. 
 \end{itemize}
 %
-The newest addition is the \gls{saiwg}, which aims to capture cross-domain best practice and guidance on key topics within the design, evaluation, assurance, and approval of safety systems that use or are developed using \gls{ai}, bringing together emerging standards and key results from the incredible amount of research being conducted into \gls{ai} safety.
-
-The working group was launched at SSS’24. It will conduct regular meetings, workshops, and publications to share knowledge and experience on various topics related to \gls{ai} and safety systems, such as co-ordination of safety with other disciplines, evaluation of risk, and mapping of terminology and language.
-
-A current list of working groups, with links to further details on the work of each group, with contact details of each lead engineer may be found here: \href{https://scsc.uk/g}{https://scsc.uk/g}.
+\cbend
 %
 \clearpage
 %
