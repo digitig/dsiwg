@@ -95,7 +95,7 @@ Note that these may be three separate organizations, or they may be separate bus
 
 In this supply chain, the Commissioning User is a Consumer of the data and the Data Acquirer is a Producer of data. The Data Provisioner acts both as a Consumer (from the Data Acquirer) and Producer (to the Commissioning User) of data. Similarly, an organization that augments \glspl{dataset} is both a Consumer and Producer of data in the supply chain.
 
-The Commissioning User Requirement Analysis is the key process step where the Commissioning User's expectations for data (including \index{Fidelity/Representation Property}fidelity levels for associated \index{Property!Data}properties) are agreed with the Data Provisioner. The requirements may be adjusted because of physical constraints (e.g., loss of precision because of physical measuring device constraints) and may include additional requirements to augment the captured data with additional \gls{information} (e.g., airport codes added to a measurement of a given runway length).
+The Commissioning User Requirement Analysis is the key process step where the Commissioning User's expectations for\cbstart\ data are\cbend\ agreed with the Data Provisioner. The requirements may be adjusted because of physical constraints (e.g., loss of precision because of physical measuring device constraints) and may include additional requirements to augment the captured data with additional \gls{information} (e.g., airport codes added to a measurement of a given runway length).
 
 The Data Provisioner may employ a Data Acquirer to capture the data (e.g., to carry out a physical survey of a site). The acquisition phase may itself require a specialised system to be built to perform the capture and data refinement to meet the Data Provisioner's specifications. Such systems will then themselves be subject to the Development lifecycle model considerations discussed above. Likewise, the data augmentation phase may require further system development processes or indeed, could trigger an instance of the model again as the Data Provisioner acting as a Commissioning User.
 
@@ -172,7 +172,7 @@ While they are interesting, and potentially important, these philosophical consi
 \begin{itemize}
   \item It is easy for data to be reused in a range of contexts and despite appearances it is not trivial to translate an assurance argument that the data is fit for purpose from one context to another.
   \item It is not always clear who owns or is responsible for data, especially when data is shared and processed amongst a collection of disparate systems.
-	\item Data often has a lifetime, that is a time after which it is no longer valid. This may be a strict cut off, or a more gradual degradation in the utility (or applicability) of the data.
+	\item Data often has a \gls{lifetime}, that is a time after which it is no longer valid. This may be a strict cut off, or a more gradual degradation in the utility (or applicability) of the data.
   \item There is often a default value for data. While this can make systems easier to use and hence more productive it can be difficult to identify a default value that is appropriate for all circumstances.
   \item It can be easy to change data. In some circumstances this can give rise to a temptation to make uncontrolled and potentially untested changes. It can also allow data to be fraudulently changed after an accident.
 \end{itemize}

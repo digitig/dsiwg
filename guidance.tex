@@ -137,7 +137,7 @@ There are some risk-inducing issues that are different or more prevalent for dat
 
 \item[Transformation:] Data is often filtered, mapped or aggregated as it moves through systems, sometimes creating new \glspl{dataset} as a result. \Glspl{data property} are not necessarily preserved by these processes. Sometimes data is filtered too much or only some of the data is selected (either deliberately or inadvertently through accident or unintended bias), such as by the selection of only the test runs that succeeded. The main issues are loss of heritage / history / source \gls{information}. Data can also appear to become something else. Without careful management, the \index{Integrity Property}\gls{integrity} may become lowered to the lowest common denominator and this needs to be recognized. Additional checks (e.g., \gls{validation} checks,\cbstart\ credibility\cbend\ checks) or assurance measures may \cbstart be needed\cbend\ to ensure that required \index{Integrity Property}\gls{integrity} / assurance is maintained.
 
-\item[Archiving and retrieval:] Safety-related data needs to be available when required. \cbstart Data accessibility needs to be considered\cbend over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
+\item[Archiving and retrieval:] Safety-related data needs to be available when required. \cbstart Data \gls{accessibility}\index{Accessibility Property} needs to be considered\cbend over the complete system lifetime. It is also important to consider what \index{Property!Data}properties of the data need to be preserved and how this affects the choice of storage medium.
 
 \item[Biasing:] This is a systemic \index{Accuracy Property}inaccuracy in data due to the characteristics of the process employed in the creation, collection, manipulation, presentation, and interpretation of data. It is usually an unintentional distortion in the \gls{dataset}. One example of this is the confirmation bias that may be applied to safety claims, and another example is that synthetic autonomous vehicle training \glspl{database} can have issues with artificial data if it is not realistic.
 Although there is no perfect way of checking for this within the system, \index{Completeness!Checks}\gls{completeness}, statistical and validity checks on \glspl{dataset} may help.
@@ -196,24 +196,24 @@ James Inge's work \cite{citation:inge2008improving} produced a useful taxonomy o
 
 Data categories were discussed in the preceding phase. \cbstart\autoref{tab:PropertiesOfData} documents a non-exhaustive collection of \index{Property!Data}\glspl{data property}. Typically, it is the loss of one of these \glspl{data property} that presents a \gls{hazard}. This notion of ``loss'' is dependent on the intended use; for example, what is ``timely'' for one use may not be for another.\cbend\
 
-The ``Goldilocks'' property \cbstart addresses\cbend\ appropriate sizing and quantity of data. A number of issues have been found to arise when there is too much or too little data. While it is particularly relevant to communications links, it may have relevance to other areas such as \glspl{database} and when people are involved in reviewing or checking data. The property is named ``Goldilocks'' as it refers to the need to have not too much, not too little, but just the right amount of data%
+The ``\Gls{goldilocks}'' property \cbstart addresses\cbend\ appropriate sizing and quantity of data. A number of issues have been found to arise when there is too much or too little data. While it is particularly relevant to communications links, it may have relevance to other areas such as \glspl{database} and when people are involved in reviewing or checking data. The property is named ``\gls{goldilocks}'' as it refers to the need to have not too much, not too little, but just the right amount of data%
 %
 \footnote{A system where the property was lost involved a high speed \cbstart data\cbend\ bus that connected several safety-critical systems. A transceiver of that bus failed and transmitted random noise. The receivers employed parity checks and cyclic redundancy check, but the system had been designed to eliminate occasional \cbstart\glspl{error}\cbend. When random noise filled the bus, several apparently valid messages were created every second, resulting in potentially lethal behaviour.
 
 In a \gls{hazop}\index{HAZOP} carried out during 2020, based upon the \gls{hazop}\index{HAZOP} guidewords \cbstart in this guidance\cbend, the facilitator realised that certain failure modes had not been identified by the \gls{hazop} team. In addition to the issue of system overload already discussed, those omissions also concerned system behaviour following data rejection. In these cases, bad data was detected and rejected, but the consequences of data rejection over an extended period had not been considered.}.
 
-The Goldilocks\index{Goldilocks Property} property is related to the \cbstart data volume problem \cbend\ discussed in \hyperref[tab:issues]{section}~\ref{tab:issues}, however, given the importance of data sizing and the experience of real-world incidents this is now a separate property.
+The \gls{goldilocks}\index{Goldilocks Property} property is related to the \cbstart data volume problem \cbend\ discussed in \hyperref[tab:issues]{section}~\ref{tab:issues}, however, given the importance of data sizing and the experience of real-world incidents this is now a separate property.
 
 %
-\paragraph{The analysability\index{Analysability Property|textbf} property}\label{bkm:guidance:analysability}
-The analysability property \cbstart recognizes\cbend\ that data is now \cbstart\ highly complex and extensive, often large scale, and distributed. And yet, for safety purposes we need to make sure it is of suitable quality and able to support system goals.\cbend\
+\paragraph{The \glsfmttext{analysability}\index{Analysability Property|textbf} property}\label{bkm:guidance:analysability}
+The \gls{analysability} property \cbstart recognizes\cbend\ that data is now \cbstart\ highly complex and extensive, often large scale, and distributed. And yet, for safety purposes we need to make sure it is of suitable quality and able to support system goals.\cbend\
 We therefore need to ensure that it is possible to analyse it for key characteristics and \cbstart establish meaningful results using tools or other means.\cbend\ This property is related to explainabilty and may be performed by the same set of tools or techniques.
 
-\paragraph{The explainability\index{Explainability Property|textbf} property}\label{bkm:guidance:explainability}
-Explainability \cbstart describes the ability to establish what the purpose and effect data (and especially changes to data) has on a system
+\paragraph{The \glsfmttext{explainability}\index{Explainability Property|textbf} property}\label{bkm:guidance:explainability}
+\Gls{explainability} \cbstart describes the ability to establish what the purpose and effect data (and especially changes to data) has on a system
 and explain this to relevant \glspl{stakeholder} in terms that they can understand. It is particularly important for learning and AI-based systems.\cbend\
 This could be, for example, \gls{ml} training data or system \gls{configuration data}.
-This property is related to analysability and may be performed by the same set of tools or techniques.
+This property is related to \gls{analysability}\index{Analysability Property} and may be performed by the same set of tools or techniques.
 %
 
 \begin{longtable}{|L{\dsiwgColumnWidth{0.24}}|C{\dsiwgColumnWidth{0.15}}|L{\dsiwgColumnWidth{0.61}}|}
@@ -231,27 +231,27 @@ This property is related to analysability and may be performed by the same set o
   {\Gls{completeness}}\index{Completeness!Property} & C & {The data has nothing missing or lost}\\\hline
   {\Gls{consistency}}\index{Consistency!Property} & N & {The data adheres to a common world view (e.g., units)}\\\hline
   {\Gls{continuity}}\index{Continuity Property} & Y & {The data is continuous and regular without gaps or breaks}\\\hline
-  {Format}\index{Format Property} & O & {The data is represented in a way which is readable by those that need to use it}\\\hline
+  {\Gls{format}}\index{Format Property} & O & {The data is represented in a way which is readable by those that need to use it}\\\hline
   {\Gls{accuracy}}\index{Accuracy Property} & A & {The data has sufficient detail for its intended use}\\\hline
   {\Gls{resolution}}\index{Resolution Property} & R & {The smallest difference between two adjacent values that can be represented in a data storage, display or transfer system}\\\hline
   {\Gls{traceability}} & T & {The data can be linked back to its source or derivation}\\\hline
   {\Gls{timeliness}}\index{timeliness Property} & M & {The data is as up to date as required}\\\hline
   {\Gls{verifiability}}\index{Verifiability Property} & V & {The data can be checked and its properties demonstrated to be correct}\\\hline
   {\Gls{availability}}\index{Availability Property} & L & {The data is accessible and usable when an authorized entity demands access}\\\hline
-  {\Gls{fidelity}}\index{Fidelity/Representation Property} & F & {How well the data maps to the real-world entity it is trying to model}\\\hline
-  {Priority}\index{Priority Property} & P & {The data is presented / transmitted / made available in the order required}\\\hline
+  {\Gls{fidelity}}\index{Fidelity / Representation Property} & F & {How well the data maps to the real-world entity it is trying to model}\\\hline
+  {\Gls{priority}}\index{Priority Property} & P & {The data is presented / transmitted / made available in the order required}\\\hline
   {\Gls{sequencing}\index{Sequencing, Data}} & Q & {The data is preserved in the order required}\\\hline
-  {Intended destination / Usage}\index{Intended Destination/Usage Property} & U & {The data is only sent to those that should have
+  {\Gls{intended_destination}}\index{Intended Destination / Usage Property} & U & {The data is only sent to those that should have
   access to
   it}\\\hline
-  {Accessibility}\index{Accessibility Property} & B & {The data is visible only to those that should see it}\\\hline
-  {Suppression}\index{Suppression Property} & S & {The data is intended never to be used again}\\\hline
-  {History}\index{History Property} & H & {The data has an audit trail of changes}\\\hline
-  {Lifetime}\index{Lifetime Property} & E & {When does the safety-related data expire}\\\hline
-  {Disposability / deletability}\index{Disposability/Deletability Property} & D & {The data can be permanently removed when required}\\\hline
-  {Goldilocks\index{Goldilocks Property}} & G & {The data is just the right size -- not too much and not too little}\\\hline
-  {Analysability\index{Analysability Property}} & Z & {The data is of a suitable size, type and representation (including any \gls{metadata}) to enable it be usefully analysed}\\\hline
-  {Explainability\index{Explainability Property}} & X & {The data can be meaningfully explained to those who need to understand it by a suitable mechanism}\\\hline
+  {\Gls{accessibility}}\index{Accessibility Property} & B & {The data is visible only to those that should see it}\\\hline
+  {\Gls{suppression}}\index{Suppression Property} & S & {The data is intended never to be used again}\\\hline
+  {\Gls{history}}\index{History Property} & H & {The data has an audit trail of changes}\\\hline
+  {\Gls{lifetime}}\index{Lifetime Property} & E & {When does the safety-related data expire}\\\hline
+  {\Gls{disposability}}\index{Disposability / Deletability Property} & D & {The data can be permanently removed when required}\\\hline
+  {\Gls{goldilocks}\index{Goldilocks Property}} & G & {The data is just the right size -- not too much and not too little}\\\hline
+  {\Gls{analysability}\index{Analysability Property}} & Z & {The data (including any \gls{metadata}) is of a suitable size, type and\cbstart\ format\cbend\ to enable it be usefully analysed}\\\hline
+  {\Gls{explainability}\index{Explainability Property}} & X & {The data can be meaningfully explained,by a suitable mechanism, to those who need to understand it}\\\hline
 \end{longtable}
 
 \autoref{tab:issuesCrossReference} illustrates where the data issues discussed in
@@ -273,24 +273,24 @@ loss of one or more \index{Property!Data}data properties (x = potential loss of 
   & \rotatebox{90}{\index{Completeness!Property}\Gls{completeness}}
   & \rotatebox{90}{\index{Consistency!Property}\Gls{consistency}}
   & \rotatebox{90}{\index{Continuity Property}\Gls{continuity}}
-  & \rotatebox{90}{Format}
+  & \rotatebox{90}{\Gls{format}\index{Format Property}}
   & \rotatebox{90}{\index{Accuracy Property}\Gls{accuracy}}
   & \rotatebox{90}{\index{Resolution Property}\Gls{resolution}}
   & \rotatebox{90}{\Gls{traceability}}
   & \rotatebox{90}{\Gls{timeliness}\index{Timeliness Property}}
   & \rotatebox{90}{\Gls{verifiability}}\index{Verifiability Property}
   & \rotatebox{90}{\index{Availability Property}\Gls{availability}}
-  & \rotatebox{90}{\index{\Gls{fidelity} Property}\Gls{fidelity}}
-  & \rotatebox{90}{Priority} & \rotatebox{90}{\Gls{sequencing}\index{Sequencing, Data}}
-  & \rotatebox{90}{Intended destination / usage\index{Intended Destination / Usage Property}\ }
-  & \rotatebox{90}{Accessibility}
-  & \rotatebox{90}{Suppression}
-  & \rotatebox{90}{History}
-  & \rotatebox{90}{Lifetime}
-  & \rotatebox{90}{Disposability / deletability}
-  & \rotatebox{90}{Goldilocks\index{Goldilocks Property}}
-  & \rotatebox{90}{Analysability\index{Analysability Property}}
-  & \rotatebox{90}{Explainability\index{Explainability Property}}
+  & \rotatebox{90}{\index{Fidelity / Representation Property}\Gls{fidelity}}
+  & \rotatebox{90}{\Gls{priority}}\index{Priority Property} & \rotatebox{90}{\Gls{sequencing}\index{Sequencing, Data}}
+  & \rotatebox{90}{\Gls{intended_destination}\index{Intended Destination / Usage Property}\ }
+  & \rotatebox{90}{\Gls{accessibility}\index{Accessibility Property}}
+  & \rotatebox{90}{\Gls{suppression}\index{Suppression Property}}
+  & \rotatebox{90}{\Gls{history}\index{History Property}}
+  & \rotatebox{90}{\Gls{lifetime}\index{Lifetime Property}}
+  & \rotatebox{90}{\Gls{disposability}\index{Disposability / Deletability Property}}
+  & \rotatebox{90}{\Gls{goldilocks}\index{Goldilocks Property}}
+  & \rotatebox{90}{\Gls{analysability}\index{Analysability Property}}
+  & \rotatebox{90}{\Gls{explainability}\index{Explainability Property}}
   %
   \\\hline\TableHeadColour{Issue} &%
   \TableHeadColour{I} & \TableHeadColour{C} & \TableHeadColour{N} & \TableHeadColour{Y} &%
@@ -303,27 +303,27 @@ loss of one or more \index{Property!Data}data properties (x = potential loss of 
     \caption[]{Properties that can be lost through issues (continued)}
     \\\hline
     & \rotatebox{90}{\index{Integrity Property}Integrity}
-    & \rotatebox{90}{\index{Completeness!Property}\gls{completeness}}
+    & \rotatebox{90}{\index{Completeness!Property}\Gls{completeness}}
     & \rotatebox{90}{\index{Consistency!Property}\Gls{consistency}}
     & \rotatebox{90}{\index{Continuity Property}Continuity}
-    & \rotatebox{90}{Format}
+    & \rotatebox{90}{\Gls{format}\index{Format Property}}
     & \rotatebox{90}{\index{Accuracy Property}Accuracy}
     & \rotatebox{90}{Resolution\index{Resolution Property}}
     & \rotatebox{90}{Traceability}
     & \rotatebox{90}{Timeliness\index{Timeliness Property}}
     & \rotatebox{90}{Verifiability}\index{Verifiability Property}
     & \rotatebox{90}{\index{Availability Property}Availability}
-    & \rotatebox{90}{Fidelity / representation\index{\Gls{fidelity} Property}}
-    & \rotatebox{90}{Priority} & \rotatebox{90}{Sequencing\index{Sequencing, Data}}
-    & \rotatebox{90}{Intended destination / usage\index{Intended Destination/Usage Property}\ }
-    & \rotatebox{90}{Accessibility}
-    & \rotatebox{90}{Suppression}
-    & \rotatebox{90}{History}
-    & \rotatebox{90}{Lifetime}
-    & \rotatebox{90}{Disposability / deletability}
-    & \rotatebox{90}{Goldilocks\index{Goldilocks Property}}
-    & \rotatebox{90}{Analysability\index{Analysability Property}}
-    & \rotatebox{90}{Explainability\index{Explainability Property}}
+    & \rotatebox{90}{\Gls{fidelity}\index{Fidelity / Representation Property}}
+    & \rotatebox{90}{\gls{priority}} & \rotatebox{90}{Sequencing\index{Sequencing, Data}}
+    & \rotatebox{90}{\Gls{intended_destination}\index{Intended Destination / Usage Property}\ }
+    & \rotatebox{90}{\Gls{accessibility}/index{Accessibility Property}}
+    & \rotatebox{90}{\Gls{suppression}\index{Suppression Property}}
+    & \rotatebox{90}{\Gls{history}\index{History Property}}
+    & \rotatebox{90}{\Gls{lifetime}\index{Lifetime Property}}
+    & \rotatebox{90}{\Gls{disposability}\index{Disposability / Deletability Property}}
+    & \rotatebox{90}{\Gls{goldilocks}\index{Goldilocks Property}}
+    & \rotatebox{90}{\Gls{analysability}\index{Analysability Property}}
+    & \rotatebox{90}{\Gls{explainability}\index{Explainability Property}}
     %
     \\\hline\TableHeadColour{Issue} &%
     \TableHeadColour{I} & \TableHeadColour{C} & \TableHeadColour{N} & \TableHeadColour{Y} &%
@@ -378,26 +378,26 @@ The list is non-exhaustive. Other guidewords may be useful for particular system
   {\Gls{completeness}}\index{Completeness!Property} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
   {\Gls{consistency}}\index{Consistency!Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {\Gls{continuity}}\index{Continuity Property} & {Loss, partial loss, incorrect, late, loss of sequence}\\\hline
-  {Format}\index{Format Property} & {Loss, partial loss, incorrect, multiple}\\\hline
+  {\Gls{format}}\index{Format Property} & {Loss, partial loss, incorrect, multiple}\\\hline
   {\Gls{accuracy}}\index{Accuracy Property} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
   {\Gls{resolution}\index{Resolution Property}} & {Loss, partial loss, incorrect, multiple, insufficient}\\\hline
   {\Gls{traceability}}\index{Traceability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {\Gls{timeliness}\index{Timeliness Property}} & {Loss, partial loss}\\\hline
   {\Gls{verifiability}}\index{Verifiability Property} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
   {\Gls{availability}}\index{Availability Property} & {Loss, partial loss, multiple, too early, too late}\\\hline
-  {\Gls{fidelity}}\index{Fidelity/Representation Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
-  {Priority}\index{Priority Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
+  {\Gls{fidelity}}\index{Fidelity / Representation Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
+  {\Gls{priority}}\index{Priority Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
   {\Gls{sequencing}\index{Sequencing, Data}} & {Loss, partial loss, incorrect, multiple}\\\hline
-  {Intended destination / usage\index{Intended Destination/Usage Property}} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
-  {Accessibility}\index{Accessibility Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
-  {Suppression}\index{Suppression Property} & {Loss, partial loss, incorrect, too early, too late, too much, too little}\\\hline
-  {History}\index{History Property} & {Loss, partial loss, incorrect, multiple}\\\hline
-  {Lifetime}\index{Lifetime Property} & {Loss, too early, too late, incorrect, multiple, loss of sequence}\\\hline
-  {Disposability / deletability}\index{Disposability/Deletability Property} & {Loss, partial loss, incorrect, too early, too late}\\\hline
-  {Goldilocks\index{Goldilocks Property}} & {Loss, partial loss, incorrect, too early, too late, too much,
+  {\Gls{intended_destination}\index{Intended Destination / Usage Property}} & {Loss, partial loss, incorrect, multiple, too early, too late, loss of sequence}\\\hline
+  {\Gls{accessibility}}\index{Accessibility Property} & {Loss, partial loss, incorrect, multiple, too early, too late}\\\hline
+  {\Gls{suppression}}\index{Suppression Property} & {Loss, partial loss, incorrect, too early, too late, too much, too little}\\\hline
+  {\Gls{history}}\index{History Property} & {Loss, partial loss, incorrect, multiple}\\\hline
+  {\Gls{lifetime}}\index{Lifetime Property} & {Loss, too early, too late, incorrect, multiple, loss of sequence}\\\hline
+  {\Gls{disposability}}\index{Disposability / Deletability Property} & {Loss, partial loss, incorrect, too early, too late}\\\hline
+  {\Gls{goldilocks}\index{Goldilocks Property}} & {Loss, partial loss, incorrect, too early, too late, too much,
     too little (insufficient), spurious}\\\hline
-  {Analysability\index{Analysability Property}} & {Loss, partial loss, incorrect, too much, too little, loss of sequence, loss of tooling}\\\hline
-  {Explainability\index{Explainability Property}} & {Loss, partial loss, incorrect, too early, too late, too much, too little, loss of sequence, loss of skills, loss of tooling}\\\hline
+  {\Gls{analysability}\index{Analysability Property}} & {Loss, partial loss, incorrect, too much, too little, loss of sequence, loss of tooling}\\\hline
+  {\Gls{explainability}\index{Explainability Property}} & {Loss, partial loss, incorrect, too early, too late, too much, too little, loss of sequence, loss of skills, loss of tooling}\\\hline
 \end{longtable}
 
 \clearpage
@@ -525,10 +525,10 @@ However there are specific functional and architectural approaches that may redu
 \cbstart The effectiveness of the functional \glspl{mitigation}\index{Mitigation} in reducing impact to the particular \index{Property!Data}data properties needs to be determined. For example, a strong checksum may be very effective at detecting unwanted change and therefore lower the \index{Assurance Level!Software}\gls{software assurance level} (from the perspective of data-related requirements). However, a checksum may not help at all if the issue is one of timely message delivery. More \gls{information} on the use of checksums in the aviation domain is available in \cite{citation:koopman2015selection}; this \gls{information} is likely to be applicable to other domains as well\cbend.
 
 \clearpage %Manual page break
-\subsection{Evaluate and Treat Risks}
+\subsection{Evaluate and \glsfmttext{treat} Risks}
 \label{bkm:EvaluateAndTreat}
 \subsubsection{Risk \index{Treatment!Risk}\Glsfmttext{treatment}}
-There is a range of approaches that could be used to treat data-related risks. One option might be to redesign part of a system, either to remove the risk or to incorporate safety devices. Alternatively, ways of mitigating (or, more generally, treating) the risk could be devised. Another option could be to conduct further analysis, for example to better understand the likelihood of a risk occurring. In extreme cases, risk evaluation may lead to a recommendation to cancel a project.
+There is a range of approaches that could be used to \gls{treat} data-related risks. One option might be to redesign part of a system, either to remove the risk or to incorporate safety devices. Alternatively, ways of mitigating (or, more generally, treating) the risk could be devised. Another option could be to conduct further analysis, for example to better understand the likelihood of a risk occurring. In extreme cases, risk evaluation may lead to a recommendation to cancel a project.
 
 It is apparent that some of these approaches involve repeating activities (or part of activities) discussed in earlier sections of this document. This type of repetition is to be expected given the iterative nature of risk management.
 
@@ -1117,7 +1117,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
 \endlastfoot
   TD.01 & Using informal / ad-hoc means & \dsiwgTextTT{V....} & R & R & - & - & Data is generated by simple means (e.g, spreadsheets, scripts, basic assumptions). There is no formal checking or review of the method of generation. & \dsiwgTextTT{ICNY.A.....F...........}\\
   \hline
-  TD.02 & Using \cbstart generic \cbend testbed & \dsiwgTextTT{V....} & - & R & HR & HR & \cbstart A testbed \cbend is a good way to produce test data. It may require configuration and tailoring for the particular application, and this configuration should be managed. & \dsiwgTextTT{ICNY.A.....F........G..}\\
+  TD.02 & Using \cbstart generic \cbend testbed & \dsiwgTextTT{V....} & - & R & HR & HR & \cbstart A testbed \cbend is a good way to produce test data. It may require configuration and \gls{tailoring}\index{Tailoring} for the particular application, and this configuration should be managed. & \dsiwgTextTT{ICNY.A.....F........G..}\\
   \hline
   TD.03 & Using simulator & \dsiwgTextTT{V....} & - & R & HR & HR & Simulators (software or hardware) may be able to produce very good test data, obviously depending on how close and detailed a simulation they can achieve. & \dsiwgTextTT{ICNYOAR....F........G..}\\
   \hline
@@ -1196,7 +1196,7 @@ Any meta-data as part of the original \gls{dataset} which cannot be incorporated
   \hline
   MP.09 & Repair / restoration programme & \dsiwgTextTT{VIDPJ} & - & - & R & HR & To protect against degradation and to ensure \index{Availability Property}\gls{availability}. & \dsiwgTextTT{I.........L............}\\
   \hline
-  MP.10 & Indexing / cataloguing & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & To support efficient accessibility. & \dsiwgTextTT{..........L............}\\
+  MP.10 & Indexing / cataloguing & \dsiwgTextTT{VIDPJ} & R & R & HR & HR & To support efficient\cbstart\ availability\cbend. & \dsiwgTextTT{..........L............}\\
   \hline
   MP.11 & Lifetime planning & \dsiwgTextTT{VIDPJ} & - & - & R & HR & For example, to avoid gradual quality reduction by repeatedly ``copying a copy''. & \dsiwgTextTT{..................ED...}\\
   \hline

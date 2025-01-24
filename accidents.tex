@@ -184,7 +184,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
   %
   \ref{bkm:incacc:horizon} & Post Office Horizon System\index[locationidx]{United Kingdom} &
   Non-atomic transactions and other errors in accounting software lead to false prosecutions, lost livelihoods, and suicides. &
-  Accountancy & 1999 & \Gls{integrity}\index{Integrity Property}, Completeness\index{Completeness Property}, \gls{traceability}\index{Traceability Property}, \gls{verifiability}\index{Verifiability Property}, History\index{History Property}\\ 
+  Accountancy & 1999 & \Gls{integrity}\index{Integrity Property}, \gls{completeness}\index{Completeness Property}, \gls{traceability}\index{Traceability Property}, \gls{verifiability}\index{Verifiability Property}, \gls{history}\index{History Property}\\ 
   %TGR I have not included Availability, because SPMs were not authorised to see the transaction information, although arguably they should have been.
   %TGR I cannot find an appropriate property for "The data can only be changed by those with authority to change it. One of the Horizon issues was that PO staff had higher level access than they were supposed to have had.
   %
@@ -199,7 +199,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
   %
   \hline
   \ref{bkm:incacc:geminiV} & Gemini V\index{Gemini V} &
-  Possibly the earliest known \gls{error}: erroneous ``schoolboy knowledge'' that Earth rotates 360$^\circ$ per day sends spacecraft off course
+  \cbstart Erroneous\cbend\ ``schoolboy knowledge'' that Earth rotates 360$^\circ$ per day sends spacecraft off course
   &
   Space & 1965 & \index{Accuracy Property}Accuracy,
   \index{Traceability Property}\gls{traceability},
@@ -239,7 +239,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
         \hline
 	\ref{bkm:incacc:cambrian} & Cambrian Line Data Loss &
 	Speed restriction data failed to be passed to trains, placing pedestrians on level crossings at risk.
-	& Rail & 2017 & \index{Availability Property}\gls{availability}, History \\ 
+	& Rail & 2017 & \index{Availability Property}\gls{availability}, \gls{history}\index{History Property} \\ 
 	\hline
 	\ref{bkm:incacc:irishsar} & Loss of Irish rescue Helicopter & At the time of writing, the investigation\index{Investigation!Incident / Accident} is continuing; possible controlled flight into terrain; possible issues with terrain / obstacle \glspl{database}. Four fatalities. & Air & 2017 & \index{Fidelity / Representation Property}\Gls{fidelity}, \index{Completeness!Property}\gls{completeness}, \index{Accuracy Property}\gls{accuracy} \\
 	\hline
@@ -253,7 +253,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
 	\hline
 	\ref{bkm:accinc:turkisha330} & Turkish Airlines A330 & Inaccurate navigation data, relating to runway location, led to touchdown with left main gear off the paved surface. Aircraft written off. & Air & 2015 & \index{Accuracy Property}\Gls{accuracy}, \gls{timeliness}\index{Timeliness Property}, \gls{verifiability}\index{Verifiability Property} \\
 	\hline
-	\ref{bkm:incacc:dallasebola} & Dallas Hospital Ebola Incident & A man suffering from Ebola was mistakenly sent home from a Dallas hospital. He later returned to hospital, was diagnosed but died; two nurses contracted Ebola but survived. & Medical & 2014 & \index{Completeness!Property}\Gls{completeness}, Format \\
+	\ref{bkm:incacc:dallasebola} & Dallas Hospital Ebola Incident & A man suffering from Ebola was mistakenly sent home from a Dallas hospital. He later returned to hospital, was diagnosed but died; two nurses contracted Ebola but survived. & Medical & 2014 & \index{Completeness!Property}\Gls{completeness}, \gls{format}{\index{Format Property}} \\
 	\hline
 	\ref{bkm:incacc:qantastakeoff} & Qantas \index{Boeing 737}Boeing 737 Take-Off & Two independent and inadvertent data entry\index{Data!Entry} errors meant weight used when calculating take-off performance was 10 tonnes less than actual weight. Tail strike. & Air & 2014 & \index{Integrity Property}\Gls{integrity}, \gls{verifiability}\index{Verifiability Property} \\
 	\hline
@@ -264,7 +264,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
 	\ref{bkm:incacc:mq9reaper} & Loss of MQ-9 reaper & The \gls{gcs} station was \cbstart misconfigured \cbend following a change from MQ-1 to MQ-9 operations. The misconfiguration was not spotted. It caused any throttle position aft of full forward to command negative thrust. The aircraft decelerated below stall speed and impacted ground in unpopulated area. & Air (Defence) & 2012 & \index{Consistency!Property}\Gls{consistency}, \gls{verifiability}\index{Verifiability Property} \\
 	\hline
 
-        \ref{bkm:incacc:737-33A} & \index{Boeing 737}Boeing 737-33A at Chambery Airport, France & Misuse of Electronic Flight Bag results in tail strike & Air & 2012 &\Gls{timeliness}\index{Timeliness Property}, Suppression, Lifetime \\
+        \ref{bkm:incacc:737-33A} & \index{Boeing 737}Boeing 737-33A at Chambery Airport, France & Misuse of Electronic Flight Bag results in tail strike & Air & 2012 &\Gls{timeliness}\index{Timeliness Property}, \gls{suppression}\index{Suppression Property}, \gls{lifetime}\index{Lifetime Property} \\
         \hline
         
 	\ref{bkm:incacc:hermes450} & Loss of Hermes 450 & While attempting an automatic landing the \gls{uas} self-aborted. This abort was due to an incorrect set-up parameter that had been loaded by the crew. The crew elected to intervene rather than let the \gls{uas} self-recover. The air vehicle hit a new, unoccupied hangar; it was ultimately deemed ``non-repairable''. & Air (Defence) & 2011 & \index{Integrity Property}\Gls{integrity} \\
@@ -277,7 +277,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
 	\hline
 	\ref{bkm:incacc:cedarssinai} & Cedars-Sinai Medical Center Scanner & A software misconfiguration led to 206 patients receiving radiation doses approximately eight times higher than intended; the error persisted for 18 months. & Medical & 2008 & \Gls{verifiability} \\
 	\hline
-	\ref{bkm:incacc:canterbury} & Grounding of \dsiwgTextIT{The Pride of Canterbury} & An unapproved \gls{ecs} was apparently being used as the primary means of navigation for the passenger ferry \dsiwgTextIT{The Pride of Canterbury}. Due to user settings a charted wreck would not have been displayed on this system. The vessel grounded on the wreck, causing severe damage to her port propeller system. & Maritime & 2008 & \index{Accuracy Property}\Gls{accuracy}, \index{Completeness!Property}\gls{completeness}, Intended Destination / Usage \\
+	\ref{bkm:incacc:canterbury} & Grounding of \dsiwgTextIT{The Pride of Canterbury} & An unapproved \gls{ecs} was apparently being used as the primary means of navigation for the passenger ferry \dsiwgTextIT{The Pride of Canterbury}. Due to user settings a charted wreck would not have been displayed on this system. The vessel grounded on the wreck, causing severe damage to her port propeller system. & Maritime & 2008 & \index{Accuracy Property}\Gls{accuracy}, \index{Completeness!Property}\gls{completeness}, \gls{intended_destination} \\
 	\hline
 	\ref{bkm:incacc:lot282} & LOT Flight 282 & Incorrect data input to the Flight Management System, `E' rather than `W', meant loss of instruments. Aircraft had to return to \gls{lhr}. & Air & 2008 & \index{Integrity Property}\Gls{integrity}, \index{Fidelity / Representation Property}\gls{fidelity} \\
 	\hline
@@ -299,7 +299,7 @@ Two tables are presented to assist the reader in finding incidents and accidents
         \ref{bkm:incacc:sanbernardino} &
         San Bernardino \index[locationidx]{USA!California!San Bernardino} derailment and pipeline rupture & \Gls{criticality} of train weight not recognized,
         resulting in multiple fatalities &
-        Rail & 1989 & \index{Integrity Property}\Gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Accuracy Property}\gls{accuracy}, \gls{timeliness}\index{Timeliness Property}, \gls{verifiability}\index{Verifiability Property}, \index{Fidelity / Representation Property}\gls{fidelity}, Lifetime \\
+        Rail & 1989 & \index{Integrity Property}\Gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Accuracy Property}\gls{accuracy}, \gls{timeliness}\index{Timeliness Property}, \gls{verifiability}\index{Verifiability Property}, \index{Fidelity / Representation Property}\gls{fidelity}, \gls{lifetime}\index{Lifetime Property} \\
         \hline
 	\ref{bkm:incacc:peigneur} & Lake Peigneur Drilling Accident & While drilling a test well, a rig crew inadvertently caused a flood in a nearby salt mine. The previously freshwater lake became a salt water lake and the flow of a river was reversed. & Oil and Gas & 1980 & \Gls{verifiability}\index{Verifiability Property} \\
 	\hline
@@ -366,7 +366,7 @@ The data issues included:
   However another view of the problem was that the French used data from what (to them) was old
   technology -- the crossbow -- and failed to keep their data up to date as technology advanced,
   leading to loss of the
-  \dsiwgTextIT{\index{\gls{timeliness} property}\gls{timeliness}} property.
+  \dsiwgTextIT{\gls{timeliness}\index{Timeliness Property} property}.
 
   \dsiwgTextBF{Links}
   \begin{itemize}
@@ -612,7 +612,7 @@ Subsequent investigation\index{Investigation!Incident / Accident} revealed that 
 
 The most significant risk identified thus far by the rail Accident Investigation Board is that a number of the speed restrictions which were in place on the Cambrian lines\index{Cambrian Line} had been invoked to allow pedestrians at level crossings sufficient time to take action, when observing an approaching train. Luckily the failure did not result in an accident -- but this was due to luck, not fail-safe systems on the railway.
 
-This incident highlights the importance of the \dsiwgTextIT{\index{Availability Property}\gls{availability}} \index{Property!Data}\gls{data property}, as the data had been silently unavailable to trains. In addition, much of the digital audit trail relating to the failure was lost during repeated attempts to correct the problem and get the rail network running again, a loss of the \dsiwgTextIT{history} \index{Property!Data}\gls{data property}.
+This incident highlights the importance of the \dsiwgTextIT{\index{Availability Property}\gls{availability}} \index{Property!Data}\gls{data property}, as the data had been silently unavailable to trains. In addition, much of the digital audit trail relating to the failure was lost during repeated attempts to correct the problem and get the rail network running again, a loss of the \dsiwgTextIT{\gls{history}\index{History Property}} \index{Property!Data}\gls{data property}.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -743,7 +743,7 @@ On 26th September 2014, a Dallas hospital\index{Dallas Hospital} mistakenly sent
 
 There have been mixed reports on the cause of the problem, but it is clear that external social phenomena such as the Ebola\index{Ebola} outbreak, which are outside the hospital's \gls{ehr}\index{Electronic Health record|see{EHr}}\index{EHR} system and processes, can change the safety significance of data held in the \gls{ehr}. If the importance of the data is not recognized and elevated appropriately in the support tools and processes, then the risk of unintended harm can increase. This conclusion is reinforced by system vendors who subsequently updated their systems to reflect the Ebola\index{Ebola} crisis in light of the Dallas\index{Dallas Hospital} incident.
 
-This incident highlights the importance of the \dsiwgTextIT{\index{Completeness!Property}\gls{completeness}} and \dsiwgTextIT{format} \index{Property!Data}\glspl{data property}, in that \gls{information} about the Ebola\index{Ebola} outbreak was apparently either not available, or not available in a usable form, to decision makers.
+This incident highlights the importance of the \dsiwgTextIT{\index{Completeness!Property}\gls{completeness}} and \dsiwgTextIT{\gls{format}}{\index{Format Property}} \index{Property!Data}\glspl{data property}, in that \gls{information} about the Ebola\index{Ebola} outbreak was apparently either not available, or not available in a usable form, to decision makers.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -837,7 +837,7 @@ A clear chain of events was established that involved the use of incorrect \gls{
 \item The AAIB recognized the essential need for appropriate system development. 
 \end{itemize}
 
-It is often recognized that data must be up to date, but the explicit need to prevent the use of old data can be omitted from the \index{Safety requirement}safety requirements. This incident illustrates the importance of the \index{Property!Data}properties \dsiwgTextIT{\gls{timeliness}\index{Timeliness Property}, Suppression} and \dsiwgTextIT{Lifetime}. 
+It is often recognized that data must be up to date, but the explicit need to prevent the use of old data can be omitted from the \index{Safety requirement}safety requirements. This incident illustrates the importance of the \index{Property!Data}properties \dsiwgTextIT{\gls{timeliness}\index{Timeliness Property}, \gls{suppression}\index{Suppression Property}} and \dsiwgTextIT{\gls{lifetime}\index{Lifetime Property}}. 
 
 \dsiwgTextBF{Links}
     
@@ -941,7 +941,7 @@ Although the \gls{vms} was loaded with \glspl{enc} for the vessel's area of oper
 
 Despite the \gls{vms} being unapproved for use as the primary means of navigation, the officers on \dsiwgTextIT{Pride of Canterbury}\index{Pride of Canterbury} were apparently using it as if it was. Furthermore, many of the officers, including the Chief Officer, who was in charge at the time of the accident, were not fully trained in the use of the system.
 
-This incident highlights the importance of the \index{Accuracy Property}\gls{accuracy} \index{Property!Data}\gls{data property}, with regards to the \gls{information} displayed on the electronic chart. It also highlights the importance of the \dsiwgTextIT{\index{Completeness!Property}\gls{completeness}} \index{Property!Data}\gls{data property}, with regards to training (and training records) and the \dsiwgTextIT{intended destination / usage} \index{Property!Data}\gls{data property}, with regards to the inappropriate use of the \gls{vms} data.
+This incident highlights the importance of the \index{Accuracy Property}\gls{accuracy} \index{Property!Data}\gls{data property}, with regards to the \gls{information} displayed on the electronic chart. It also highlights the importance of the \dsiwgTextIT{\index{Completeness!Property}\gls{completeness}} \index{Property!Data}\gls{data property}, with regards to training (and training records) and the \dsiwgTextIT{\gls{intended_destination}} \index{Property!Data}\gls{data property}, with regards to the inappropriate use of the \gls{vms} data.
 
 \begin{samepage}
 \dsiwgTextBF{Links}
@@ -977,7 +977,7 @@ The Marine Accident Investigation Branch\index{Investigation!Incident / Accident
 \item Cargo planning software should be able to recognize and alert planners to the consequences of variable data, such as non-standard container specifications.
 \end{itemize}
 
-This incident involved incorrect data, that could have been identified if the software had highlighted the unusual aspects of the data such as the container dimensions to the operator. From a data perspective, the \index{Property!Data}properties that needed to be maintained were \dsiwgTextIT{\index{Integrity Property}\gls{integrity}, \gls{verifiability}}\index{Verifiability Property} and \dsiwgTextIT{\index{Fidelity/Representation Property}\gls{fidelity}.}
+This incident involved incorrect data, that could have been identified if the software had highlighted the unusual aspects of the data such as the container dimensions to the operator. From a data perspective, the \index{Property!Data}properties that needed to be maintained were \dsiwgTextIT{\index{Integrity Property}\gls{integrity}, \gls{verifiability}}\index{Verifiability Property} and \dsiwgTextIT{\index{Fidelity / Representation Property}\gls{fidelity}.}
 
 \dsiwgTextBF{Links}
 \begin{itemize}
@@ -1088,7 +1088,7 @@ The \gls{msaw} system uses a terrain \gls{database}. It is designed to alert a c
 
 In 1990, the Guam\index[locationidx]{Guam} terminal \gls{msaw} was installed to provide protection within a 55~nm radius. In 1993, a new software package was produced in which warnings were inhibited within a 54~nm radius; this left a 1~nm annular region within which warnings could be generated. The motivation behind the new configuration was to reduce false alarms. The software became operational in February 1995. A further software update became operational in April 1996. This also had the 54~nm inhibition.
 
-This incident illustrates the importance of the \dsiwgTextIT{\index{Continuity Property}\gls{continuity} \index{Property!Data}}\gls{data property}, with respect to the \gls{msaw} coverage, and the \dsiwgTextIT{\index{Fidelity/Representation Property}\gls{fidelity}} \index{Property!Data}\gls{data property},
+This incident illustrates the importance of the \dsiwgTextIT{\index{Continuity Property}\gls{continuity} \index{Property!Data}}\gls{data property}, with respect to the \gls{msaw} coverage, and the \dsiwgTextIT{\index{Fidelity / Representation Property}\gls{fidelity}} \index{Property!Data}\gls{data property},
 regarding
 the terrain \gls{database} used by the \gls{msaw} system.
 
@@ -1104,7 +1104,7 @@ In May 1989 a Southern Pacific Transportation Company\index{Southern Pacific Tra
 
 One of the causal factors of the train’s derailment, as reported by the National Transportation Safety Board, was a ``failure to determine the weight of the train'' and in summary, the operator thought it weighed less than it actually did, resulting in the dynamic braking being insufficient to deal with the downhill gradient it was travelling on. The Company\index{Southern Pacific Transportation Company} had used a computer to determine the train’s weight and because the actual weights had not been entered the system made its calculations based upon estimated weights, which were lower. Clearly this was not a systematic failure of the computation algorithm but again potentially a failure to appreciate the \gls{criticality} of the weight \gls{information} and its potential as a causal factor within an accident sequence.
 
-From the \gls{criticality} of the weight \gls{information}, \index{Safety Requirement!Data!Derived}derived safety requirements could be developed for the various data sources that were used to derive the weight. Such requirements could be expected to highlight the \index{Property!Data}properties of \index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Accuracy Property}\gls{accuracy}, \gls{timeliness}\index{Timeliness Property}, \gls{verifiability}\index{Verifiability Property}, \index{Fidelity / Representation Property}\gls{fidelity} and Lifetime.
+From the \gls{criticality} of the weight \gls{information}, \index{Safety Requirement!Data!Derived}derived safety requirements could be developed for the various data sources that were used to derive the weight. Such requirements could be expected to highlight the \index{Property!Data}properties of \index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Accuracy Property}\gls{accuracy}, \gls{timeliness}\index{Timeliness Property}, \gls{verifiability}\index{Verifiability Property}, \index{Fidelity / Representation Property}\gls{fidelity} and \gls{lifetime}\index{Lifetime Property}.
 
 T Hardy, \dsiwgTextIT{Software and System Safety -- Accidents, Incidents and Lessons Learned,} Bloomington, Author House, 2012, ISBN 978-1-4685-7470-8
 

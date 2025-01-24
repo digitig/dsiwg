@@ -254,7 +254,7 @@ On completion of the risk identification phase the manufacturer \dsiwgTextBF{\ds
 As with the manufacturer, both a \dsiwgTextBF{\dsiwgTextIT{top-down approach}} and a \dsiwgTextBF{\dsiwgTextIT{bottom-up approach}} are adopted. From the health organization's perspective, one key focus for \gls{hazard} identification is in the use of \dsiwgTextBF{dynamic data}, i.e., data that will be delivered into the new system from existing system data sources and the data presented to the user. For the interactions identified in the supply chain, the health organization needs to consider the risks associated with loss of \index{Property!Data}properties of the data it will receive. Questions the health organization will need to consider and address more formally in the clinical risk management plan are:
 \clearpage% Required on 3.3 to keep page breaks as 3.2
 \begin{itemize}
-  \item which \glspl{dataset} or \cbstart\glspl{item data}\cbend\ being received from other systems have \index{Property!Data}\glspl{data property} (such as \gls{timeliness}\index{Timeliness Property}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Fidelity/Representation Property}\cbstart\gls{fidelity}\cbend\ etc.) that are significant to patient safety? 
+  \item which \glspl{dataset} or \cbstart\glspl{item data}\cbend\ being received from other systems have \index{Property!Data}\glspl{data property} (such as \gls{timeliness}\index{Timeliness Property}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Fidelity / Representation Property}\cbstart\gls{fidelity}\cbend\ etc.) that are significant to patient safety? 
   \item what data presented to the user has \index{Property!Data}\glspl{data property} (such as \index{Availability Property}\gls{availability}, format, \gls{resolution}\index{Resolution Property}, etc.) that are significant to patient safety?
   \item what existing barriers or \glspl{mitigation}\index{Mitigation} (physical, technical, procedural) exist to reduce the risk of loss of \index{Property!Data}\glspl{data property}? and
   \item will any existing barriers be lost as a consequence of the new system?
@@ -277,7 +277,7 @@ On completion of the Risk Identification phase the health organization will \dsi
 
 The manufacturer will \dsiwgTextBF{\dsiwgTextIT{establish \glspl{dsal}\index{Assurance Level!Data}}} by considering cases where the use of specific categories of data\index{Category!Data} could give rise to \glspl{hazard}. In the\cbstart\ prototyping\cbend\ phase, the manufacturer sees no use of the data that can give rise to credible clinical risk and\cbstart\ assesses\cbend\ the \gls{dsal}\index{Assurance Level!Data} for that \gls{dataset} as \dsiwgTextBF{DSAL0}. 
 
-In the second phase of the development lifecycle\index{Lifecycle!Development}, where \dsiwgTextBF{\gls{verification} data}\index{Verification Data} and \dsiwgTextBF{infrastructure data}\index{Infrastructure Data} is being used to demonstrate the correct functioning of the system, the manufacturer considers that loss of any of the \glspl{data property} of \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}format, \index{Accuracy Property}\gls{accuracy}, \gls{resolution}\index{Resolution!Data}, \gls{timeliness}\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity / Representation Property}\gls{fidelity}, \gls{sequencing}\index{Sequencing, Data}, intended destination / usage\index{Intended Destination/Usage Property}, Goldilocks\index{Goldilocks Property}, and explainability\index{Explainability Property}} of this data could give rise to \glspl{hazard}.
+In the second phase of the development lifecycle\index{Lifecycle!Development}, where \dsiwgTextBF{\gls{verification} data}\index{Verification Data} and \dsiwgTextBF{infrastructure data}\index{Infrastructure Data} is being used to demonstrate the correct functioning of the system, the manufacturer considers that loss of any of the \glspl{data property} of \dsiwgTextBF{\index{Integrity Property}\gls{integrity}, \index{Completeness!Property}\gls{completeness}, \index{Consistency!Property}\gls{consistency}, \index{Continuity Property}\gls{continuity}, \index{Format Property}format, \index{Accuracy Property}\gls{accuracy}, \gls{resolution}\index{Resolution!Data}, \gls{timeliness}\index{Timeliness Property}, \index{Availability Property}\gls{availability}, \index{Fidelity / Representation Property}\gls{fidelity}, \gls{sequencing}\index{Sequencing, Data}, \gls{intended_destination}\index{Intended Destination / Usage Property}, \gls{goldilocks}\index{Goldilocks Property}, and explainability\index{Explainability Property}} of this data could give rise to \glspl{hazard}.
 
 For example, if the \gls{verification} \gls{dataset} selected is not representative of the eventual diversity experienced in practice (loss of \index{Fidelity / Representation Property}\gls{fidelity}), then it is possible that the system may contain latent software errors that could give rise to harm. However, the manufacturer acknowledges that the system will be subject to further testing and trials in the clinical setting and so there will be other opportunities to detect errors in the system. Overall:
 \begin{itemize}
@@ -304,7 +304,7 @@ The manufacturer takes care to \dsiwgTextBF{\dsiwgTextIT{analyse \glspl{dsal}\in
   \item hhat recovery action would be required to resolve the issue to maintain patient safety?
 \end{itemize}
 
-Concerns were raised about the vulnerability of the system to inadvertent data overload from the large number of potential data sources, and possibly from malicious activity. This led to the addition of the \dsiwgTextBF{Goldilocks}\index{Goldilocks Property} property to the list of \index{Property!Data}\glspl{data property} applicable to the live system.
+Concerns were raised about the vulnerability of the system to inadvertent data overload from the large number of potential data sources, and possibly from malicious activity. This led to the addition of the \dsiwgTextBF{\gls{goldilocks}}\index{Goldilocks Property} property to the list of \index{Property!Data}\glspl{data property} applicable to the live system.
 
 In considering the receipt of outcome measures data received from a clinic or hospital, the health organization considers that it is likely that some credible errors would not be readily detected by their new system; if the hospital system confused a result or there were errors in the precision of data then there would be few chances to catch these once received by the system.
 \begin{itemize}
@@ -321,7 +321,7 @@ The health organization takes care to \dsiwgTextBF{\dsiwgTextIT{analyse \glspl{d
 \begin{minipage}[t]{0.73\textwidth}
   The manufacturer carries out the following activities to meet the guidance objectives:
   \begin{itemize}
-    \item review each risk and either avoid, accept, transfer, treat;
+    \item review each risk and either avoid, accept, transfer, \gls{treat};
     \item establish \index{Treatment!Risk} methods for relevant risks; and
     \item implement and verify \index{Treatment!Risk}\gls{treatment} methods.
   \end{itemize}
@@ -331,7 +331,7 @@ The health organization takes care to \dsiwgTextBF{\dsiwgTextIT{analyse \glspl{d
     \includegraphics[width=\textwidth]{images/manufacturer}}
 \end{minipage}
 
-The manufacturer decides to \dsiwgTextBF{\dsiwgTextIT{review each risk and either avoid, accept, transfer, or treat the risk}}. It decides to \dsiwgTextBF{accept} the \dsiwgTextBF{DSAL0}\index{Assurance Level!Data} risk, but as it has determined there is some, albeit low, risk (\dsiwgTextBF{DSAL1}) associated with its use of data at a specific point of its lifecycle\index{Lifecycle!Data}, it decides to \dsiwgTextBF{treat} that risk. The manufacturer evaluates this risk and considers that the risks should be reduced further by taking some reasonably practicable steps.
+The manufacturer decides to \dsiwgTextBF{\dsiwgTextIT{review each risk and either avoid, accept, transfer, or \gls{treat} the risk}}. It decides to \dsiwgTextBF{accept} the \dsiwgTextBF{DSAL0}\index{Assurance Level!Data} risk, but as it has determined there is some, albeit low, risk (\dsiwgTextBF{DSAL1}) associated with its use of data at a specific point of its lifecycle\index{Lifecycle!Data}, it decides to \dsiwgTextBF{\gls{treat}} that risk. The manufacturer evaluates this risk and considers that the risks should be reduced further by taking some reasonably practicable steps.
 
 Having decided that further risk reduction is necessary, the manufacturer needs to \dsiwgTextBF{\dsiwgTextIT{establish \index{Treatment!Risk}\gls{treatment} methods for relevant risks}} that are appropriate for DSAL1\index{Assurance Level!Data}data and in doing so demonstrate that reasonably practicable steps have been taken to reduce the risk. The manufacturer therefore refers to the tables in the \gls{dsg} document. The manufacturer then documents in its clinical risk management plan:
 
@@ -353,9 +353,9 @@ For \dsiwgTextBF{DSAL1}\index{Assurance Level!Data} \gls{verification} data, the
 	\gls{availability}\index{Availability Property},
 	\gls{fidelity}\index{Fidelity / Representation Property},
 	\gls{sequencing}\index{Sequencing, Data},
-	Intended destination / usage\index{Intended Destination/Usage Property},
-	Goldilocks\index{Goldilocks Property}, and
-	explainability\index{Explainability Property}}
+	\gls{intended_destination}\index{Intended Destination / Usage Property},
+	\gls{goldilocks}\index{Goldilocks Property}, and
+	\gls{explainability}\index{Explainability Property}}
 can give rise to
 a number of \glspl{hazard}. The extracts below indicate the \gls{mitigation}\index{Mitigation} techniques identified from the tables which should form the basis of the \index{Safety Requirement!Data}\glspl{data safety requirement}. 
 
@@ -483,7 +483,7 @@ a number of \glspl{hazard}. The extracts below indicate the \gls{mitigation}\ind
   \hline
   MP.02 & Scan to electronic format & R & Retain both paper and electronic copies.\\
   \hline
-  MP.10 & Indexing / cataloguing & R & To support efficient accessibility.\\
+  MP.10 & Indexing / cataloguing & R & To support efficient\cbstart\ availability\cbend.\\
   \hline
 \end{longtable*}
 
@@ -571,7 +571,7 @@ The following guidance recommendations were not adopted by the manufacturer for 
 Having determined the requirements arising from the data safety analysis the manufacturer ensures these are included along with other system requirements as part of the overall delivery and operation of the system. It then remains for the manufacturer to \dsiwgTextBF{\dsiwgTextIT{implement and verify \index{Treatment!Risk} methods}}, that is, as well as defining requirements the clinical risk management plan needs to ensure activities are in place to verify and evidence that \index{Treatment!Risk}\glspl{treatment} have actually been implemented.
 
 \begin{minipage}[t]{0.79\textwidth}
-  Likewise, the health organization has identified DSAL2\index{Assurance Level!Data} data and in deciding to treat the risk, it aims to ensure risks are reduced as low as reasonably practicable. 
+  Likewise, the health organization has identified DSAL2\index{Assurance Level!Data} data and in deciding to \gls{treat} the risk, it aims to ensure risks are reduced as low as reasonably practicable. 
 \end{minipage}
 \begin{minipage}[t]{0.2\textwidth}
   \centering\raisebox{\dimexpr \topskip-\height}{%

@@ -284,7 +284,7 @@ Dark Data\index{Dark Data} relates to data that is not available but nevertheles
 \end{quote}
 
 At first sight it might be thought this is just an annoyance rather than a problem,
-however Dazzle Data can mask, distort or prevent usage of the real or desired data.
+however Dazzle Data can mask, distort or prevent use of the real or desired data.
 It can hide the true picture as in ``wood for the trees'' and in the worst case create real problems. 
 
 Some examples of such false positive alerts that cause real alerts to be ignored are:
@@ -502,7 +502,7 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   Methods may be available to mitigate if detected, e.g., interpolation.\\
   \hline
   %
-  Format (O) & The data is represented in a way which is readable by those that need to use it & \tick & \tick &
+  \Gls{format}{\index{Format Property}} (O) & The data is represented in a way which is readable by those that need to use it & \tick & \tick &
   If data is not in the correct format then it may not be usable so becomes dark. If lots of data is in the wrong format it may obscure other (good) data, and hence can dazzle.\\
   \hline
   %
@@ -535,7 +535,7 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   - & - &\\
   \hline
   %
-  Priority (P) & The data is presented / transmitted / made available in the order required &
+  \Gls{priority}\index{Priority Priority} (P) & The data is presented / transmitted / made available in the order required &
   \tick & \tick &
   If data is not prioritised to be available when needed it is effectively dark. This could be because other data is taking precedence so could be a dazzle case.\\
   \hline
@@ -545,37 +545,37 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   If data is not sequenced as needed it may be rejected or ignored and then is effectively dark. Other data which is out of order or sequence may cause the whole message, set or file to be rejected – a dazzle case.\\
   \hline
   %
-  Intended Destination / Usage (U) & The data is only sent to those that should have access to it &
+  \Gls{intended_destination}\index{Intended Destination / Usage Property} (U) & The data is only sent to those that should have access to it &
   \tick & - &
   If data is not sent to the correct destination it may be a dark data situation as it is effectively missing.\\
   \hline
   %
-  Accessibility (B) & The data is visible only to those that should see it &
+  \Gls{accessibility}\index{Accessibility Property} (B) & The data is visible only to those that should see it &
   - & \tick &
   If data is more widely visible or distributed than intended it could cause a dazzle situation due to e.g. bandwidth issues.\\
   \hline
   %
-  Suppression (S) & The data is intended never to be used again &
+  \Gls{suppression}\index{Suppression Property} (S) & The data is intended never to be used again &
   - & \tick &
   If data re-emerges after it should have been deleted it could cause all sorts of dazzle-related problems.\\
   \hline
   %
-  History (H) & The data has an audit trail of changes &
+  \Gls{history}\index{History Property} (H) & The data has an audit trail of changes &
   \tick & - &
   If the audit trail is lost then the data is darkened as its origins and derivation could be important.\\
   \hline
   %
-  Lifetime (E) & When does the safety-related data expire &
+  \Gls{lifetime}\index{Lifetime Property} (E) & When does the safety-related data expire &
   \tick & \tick &
-  If the lifetime is erroneously early than the data is lost -- a dark data problem. Conversely if the lifetime is too long it is potentially a dazzle situation.\\
+  If the \gls{lifetime}\cbstart\ erroneously ends too early then\cbend\ the data is lost -- a dark data problem. Conversely if the \gls{lifetime} is too long it is potentially a dazzle situation.\\
   \hline
   %
-  Disposability / Deletability (D) & The data can be permanently removed when required &
+  \Gls{disposability}\index{Disposability / Deletability Property} (D) & The data can be permanently removed when required &
   - & \tick &
   If the data cannot be removed it is potentially a dazzle situation, as it may obscure the real or current data.\\
   \hline
   %
-  Goldilocks (G) & The data is just the right size — not too much and not too little &
+  \Gls{goldilocks}\index{Goldilocks Property} (G) & The data is just the right size — not too much and not too little &
   \tick & \tick &
   Too little data may be a dark data case and too much data to deal with is a dazzle case.\\
   \hline
@@ -585,7 +585,7 @@ The opposite attributes of dark data and dazzle data might be termed Brightness 
   If the data can’t be analysed it may not be able to be used causing a dark data issue. If there is too much of it or it is obscured (e.g., by noise on a comms line) then it is a dazzle case.\\
   \hline
   %
-  Explainability (X) & The data can be meaningfully explained to those who need to understand it by a suitable mechanism &
+  \Gls{explainability}\index{Explainability Property} (X) & The data can be meaningfully explained to those who need to understand it by a suitable mechanism &
   \tick & \tick &
   If the data can’t be explained it may not be able to be used causing a dark data issue. If there is too much of it or suitable management and analysis tools are not available then it is potentially both cases.\\
   \hline
